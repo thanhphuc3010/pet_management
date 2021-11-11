@@ -34,6 +34,7 @@ namespace pet_management
                 "VALUES ('SD0912', 'Nguyễn Thị Hoàn', '2000-10-30', 'acekembbc@gmail.com', 'Kim Sơn', 'Ninh Bình', 'Việt Nam', '0918848155')";
             DataProvider.Instance.excuteNonQuery(insert);
             LoadData();
+            //Demo github
         }
     }
 }
