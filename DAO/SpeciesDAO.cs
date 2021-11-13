@@ -31,6 +31,13 @@ namespace DAO
             return result;
         }
 
+        public static bool Update(Species species)
+        {
+            string update = "UPDATE species SET name = @name , description = @description WHERE id = @id";
+            int result = DataProvider.Instance.ExcuteNonQuery(update, new object[] { species.Name, species.Description, species.Id});
+            return result == 1;
+        }
+
         public static int GetLastID()
         {
             string query = "SELECT id FROM species ORDER BY id DESC LIMIT 1";

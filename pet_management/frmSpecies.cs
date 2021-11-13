@@ -64,9 +64,36 @@ namespace pet_management
         {
             speciesBindingSource.EndEdit();
             Species species = speciesBindingSource.Current as Species;
-            bool isSuccess = SpeciesBUS.AddNewSpecies(species);
+            if (species != null)
+            {
+                if (state == EntityState.Added)
+                {
+                    bool isSuccess = SpeciesBUS.AddNewSpecies(species);
+                }
+                else if (state == EntityState.Changed)
+                {
+                    SpeciesBUS.Update(species);
+                }
+            }
+            
             grcDemo.Refresh();
             lytInput.Disable();
+            state = EntityState.Unchaged;
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            speciesBindingSource.RemoveCurrent();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            state = EntityState.Changed;
+            lytInput.Enable();
+            txtName.ReadOnly = false;
+            txtDescription.ReadOnly = false;
+            btnUpdate.Enable();
+            txtName.Focus();
         }
     }
 }

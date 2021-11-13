@@ -39,7 +39,7 @@ namespace pet_management
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.lytInput = new DevExpress.XtraDataLayout.DataLayoutControl();
@@ -73,12 +73,12 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcDemo.DataSource = this.speciesBindingSource;
             this.grcDemo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
-            this.grcDemo.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grcDemo.Location = new System.Drawing.Point(6, 152);
+            this.grcDemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grcDemo.Location = new System.Drawing.Point(12, 158);
             this.grcDemo.MainView = this.gridView1;
             this.grcDemo.Margin = new System.Windows.Forms.Padding(5);
             this.grcDemo.Name = "grcDemo";
-            this.grcDemo.Size = new System.Drawing.Size(717, 219);
+            this.grcDemo.Size = new System.Drawing.Size(704, 286);
             this.grcDemo.TabIndex = 2;
             this.grcDemo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -96,6 +96,7 @@ namespace pet_management
             this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.grcDemo;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
             // 
             // colId
             // 
@@ -145,7 +146,7 @@ namespace pet_management
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.Appearance.Options.UseForeColor = true;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(5, 380);
+            this.btnAdd.Location = new System.Drawing.Point(13, 459);
             this.btnAdd.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
@@ -162,31 +163,32 @@ namespace pet_management
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.Appearance.Options.UseForeColor = true;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(156, 380);
+            this.btnUpdate.Location = new System.Drawing.Point(147, 459);
             this.btnUpdate.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnUpdate.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(113, 38);
             this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Text = "Lưu";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // simpleButton3
+            // btnEdit
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Appearance.Options.UseForeColor = true;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(307, 380);
-            this.simpleButton3.LookAndFeel.SkinName = "Office 2007 Blue";
-            this.simpleButton3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(113, 38);
-            this.simpleButton3.TabIndex = 3;
-            this.simpleButton3.Text = "Sửa";
+            this.btnEdit.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
+            this.btnEdit.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnEdit.Appearance.Options.UseFont = true;
+            this.btnEdit.Appearance.Options.UseForeColor = true;
+            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(299, 459);
+            this.btnEdit.LookAndFeel.SkinName = "Office 2007 Blue";
+            this.btnEdit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(113, 38);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // simpleButton4
             // 
@@ -195,7 +197,7 @@ namespace pet_management
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.Appearance.Options.UseForeColor = true;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(458, 380);
+            this.simpleButton4.Location = new System.Drawing.Point(446, 459);
             this.simpleButton4.LookAndFeel.SkinName = "Office 2007 Blue";
             this.simpleButton4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
@@ -211,7 +213,7 @@ namespace pet_management
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.Appearance.Options.UseForeColor = true;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(609, 380);
+            this.simpleButton5.Location = new System.Drawing.Point(602, 459);
             this.simpleButton5.LookAndFeel.SkinName = "Office 2007 Blue";
             this.simpleButton5.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton5.Margin = new System.Windows.Forms.Padding(4);
@@ -219,6 +221,7 @@ namespace pet_management
             this.simpleButton5.Size = new System.Drawing.Size(113, 38);
             this.simpleButton5.TabIndex = 3;
             this.simpleButton5.Text = "Huỷ";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // lytInput
             // 
@@ -226,6 +229,7 @@ namespace pet_management
             this.lytInput.Controls.Add(this.txtName);
             this.lytInput.Controls.Add(this.txtDescription);
             this.lytInput.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lytInput.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lytInput.Location = new System.Drawing.Point(0, 0);
             this.lytInput.Name = "lytInput";
             this.lytInput.Root = this.Root;
@@ -236,32 +240,32 @@ namespace pet_management
             // txtId
             // 
             this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Id", true));
-            this.txtId.Location = new System.Drawing.Point(12, 34);
+            this.txtId.Location = new System.Drawing.Point(12, 33);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
             this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtId.Properties.Mask.EditMask = "N0";
             this.txtId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtId.Size = new System.Drawing.Size(164, 26);
+            this.txtId.Size = new System.Drawing.Size(164, 24);
             this.txtId.StyleController = this.lytInput;
             this.txtId.TabIndex = 4;
             // 
             // txtName
             // 
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Name", true));
-            this.txtName.Location = new System.Drawing.Point(180, 34);
+            this.txtName.Location = new System.Drawing.Point(180, 33);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(536, 26);
+            this.txtName.Size = new System.Drawing.Size(536, 24);
             this.txtName.StyleController = this.lytInput;
             this.txtName.TabIndex = 5;
             // 
             // txtDescription
             // 
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Description", true));
-            this.txtDescription.Location = new System.Drawing.Point(12, 86);
+            this.txtDescription.Location = new System.Drawing.Point(12, 82);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(704, 58);
+            this.txtDescription.Size = new System.Drawing.Size(704, 62);
             this.txtDescription.StyleController = this.lytInput;
             this.txtDescription.TabIndex = 6;
             // 
@@ -292,40 +296,40 @@ namespace pet_management
             this.ItemForId.Control = this.txtId;
             this.ItemForId.Location = new System.Drawing.Point(0, 0);
             this.ItemForId.Name = "ItemForId";
-            this.ItemForId.Size = new System.Drawing.Size(168, 52);
+            this.ItemForId.Size = new System.Drawing.Size(168, 49);
             this.ItemForId.Text = "Id";
             this.ItemForId.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForId.TextSize = new System.Drawing.Size(77, 19);
+            this.ItemForId.TextSize = new System.Drawing.Size(77, 18);
             // 
             // ItemForDescription
             // 
             this.ItemForDescription.Control = this.txtDescription;
-            this.ItemForDescription.Location = new System.Drawing.Point(0, 52);
+            this.ItemForDescription.Location = new System.Drawing.Point(0, 49);
             this.ItemForDescription.Name = "ItemForDescription";
-            this.ItemForDescription.Size = new System.Drawing.Size(708, 84);
+            this.ItemForDescription.Size = new System.Drawing.Size(708, 87);
             this.ItemForDescription.Text = "Description";
             this.ItemForDescription.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForDescription.TextSize = new System.Drawing.Size(77, 19);
+            this.ItemForDescription.TextSize = new System.Drawing.Size(77, 18);
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.txtName;
             this.ItemForName.Location = new System.Drawing.Point(168, 0);
             this.ItemForName.Name = "ItemForName";
-            this.ItemForName.Size = new System.Drawing.Size(540, 52);
+            this.ItemForName.Size = new System.Drawing.Size(540, 49);
             this.ItemForName.Text = "Name";
             this.ItemForName.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForName.TextSize = new System.Drawing.Size(77, 19);
+            this.ItemForName.TextSize = new System.Drawing.Size(77, 18);
             // 
             // frmSpecies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 435);
+            this.ClientSize = new System.Drawing.Size(728, 512);
             this.Controls.Add(this.lytInput);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcDemo);
@@ -355,7 +359,7 @@ namespace pet_management
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private System.Windows.Forms.BindingSource speciesBindingSource;

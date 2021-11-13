@@ -24,5 +24,10 @@ namespace BUS
         {
             return SpeicesDAO.GetLastID();
         }
+
+        public static bool Update(Species species)
+        {
+            return SpeicesDAO.Update(species);
+        }
     }
 }
