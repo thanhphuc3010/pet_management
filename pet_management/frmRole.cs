@@ -118,6 +118,7 @@ namespace pet_management
         private void HandleControl()
         {
             txtCode.ReadOnly = true;
+            btnAdd.Enable();
             switch (state)
             {
                 case EntityState.Unchaged:

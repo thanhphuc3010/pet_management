@@ -34,6 +34,7 @@ namespace pet_management
             this.grcRole = new DevExpress.XtraGrid.GridControl();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,7 +54,6 @@ namespace pet_management
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grcRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -109,8 +109,16 @@ namespace pet_management
             this.gridView1.OptionsCustomization.AllowColumnMoving = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm ...";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowHeight = 28;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.MinWidth = 25;
+            this.colId.Name = "colId";
+            this.colId.Width = 94;
             // 
             // colCode
             // 
@@ -172,14 +180,20 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.btnAdd.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnAdd.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnAdd.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Appearance.Options.UseBackColor = true;
+            this.btnAdd.Appearance.Options.UseBorderColor = true;
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.Appearance.Options.UseForeColor = true;
+            this.btnAdd.Appearance.Options.UseTextOptions = true;
+            this.btnAdd.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAdd.Location = new System.Drawing.Point(13, 430);
-            this.btnAdd.LookAndFeel.SkinName = "Office 2016 Colorful";
+            this.btnAdd.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
@@ -191,11 +205,17 @@ namespace pet_management
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnUpdate.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnUpdate.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Appearance.Options.UseBackColor = true;
+            this.btnUpdate.Appearance.Options.UseBorderColor = true;
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.Appearance.Options.UseForeColor = true;
+            this.btnUpdate.Appearance.Options.UseTextOptions = true;
+            this.btnUpdate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
+            this.btnUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnUpdate.Location = new System.Drawing.Point(160, 430);
             this.btnUpdate.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnUpdate.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -209,11 +229,17 @@ namespace pet_management
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEdit.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.btnEdit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnEdit.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnEdit.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Appearance.Options.UseBackColor = true;
+            this.btnEdit.Appearance.Options.UseBorderColor = true;
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.Appearance.Options.UseForeColor = true;
+            this.btnEdit.Appearance.Options.UseTextOptions = true;
+            this.btnEdit.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
+            this.btnEdit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnEdit.Location = new System.Drawing.Point(307, 430);
             this.btnEdit.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnEdit.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -227,11 +253,17 @@ namespace pet_management
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnDelete.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnDelete.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Appearance.Options.UseBackColor = true;
+            this.btnDelete.Appearance.Options.UseBorderColor = true;
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.Appearance.Options.UseForeColor = true;
+            this.btnDelete.Appearance.Options.UseTextOptions = true;
+            this.btnDelete.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDelete.Location = new System.Drawing.Point(454, 430);
             this.btnDelete.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -245,11 +277,17 @@ namespace pet_management
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.btnCancel.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Appearance.Options.UseBackColor = true;
+            this.btnCancel.Appearance.Options.UseBorderColor = true;
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.Appearance.Options.UseForeColor = true;
+            this.btnCancel.Appearance.Options.UseTextOptions = true;
+            this.btnCancel.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCancel.Location = new System.Drawing.Point(601, 430);
             this.btnCancel.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnCancel.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -379,13 +417,6 @@ namespace pet_management
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(708, 13);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.MinWidth = 25;
-            this.colId.Name = "colId";
-            this.colId.Width = 94;
             // 
             // frmRole
             // 
