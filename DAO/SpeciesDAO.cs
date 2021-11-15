@@ -31,10 +31,17 @@ namespace DAO
             return result;
         }
 
+        public static bool Delete(Species species)
+        {
+            string update = "DELETE FROM species WHERE id = @id";
+            int result = DataProvider.Instance.ExcuteNonQuery(update, new object[] { species.Id });
+            return result == 1;
+        }
+
         public static bool Update(Species species)
         {
             string update = "UPDATE species SET name = @name , description = @description WHERE id = @id";
-            int result = DataProvider.Instance.ExcuteNonQuery(update, new object[] { species.Name, species.Description, species.Id});
+            int result = DataProvider.Instance.ExcuteNonQuery(update, new object[] { species.Name, species.Description, species.Id });
             return result == 1;
         }
 
@@ -49,7 +56,7 @@ namespace DAO
             try
             {
                 string insert = "insert into species (name, description) VALUES ( @name , @description )";
-                int n = DataProvider.Instance.ExcuteNonQuery(insert, new object[] { speices.Name, speices.Description});
+                int n = DataProvider.Instance.ExcuteNonQuery(insert, new object[] { speices.Name, speices.Description });
                 result = n == 1;
             }
             catch (Exception e)

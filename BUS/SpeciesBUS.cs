@@ -29,5 +29,10 @@ namespace BUS
         {
             return SpeicesDAO.Update(species);
         }
+
+        public static bool Delete(Species species)
+        {
+            return SpeicesDAO.Delete(species);
+        }
     }
 }

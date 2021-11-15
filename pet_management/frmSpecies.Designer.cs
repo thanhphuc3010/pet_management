@@ -40,8 +40,8 @@ namespace pet_management
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.lytInput = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
@@ -89,6 +89,7 @@ namespace pet_management
             // 
             // gridView1
             // 
+            this.gridView1.ColumnPanelRowHeight = 30;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colName,
@@ -97,13 +98,21 @@ namespace pet_management
             this.gridView1.GridControl = this.grcDemo;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.RowHeight = 28;
             // 
             // colId
             // 
+            this.colId.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colId.AppearanceCell.Options.UseFont = true;
             this.colId.AppearanceCell.Options.UseTextOptions = true;
             this.colId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Roboto Medium", 9F);
             this.colId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colId.AppearanceHeader.Options.UseFont = true;
             this.colId.AppearanceHeader.Options.UseForeColor = true;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.Caption = "Mã";
             this.colId.FieldName = "Id";
             this.colId.MinWidth = 25;
@@ -115,8 +124,14 @@ namespace pet_management
             // 
             // colName
             // 
+            this.colName.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colName.AppearanceCell.Options.UseFont = true;
+            this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto Medium", 9F);
             this.colName.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colName.AppearanceHeader.Options.UseFont = true;
             this.colName.AppearanceHeader.Options.UseForeColor = true;
+            this.colName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colName.Caption = "Tên loài";
             this.colName.FieldName = "Name";
             this.colName.MinWidth = 25;
@@ -128,8 +143,14 @@ namespace pet_management
             // 
             // colDescription
             // 
+            this.colDescription.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDescription.AppearanceCell.Options.UseFont = true;
+            this.colDescription.AppearanceHeader.Font = new System.Drawing.Font("Roboto Medium", 9F);
             this.colDescription.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colDescription.AppearanceHeader.Options.UseFont = true;
             this.colDescription.AppearanceHeader.Options.UseForeColor = true;
+            this.colDescription.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDescription.Caption = "Mô tả";
             this.colDescription.FieldName = "Description";
             this.colDescription.MinWidth = 25;
@@ -141,6 +162,7 @@ namespace pet_management
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
             this.btnAdd.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnAdd.Appearance.Options.UseFont = true;
@@ -158,6 +180,7 @@ namespace pet_management
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpdate.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
             this.btnUpdate.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnUpdate.Appearance.Options.UseFont = true;
@@ -175,6 +198,7 @@ namespace pet_management
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
             this.btnEdit.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnEdit.Appearance.Options.UseFont = true;
@@ -190,38 +214,41 @@ namespace pet_management
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // simpleButton4
+            // btnDelete
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Appearance.Options.UseForeColor = true;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(446, 459);
-            this.simpleButton4.LookAndFeel.SkinName = "Office 2007 Blue";
-            this.simpleButton4.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(113, 38);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "Xoá";
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDelete.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
+            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnDelete.Appearance.Options.UseFont = true;
+            this.btnDelete.Appearance.Options.UseForeColor = true;
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(446, 459);
+            this.btnDelete.LookAndFeel.SkinName = "Office 2007 Blue";
+            this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(113, 38);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Xoá";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // simpleButton5
+            // btnCancel
             // 
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
-            this.simpleButton5.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.Appearance.Options.UseForeColor = true;
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(602, 459);
-            this.simpleButton5.LookAndFeel.SkinName = "Office 2007 Blue";
-            this.simpleButton5.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(113, 38);
-            this.simpleButton5.TabIndex = 3;
-            this.simpleButton5.Text = "Huỷ";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Roboto", 8F);
+            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.Appearance.Options.UseForeColor = true;
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(602, 459);
+            this.btnCancel.LookAndFeel.SkinName = "Office 2007 Blue";
+            this.btnCancel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 38);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Huỷ";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lytInput
             // 
@@ -240,13 +267,13 @@ namespace pet_management
             // txtId
             // 
             this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Id", true));
+            this.txtId.EditValue = "";
             this.txtId.Location = new System.Drawing.Point(12, 33);
             this.txtId.Name = "txtId";
+            this.txtId.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Properties.Appearance.Options.UseFont = true;
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtId.Properties.Mask.EditMask = "N0";
-            this.txtId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtId.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtId.Size = new System.Drawing.Size(164, 24);
             this.txtId.StyleController = this.lytInput;
             this.txtId.TabIndex = 4;
@@ -256,6 +283,8 @@ namespace pet_management
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Name", true));
             this.txtName.Location = new System.Drawing.Point(180, 33);
             this.txtName.Name = "txtName";
+            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Size = new System.Drawing.Size(536, 24);
             this.txtName.StyleController = this.lytInput;
             this.txtName.TabIndex = 5;
@@ -265,6 +294,8 @@ namespace pet_management
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.speciesBindingSource, "Description", true));
             this.txtDescription.Location = new System.Drawing.Point(12, 82);
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Size = new System.Drawing.Size(704, 62);
             this.txtDescription.StyleController = this.lytInput;
             this.txtDescription.TabIndex = 6;
@@ -293,33 +324,43 @@ namespace pet_management
             // 
             // ItemForId
             // 
+            this.ItemForId.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemForId.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForId.Control = this.txtId;
             this.ItemForId.Location = new System.Drawing.Point(0, 0);
             this.ItemForId.Name = "ItemForId";
             this.ItemForId.Size = new System.Drawing.Size(168, 49);
-            this.ItemForId.Text = "Id";
+            this.ItemForId.Text = "Mã loài:";
             this.ItemForId.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForId.TextSize = new System.Drawing.Size(77, 18);
+            this.ItemForId.TextSize = new System.Drawing.Size(58, 18);
             // 
             // ItemForDescription
             // 
+            this.ItemForDescription.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemForDescription.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForDescription.Control = this.txtDescription;
             this.ItemForDescription.Location = new System.Drawing.Point(0, 49);
             this.ItemForDescription.Name = "ItemForDescription";
+            this.ItemForDescription.OptionsPrint.AppearanceItemText.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemForDescription.OptionsPrint.AppearanceItemText.Options.UseFont = true;
             this.ItemForDescription.Size = new System.Drawing.Size(708, 87);
-            this.ItemForDescription.Text = "Description";
+            this.ItemForDescription.Text = "Mô tả:";
             this.ItemForDescription.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForDescription.TextSize = new System.Drawing.Size(77, 18);
+            this.ItemForDescription.TextSize = new System.Drawing.Size(58, 18);
             // 
             // ItemForName
             // 
+            this.ItemForName.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemForName.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForName.Control = this.txtName;
             this.ItemForName.Location = new System.Drawing.Point(168, 0);
             this.ItemForName.Name = "ItemForName";
+            this.ItemForName.OptionsPrint.AppearanceItemText.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemForName.OptionsPrint.AppearanceItemText.Options.UseFont = true;
             this.ItemForName.Size = new System.Drawing.Size(540, 49);
-            this.ItemForName.Text = "Name";
+            this.ItemForName.Text = "Tên loài:";
             this.ItemForName.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForName.TextSize = new System.Drawing.Size(77, 18);
+            this.ItemForName.TextSize = new System.Drawing.Size(58, 18);
             // 
             // frmSpecies
             // 
@@ -327,15 +368,16 @@ namespace pet_management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 512);
             this.Controls.Add(this.lytInput);
-            this.Controls.Add(this.simpleButton5);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcDemo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSpecies";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loài";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDemo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
@@ -360,8 +402,8 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
         private System.Windows.Forms.BindingSource speciesBindingSource;
         private DevExpress.XtraDataLayout.DataLayoutControl lytInput;
         private DevExpress.XtraEditors.TextEdit txtId;
