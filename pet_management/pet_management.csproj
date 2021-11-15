@@ -102,6 +102,12 @@
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
     <Compile Include="EntityState.cs" />
+    <Compile Include="frmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRole.Designer.cs">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSpecies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHTDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmRole.resx">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSpecies.resx">
       <DependentUpon>frmSpecies.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +139,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.Role.datasource" />
     <None Include="Properties\DataSources\DTO.Species.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

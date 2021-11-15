@@ -11,7 +11,7 @@ namespace DTO
     {
         public static object GetValueInCell(this DataRow row, string field)
         {
-            var result = (row[field] != DBNull.Value) ? row[field] : null;
+            var result = (row[field] != DBNull.Value) ? row[field] : "";
             return result;
         }
     }
