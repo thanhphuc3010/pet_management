@@ -33,7 +33,7 @@ namespace pet_management
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRole));
             this.grcRole = new DevExpress.XtraGrid.GridControl();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewRole = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +56,7 @@ namespace pet_management
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grcRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lytInput)).BeginInit();
             this.lytInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
@@ -77,48 +77,49 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcRole.DataSource = this.roleBindingSource;
-            this.grcRole.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
+            this.grcRole.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grcRole.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grcRole.Location = new System.Drawing.Point(12, 139);
-            this.grcRole.MainView = this.gridView1;
-            this.grcRole.Margin = new System.Windows.Forms.Padding(5);
+            this.grcRole.Location = new System.Drawing.Point(0, 140);
+            this.grcRole.MainView = this.gridViewRole;
+            this.grcRole.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grcRole.Name = "grcRole";
-            this.grcRole.Size = new System.Drawing.Size(704, 276);
+            this.grcRole.Size = new System.Drawing.Size(728, 269);
             this.grcRole.TabIndex = 2;
             this.grcRole.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewRole});
             // 
             // roleBindingSource
             // 
             this.roleBindingSource.DataSource = typeof(DTO.Role);
             // 
-            // gridView1
+            // gridViewRole
             // 
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.ColumnPanelRowHeight = 30;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewRole.Appearance.Row.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridViewRole.Appearance.Row.Options.UseFont = true;
+            this.gridViewRole.ColumnPanelRowHeight = 37;
+            this.gridViewRole.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colCode,
             this.colName,
             this.colDescription});
-            this.gridView1.DetailHeight = 431;
-            this.gridView1.GridControl = this.grcRole;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm ...";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowHeight = 28;
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            this.gridViewRole.DetailHeight = 539;
+            this.gridViewRole.GridControl = this.grcRole;
+            this.gridViewRole.Name = "gridViewRole";
+            this.gridViewRole.OptionsBehavior.Editable = false;
+            this.gridViewRole.OptionsCustomization.AllowColumnMoving = false;
+            this.gridViewRole.OptionsFind.AlwaysVisible = true;
+            this.gridViewRole.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm ...";
+            this.gridViewRole.OptionsView.ShowGroupPanel = false;
+            this.gridViewRole.RowHeight = 35;
+            this.gridViewRole.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewRole_RowClick);
+            this.gridViewRole.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
-            this.colId.MinWidth = 25;
+            this.colId.MinWidth = 31;
             this.colId.Name = "colId";
-            this.colId.Width = 94;
+            this.colId.Width = 117;
             // 
             // colCode
             // 
@@ -132,12 +133,12 @@ namespace pet_management
             this.colCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCode.Caption = "Mã";
             this.colCode.FieldName = "Code";
-            this.colCode.MinWidth = 25;
+            this.colCode.MinWidth = 31;
             this.colCode.Name = "colCode";
             this.colCode.OptionsColumn.ReadOnly = true;
             this.colCode.Visible = true;
             this.colCode.VisibleIndex = 0;
-            this.colCode.Width = 94;
+            this.colCode.Width = 187;
             // 
             // colName
             // 
@@ -151,12 +152,12 @@ namespace pet_management
             this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colName.Caption = "Tên vai trò";
             this.colName.FieldName = "Name";
-            this.colName.MinWidth = 25;
+            this.colName.MinWidth = 31;
             this.colName.Name = "colName";
             this.colName.OptionsColumn.ReadOnly = true;
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
-            this.colName.Width = 94;
+            this.colName.Width = 205;
             // 
             // colDescription
             // 
@@ -170,12 +171,12 @@ namespace pet_management
             this.colDescription.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDescription.Caption = "Mô tả";
             this.colDescription.FieldName = "Description";
-            this.colDescription.MinWidth = 25;
+            this.colDescription.MinWidth = 31;
             this.colDescription.Name = "colDescription";
             this.colDescription.OptionsColumn.ReadOnly = true;
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 2;
-            this.colDescription.Width = 94;
+            this.colDescription.Width = 450;
             // 
             // btnAdd
             // 
@@ -192,12 +193,12 @@ namespace pet_management
             this.btnAdd.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAdd.Location = new System.Drawing.Point(13, 430);
+            this.btnAdd.Location = new System.Drawing.Point(14, 449);
             this.btnAdd.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(113, 38);
+            this.btnAdd.Size = new System.Drawing.Size(107, 48);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -216,12 +217,12 @@ namespace pet_management
             this.btnUpdate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnUpdate.Location = new System.Drawing.Point(160, 430);
+            this.btnUpdate.Location = new System.Drawing.Point(161, 449);
             this.btnUpdate.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnUpdate.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(113, 38);
+            this.btnUpdate.Size = new System.Drawing.Size(107, 48);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Lưu";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -240,12 +241,13 @@ namespace pet_management
             this.btnEdit.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnEdit.Location = new System.Drawing.Point(307, 430);
+            this.btnEdit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(308, 449);
             this.btnEdit.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnEdit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(113, 38);
+            this.btnEdit.Size = new System.Drawing.Size(107, 48);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -264,12 +266,12 @@ namespace pet_management
             this.btnDelete.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDelete.Location = new System.Drawing.Point(454, 430);
+            this.btnDelete.Location = new System.Drawing.Point(455, 449);
             this.btnDelete.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(113, 38);
+            this.btnDelete.Size = new System.Drawing.Size(107, 48);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -288,12 +290,12 @@ namespace pet_management
             this.btnCancel.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancel.Location = new System.Drawing.Point(601, 430);
+            this.btnCancel.Location = new System.Drawing.Point(602, 449);
             this.btnCancel.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnCancel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(113, 38);
+            this.btnCancel.Size = new System.Drawing.Size(107, 48);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -422,7 +424,7 @@ namespace pet_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 483);
+            this.ClientSize = new System.Drawing.Size(728, 511);
             this.Controls.Add(this.lytInput);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
@@ -438,7 +440,7 @@ namespace pet_management
             this.Load += new System.EventHandler(this.frmRole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lytInput)).EndInit();
             this.lytInput.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
@@ -457,7 +459,7 @@ namespace pet_management
 
         #endregion
         private DevExpress.XtraGrid.GridControl grcRole;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewRole;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnEdit;

@@ -23,8 +23,8 @@ namespace pet_management
         // Get connection string from App.config file
         // private string conString = System.Configuration.ConfigurationManager.ConnectionStrings["medicalManagement"].ConnectionString;
         private static string SERVER = "151.106.117.0";
-        private static string DATABASE = "u116687685_udweb02";
-        private static string USERNAME = "u116687685_udweb02";
+        private static string DATABASE = "u116687685_pet";
+        private static string USERNAME = "u116687685_pet";
         private static string PASSWORD  = "Thanhphuc3010@";
         private string conString = "server=" + SERVER + ";database=" + DATABASE + ";uid=" + USERNAME + ";pwd=" + PASSWORD + ";";
         public DataTable excuteQuery(string query, object[] parameter = null)

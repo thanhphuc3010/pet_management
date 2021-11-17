@@ -12,6 +12,21 @@ namespace pet_management
 {
     public static class Helper
     {
+        public static void FillCombo(this ComboBox cbo, string sql, string value, string display, object[] param)
+        {
+            DataTable data = DataProvider.Instance.excuteQuery(sql, param);
+            cbo.DisplayMember = display; //Trường hiển thị
+            cbo.ValueMember = value; //Trường giá trị
+            cbo.DataSource = data;
+        }
+
+        public static void FillCombo(this ComboBox cbo, string value, string display, DataTable dataSource)
+        {
+            cbo.DisplayMember = display; //Trường hiển thị
+            cbo.ValueMember = value; //Trường giá trị
+            cbo.DataSource = dataSource;
+        }
+
         /**
          * <summary>Disable a control like: button, textbox, label,...</summary>
          */
@@ -92,6 +107,23 @@ namespace pet_management
             return result;
         }
 
+        public static string GenerateId(string prefix, string query, string field)
+        {
+            DataTable data = DataProvider.Instance.excuteQuery(query);
+            int key = 0;
+            if (data.Rows.Count > 0)
+            {
+                string lastID = data.Rows[0][field].ToString();
+                string index = lastID.Substring(prefix.Length);
+                key = Convert.ToInt16(index) + 1;
+            }
+            else
+            {
+                key = 1;
+            }
+            return prefix + String.Format("{0:00000}", key);
+        }
+
         public static string formatStringNumber(int i, string prefix)
         {
             string result;
@@ -136,12 +168,12 @@ namespace pet_management
             }
         }
 
-        public static void showDialogConfirmDelete(string message, Action callback)
+        public static void showDialogConfirmDelete(string message, Func<string, bool> callback, string id)
         {
             DialogResult dialogResult = MessageBox.Show(message, "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
             if (dialogResult == DialogResult.Yes)
             {
-                callback();
+                callback(id);
             }
             else
             {

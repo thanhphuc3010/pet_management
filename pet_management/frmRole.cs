@@ -165,5 +165,16 @@ namespace pet_management
                 MessageBox.Show(string.Format("DoubleClick on row: {0}, column: {1}.", info.RowHandle, name));
             }
         }
+
+        private void gridViewRole_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            MessageBox.Show(e.CellValue.ToString());
+        }
+
+        private void gridViewRole_RowClick(object sender, RowClickEventArgs e)
+        {
+            string id = (sender as GridView).GetFocusedRowCellValue("Code").ToString();
+            MessageBox.Show(id);
+        }
     }
 }
