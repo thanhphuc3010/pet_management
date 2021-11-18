@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using Dapper;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,7 +27,9 @@ namespace DAO
         private static string DATABASE = "u116687685_pet";
         private static string USERNAME = "u116687685_pet";
         private static string PASSWORD  = "Thanhphuc3010@";
-        private string conString = "server=" + SERVER + ";database=" + DATABASE + ";uid=" + USERNAME + ";pwd=" + PASSWORD + ";";
+        private static string conString = "server=" + SERVER + ";database=" + DATABASE + ";uid=" + USERNAME + ";pwd=" + PASSWORD + ";";
+
+        public static IDbConnection Connect = new MySqlConnection(conString);
         public DataTable ExcuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

@@ -296,7 +296,7 @@ namespace pet_management
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcCustomer);
             this.Name = "frmCustomer";
-            this.Text = "frmCustomer";
+            this.Text = "Khách hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();

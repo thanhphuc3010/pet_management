@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace pet_management
 {
-    class MyColor
+    public class MyColor
     {
+        public static Color Primary = Color.FromArgb(16, 68, 115);
     }
 }

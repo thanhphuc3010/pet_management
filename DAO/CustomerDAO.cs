@@ -4,11 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 using DTO;
 
 namespace DAO
 {
-    public class CustomerDAO
+    public class CustomerDAO : BaseDAO<Customer>
     {
         public static Customer GetCustomerByID(string id)
         {
@@ -68,7 +69,6 @@ namespace DAO
 
         public static List<Customer> GetCustomers()
         {
-
             var result = new List<Customer>();
             try
             {
@@ -84,6 +84,20 @@ namespace DAO
             {
                 throw ex;
             }
+            return result;
+        }
+
+        public static List<Customer> GetCustomersDapper()
+        {
+            string query = "SELECT * FROM staff";
+            if (db.State == ConnectionState.Closed) db.Open();
+            //Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+
+            MapperColumn mapper = new MapperColumn();
+            SqlMapper.SetTypeMap(typeof(Customer), mapper.GetMap<Customer>());
+
+            List<Customer> result = db.Query<Customer>(query).ToList();
+            db.Close();
             return result;
         }
 
