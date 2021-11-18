@@ -153,6 +153,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TextBoxUtils.cs" />
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>

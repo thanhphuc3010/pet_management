@@ -27,6 +27,16 @@ namespace pet_management
             this.frmStaff = frmStaff;
             this.staff = staff;
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            BeginInvoke(new MethodInvoker(() =>
+            {
+                txtFirstname.FocusEnd();
+            }));
+        }
+
         private void frmStaffInfo_Load(object sender, EventArgs e)
         {
             roleBindingSource.DataSource = RoleBUS.GetRoles();
