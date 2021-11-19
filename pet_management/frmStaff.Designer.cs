@@ -50,6 +50,7 @@ namespace pet_management
             this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStaff)).BeginInit();
@@ -65,6 +66,8 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcStaff.DataSource = this.staffBindingSource;
             this.grcStaff.Location = new System.Drawing.Point(12, 50);
+            this.grcStaff.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.grcStaff.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grcStaff.MainView = this.gridViewStaff;
             this.grcStaff.Name = "grcStaff";
             this.grcStaff.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -95,12 +98,17 @@ namespace pet_management
             this.colCreatedDate,
             this.colUpdatedDate});
             this.gridViewStaff.GridControl = this.grcStaff;
+            this.gridViewStaff.IndicatorWidth = 50;
             this.gridViewStaff.Name = "gridViewStaff";
             this.gridViewStaff.OptionsBehavior.Editable = false;
+            this.gridViewStaff.OptionsView.ShowGroupPanel = false;
+            this.gridViewStaff.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridViewStaff_CustomDrawRowIndicator);
             this.gridViewStaff.DoubleClick += new System.EventHandler(this.gridViewStaff_DoubleClick);
             // 
             // colId
             // 
+            this.colId.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colId.AppearanceCell.Options.UseFont = true;
             this.colId.FieldName = "Id";
             this.colId.MinWidth = 25;
             this.colId.Name = "colId";
@@ -108,6 +116,8 @@ namespace pet_management
             // 
             // colStaffNumber
             // 
+            this.colStaffNumber.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colStaffNumber.AppearanceCell.Options.UseFont = true;
             this.colStaffNumber.FieldName = "StaffNumber";
             this.colStaffNumber.MinWidth = 25;
             this.colStaffNumber.Name = "colStaffNumber";
@@ -117,6 +127,8 @@ namespace pet_management
             // 
             // colFirstName
             // 
+            this.colFirstName.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colFirstName.AppearanceCell.Options.UseFont = true;
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.MinWidth = 25;
             this.colFirstName.Name = "colFirstName";
@@ -126,6 +138,8 @@ namespace pet_management
             // 
             // colLastName
             // 
+            this.colLastName.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLastName.AppearanceCell.Options.UseFont = true;
             this.colLastName.FieldName = "LastName";
             this.colLastName.MinWidth = 25;
             this.colLastName.Name = "colLastName";
@@ -135,6 +149,8 @@ namespace pet_management
             // 
             // colBirthday
             // 
+            this.colBirthday.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colBirthday.AppearanceCell.Options.UseFont = true;
             this.colBirthday.FieldName = "Birthday";
             this.colBirthday.MinWidth = 25;
             this.colBirthday.Name = "colBirthday";
@@ -144,6 +160,8 @@ namespace pet_management
             // 
             // colPhone
             // 
+            this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPhone.AppearanceCell.Options.UseFont = true;
             this.colPhone.FieldName = "Phone";
             this.colPhone.MinWidth = 25;
             this.colPhone.Name = "colPhone";
@@ -153,6 +171,8 @@ namespace pet_management
             // 
             // colEmail
             // 
+            this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colEmail.AppearanceCell.Options.UseFont = true;
             this.colEmail.FieldName = "Email";
             this.colEmail.MinWidth = 25;
             this.colEmail.Name = "colEmail";
@@ -162,6 +182,8 @@ namespace pet_management
             // 
             // colAddress
             // 
+            this.colAddress.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAddress.AppearanceCell.Options.UseFont = true;
             this.colAddress.FieldName = "Address";
             this.colAddress.MinWidth = 25;
             this.colAddress.Name = "colAddress";
@@ -171,6 +193,8 @@ namespace pet_management
             // 
             // colIdRole
             // 
+            this.colIdRole.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colIdRole.AppearanceCell.Options.UseFont = true;
             this.colIdRole.ColumnEdit = this.repositoryItemGridLookUpEdit1;
             this.colIdRole.FieldName = "IdRole";
             this.colIdRole.MinWidth = 25;
@@ -203,6 +227,8 @@ namespace pet_management
             // 
             // colActive
             // 
+            this.colActive.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colActive.AppearanceCell.Options.UseFont = true;
             this.colActive.FieldName = "Active";
             this.colActive.MinWidth = 25;
             this.colActive.Name = "colActive";
@@ -210,6 +236,8 @@ namespace pet_management
             // 
             // colPassword
             // 
+            this.colPassword.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPassword.AppearanceCell.Options.UseFont = true;
             this.colPassword.FieldName = "Password";
             this.colPassword.MinWidth = 25;
             this.colPassword.Name = "colPassword";
@@ -217,6 +245,8 @@ namespace pet_management
             // 
             // colCreatedDate
             // 
+            this.colCreatedDate.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCreatedDate.AppearanceCell.Options.UseFont = true;
             this.colCreatedDate.FieldName = "CreatedDate";
             this.colCreatedDate.MinWidth = 25;
             this.colCreatedDate.Name = "colCreatedDate";
@@ -224,6 +254,8 @@ namespace pet_management
             // 
             // colUpdatedDate
             // 
+            this.colUpdatedDate.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colUpdatedDate.AppearanceCell.Options.UseFont = true;
             this.colUpdatedDate.FieldName = "UpdatedDate";
             this.colUpdatedDate.MinWidth = 25;
             this.colUpdatedDate.Name = "colUpdatedDate";
@@ -232,22 +264,34 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(601, 5);
+            this.btnAdd.Location = new System.Drawing.Point(585, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(694, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 39);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcStaff);
             this.Name = "frmStaff";
-            this.Text = "frmStaff";
+            this.Text = "Nhân viên";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
@@ -281,5 +325,6 @@ namespace pet_management
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private System.Windows.Forms.BindingSource roleStaffBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
     }
 }

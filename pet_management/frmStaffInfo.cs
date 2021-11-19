@@ -21,11 +21,13 @@ namespace pet_management
     {
         private readonly frmStaff frmStaff;
         private Staff staff;
-        public frmStaffInfo(frmStaff frmStaff, Staff staff)
+        private bool isEditMode;
+        public frmStaffInfo(frmStaff frmStaff, Staff staff, bool isEditMode)
         {
             InitializeComponent();
             this.frmStaff = frmStaff;
             this.staff = staff;
+            this.isEditMode = isEditMode;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -49,8 +51,8 @@ namespace pet_management
             }
             else
             {
-                this.Text = "Thông tin khách hàng";
-                //isEdit = true;
+                string fullname = $"{staff.FirstName} {staff.LastName}";
+                this.Text = $"Thông tin nhân viên {fullname}";
                 BindStaffInfo();
             }
             txtFirstname.Focus();
@@ -82,17 +84,21 @@ namespace pet_management
             staff.Password = GeneratePassword(6);
             staff.Address = txtAddress.Text.ToString().Trim();
 
-            StaffBUS.Save(staff);
-            SendPassword(staff);
+            if (isEditMode)
+            {
+                staff.Id = this.staff.Id;
+                StaffBUS.Update(staff);
+            } else
+            {
+                StaffBUS.Save(staff);
+                SendPassword(staff);
+            }
 
             if (frmStaff != null)
             {
                 frmStaff.LoadData();
                 this.Close();
             }
-
-            // Call send password function to send the password via email
-            //sendPassword(staff);
         }
 
 

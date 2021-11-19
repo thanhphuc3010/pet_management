@@ -21,7 +21,23 @@ namespace BUS
         }
         public static bool Save(Staff s)
         {
+            if (string.IsNullOrWhiteSpace(s.Address))
+            {
+                s.Address = null;
+            }
             return StaffDAO.Save(s);
+        }
+        public static bool Update(Staff s)
+        {
+            if (string.IsNullOrWhiteSpace(s.Address))
+            {
+                s.Address = null;
+            }
+            return StaffDAO.Update(s);
+        }
+        public static bool Delete(string id)
+        {
+            return StaffDAO.Delete(id);
         }
     }
 }

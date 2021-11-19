@@ -346,7 +346,10 @@ namespace pet_management
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtcStaff);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "frmStaffInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStaffInfo";
             this.Load += new System.EventHandler(this.frmStaffInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtcStaff)).EndInit();

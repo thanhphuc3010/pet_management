@@ -36,7 +36,7 @@ namespace pet_management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmStaffInfo f = new frmStaffInfo(this, null);
+            frmStaffInfo f = new frmStaffInfo(this, null, isEditMode: false);
             f.ShowDialog();
         }
 
@@ -49,9 +49,42 @@ namespace pet_management
             {
                 string id = view.GetFocusedRowCellValue("Id").ToString();
                 Staff staff = StaffBUS.GetStaffById(id);
-                frmStaffInfo f = new frmStaffInfo(this, staff);
+                frmStaffInfo f = new frmStaffInfo(this, staff, isEditMode: true);
                 f.ShowDialog();
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = gridViewStaff.GetFocusedRowCellValue("Id").ToString();
+            if (id == null) return;
+            Helper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa bản ghi này không ?", DeleteStaff, id);
+        }
+
+        private bool DeleteStaff(string id)
+        {
+            bool result = StaffBUS.Delete(id);
+            if (result)
+            {
+                LoadData();
+            }
+            return result;
+        }
+
+        private void gridViewStaff_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view.IsDataRow(e.RowHandle))
+            {
+                e.Info.DisplayText = (view.GetVisibleIndex(e.RowHandle) + 1).ToString();
+                //e.Info.ImageIndex = -1;
+            }
+            var pen = view.PaintAppearance.HorzLine.GetBackPen(e.Cache);
+            var startPoint = new Point(e.Bounds.Location.X, e.Bounds.Bottom - (int)pen.Width);
+            var endPoint = new Point(e.Bounds.Right, e.Bounds.Bottom - (int)pen.Width);
+            e.DefaultDraw();
+            e.Cache.DrawLine(pen, startPoint, endPoint);
+            e.Handled = true;
         }
     }
 }
