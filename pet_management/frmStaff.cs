@@ -86,5 +86,23 @@ namespace pet_management
             e.Cache.DrawLine(pen, startPoint, endPoint);
             e.Handled = true;
         }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string keySearch = txtSearch.Text.ToString();
+            if (!string.IsNullOrEmpty(keySearch))
+            {
+                gridViewStaff.ApplyFindFilter(keySearch);
+            }
+            else
+            {
+                gridViewStaff.ClearFindFilter();
+            }
+        }
     }
 }

@@ -51,12 +51,14 @@ namespace pet_management
             this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSearch = new DevExpress.XtraEditors.SearchControl();
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleStaffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grcStaff
@@ -65,7 +67,7 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcStaff.DataSource = this.staffBindingSource;
-            this.grcStaff.Location = new System.Drawing.Point(12, 50);
+            this.grcStaff.Location = new System.Drawing.Point(12, 59);
             this.grcStaff.LookAndFeel.SkinName = "Office 2010 Blue";
             this.grcStaff.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grcStaff.MainView = this.gridViewStaff;
@@ -83,6 +85,7 @@ namespace pet_management
             // 
             // gridViewStaff
             // 
+            this.gridViewStaff.ColumnPanelRowHeight = 30;
             this.gridViewStaff.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colStaffNumber,
@@ -109,6 +112,12 @@ namespace pet_management
             // 
             this.colId.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colId.AppearanceCell.Options.UseFont = true;
+            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colId.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colId.AppearanceHeader.Options.UseFont = true;
+            this.colId.AppearanceHeader.Options.UseForeColor = true;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.FieldName = "Id";
             this.colId.MinWidth = 25;
             this.colId.Name = "colId";
@@ -118,6 +127,13 @@ namespace pet_management
             // 
             this.colStaffNumber.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colStaffNumber.AppearanceCell.Options.UseFont = true;
+            this.colStaffNumber.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colStaffNumber.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colStaffNumber.AppearanceHeader.Options.UseFont = true;
+            this.colStaffNumber.AppearanceHeader.Options.UseForeColor = true;
+            this.colStaffNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colStaffNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStaffNumber.Caption = "Mã nhân viên";
             this.colStaffNumber.FieldName = "StaffNumber";
             this.colStaffNumber.MinWidth = 25;
             this.colStaffNumber.Name = "colStaffNumber";
@@ -129,6 +145,13 @@ namespace pet_management
             // 
             this.colFirstName.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colFirstName.AppearanceCell.Options.UseFont = true;
+            this.colFirstName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colFirstName.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colFirstName.AppearanceHeader.Options.UseFont = true;
+            this.colFirstName.AppearanceHeader.Options.UseForeColor = true;
+            this.colFirstName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colFirstName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colFirstName.Caption = "Họ đệm";
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.MinWidth = 25;
             this.colFirstName.Name = "colFirstName";
@@ -140,6 +163,13 @@ namespace pet_management
             // 
             this.colLastName.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colLastName.AppearanceCell.Options.UseFont = true;
+            this.colLastName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colLastName.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colLastName.AppearanceHeader.Options.UseFont = true;
+            this.colLastName.AppearanceHeader.Options.UseForeColor = true;
+            this.colLastName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLastName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLastName.Caption = "Tên";
             this.colLastName.FieldName = "LastName";
             this.colLastName.MinWidth = 25;
             this.colLastName.Name = "colLastName";
@@ -151,6 +181,13 @@ namespace pet_management
             // 
             this.colBirthday.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colBirthday.AppearanceCell.Options.UseFont = true;
+            this.colBirthday.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colBirthday.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colBirthday.AppearanceHeader.Options.UseFont = true;
+            this.colBirthday.AppearanceHeader.Options.UseForeColor = true;
+            this.colBirthday.AppearanceHeader.Options.UseTextOptions = true;
+            this.colBirthday.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colBirthday.Caption = "Ngày sinh";
             this.colBirthday.FieldName = "Birthday";
             this.colBirthday.MinWidth = 25;
             this.colBirthday.Name = "colBirthday";
@@ -162,6 +199,13 @@ namespace pet_management
             // 
             this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPhone.AppearanceCell.Options.UseFont = true;
+            this.colPhone.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPhone.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colPhone.AppearanceHeader.Options.UseFont = true;
+            this.colPhone.AppearanceHeader.Options.UseForeColor = true;
+            this.colPhone.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPhone.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPhone.Caption = "Số điện thoại";
             this.colPhone.FieldName = "Phone";
             this.colPhone.MinWidth = 25;
             this.colPhone.Name = "colPhone";
@@ -173,6 +217,12 @@ namespace pet_management
             // 
             this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colEmail.AppearanceCell.Options.UseFont = true;
+            this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colEmail.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colEmail.AppearanceHeader.Options.UseFont = true;
+            this.colEmail.AppearanceHeader.Options.UseForeColor = true;
+            this.colEmail.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmail.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEmail.FieldName = "Email";
             this.colEmail.MinWidth = 25;
             this.colEmail.Name = "colEmail";
@@ -184,6 +234,13 @@ namespace pet_management
             // 
             this.colAddress.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colAddress.AppearanceCell.Options.UseFont = true;
+            this.colAddress.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAddress.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colAddress.AppearanceHeader.Options.UseFont = true;
+            this.colAddress.AppearanceHeader.Options.UseForeColor = true;
+            this.colAddress.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAddress.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddress.Caption = "Địa chỉ";
             this.colAddress.FieldName = "Address";
             this.colAddress.MinWidth = 25;
             this.colAddress.Name = "colAddress";
@@ -195,6 +252,13 @@ namespace pet_management
             // 
             this.colIdRole.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colIdRole.AppearanceCell.Options.UseFont = true;
+            this.colIdRole.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colIdRole.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colIdRole.AppearanceHeader.Options.UseFont = true;
+            this.colIdRole.AppearanceHeader.Options.UseForeColor = true;
+            this.colIdRole.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIdRole.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIdRole.Caption = "Vai trò";
             this.colIdRole.ColumnEdit = this.repositoryItemGridLookUpEdit1;
             this.colIdRole.FieldName = "IdRole";
             this.colIdRole.MinWidth = 25;
@@ -229,6 +293,12 @@ namespace pet_management
             // 
             this.colActive.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colActive.AppearanceCell.Options.UseFont = true;
+            this.colActive.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colActive.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colActive.AppearanceHeader.Options.UseFont = true;
+            this.colActive.AppearanceHeader.Options.UseForeColor = true;
+            this.colActive.AppearanceHeader.Options.UseTextOptions = true;
+            this.colActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colActive.FieldName = "Active";
             this.colActive.MinWidth = 25;
             this.colActive.Name = "colActive";
@@ -238,6 +308,12 @@ namespace pet_management
             // 
             this.colPassword.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPassword.AppearanceCell.Options.UseFont = true;
+            this.colPassword.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPassword.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colPassword.AppearanceHeader.Options.UseFont = true;
+            this.colPassword.AppearanceHeader.Options.UseForeColor = true;
+            this.colPassword.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPassword.FieldName = "Password";
             this.colPassword.MinWidth = 25;
             this.colPassword.Name = "colPassword";
@@ -247,6 +323,12 @@ namespace pet_management
             // 
             this.colCreatedDate.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCreatedDate.AppearanceCell.Options.UseFont = true;
+            this.colCreatedDate.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCreatedDate.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colCreatedDate.AppearanceHeader.Options.UseFont = true;
+            this.colCreatedDate.AppearanceHeader.Options.UseForeColor = true;
+            this.colCreatedDate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colCreatedDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCreatedDate.FieldName = "CreatedDate";
             this.colCreatedDate.MinWidth = 25;
             this.colCreatedDate.Name = "colCreatedDate";
@@ -256,6 +338,12 @@ namespace pet_management
             // 
             this.colUpdatedDate.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colUpdatedDate.AppearanceCell.Options.UseFont = true;
+            this.colUpdatedDate.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colUpdatedDate.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colUpdatedDate.AppearanceHeader.Options.UseFont = true;
+            this.colUpdatedDate.AppearanceHeader.Options.UseForeColor = true;
+            this.colUpdatedDate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUpdatedDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUpdatedDate.FieldName = "UpdatedDate";
             this.colUpdatedDate.MinWidth = 25;
             this.colUpdatedDate.Name = "colUpdatedDate";
@@ -264,7 +352,9 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(585, 5);
+            this.btnAdd.Location = new System.Drawing.Point(585, 10);
+            this.btnAdd.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
             this.btnAdd.TabIndex = 1;
@@ -274,18 +364,33 @@ namespace pet_management
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(694, 5);
+            this.btnDelete.Location = new System.Drawing.Point(694, 10);
+            this.btnDelete.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(12, 17);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.txtSearch.Size = new System.Drawing.Size(551, 24);
+            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcStaff);
@@ -299,6 +404,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleStaffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,5 +432,6 @@ namespace pet_management
         private System.Windows.Forms.BindingSource roleStaffBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SearchControl txtSearch;
     }
 }
