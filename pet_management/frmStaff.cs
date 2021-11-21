@@ -30,6 +30,10 @@ namespace pet_management
         public void LoadData()
         {
             List<Staff> result = StaffBUS.GetStaffs();
+            foreach (Staff staff in result)
+            {
+                staff.FullName = $"{staff.FirstName} {staff.LastName}";
+            }
             staffBindingSource.DataSource = result;
             roleStaffBindingSource.DataSource = RoleBUS.GetRoles();
         }
@@ -58,7 +62,7 @@ namespace pet_management
         {
             string id = gridViewStaff.GetFocusedRowCellValue("Id").ToString();
             if (id == null) return;
-            Helper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa bản ghi này không ?", DeleteStaff, id);
+            MyHelper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa bản ghi này không ?", DeleteStaff, id);
         }
 
         private bool DeleteStaff(string id)

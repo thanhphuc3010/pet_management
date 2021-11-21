@@ -11,6 +11,7 @@ namespace DTO
 {
     public class Staff
     {
+        private string fullname;
         public int Id { get; set; }
 
         [Description("staff_number")]
@@ -19,6 +20,16 @@ namespace DTO
         public string FirstName { get; set; }
         [Description("last_name")]
         public string LastName { get; set; }
+        public string FullName {
+            get
+            {
+                return fullname;
+            }
+            set
+            {
+                fullname = value;
+            } 
+        }
 		public DateTime? Birthday { get; set; }
 		public string Phone { get; set; }
 		public string Email { get; set; }
@@ -45,6 +56,7 @@ namespace DTO
             IdRole = roleId;
             Active = active;
             Password = password;
+            FullName = firstname + " " + lastname;
         }
 
         public Staff(DataRow item)

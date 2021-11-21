@@ -52,6 +52,7 @@ namespace pet_management
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStaff)).BeginInit();
@@ -91,6 +92,7 @@ namespace pet_management
             this.colStaffNumber,
             this.colFirstName,
             this.colLastName,
+            this.colFullName,
             this.colBirthday,
             this.colPhone,
             this.colEmail,
@@ -245,7 +247,7 @@ namespace pet_management
             this.colAddress.MinWidth = 25;
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 6;
+            this.colAddress.VisibleIndex = 7;
             this.colAddress.Width = 94;
             // 
             // colIdRole
@@ -264,7 +266,7 @@ namespace pet_management
             this.colIdRole.MinWidth = 25;
             this.colIdRole.Name = "colIdRole";
             this.colIdRole.Visible = true;
-            this.colIdRole.VisibleIndex = 7;
+            this.colIdRole.VisibleIndex = 8;
             this.colIdRole.Width = 94;
             // 
             // repositoryItemGridLookUpEdit1
@@ -385,6 +387,16 @@ namespace pet_management
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
+            // colFullName
+            // 
+            this.colFullName.Caption = "Họ và tên";
+            this.colFullName.FieldName = "FullName";
+            this.colFullName.MinWidth = 25;
+            this.colFullName.Name = "colFullName";
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 6;
+            this.colFullName.Width = 94;
+            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -433,5 +445,6 @@ namespace pet_management
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SearchControl txtSearch;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName;
     }
 }

@@ -79,7 +79,7 @@ namespace pet_management
                     if (isSuccess)
                     {
                         speciesBindingSource.RemoveCurrent();
-                        Helper.showSuccessMessage("Xóa bản ghi thành công");
+                        MyHelper.showSuccessMessage("Xóa bản ghi thành công");
                     }
                     grcDemo.Refresh();
                     state = EntityState.Unchaged;

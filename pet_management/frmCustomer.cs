@@ -66,7 +66,7 @@ namespace pet_management
         {
             string id = gridViewCustomer.GetFocusedRowCellValue("Id").ToString();
             if (id == null) return;
-            Helper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa khách hàng", DeleteCustomer, id);
+            MyHelper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa khách hàng", DeleteCustomer, id);
         }
 
         private bool DeleteCustomer(string id)

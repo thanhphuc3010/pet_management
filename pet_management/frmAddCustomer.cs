@@ -57,7 +57,7 @@ namespace pet_management
             {
                 txtCustomerNumber.ReadOnly = true;
                 string query = "SELECT * FROM customer ORDER BY customer_number DESC LIMIT 1";
-                txtCustomerNumber.Text = Helper.GenerateId("KH", query, "customer_number");
+                txtCustomerNumber.Text = MyHelper.GenerateId("KH", query, "customer_number");
             } else
             {
                 this.Text = "Thông tin khách hàng";

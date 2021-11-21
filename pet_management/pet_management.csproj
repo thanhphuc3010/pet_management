@@ -113,12 +113,6 @@
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
     <Compile Include="EntityState.cs" />
-    <Compile Include="fmrPet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fmrPet.Designer.cs">
-      <DependentUpon>fmrPet.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +130,12 @@
     </Compile>
     <Compile Include="frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPet.Designer.cs">
+      <DependentUpon>frmPet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPetInfo.cs">
       <SubType>Form</SubType>
@@ -173,7 +173,7 @@
     <Compile Include="frmStaffInfo.Designer.cs">
       <DependentUpon>frmStaffInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="MyHelper.cs" />
     <Compile Include="MyColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,9 +183,6 @@
       <DependentUpon>QLHTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TextBoxUtils.cs" />
-    <EmbeddedResource Include="fmrPet.resx">
-      <DependentUpon>fmrPet.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPet.resx">
+      <DependentUpon>frmPet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPetInfo.resx">
       <DependentUpon>frmPetInfo.cs</DependentUpon>
@@ -224,7 +224,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
+    <None Include="Properties\DataSources\DTO.Pet.datasource" />
     <None Include="Properties\DataSources\DTO.Role.datasource" />
     <None Include="Properties\DataSources\DTO.Species.datasource" />
     <None Include="Properties\DataSources\DTO.Staff.datasource" />

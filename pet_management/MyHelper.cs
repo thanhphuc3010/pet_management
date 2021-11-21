@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public static class Helper
+    public static class MyHelper
     {
         public static void FillCombo(this ComboBox cbo, string sql, string value, string display, object[] param)
         {

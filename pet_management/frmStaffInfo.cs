@@ -47,7 +47,7 @@ namespace pet_management
             {
                 txtNumber.ReadOnly = true;
                 string query = "SELECT * FROM staff ORDER BY staff_number DESC LIMIT 1";
-                txtNumber.Text = Helper.GenerateId("S", query, "staff_number");
+                txtNumber.Text = MyHelper.GenerateId("S", query, "staff_number");
             }
             else
             {

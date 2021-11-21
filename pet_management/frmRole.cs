@@ -82,7 +82,7 @@ namespace pet_management
                     if (isSuccess)
                     {
                         roleBindingSource.RemoveCurrent();
-                        Helper.showSuccessMessage("Xóa bản ghi thành công");
+                        MyHelper.showSuccessMessage("Xóa bản ghi thành công");
                     }
                     grcRole.Refresh();
                     state = EntityState.Unchaged;
