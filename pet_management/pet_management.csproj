@@ -226,6 +226,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
+    <None Include="Properties\DataSources\DTO.GroupService.datasource" />
     <None Include="Properties\DataSources\DTO.Pet.datasource" />
     <None Include="Properties\DataSources\DTO.Role.datasource" />
     <None Include="Properties\DataSources\DTO.Species.datasource" />

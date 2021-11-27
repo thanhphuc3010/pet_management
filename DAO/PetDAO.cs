@@ -15,7 +15,6 @@ namespace DAO
         {
             string query = "SELECT * FROM pet";
             if (db.State == ConnectionState.Closed) db.Open();
-            //Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
             MapperColumn mapper = new MapperColumn();
             SqlMapper.SetTypeMap(typeof(Pet), mapper.GetMap<Pet>());
