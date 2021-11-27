@@ -36,9 +36,15 @@ namespace pet_management
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGroupServiceId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGroupService = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.groupServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnitId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoUnit = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
@@ -46,17 +52,17 @@ namespace pet_management
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.repoGroupService = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGroupService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grcService
@@ -66,7 +72,8 @@ namespace pet_management
             this.grcService.MainView = this.gridView1;
             this.grcService.Name = "grcService";
             this.grcService.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repoGroupService});
+            this.repoGroupService,
+            this.repoUnit});
             this.grcService.Size = new System.Drawing.Size(1000, 640);
             this.grcService.TabIndex = 0;
             this.grcService.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -117,6 +124,28 @@ namespace pet_management
             this.colGroupServiceId.VisibleIndex = 0;
             this.colGroupServiceId.Width = 153;
             // 
+            // repoGroupService
+            // 
+            this.repoGroupService.AutoHeight = false;
+            this.repoGroupService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGroupService.DataSource = this.groupServiceBindingSource;
+            this.repoGroupService.DisplayMember = "Name";
+            this.repoGroupService.Name = "repoGroupService";
+            this.repoGroupService.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.repoGroupService.ValueMember = "Id";
+            // 
+            // groupServiceBindingSource
+            // 
+            this.groupServiceBindingSource.DataSource = typeof(DTO.GroupService);
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // colName
             // 
             this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,12 +181,35 @@ namespace pet_management
             this.colUnitId.AppearanceHeader.Options.UseTextOptions = true;
             this.colUnitId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUnitId.Caption = "ĐVT";
+            this.colUnitId.ColumnEdit = this.repoUnit;
             this.colUnitId.FieldName = "UnitId";
             this.colUnitId.MinWidth = 25;
             this.colUnitId.Name = "colUnitId";
             this.colUnitId.Visible = true;
             this.colUnitId.VisibleIndex = 4;
             this.colUnitId.Width = 71;
+            // 
+            // repoUnit
+            // 
+            this.repoUnit.AutoHeight = false;
+            this.repoUnit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoUnit.DataSource = this.unitBindingSource;
+            this.repoUnit.DisplayMember = "Name";
+            this.repoUnit.Name = "repoUnit";
+            this.repoUnit.PopupView = this.gridView2;
+            this.repoUnit.ValueMember = "Id";
+            // 
+            // unitBindingSource
+            // 
+            this.unitBindingSource.DataSource = typeof(DTO.Unit);
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colPrice
             // 
@@ -246,42 +298,21 @@ namespace pet_management
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xóa";
             // 
-            // simpleButton4
+            // btnQuit
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(1018, 658);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(111, 29);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "simpleButton1";
-            // 
-            // repoGroupService
-            // 
-            this.repoGroupService.AutoHeight = false;
-            this.repoGroupService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoGroupService.DataSource = this.groupServiceBindingSource;
-            this.repoGroupService.DisplayMember = "Name";
-            this.repoGroupService.Name = "repoGroupService";
-            this.repoGroupService.PopupView = this.repositoryItemGridLookUpEdit1View;
-            this.repoGroupService.ValueMember = "Id";
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // groupServiceBindingSource
-            // 
-            this.groupServiceBindingSource.DataSource = typeof(DTO.GroupService);
+            this.btnQuit.Location = new System.Drawing.Point(1032, 653);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(97, 34);
+            this.btnQuit.TabIndex = 3;
+            this.btnQuit.Text = "&Thoát";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // frmService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 697);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -296,10 +327,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGroupService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,7 +348,7 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btnQuit;
         private System.Windows.Forms.BindingSource serviceBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colGroupServiceId;
@@ -326,5 +360,8 @@ namespace pet_management
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGroupService;
         private System.Windows.Forms.BindingSource groupServiceBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoUnit;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.BindingSource unitBindingSource;
     }
 }

@@ -35,6 +35,12 @@ namespace DAO
             }
         }
 
+        public static int GetLastID()
+        {
+            string query = "SELECT * FROM service ORDER BY id DESC LIMIT 1";
+            return Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query));
+        }
+
         public static bool Save(GroupService value)
         {
             bool result = false;

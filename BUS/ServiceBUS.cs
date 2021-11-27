@@ -16,7 +16,7 @@ namespace BUS
         }
         public static bool Save(Service service)
         {
-            return ServiceBUS.Save(service);
+            return ServiceDAO.Save(service);
         }
     }
 }

@@ -28,5 +28,10 @@ namespace BUS
         {
             return GroupServiceDAO.Delete(id);
         }
+
+        public static int GetLastID()
+        {
+            return GroupServiceDAO.GetLastID();
+        }
     }
 }

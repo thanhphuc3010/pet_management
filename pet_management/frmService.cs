@@ -21,7 +21,7 @@ namespace pet_management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmServiceInfor f = new frmServiceInfor();
+            frmServiceInfor f = new frmServiceInfor(this, null, false);
             f.ShowDialog();
         }
 
@@ -33,6 +33,12 @@ namespace pet_management
         {
             serviceBindingSource.DataSource = ServiceBUS.GetServices();
             groupServiceBindingSource.DataSource = GroupServiceBUS.GetGroupServices();
+            unitBindingSource.DataSource = UnitBUS.GetUnits();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

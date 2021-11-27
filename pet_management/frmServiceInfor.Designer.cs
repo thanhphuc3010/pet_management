@@ -31,7 +31,7 @@ namespace pet_management
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTax = new DevExpress.XtraEditors.TextEdit();
             this.gluUnit = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtPrice = new DevExpress.XtraEditors.TextEdit();
@@ -46,7 +46,7 @@ namespace pet_management
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTax = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lytTax = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,9 +63,10 @@ namespace pet_management
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.groupServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
@@ -80,7 +81,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lytTax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -91,12 +92,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.txtId);
-            this.layoutControl1.Controls.Add(this.textEdit4);
+            this.layoutControl1.Controls.Add(this.txtTax);
             this.layoutControl1.Controls.Add(this.gluUnit);
             this.layoutControl1.Controls.Add(this.txtPrice);
             this.layoutControl1.Controls.Add(this.txtName);
@@ -109,21 +111,29 @@ namespace pet_management
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // textEdit4
+            // txtTax
             // 
-            this.textEdit4.Location = new System.Drawing.Point(421, 88);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(188, 24);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 9;
+            this.txtTax.Location = new System.Drawing.Point(421, 88);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.Properties.DisplayFormat.FormatString = "N2";
+            this.txtTax.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTax.Properties.Mask.EditMask = "n";
+            this.txtTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTax.Size = new System.Drawing.Size(188, 24);
+            this.txtTax.StyleController = this.layoutControl1;
+            this.txtTax.TabIndex = 9;
             // 
             // gluUnit
             // 
+            this.gluUnit.EditValue = "";
             this.gluUnit.Location = new System.Drawing.Point(421, 50);
             this.gluUnit.Name = "gluUnit";
             this.gluUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluUnit.Properties.DataSource = this.unitBindingSource;
+            this.gluUnit.Properties.DisplayMember = "Name";
             this.gluUnit.Properties.PopupView = this.gridLookUpEdit2View;
+            this.gluUnit.Properties.ValueMember = "Id";
             this.gluUnit.Size = new System.Drawing.Size(188, 24);
             this.gluUnit.StyleController = this.layoutControl1;
             this.gluUnit.TabIndex = 8;
@@ -139,6 +149,10 @@ namespace pet_management
             // 
             this.txtPrice.Location = new System.Drawing.Point(111, 88);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Properties.DisplayFormat.FormatString = "N0";
+            this.txtPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPrice.Properties.Mask.EditMask = "n0";
+            this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPrice.Size = new System.Drawing.Size(197, 24);
             this.txtPrice.StyleController = this.layoutControl1;
             this.txtPrice.TabIndex = 7;
@@ -201,7 +215,7 @@ namespace pet_management
             this.layoutControlItem3,
             this.layoutControlItem5,
             this.layoutControlItem4,
-            this.txtTax,
+            this.lytTax,
             this.layoutControlItem6,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
@@ -267,14 +281,14 @@ namespace pet_management
             this.layoutControlItem4.Text = "Đơn giá:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(96, 18);
             // 
-            // txtTax
+            // lytTax
             // 
-            this.txtTax.Control = this.textEdit4;
-            this.txtTax.Location = new System.Drawing.Point(310, 76);
-            this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(291, 28);
-            this.txtTax.Text = "Thuế (%):";
-            this.txtTax.TextSize = new System.Drawing.Size(96, 18);
+            this.lytTax.Control = this.txtTax;
+            this.lytTax.Location = new System.Drawing.Point(310, 76);
+            this.lytTax.Name = "lytTax";
+            this.lytTax.Size = new System.Drawing.Size(291, 28);
+            this.lytTax.Text = "Thuế (%):";
+            this.lytTax.TextSize = new System.Drawing.Size(96, 18);
             // 
             // btnSave
             // 
@@ -283,6 +297,7 @@ namespace pet_management
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "&Ghi nhận";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // simpleButton2
             // 
@@ -322,6 +337,7 @@ namespace pet_management
             // 
             this.txtId.Location = new System.Drawing.Point(111, 12);
             this.txtId.Name = "txtId";
+            this.txtId.Properties.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(197, 24);
             this.txtId.StyleController = this.layoutControl1;
             this.txtId.TabIndex = 10;
@@ -395,6 +411,10 @@ namespace pet_management
             // 
             this.groupServiceBindingSource.DataSource = typeof(DTO.GroupService);
             // 
+            // unitBindingSource
+            // 
+            this.unitBindingSource.DataSource = typeof(DTO.Unit);
+            // 
             // frmServiceInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -412,7 +432,7 @@ namespace pet_management
             this.Load += new System.EventHandler(this.frmServiceInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
@@ -427,7 +447,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lytTax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -438,6 +458,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,9 +479,9 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtTax;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
-        private DevExpress.XtraLayout.LayoutControlItem txtTax;
+        private DevExpress.XtraLayout.LayoutControlItem lytTax;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.BindingSource groupServiceBindingSource;
@@ -477,5 +498,6 @@ namespace pet_management
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
+        private System.Windows.Forms.BindingSource unitBindingSource;
     }
 }
