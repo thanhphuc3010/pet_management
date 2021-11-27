@@ -24,6 +24,33 @@ namespace DAO
             db.Close();
             return result;
         }
+
+        public static bool Delete(string id)
+        {
+            string sql = $"DELETE FROM pet WHERE id = {id}";
+            return DataProvider.Instance.ExcuteNonQuery(sql) == 1;
+        }
+
+        public static bool Update(Pet p)
+        {
+            string sql =
+                "UPDATE `pet` SET " +
+                "`pet_number` = @pet_number , " +
+                "`microchip` = @microchip , " +
+                "`breed_id` = @breed_id , " +
+                "`customer_id` = @customer_id , " +
+                "`name` = @name , " +
+                "`age` = @age , " +
+                "`weight` = @weight , " +
+                "`feather_color` = @feather_color , " +
+                "`note` = @note , " +
+                "`medical_history` = @medical_history , " +
+                "`updated_date` = @updated_date WHERE `id` = @id ";
+            int result = DataProvider.Instance.ExcuteNonQuery(sql,
+                         new object[] { p.PetNumber, p.Microchip, p.BreedId, p.CustomerId, p.Name, p.Age, p.Weight, p.FeatherColor, p.Note, p.MedicalHistory, DateTime.Now, p.Id });
+            return result == 1;
+        }
+
         public static bool Save(Pet p)
         {
             try

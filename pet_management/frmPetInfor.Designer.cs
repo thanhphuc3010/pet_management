@@ -38,7 +38,9 @@ namespace pet_management
             this.txtNote = new DevExpress.XtraEditors.MemoEdit();
             this.txtHistory = new DevExpress.XtraEditors.MemoEdit();
             this.cboBreed = new DevExpress.XtraEditors.LookUpEdit();
+            this.breedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboSpecies = new DevExpress.XtraEditors.LookUpEdit();
+            this.speciesPetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtMicro = new DevExpress.XtraEditors.TextEdit();
             this.txtWeight = new DevExpress.XtraEditors.TextEdit();
             this.txtFeatherColor = new DevExpress.XtraEditors.TextEdit();
@@ -46,7 +48,18 @@ namespace pet_management
             this.txtAge = new DevExpress.XtraEditors.TextEdit();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.cboCustomer = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.customerPetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colCustomerNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiscountRate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDob = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirstname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLastname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -79,19 +92,6 @@ namespace pet_management
             this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomerNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDiscountRate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDob = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFirstname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFullname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLastname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.breedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.speciesPetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerPetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lytPetInfo)).BeginInit();
             this.lytPetInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
@@ -99,7 +99,9 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboBreed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSpecies.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesPetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMicro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFeatherColor.Properties)).BeginInit();
@@ -107,6 +109,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerPetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -138,9 +141,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesPetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerPetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lytPetInfo
@@ -170,7 +170,7 @@ namespace pet_management
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnAddCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.ImageOptions.Image")));
             this.btnAddCustomer.Location = new System.Drawing.Point(573, 355);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(24, 27);
@@ -184,6 +184,7 @@ namespace pet_management
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
+            this.txtAddress.Properties.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(489, 36);
             this.txtAddress.StyleController = this.lytPetInfo;
             this.txtAddress.TabIndex = 17;
@@ -194,6 +195,7 @@ namespace pet_management
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
+            this.txtPhone.Properties.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(489, 24);
             this.txtPhone.StyleController = this.lytPetInfo;
             this.txtPhone.TabIndex = 16;
@@ -234,6 +236,10 @@ namespace pet_management
             this.cboBreed.StyleController = this.lytPetInfo;
             this.cboBreed.TabIndex = 12;
             // 
+            // breedBindingSource
+            // 
+            this.breedBindingSource.DataSource = typeof(DTO.Breed);
+            // 
             // cboSpecies
             // 
             this.cboSpecies.Location = new System.Drawing.Point(108, 135);
@@ -249,6 +255,10 @@ namespace pet_management
             this.cboSpecies.Size = new System.Drawing.Size(489, 24);
             this.cboSpecies.StyleController = this.lytPetInfo;
             this.cboSpecies.TabIndex = 11;
+            // 
+            // speciesPetBindingSource
+            // 
+            this.speciesPetBindingSource.DataSource = typeof(DTO.Species);
             // 
             // txtMicro
             // 
@@ -329,6 +339,10 @@ namespace pet_management
             this.cboCustomer.TabIndex = 15;
             this.cboCustomer.EditValueChanged += new System.EventHandler(this.cboCustomer_EditValueChanged);
             // 
+            // customerPetBindingSource
+            // 
+            this.customerPetBindingSource.DataSource = typeof(DTO.Customer);
+            // 
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -346,6 +360,64 @@ namespace pet_management
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colCustomerNumber
+            // 
+            this.colCustomerNumber.FieldName = "CustomerNumber";
+            this.colCustomerNumber.Name = "colCustomerNumber";
+            this.colCustomerNumber.Visible = true;
+            this.colCustomerNumber.VisibleIndex = 1;
+            // 
+            // colFullname
+            // 
+            this.colFullname.FieldName = "Fullname";
+            this.colFullname.Name = "colFullname";
+            this.colFullname.Visible = true;
+            this.colFullname.VisibleIndex = 2;
+            // 
+            // colPhone
+            // 
+            this.colPhone.FieldName = "Phone";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.Visible = true;
+            this.colPhone.VisibleIndex = 3;
+            // 
+            // colAddress
+            // 
+            this.colAddress.FieldName = "Address";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.Visible = true;
+            this.colAddress.VisibleIndex = 0;
+            // 
+            // colDiscountRate
+            // 
+            this.colDiscountRate.FieldName = "DiscountRate";
+            this.colDiscountRate.Name = "colDiscountRate";
+            // 
+            // colDob
+            // 
+            this.colDob.FieldName = "Dob";
+            this.colDob.Name = "colDob";
+            // 
+            // colEmail
+            // 
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            // 
+            // colFirstname
+            // 
+            this.colFirstname.FieldName = "Firstname";
+            this.colFirstname.Name = "colFirstname";
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colLastname
+            // 
+            this.colLastname.FieldName = "Lastname";
+            this.colLastname.Name = "colLastname";
             // 
             // Root
             // 
@@ -688,7 +760,7 @@ namespace pet_management
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(94, 37);
             this.btnQuit.TabIndex = 2;
-            this.btnQuit.Text = "Thoát";
+            this.btnQuit.Text = "&Thoát";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnSave
@@ -697,78 +769,8 @@ namespace pet_management
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 37);
             this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Ghi nhận";
+            this.btnSave.Text = "&Ghi nhận";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // colAddress
-            // 
-            this.colAddress.FieldName = "Address";
-            this.colAddress.Name = "colAddress";
-            this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 0;
-            // 
-            // colCustomerNumber
-            // 
-            this.colCustomerNumber.FieldName = "CustomerNumber";
-            this.colCustomerNumber.Name = "colCustomerNumber";
-            this.colCustomerNumber.Visible = true;
-            this.colCustomerNumber.VisibleIndex = 1;
-            // 
-            // colDiscountRate
-            // 
-            this.colDiscountRate.FieldName = "DiscountRate";
-            this.colDiscountRate.Name = "colDiscountRate";
-            // 
-            // colDob
-            // 
-            this.colDob.FieldName = "Dob";
-            this.colDob.Name = "colDob";
-            // 
-            // colEmail
-            // 
-            this.colEmail.FieldName = "Email";
-            this.colEmail.Name = "colEmail";
-            // 
-            // colFirstname
-            // 
-            this.colFirstname.FieldName = "Firstname";
-            this.colFirstname.Name = "colFirstname";
-            // 
-            // colFullname
-            // 
-            this.colFullname.FieldName = "Fullname";
-            this.colFullname.Name = "colFullname";
-            this.colFullname.Visible = true;
-            this.colFullname.VisibleIndex = 2;
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            // 
-            // colLastname
-            // 
-            this.colLastname.FieldName = "Lastname";
-            this.colLastname.Name = "colLastname";
-            // 
-            // colPhone
-            // 
-            this.colPhone.FieldName = "Phone";
-            this.colPhone.Name = "colPhone";
-            this.colPhone.Visible = true;
-            this.colPhone.VisibleIndex = 3;
-            // 
-            // breedBindingSource
-            // 
-            this.breedBindingSource.DataSource = typeof(DTO.Breed);
-            // 
-            // speciesPetBindingSource
-            // 
-            this.speciesPetBindingSource.DataSource = typeof(DTO.Species);
-            // 
-            // customerPetBindingSource
-            // 
-            this.customerPetBindingSource.DataSource = typeof(DTO.Customer);
             // 
             // frmPetInfor
             // 
@@ -781,6 +783,7 @@ namespace pet_management
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPetInfor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPetInfor";
             this.Load += new System.EventHandler(this.frmPetInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lytPetInfo)).EndInit();
@@ -790,7 +793,9 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboBreed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSpecies.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesPetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMicro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFeatherColor.Properties)).EndInit();
@@ -798,6 +803,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerPetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -829,9 +835,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesPetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerPetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

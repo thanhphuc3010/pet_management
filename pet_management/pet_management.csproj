@@ -131,17 +131,17 @@
     <Compile Include="frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGroupService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGroupService.Designer.cs">
+      <DependentUpon>frmGroupService.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPet.Designer.cs">
       <DependentUpon>frmPet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPetInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPetInfo.Designer.cs">
-      <DependentUpon>frmPetInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPetInfor.cs">
       <SubType>Form</SubType>
@@ -192,11 +192,11 @@
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGroupService.resx">
+      <DependentUpon>frmGroupService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPet.resx">
       <DependentUpon>frmPet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPetInfo.resx">
-      <DependentUpon>frmPetInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPetInfor.resx">
       <DependentUpon>frmPetInfor.cs</DependentUpon>

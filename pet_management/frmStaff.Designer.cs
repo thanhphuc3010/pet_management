@@ -37,6 +37,7 @@ namespace pet_management
             this.colStaffNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +53,6 @@ namespace pet_management
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
-            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStaff)).BeginInit();
@@ -93,11 +93,11 @@ namespace pet_management
             this.colFirstName,
             this.colLastName,
             this.colFullName,
+            this.colIdRole,
             this.colBirthday,
             this.colPhone,
             this.colEmail,
             this.colAddress,
-            this.colIdRole,
             this.colActive,
             this.colPassword,
             this.colCreatedDate,
@@ -178,6 +178,16 @@ namespace pet_management
             this.colLastName.Visible = true;
             this.colLastName.VisibleIndex = 2;
             this.colLastName.Width = 94;
+            // 
+            // colFullName
+            // 
+            this.colFullName.Caption = "Họ và tên";
+            this.colFullName.FieldName = "FullName";
+            this.colFullName.MinWidth = 25;
+            this.colFullName.Name = "colFullName";
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 6;
+            this.colFullName.Width = 94;
             // 
             // colBirthday
             // 
@@ -386,16 +396,6 @@ namespace pet_management
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
-            // 
-            // colFullName
-            // 
-            this.colFullName.Caption = "Họ và tên";
-            this.colFullName.FieldName = "FullName";
-            this.colFullName.MinWidth = 25;
-            this.colFullName.Name = "colFullName";
-            this.colFullName.Visible = true;
-            this.colFullName.VisibleIndex = 6;
-            this.colFullName.Width = 94;
             // 
             // frmStaff
             // 

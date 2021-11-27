@@ -15,9 +15,15 @@ namespace pet_management
 {
     public partial class frmPetInfor : DevExpress.XtraEditors.XtraForm
     {
-        public frmPetInfor()
+        private readonly frmPet frmPet;
+        private Pet pet;
+        private bool isEditMode;
+        public frmPetInfor(frmPet frmPet, Pet pet, bool isEditMode)
         {
             InitializeComponent();
+            this.frmPet = frmPet;
+            this.pet = pet;
+            this.isEditMode = isEditMode;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -41,11 +47,34 @@ namespace pet_management
             }
             customerPetBindingSource.DataSource = customers;
 
-            string query = "SELECT * FROM pet ORDER BY pet_number DESC LIMIT 1";
-            txtId.Text = MyHelper.GenerateId("TC-", query, "pet_number");
+            if (!isEditMode)
+            {
+                string query = "SELECT * FROM pet ORDER BY pet_number DESC LIMIT 1";
+                txtId.Text = MyHelper.GenerateId("TC-", query, "pet_number");
+            }
+            else
+            {
+                BindPetData();
+            }
         }
 
-        private void AddPet()
+        private void BindPetData()
+        {
+            txtId.Text = pet.PetNumber;
+            txtMicro.Text = pet.Microchip;
+            cboBreed.EditValue = pet.BreedId;
+            Breed breed = BreedBUS.GetBreedById(pet.BreedId.ToString());
+            cboSpecies.EditValue = breed.SpeciesId;
+            cboCustomer.EditValue = pet.CustomerId;
+            txtName.Text = pet.Name;
+            txtAge.Text = pet.Age;
+            txtWeight.Text = pet.Weight;
+            txtFeatherColor.Text = pet.FeatherColor;
+            txtHistory.Text = pet.MedicalHistory;
+            txtNote.Text = pet.Note;
+        }
+
+        private void SavePet()
         {
             Pet p = new Pet();
             p.PetNumber = txtId.Text.ToString().Trim();
@@ -58,10 +87,24 @@ namespace pet_management
             p.FeatherColor = txtFeatherColor.Text.ToString().Trim();
             p.MedicalHistory = txtHistory.Text.ToString().Trim();
             p.Note = txtNote.Text.ToString().Trim();
-            bool isSuccess = PetBUS.Save(p);
+
+            bool isSuccess = false;
+
+            if (!isEditMode)
+            {
+                isSuccess = PetBUS.Save(p);
+            } else
+            {
+                p.Id = pet.Id;
+                isSuccess = PetBUS.Update(p);
+            }
             if (isSuccess)
             {
-                this.Close();
+                if (frmPet != null)
+                {
+                    frmPet.ReloadData();
+                    this.Close();
+                }
             }
         }
 
@@ -75,7 +118,7 @@ namespace pet_management
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            AddPet();
+            SavePet();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)

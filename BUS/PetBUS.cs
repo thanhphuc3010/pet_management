@@ -18,5 +18,15 @@ namespace BUS
         {
             return PetDAO.Save(p);
         }
+
+        public static bool Update(Pet p)
+        {
+            return PetDAO.Update(p);
+        }
+
+        public static bool Delete(string id)
+        {
+            return PetDAO.Delete(id);
+        }
     }
 }

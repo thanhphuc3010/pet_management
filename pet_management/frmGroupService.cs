@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,11 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public partial class frmPetInfo : Form
+    public partial class frmGroupService : DevExpress.XtraEditors.XtraForm
     {
-        public frmPetInfo()
+        public frmGroupService()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -14,5 +14,10 @@ namespace BUS
         {
             return BreedDAO.GetBreeds();
         }
+
+        public static Breed GetBreedById(string id)
+        {
+            return BreedDAO.GetBreedById(id);
+        }
     }
 }

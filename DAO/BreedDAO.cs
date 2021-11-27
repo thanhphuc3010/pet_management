@@ -24,5 +24,11 @@ namespace DAO
             db.Close();
             return result;
         }
+
+        public static Breed GetBreedById(string id)
+        {
+            string sql = $"SELECT * FROM breed WHERE id = {id}";
+            return db.QuerySingle<Breed>(sql); ;
+        }
     }
 }
