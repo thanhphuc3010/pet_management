@@ -16,7 +16,7 @@ namespace pet_management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGroupService());
+            Application.Run(new frmService());
         }
     }
 }

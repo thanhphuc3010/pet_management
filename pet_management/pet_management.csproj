@@ -155,6 +155,12 @@
     <Compile Include="frmRole.Designer.cs">
       <DependentUpon>frmRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmService.Designer.cs">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSpecies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmServiceInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceInfor.Designer.cs">
+      <DependentUpon>frmServiceInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextBoxUtils.cs" />
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
@@ -204,6 +216,9 @@
     <EmbeddedResource Include="frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmService.resx">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSpecies.resx">
       <DependentUpon>frmSpecies.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,12 +238,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmServiceInfor.resx">
+      <DependentUpon>frmServiceInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
     <None Include="Properties\DataSources\DTO.GroupService.datasource" />
     <None Include="Properties\DataSources\DTO.Pet.datasource" />
     <None Include="Properties\DataSources\DTO.Role.datasource" />
+    <None Include="Properties\DataSources\DTO.Service.datasource" />
     <None Include="Properties\DataSources\DTO.Species.datasource" />
     <None Include="Properties\DataSources\DTO.Staff.datasource" />
     <None Include="Properties\Settings.settings">
