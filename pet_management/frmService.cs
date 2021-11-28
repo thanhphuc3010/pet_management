@@ -14,6 +14,7 @@ namespace pet_management
 {
     public partial class frmService : DevExpress.XtraEditors.XtraForm
     {
+        private ServiceBUS serviceBUS = new ServiceBUS();
         public frmService()
         {
             InitializeComponent();
@@ -39,6 +40,23 @@ namespace pet_management
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = gridViewService.GetFocusedRowCellValue("Id").ToString();
+            if (id == null) return;
+            MyHelper.showDialogConfirmDelete("Bạn có chắc chắn muốn xóa bản ghi này không ?", DeleteService, id);
+        }
+
+        private bool DeleteService(string id)
+        {
+            bool result = serviceBUS.Delete(id);
+            if (result)
+            {
+                LoadData();
+            }
+            return result;
         }
     }
 }

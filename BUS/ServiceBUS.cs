@@ -10,6 +10,7 @@ namespace BUS
 {
     public class ServiceBUS
     {
+        ServiceDAO serviceDAO = new ServiceDAO();
         public static List<Service> GetServices()
         {
             return ServiceDAO.GetServices();
@@ -17,6 +18,14 @@ namespace BUS
         public static bool Save(Service service)
         {
             return ServiceDAO.Save(service);
+        }
+        public bool Update(Service service)
+        {
+            return serviceDAO.Update(service);
+        }
+        public bool Delete(string id)
+        {
+            return serviceDAO.Delete(id);
         }
     }
 }

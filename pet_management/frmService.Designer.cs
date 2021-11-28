@@ -33,7 +33,7 @@ namespace pet_management
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmService));
             this.grcService = new DevExpress.XtraGrid.GridControl();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewService = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGroupServiceId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoGroupService = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
@@ -55,7 +55,7 @@ namespace pet_management
             this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGroupService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -69,7 +69,7 @@ namespace pet_management
             // 
             this.grcService.DataSource = this.serviceBindingSource;
             this.grcService.Location = new System.Drawing.Point(12, 47);
-            this.grcService.MainView = this.gridView1;
+            this.grcService.MainView = this.gridViewService;
             this.grcService.Name = "grcService";
             this.grcService.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoGroupService,
@@ -77,15 +77,15 @@ namespace pet_management
             this.grcService.Size = new System.Drawing.Size(1000, 640);
             this.grcService.TabIndex = 0;
             this.grcService.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewService});
             // 
             // serviceBindingSource
             // 
             this.serviceBindingSource.DataSource = typeof(DTO.Service);
             // 
-            // gridView1
+            // gridViewService
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewService.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colGroupServiceId,
             this.colName,
@@ -93,10 +93,10 @@ namespace pet_management
             this.colUnitId,
             this.colPrice,
             this.colTax});
-            this.gridView1.GridControl = this.grcService;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridViewService.GridControl = this.grcService;
+            this.gridViewService.Name = "gridViewService";
+            this.gridViewService.OptionsBehavior.Editable = false;
+            this.gridViewService.OptionsView.ShowGroupPanel = false;
             // 
             // colId
             // 
@@ -297,6 +297,7 @@ namespace pet_management
             this.btnDelete.Size = new System.Drawing.Size(97, 34);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnQuit
             // 
@@ -326,7 +327,7 @@ namespace pet_management
             this.Load += new System.EventHandler(this.frmService_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGroupService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
@@ -342,7 +343,7 @@ namespace pet_management
         #endregion
 
         private DevExpress.XtraGrid.GridControl grcService;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewService;
         private DevExpress.XtraEditors.SearchControl txtSearch;
         private DevExpress.XtraEditors.LabelControl lblSearch;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
