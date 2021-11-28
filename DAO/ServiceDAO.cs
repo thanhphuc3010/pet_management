@@ -38,6 +38,11 @@ namespace DAO
                 throw;
             }
         }
+        public Service GetServiceById(string id)
+        {
+            string sql = $"SELECT * FROM service WHERE id = {id}";
+            return db.QuerySingle<Service>(sql);
+        }
         public bool Update(Service service)
         {
             try

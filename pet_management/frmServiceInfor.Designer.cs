@@ -31,13 +31,20 @@ namespace pet_management
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.txtTax = new DevExpress.XtraEditors.TextEdit();
             this.gluUnit = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtPrice = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.gluGroupService = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.groupServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -47,13 +54,6 @@ namespace pet_management
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lytTax = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -62,16 +62,19 @@ namespace pet_management
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.groupServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluUnit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluGroupService.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -82,7 +85,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lytTax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -91,8 +93,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -110,6 +110,15 @@ namespace pet_management
             this.layoutControl1.Size = new System.Drawing.Size(621, 245);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(111, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.Properties.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(197, 24);
+            this.txtId.StyleController = this.layoutControl1;
+            this.txtId.TabIndex = 10;
             // 
             // txtTax
             // 
@@ -137,6 +146,10 @@ namespace pet_management
             this.gluUnit.Size = new System.Drawing.Size(188, 24);
             this.gluUnit.StyleController = this.layoutControl1;
             this.gluUnit.TabIndex = 8;
+            // 
+            // unitBindingSource
+            // 
+            this.unitBindingSource.DataSource = typeof(DTO.Unit);
             // 
             // gridLookUpEdit2View
             // 
@@ -184,6 +197,10 @@ namespace pet_management
             this.gluGroupService.StyleController = this.layoutControl1;
             this.gluGroupService.TabIndex = 4;
             // 
+            // groupServiceBindingSource
+            // 
+            this.groupServiceBindingSource.DataSource = typeof(DTO.GroupService);
+            // 
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -195,6 +212,32 @@ namespace pet_management
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colCode
+            // 
+            this.colCode.Caption = "Mã/Code";
+            this.colCode.FieldName = "Code";
+            this.colCode.Name = "colCode";
+            this.colCode.Visible = true;
+            this.colCode.VisibleIndex = 0;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "Tên nhóm dịch vụ";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 1;
+            // 
+            // colDescription
+            // 
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
             // 
             // txtDescription
             // 
@@ -290,58 +333,6 @@ namespace pet_management
             this.lytTax.Text = "Thuế (%):";
             this.lytTax.TextSize = new System.Drawing.Size(96, 18);
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(401, 257);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "&Ghi nhận";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(514, 257);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "&Thoát";
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            // 
-            // colCode
-            // 
-            this.colCode.Caption = "Mã/Code";
-            this.colCode.FieldName = "Code";
-            this.colCode.Name = "colCode";
-            this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 0;
-            // 
-            // colName
-            // 
-            this.colName.Caption = "Tên nhóm dịch vụ";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 1;
-            // 
-            // colDescription
-            // 
-            this.colDescription.FieldName = "Description";
-            this.colDescription.Name = "colDescription";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(111, 12);
-            this.txtId.Name = "txtId";
-            this.txtId.Properties.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(197, 24);
-            this.txtId.StyleController = this.layoutControl1;
-            this.txtId.TabIndex = 10;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtId;
@@ -407,20 +398,30 @@ namespace pet_management
             this.emptySpaceItem8.Size = new System.Drawing.Size(291, 10);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // groupServiceBindingSource
+            // btnSave
             // 
-            this.groupServiceBindingSource.DataSource = typeof(DTO.GroupService);
+            this.btnSave.Location = new System.Drawing.Point(401, 257);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "&Ghi nhận";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // unitBindingSource
+            // btnQuit
             // 
-            this.unitBindingSource.DataSource = typeof(DTO.Unit);
+            this.btnQuit.Location = new System.Drawing.Point(514, 257);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(94, 29);
+            this.btnQuit.TabIndex = 2;
+            this.btnQuit.Text = "&Thoát";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // frmServiceInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 308);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -432,12 +433,15 @@ namespace pet_management
             this.Load += new System.EventHandler(this.frmServiceInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluUnit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluGroupService.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -448,7 +452,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lytTax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -457,8 +460,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,7 +484,7 @@ namespace pet_management
         private DevExpress.XtraEditors.MemoEdit txtDescription;
         private DevExpress.XtraLayout.LayoutControlItem lytTax;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnQuit;
         private System.Windows.Forms.BindingSource groupServiceBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colCode;

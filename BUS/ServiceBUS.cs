@@ -15,6 +15,10 @@ namespace BUS
         {
             return ServiceDAO.GetServices();
         }
+        public Service GetServiceById(string id)
+        {
+            return serviceDAO.GetServiceById(id);
+        }
         public static bool Save(Service service)
         {
             return ServiceDAO.Save(service);

@@ -285,6 +285,7 @@ namespace pet_management
             this.btnEdit.Size = new System.Drawing.Size(97, 34);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 

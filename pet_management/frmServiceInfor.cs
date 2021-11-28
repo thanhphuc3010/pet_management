@@ -18,6 +18,8 @@ namespace pet_management
         private readonly frmService frmService;
         private Service service;
         private bool isEditMode;
+
+        private ServiceBUS serviceBUS = new ServiceBUS();
         public frmServiceInfor(frmService frmService, Service service, bool isEditMode)
         {
             InitializeComponent();
@@ -25,7 +27,6 @@ namespace pet_management
             this.service = service;
             this.isEditMode = isEditMode;
         }
-
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -35,6 +36,7 @@ namespace pet_management
             }));
         }
 
+        #region Handle event
         private void frmServiceInfor_Load(object sender, EventArgs e)
         {
             groupServiceBindingSource.DataSource = GroupServiceBUS.GetGroupServices();
@@ -46,8 +48,29 @@ namespace pet_management
             }
             else
             {
-                //BindPetData();
+                BindServiceData();
             }
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveService();
+        }
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region Handle data
+        private void BindServiceData()
+        {
+            txtId.Text = service.Id.ToString();
+            txtName.Text = service.Name.ToString();
+            txtDescription.Text = service.Description;
+            txtPrice.Text = service.Price.ToString();
+            txtTax.Text = service.Tax.ToString();
+            gluGroupService.EditValue = service.GroupServiceId;
+            gluUnit.EditValue = service.UnitId;
         }
         private void SaveService()
         {
@@ -68,8 +91,8 @@ namespace pet_management
             }
             else
             {
-                //s.Id = pet.Id;
-                //isSuccess = PetBUS.Update(s);
+                s.Id = service.Id;
+                isSuccess = serviceBUS.Update(s);
             }
             if (isSuccess)
             {
@@ -80,10 +103,6 @@ namespace pet_management
                 }
             }
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            SaveService();
-        }
+        #endregion
     }
 }

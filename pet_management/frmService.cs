@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace pet_management
 {
@@ -57,6 +58,18 @@ namespace pet_management
                 LoadData();
             }
             return result;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string id = gridViewService.GetFocusedRowCellValue("Id").ToString();
+            if (id != null)
+            {
+                Service service = serviceBUS.GetServiceById(id);
+                frmServiceInfor f = new frmServiceInfor(this, service, isEditMode: true);
+                f.ShowDialog();
+            }
+            else return;
         }
     }
 }
