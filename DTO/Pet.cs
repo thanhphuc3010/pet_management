@@ -12,7 +12,6 @@ namespace DTO
         public Pet()
         {
         }
-
         public int Id { get; set; }
 
         [Description("pet_number")]

@@ -57,7 +57,6 @@ namespace DAO
             }
             return data;
         }
-
         public int ExcuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -84,7 +83,6 @@ namespace DAO
             }
             return data;
         }
-
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;

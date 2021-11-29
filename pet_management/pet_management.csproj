@@ -111,76 +111,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProvider.cs" />
-    <Compile Include="EntityState.cs" />
-    <Compile Include="frmAddCustomer.cs">
+    <Compile Include="utils\DataProvider.cs" />
+    <Compile Include="utils\EntityState.cs" />
+    <Compile Include="form\customer\frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddCustomer.Designer.cs">
+    <Compile Include="form\customer\frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBreed.cs">
+    <Compile Include="form\pet\frmBreed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBreed.Designer.cs">
+    <Compile Include="form\pet\frmBreed.Designer.cs">
       <DependentUpon>frmBreed.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer.cs">
+    <Compile Include="form\customer\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer.Designer.cs">
+    <Compile Include="form\customer\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGroupService.cs">
+    <Compile Include="form\service\frmGroupService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGroupService.Designer.cs">
+    <Compile Include="form\service\frmGroupService.Designer.cs">
       <DependentUpon>frmGroupService.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPet.cs">
+    <Compile Include="form\pet\frmPet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPet.Designer.cs">
+    <Compile Include="form\pet\frmPet.Designer.cs">
       <DependentUpon>frmPet.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPetInfor.cs">
+    <Compile Include="form\pet\frmPetInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPetInfor.Designer.cs">
+    <Compile Include="form\pet\frmPetInfor.Designer.cs">
       <DependentUpon>frmPetInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRole.cs">
+    <Compile Include="form\staff\frmRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRole.Designer.cs">
+    <Compile Include="form\staff\frmRole.Designer.cs">
       <DependentUpon>frmRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmService.cs">
+    <Compile Include="form\service\frmService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmService.Designer.cs">
+    <Compile Include="form\service\frmService.Designer.cs">
       <DependentUpon>frmService.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSpecies.cs">
+    <Compile Include="form\pet\frmSpecies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSpecies.Designer.cs">
+    <Compile Include="form\pet\frmSpecies.Designer.cs">
       <DependentUpon>frmSpecies.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaff.cs">
+    <Compile Include="form\staff\frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaff.Designer.cs">
+    <Compile Include="form\staff\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffInfo.cs">
+    <Compile Include="form\staff\frmStaffInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffInfo.Designer.cs">
+    <Compile Include="form\staff\frmStaffInfo.Designer.cs">
       <DependentUpon>frmStaffInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyHelper.cs" />
-    <Compile Include="MyColor.cs" />
+    <Compile Include="utils\MyHelper.cs" />
+    <Compile Include="utils\MyColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHTDataSet.Designer.cs">
@@ -188,44 +188,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmServiceInfor.cs">
+    <Compile Include="form\service\frmServiceInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmServiceInfor.Designer.cs">
+    <Compile Include="form\service\frmServiceInfor.Designer.cs">
       <DependentUpon>frmServiceInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TextBoxUtils.cs" />
-    <EmbeddedResource Include="frmAddCustomer.resx">
+    <Compile Include="utils\TextBoxUtils.cs" />
+    <EmbeddedResource Include="form\customer\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBreed.resx">
+    <EmbeddedResource Include="form\pet\frmBreed.resx">
       <DependentUpon>frmBreed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer.resx">
+    <EmbeddedResource Include="form\customer\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGroupService.resx">
+    <EmbeddedResource Include="form\service\frmGroupService.resx">
       <DependentUpon>frmGroupService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPet.resx">
+    <EmbeddedResource Include="form\pet\frmPet.resx">
       <DependentUpon>frmPet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPetInfor.resx">
+    <EmbeddedResource Include="form\pet\frmPetInfor.resx">
       <DependentUpon>frmPetInfor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRole.resx">
+    <EmbeddedResource Include="form\staff\frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmService.resx">
+    <EmbeddedResource Include="form\service\frmService.resx">
       <DependentUpon>frmService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSpecies.resx">
+    <EmbeddedResource Include="form\pet\frmSpecies.resx">
       <DependentUpon>frmSpecies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
+    <EmbeddedResource Include="form\staff\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffInfo.resx">
+    <EmbeddedResource Include="form\staff\frmStaffInfo.resx">
       <DependentUpon>frmStaffInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -238,7 +238,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmServiceInfor.resx">
+    <EmbeddedResource Include="form\service\frmServiceInfor.resx">
       <DependentUpon>frmServiceInfor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -291,5 +291,6 @@
   <ItemGroup>
     <Content Include="MailTemplate.html" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
