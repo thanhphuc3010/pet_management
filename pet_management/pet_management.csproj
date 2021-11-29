@@ -111,6 +111,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPart.Designer.cs">
+      <DependentUpon>frmPart.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\EntityState.cs" />
     <Compile Include="form\customer\frmAddCustomer.cs">
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="form\staff\frmStaffInfo.resx">
       <DependentUpon>frmStaffInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPart.resx">
+      <DependentUpon>frmPart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -245,6 +254,7 @@
     <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
     <None Include="Properties\DataSources\DTO.GroupService.datasource" />
+    <None Include="Properties\DataSources\DTO.Part.datasource" />
     <None Include="Properties\DataSources\DTO.Pet.datasource" />
     <None Include="Properties\DataSources\DTO.Role.datasource" />
     <None Include="Properties\DataSources\DTO.Service.datasource" />
