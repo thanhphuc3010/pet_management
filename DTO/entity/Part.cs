@@ -12,6 +12,7 @@ namespace DTO
         public int Id { get; set; }
         [Description("id_make")]
         public int MakeId { get; set; }
+        [Description("part_number")]
         public string PartNumber { get; set; }
         public string Name { get; set; }
         [Description("id_unit")]

@@ -11,14 +11,11 @@ namespace DAO
 {
     public class ServiceDAO : BaseDAO<Service>
     {
-        public static List<Service> GetServices()
+        public List<Service> GetServices()
         {
             string query = "SELECT * FROM service";
             if (db.State == ConnectionState.Closed) db.Open();
-
-            MapperColumn mapper = new MapperColumn();
-            SqlMapper.SetTypeMap(typeof(Service), mapper.GetMap<Service>());
-
+            SetTypeMapper();
             List<Service> result = db.Query<Service>(query).ToList();
             db.Close();
             return result;

@@ -11,9 +11,9 @@ namespace BUS
     public class ServiceBUS
     {
         ServiceDAO serviceDAO = new ServiceDAO();
-        public static List<Service> GetServices()
+        public List<Service> GetServices()
         {
-            return ServiceDAO.GetServices();
+            return serviceDAO.GetServices();
         }
         public Service GetServiceById(string id)
         {

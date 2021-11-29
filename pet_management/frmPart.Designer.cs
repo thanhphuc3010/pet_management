@@ -304,6 +304,7 @@ namespace pet_management
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPart";
             this.Text = "Danh mục hàng hóa";
+            this.Load += new System.EventHandler(this.frmPart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcPart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();

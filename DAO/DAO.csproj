@@ -104,6 +104,7 @@
     <Compile Include="BaseDAO.cs" />
     <Compile Include="GroupServiceDAO.cs" />
     <Compile Include="MapperColumn.cs" />
+    <Compile Include="PartDAO.cs" />
     <Compile Include="PetDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

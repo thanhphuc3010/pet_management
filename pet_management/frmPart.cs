@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUS;
 
 namespace pet_management
 {
     public partial class frmPart : DevExpress.XtraEditors.XtraForm
     {
+        PartBUS partBUS = new PartBUS();
         public frmPart()
         {
             InitializeComponent();
@@ -29,6 +32,11 @@ namespace pet_management
             {
                 gridViewPart.ClearFindFilter();
             }
+        }
+
+        private void frmPart_Load(object sender, EventArgs e)
+        {
+            partBindingSource.DataSource = partBUS.GetParts();
         }
     }
 }

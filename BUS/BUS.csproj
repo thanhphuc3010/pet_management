@@ -98,6 +98,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupServiceBUS.cs" />
+    <Compile Include="PartBUS.cs" />
     <Compile Include="PetBUS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

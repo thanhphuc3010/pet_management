@@ -33,7 +33,7 @@ namespace pet_management
         }
         public void LoadData()
         {
-            serviceBindingSource.DataSource = ServiceBUS.GetServices();
+            serviceBindingSource.DataSource = serviceBUS.GetServices();
             groupServiceBindingSource.DataSource = GroupServiceBUS.GetGroupServices();
             unitBindingSource.DataSource = UnitBUS.GetUnits();
         }
