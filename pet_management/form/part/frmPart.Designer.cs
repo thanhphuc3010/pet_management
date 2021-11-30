@@ -272,6 +272,7 @@ namespace pet_management
             this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnImport
             // 

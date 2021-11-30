@@ -39,5 +39,11 @@ namespace pet_management
             partBindingSource.DataSource = parts;
         }
         #endregion
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmPartInfor f = new frmPartInfor(this, null, isEditMode: false);
+            f.ShowDialog();
+        }
     }
 }
