@@ -33,5 +33,17 @@ namespace DAO
             string sql = $"SELECT * FROM part WHERE id = {id}";
             return db.QuerySingle<Part>(sql);
         }
+        public bool Save(Part p)
+        {
+            return true;
+        }
+        public bool Update(Part p)
+        {
+            return true;
+        }
+        public bool Delete(string id)
+        {
+            return true;
+        }
     }
 }

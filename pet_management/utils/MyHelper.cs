@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -12,20 +15,6 @@ namespace pet_management
 {
     public static class MyHelper
     {
-        public static void FillCombo(this ComboBox cbo, string sql, string value, string display, object[] param)
-        {
-            DataTable data = DataProvider.Instance.excuteQuery(sql, param);
-            cbo.DisplayMember = display; //Trường hiển thị
-            cbo.ValueMember = value; //Trường giá trị
-            cbo.DataSource = data;
-        }
-
-        public static void FillCombo(this ComboBox cbo, string value, string display, DataTable dataSource)
-        {
-            cbo.DisplayMember = display; //Trường hiển thị
-            cbo.ValueMember = value; //Trường giá trị
-            cbo.DataSource = dataSource;
-        }
 
         /**
          * <summary>Disable a control like: button, textbox, label,...</summary>
@@ -123,30 +112,6 @@ namespace pet_management
             }
             return prefix + String.Format("{0:00000}", key);
         }
-
-        public static string formatStringNumber(int i, string prefix)
-        {
-            string result;
-            if (i < 10)
-            {
-                result = prefix + "0000" + i.ToString().Trim();
-            }
-            else if (i < 100)
-            {
-                result = prefix + "000" + i.ToString().Trim();
-            }
-            else if (i < 1000)
-            {
-                result = prefix + "00" + i.ToString().Trim();
-            }
-            else if (i < 10000)
-            {
-                result = prefix + "0" + i.ToString().Trim();
-            }
-            else result = prefix + i.ToString().Trim();
-            return result;
-        }
-
         public static void binding(this TextBox textBox, object dataSoure, string field)
         {
             textBox.DataBindings.Clear();
@@ -155,17 +120,6 @@ namespace pet_management
                 DataSourceUpdateMode = DataSourceUpdateMode.Never,
                 //ControlUpdateMode = ControlUpdateMode.Never
             });
-        }
-
-        public static void superBinding(List<TextBox> list, List<String> fields, object dataSoure)
-        {
-            if (list.Count != fields.Count) return;
-            foreach (TextBox txt in list)
-            {
-                int index = list.IndexOf(txt);
-                string field = fields[index];
-                txt.binding(dataSoure, field);
-            }
         }
 
         public static void showDialogConfirmDelete(string message, Func<string, bool> callback, string id)
@@ -194,6 +148,19 @@ namespace pet_management
         public static void showMessageRole()
         {
             MessageBox.Show("Bạn không có quyền sử dụng chức năng này", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static void HandleSearch(GridView grc, SearchControl sc)
+        {
+            string keySearch = sc.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(keySearch))
+            {
+                grc.ApplyFindFilter(keySearch);
+            }
+            else
+            {
+                grc.ClearFindFilter();
+            }
         }
     }
 }

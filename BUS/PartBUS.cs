@@ -8,12 +8,12 @@ using DAO;
 
 namespace BUS
 {
-    public class PartBUS
+    public class PartBUS : BaseBUS<PartDAO, Part>
     {
-        PartDAO partDAO = new PartDAO();
-        public List<Part> GetParts()
-        {
-            return partDAO.GetParts();
-        }
+        private PartDAO PartDAO => baseDAO;
+        public List<Part> GetParts() => PartDAO.GetParts();
+        public override bool Save(Part entity) => Save(entity);
+        public override bool Update(Part entity) => Update(entity);
+        public override bool Delete(string id) => PartDAO.Delete(id);
     }
 }

@@ -20,23 +20,24 @@ namespace pet_management
         {
             InitializeComponent();
         }
-
+        #region Handle Event
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string keySearch = txtSearch.Text.ToString().Trim();
-            if (!string.IsNullOrEmpty(keySearch))
-            {
-                gridViewPart.ApplyFindFilter(keySearch);
-            }
-            else
-            {
-                gridViewPart.ClearFindFilter();
-            }
+            MyHelper.HandleSearch(gridViewPart, txtSearch);
         }
 
         private void frmPart_Load(object sender, EventArgs e)
         {
-            partBindingSource.DataSource = partBUS.GetParts();
+            LoadData();
         }
+        #endregion
+
+        #region Handle Logic
+        public void LoadData()
+        {
+            List<Part> parts = partBUS.GetParts();
+            partBindingSource.DataSource = parts;
+        }
+        #endregion
     }
 }

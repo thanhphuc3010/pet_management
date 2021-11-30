@@ -20,10 +20,7 @@ namespace pet_management
 
         private void frmBreed_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM species";
-            cboBreed.FillCombo(query, "id", "name", null);
-            cboBreed.SelectedIndex = 0;
-            id = cboBreed.SelectedValue.ToString();
+            
         }
 
         private void cboBreed_SelectedIndexChanged(object sender, EventArgs e)

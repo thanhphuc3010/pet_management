@@ -31,13 +31,8 @@ namespace pet_management
         {
             this.components = new System.ComponentModel.Container();
             this.grcPart = new DevExpress.XtraGrid.GridControl();
-            this.gridViewPart = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblSearch = new DevExpress.XtraEditors.LabelControl();
-            this.txtSearch = new DevExpress.XtraEditors.SearchControl();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewPart = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMakeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPartNumber = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,10 +45,15 @@ namespace pet_management
             this.colTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblSearch = new DevExpress.XtraEditors.LabelControl();
+            this.txtSearch = new DevExpress.XtraEditors.SearchControl();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcPart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grcPart
@@ -69,6 +69,10 @@ namespace pet_management
             this.grcPart.TabIndex = 0;
             this.grcPart.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPart});
+            // 
+            // partBindingSource
+            // 
+            this.partBindingSource.DataSource = typeof(DTO.Part);
             // 
             // gridViewPart
             // 
@@ -88,53 +92,6 @@ namespace pet_management
             this.gridViewPart.GridControl = this.grcPart;
             this.gridViewPart.Name = "gridViewPart";
             this.gridViewPart.OptionsView.ShowGroupPanel = false;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.Location = new System.Drawing.Point(13, 26);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(67, 18);
-            this.lblSearch.TabIndex = 1;
-            this.lblSearch.Text = "Tìm kiếm:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(86, 23);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.txtSearch.Size = new System.Drawing.Size(336, 24);
-            this.txtSearch.TabIndex = 2;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(1021, 20);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm mới";
-            // 
-            // btnImport
-            // 
-            this.btnImport.Location = new System.Drawing.Point(1121, 20);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(94, 29);
-            this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Import File";
-            // 
-            // btnExport
-            // 
-            this.btnExport.Location = new System.Drawing.Point(1221, 20);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(94, 29);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Export Excel";
-            // 
-            // partBindingSource
-            // 
-            this.partBindingSource.DataSource = typeof(DTO.Part);
             // 
             // colId
             // 
@@ -289,6 +246,49 @@ namespace pet_management
             this.colEdit.VisibleIndex = 1;
             this.colEdit.Width = 27;
             // 
+            // lblSearch
+            // 
+            this.lblSearch.Location = new System.Drawing.Point(13, 26);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(67, 18);
+            this.lblSearch.TabIndex = 1;
+            this.lblSearch.Text = "Tìm kiếm:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(86, 23);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.txtSearch.Size = new System.Drawing.Size(336, 24);
+            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(1021, 21);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Thêm mới";
+            // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(1121, 21);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(94, 29);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "Import File";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(1221, 21);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(94, 29);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export Excel";
+            // 
             // frmPart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -304,11 +304,12 @@ namespace pet_management
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPart";
             this.Text = "Danh mục hàng hóa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcPart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
