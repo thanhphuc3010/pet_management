@@ -10,10 +10,11 @@ namespace BUS
 {
     public class PartBUS : BaseBUS<PartDAO, Part>
     {
-        private PartDAO PartDAO => baseDAO;
-        public List<Part> GetParts() => PartDAO.GetParts();
-        public override bool Save(Part entity) => Save(entity);
-        public override bool Update(Part entity) => Update(entity);
-        public override bool Delete(string id) => PartDAO.Delete(id);
+        private PartDAO partDAO => baseDAO;
+        public List<Part> GetParts() => partDAO.GetParts();
+        public bool Save(Part entity) => partDAO.Save(entity);
+          
+        public bool Update(Part entity) => partDAO.Update(entity);
+        public bool Delete(string id) => partDAO.Delete(id);
     }
 }

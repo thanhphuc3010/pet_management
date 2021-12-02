@@ -40,6 +40,11 @@ namespace pet_management
             this.gluMake = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtPartNumber = new DevExpress.XtraEditors.TextEdit();
+            this.luUnit = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -62,11 +67,7 @@ namespace pet_management
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
-            this.luUnit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.makeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -79,6 +80,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gluMake.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -99,8 +102,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,35 +134,56 @@ namespace pet_management
             // 
             // txtTax
             // 
+            this.txtTax.EditValue = "0";
             this.txtTax.Location = new System.Drawing.Point(418, 126);
             this.txtTax.Name = "txtTax";
+            this.txtTax.Properties.DisplayFormat.FormatString = "N0";
+            this.txtTax.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTax.Properties.Mask.EditMask = "N2";
+            this.txtTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTax.Size = new System.Drawing.Size(175, 24);
             this.txtTax.StyleController = this.layoutControl1;
             this.txtTax.TabIndex = 11;
             // 
             // txtQuantity
             // 
+            this.txtQuantity.EditValue = "0";
             this.txtQuantity.Location = new System.Drawing.Point(109, 126);
             this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Properties.DisplayFormat.FormatString = "N0";
+            this.txtQuantity.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtQuantity.Properties.Mask.EditMask = "N0";
+            this.txtQuantity.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtQuantity.Size = new System.Drawing.Size(198, 24);
             this.txtQuantity.StyleController = this.layoutControl1;
             this.txtQuantity.TabIndex = 10;
             // 
             // txtPrice
             // 
+            this.txtPrice.EditValue = "0";
             this.txtPrice.Location = new System.Drawing.Point(418, 88);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Properties.DisplayFormat.FormatString = "N0";
+            this.txtPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPrice.Properties.Mask.EditMask = "c0";
+            this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPrice.Size = new System.Drawing.Size(175, 24);
             this.txtPrice.StyleController = this.layoutControl1;
             this.txtPrice.TabIndex = 9;
             // 
             // txtCost
             // 
+            this.txtCost.EditValue = "0";
             this.txtCost.Location = new System.Drawing.Point(109, 88);
             this.txtCost.Name = "txtCost";
+            this.txtCost.Properties.DisplayFormat.FormatString = "N0";
+            this.txtCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCost.Properties.Mask.EditMask = "c0";
+            this.txtCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCost.Size = new System.Drawing.Size(198, 24);
             this.txtCost.StyleController = this.layoutControl1;
             this.txtCost.TabIndex = 8;
+            this.txtCost.Validating += new System.ComponentModel.CancelEventHandler(this.txtCost_Validating);
             // 
             // txtName
             // 
@@ -176,8 +199,11 @@ namespace pet_management
             this.gluMake.Name = "gluMake";
             this.gluMake.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluMake.Properties.DataSource = this.makeBindingSource;
+            this.gluMake.Properties.DisplayMember = "Name";
             this.gluMake.Properties.NullText = "---Chọn nhà sản xuất--";
             this.gluMake.Properties.PopupView = this.gridLookUpEdit1View;
+            this.gluMake.Properties.ValueMember = "Id";
             this.gluMake.Size = new System.Drawing.Size(175, 24);
             this.gluMake.StyleController = this.layoutControl1;
             this.gluMake.TabIndex = 5;
@@ -197,6 +223,61 @@ namespace pet_management
             this.txtPartNumber.Size = new System.Drawing.Size(198, 24);
             this.txtPartNumber.StyleController = this.layoutControl1;
             this.txtPartNumber.TabIndex = 4;
+            // 
+            // luUnit
+            // 
+            this.luUnit.EditValue = "a";
+            this.luUnit.Location = new System.Drawing.Point(418, 50);
+            this.luUnit.Name = "luUnit";
+            this.luUnit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.luUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luUnit.Properties.DataSource = this.unitBindingSource;
+            this.luUnit.Properties.DisplayMember = "Name";
+            this.luUnit.Properties.NullText = "Chọn đơn vị";
+            this.luUnit.Properties.PopupFormMinSize = new System.Drawing.Size(10, 10);
+            this.luUnit.Properties.PopupFormSize = new System.Drawing.Size(175, 150);
+            this.luUnit.Properties.PopupSizeable = false;
+            this.luUnit.Properties.PopupView = this.gridView1;
+            this.luUnit.Properties.PopupWidthMode = DevExpress.XtraEditors.PopupWidthMode.ContentWidth;
+            this.luUnit.Properties.ValueMember = "Id";
+            this.luUnit.Size = new System.Drawing.Size(175, 24);
+            this.luUnit.StyleController = this.layoutControl1;
+            this.luUnit.TabIndex = 13;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colName,
+            this.colNote});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colName
+            // 
+            this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colName.AppearanceHeader.Options.UseFont = true;
+            this.colName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colName.Caption = "Đơn vị";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            // 
+            // colNote
+            // 
+            this.colNote.FieldName = "Note";
+            this.colNote.Name = "colNote";
             // 
             // Root
             // 
@@ -394,6 +475,7 @@ namespace pet_management
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Ghi nhận";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnQuit
             // 
@@ -402,61 +484,11 @@ namespace pet_management
             this.btnQuit.Size = new System.Drawing.Size(94, 29);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Thoát";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // luUnit
+            // makeBindingSource
             // 
-            this.luUnit.EditValue = "123";
-            this.luUnit.Location = new System.Drawing.Point(418, 50);
-            this.luUnit.Name = "luUnit";
-            this.luUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luUnit.Properties.DataSource = this.unitBindingSource;
-            this.luUnit.Properties.DisplayMember = "Name";
-            this.luUnit.Properties.NullText = "---Chọn đơn vị---";
-            this.luUnit.Properties.PopupFormMinSize = new System.Drawing.Size(10, 10);
-            this.luUnit.Properties.PopupFormSize = new System.Drawing.Size(175, 150);
-            this.luUnit.Properties.PopupSizeable = false;
-            this.luUnit.Properties.PopupView = this.gridView1;
-            this.luUnit.Properties.PopupWidthMode = DevExpress.XtraEditors.PopupWidthMode.ContentWidth;
-            this.luUnit.Properties.ValueMember = "Id";
-            this.luUnit.Size = new System.Drawing.Size(175, 24);
-            this.luUnit.StyleController = this.layoutControl1;
-            this.luUnit.TabIndex = 13;
-            this.luUnit.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.luUnit_QueryPopUp);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colName,
-            this.colNote});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            // 
-            // colName
-            // 
-            this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.colName.AppearanceHeader.Options.UseFont = true;
-            this.colName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colName.Caption = "Đơn vị";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
-            // 
-            // colNote
-            // 
-            this.colNote.FieldName = "Note";
-            this.colNote.Name = "colNote";
+            this.makeBindingSource.DataSource = typeof(DTO.Make);
             // 
             // unitBindingSource
             // 
@@ -476,6 +508,7 @@ namespace pet_management
             this.MaximizeBox = false;
             this.Name = "frmPartInfor";
             this.Text = "Thông tin hàng hóa";
+            this.Load += new System.EventHandler(this.frmPartInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUses.Properties)).EndInit();
@@ -487,6 +520,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gluMake.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -507,8 +542,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -554,5 +588,6 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
+        private System.Windows.Forms.BindingSource makeBindingSource;
     }
 }

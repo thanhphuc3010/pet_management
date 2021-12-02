@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="BaseDAO.cs" />
     <Compile Include="GroupServiceDAO.cs" />
+    <Compile Include="MakeDAO.cs" />
     <Compile Include="MapperColumn.cs" />
     <Compile Include="PartDAO.cs" />
     <Compile Include="PetDAO.cs" />

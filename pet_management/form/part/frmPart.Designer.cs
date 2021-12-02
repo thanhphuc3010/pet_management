@@ -30,6 +30,17 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPart));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grcPart = new DevExpress.XtraGrid.GridControl();
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewPart = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -44,7 +55,9 @@ namespace pet_management
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rbtnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rtbnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.lblSearch = new DevExpress.XtraEditors.LabelControl();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -53,6 +66,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcPart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rtbnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +80,9 @@ namespace pet_management
             this.grcPart.Location = new System.Drawing.Point(12, 68);
             this.grcPart.MainView = this.gridViewPart;
             this.grcPart.Name = "grcPart";
+            this.grcPart.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rbtnDelete,
+            this.rtbnEdit});
             this.grcPart.Size = new System.Drawing.Size(1303, 537);
             this.grcPart.TabIndex = 0;
             this.grcPart.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -102,6 +120,7 @@ namespace pet_management
             this.colId.FieldName = "Id";
             this.colId.MinWidth = 25;
             this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
             this.colId.Width = 94;
             // 
             // colMakeId
@@ -114,6 +133,7 @@ namespace pet_management
             this.colMakeId.FieldName = "MakeId";
             this.colMakeId.MinWidth = 25;
             this.colMakeId.Name = "colMakeId";
+            this.colMakeId.OptionsColumn.AllowEdit = false;
             this.colMakeId.Visible = true;
             this.colMakeId.VisibleIndex = 2;
             this.colMakeId.Width = 147;
@@ -128,6 +148,7 @@ namespace pet_management
             this.colPartNumber.FieldName = "PartNumber";
             this.colPartNumber.MinWidth = 25;
             this.colPartNumber.Name = "colPartNumber";
+            this.colPartNumber.OptionsColumn.AllowEdit = false;
             this.colPartNumber.Visible = true;
             this.colPartNumber.VisibleIndex = 3;
             this.colPartNumber.Width = 136;
@@ -142,6 +163,7 @@ namespace pet_management
             this.colName.FieldName = "Name";
             this.colName.MinWidth = 25;
             this.colName.Name = "colName";
+            this.colName.OptionsColumn.AllowEdit = false;
             this.colName.Visible = true;
             this.colName.VisibleIndex = 4;
             this.colName.Width = 244;
@@ -156,6 +178,7 @@ namespace pet_management
             this.colUnitId.FieldName = "UnitId";
             this.colUnitId.MinWidth = 25;
             this.colUnitId.Name = "colUnitId";
+            this.colUnitId.OptionsColumn.AllowEdit = false;
             this.colUnitId.Visible = true;
             this.colUnitId.VisibleIndex = 5;
             this.colUnitId.Width = 49;
@@ -170,9 +193,10 @@ namespace pet_management
             this.colUses.FieldName = "Uses";
             this.colUses.MinWidth = 25;
             this.colUses.Name = "colUses";
+            this.colUses.OptionsColumn.AllowEdit = false;
             this.colUses.Visible = true;
             this.colUses.VisibleIndex = 10;
-            this.colUses.Width = 277;
+            this.colUses.Width = 282;
             // 
             // colCost
             // 
@@ -181,9 +205,12 @@ namespace pet_management
             this.colCost.AppearanceHeader.Options.UseTextOptions = true;
             this.colCost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCost.Caption = "Giá nhập";
+            this.colCost.DisplayFormat.FormatString = "N0";
+            this.colCost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colCost.FieldName = "Cost";
             this.colCost.MinWidth = 25;
             this.colCost.Name = "colCost";
+            this.colCost.OptionsColumn.AllowEdit = false;
             this.colCost.Visible = true;
             this.colCost.VisibleIndex = 6;
             this.colCost.Width = 122;
@@ -195,9 +222,12 @@ namespace pet_management
             this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
             this.colPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPrice.Caption = "Giá bán";
+            this.colPrice.DisplayFormat.FormatString = "N0";
+            this.colPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPrice.FieldName = "Price";
             this.colPrice.MinWidth = 25;
             this.colPrice.Name = "colPrice";
+            this.colPrice.OptionsColumn.AllowEdit = false;
             this.colPrice.Visible = true;
             this.colPrice.VisibleIndex = 7;
             this.colPrice.Width = 122;
@@ -212,6 +242,7 @@ namespace pet_management
             this.colQuantity.FieldName = "Quantity";
             this.colQuantity.MinWidth = 25;
             this.colQuantity.Name = "colQuantity";
+            this.colQuantity.OptionsColumn.AllowEdit = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 8;
             this.colQuantity.Width = 68;
@@ -226,25 +257,50 @@ namespace pet_management
             this.colTax.FieldName = "Tax";
             this.colTax.MinWidth = 25;
             this.colTax.Name = "colTax";
+            this.colTax.OptionsColumn.AllowEdit = false;
             this.colTax.Visible = true;
             this.colTax.VisibleIndex = 9;
             this.colTax.Width = 63;
             // 
             // colDelete
             // 
+            this.colDelete.ColumnEdit = this.rbtnDelete;
             this.colDelete.MinWidth = 25;
             this.colDelete.Name = "colDelete";
+            this.colDelete.OptionsColumn.FixedWidth = true;
             this.colDelete.Visible = true;
-            this.colDelete.VisibleIndex = 0;
-            this.colDelete.Width = 28;
+            this.colDelete.VisibleIndex = 1;
+            this.colDelete.Width = 25;
+            // 
+            // rbtnDelete
+            // 
+            this.rbtnDelete.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.rbtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rbtnDelete.Name = "rbtnDelete";
+            this.rbtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rbtnDelete.Click += new System.EventHandler(this.rbtnDelete_Click);
             // 
             // colEdit
             // 
+            this.colEdit.ColumnEdit = this.rtbnEdit;
             this.colEdit.MinWidth = 25;
             this.colEdit.Name = "colEdit";
+            this.colEdit.OptionsColumn.FixedWidth = true;
             this.colEdit.Visible = true;
-            this.colEdit.VisibleIndex = 1;
-            this.colEdit.Width = 27;
+            this.colEdit.VisibleIndex = 0;
+            this.colEdit.Width = 25;
+            // 
+            // rtbnEdit
+            // 
+            this.rtbnEdit.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.rtbnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rtbnEdit.Name = "rtbnEdit";
+            this.rtbnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rtbnEdit.Click += new System.EventHandler(this.rtbnEdit_Click);
             // 
             // lblSearch
             // 
@@ -310,6 +366,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcPart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rtbnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -338,5 +396,7 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colTax;
         private DevExpress.XtraGrid.Columns.GridColumn colDelete;
         private DevExpress.XtraGrid.Columns.GridColumn colEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rtbnEdit;
     }
 }

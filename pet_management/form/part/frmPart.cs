@@ -45,5 +45,26 @@ namespace pet_management
             frmPartInfor f = new frmPartInfor(this, null, isEditMode: false);
             f.ShowDialog();
         }
+
+        private void rbtnDelete_Click(object sender, EventArgs e)
+        {
+            Part part = gridViewPart.GetFocusedRow() as Part;
+            if (XtraMessageBox.Show($"Bạn có chắc chắn muốn xóa {part.Name} ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bool isSuccess = partBUS.Delete(part.Id.ToString());
+                if (isSuccess)
+                {
+                    LoadData();
+                    XtraMessageBox.Show($"Xóa hàng hóa: {part.Name} thành công", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void rtbnEdit_Click(object sender, EventArgs e)
+        {
+            Part part = gridViewPart.GetFocusedRow() as Part;
+            frmPartInfor f = new frmPartInfor(this, part, isEditMode: true);
+            f.ShowDialog();
+        }
     }
 }

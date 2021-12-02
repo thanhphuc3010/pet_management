@@ -35,15 +35,45 @@ namespace DAO
         }
         public bool Save(Part p)
         {
-            return true;
+            string sql = "INSERT INTO `part` (`id_make`, `part_number`, `name`, `id_unit`, `uses`, `cost`, `price`, `quantity`, `tax`) VALUES ( @id_make , @part_number , @name , @id_unit , @uses , @cost , @price , @quantity , @tax )";
+            try
+            {
+                int value = DataProvider.Instance.ExcuteNonQuery(sql, new object[] { p.MakeId, p.PartNumber, p.Name, p.UnitId, p.Uses, p.Cost, p.Price, p.Quantity, p.Tax });
+                return value == 1;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
         }
         public bool Update(Part p)
         {
-            return true;
+            string sql = "UPDATE `part` SET " +
+                         "`id_make` = @id_make , " +
+                         "`part_number` = @part_number , " +
+                         "`name` = @name , " +
+                         "`id_unit` = @id_unit , " +
+                         "`uses` = @uses , " +
+                         "`cost` = @cost , " +
+                         "`price` = @price , " +
+                         "`quantity` = @quantity , " +
+                         "`tax` = @tax " +
+                         "WHERE `part`.`id` = @id ";
+            try
+            {
+                int value = DataProvider.Instance.ExcuteNonQuery(sql, new object[] { p.MakeId, p.PartNumber, p.Name, p.UnitId, p.Uses, p.Cost, p.Price, p.Quantity, p.Tax, p.Id });
+                return value == 1;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
         }
         public bool Delete(string id)
         {
-            return true;
+            string sql = $"DELETE FROM part WHERE id = {id}";
+            int value = DataProvider.Instance.ExcuteNonQuery(sql);
+            return value == 1;
         }
     }
 }
