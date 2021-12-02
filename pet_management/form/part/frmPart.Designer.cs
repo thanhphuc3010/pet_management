@@ -83,7 +83,7 @@ namespace pet_management
             this.grcPart.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rbtnDelete,
             this.rtbnEdit});
-            this.grcPart.Size = new System.Drawing.Size(1303, 537);
+            this.grcPart.Size = new System.Drawing.Size(1317, 539);
             this.grcPart.TabIndex = 0;
             this.grcPart.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPart});
@@ -113,8 +113,12 @@ namespace pet_management
             // 
             // colId
             // 
+            this.colId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colId.AppearanceCell.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colId.AppearanceHeader.Options.UseFont = true;
+            this.colId.AppearanceHeader.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Options.UseTextOptions = true;
             this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.FieldName = "Id";
@@ -125,8 +129,12 @@ namespace pet_management
             // 
             // colMakeId
             // 
+            this.colMakeId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMakeId.AppearanceCell.Options.UseForeColor = true;
             this.colMakeId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMakeId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colMakeId.AppearanceHeader.Options.UseFont = true;
+            this.colMakeId.AppearanceHeader.Options.UseForeColor = true;
             this.colMakeId.AppearanceHeader.Options.UseTextOptions = true;
             this.colMakeId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMakeId.Caption = "Nhà sản xuất";
@@ -140,8 +148,12 @@ namespace pet_management
             // 
             // colPartNumber
             // 
+            this.colPartNumber.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colPartNumber.AppearanceCell.Options.UseForeColor = true;
             this.colPartNumber.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPartNumber.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colPartNumber.AppearanceHeader.Options.UseFont = true;
+            this.colPartNumber.AppearanceHeader.Options.UseForeColor = true;
             this.colPartNumber.AppearanceHeader.Options.UseTextOptions = true;
             this.colPartNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPartNumber.Caption = "Mã hàng";
@@ -155,8 +167,12 @@ namespace pet_management
             // 
             // colName
             // 
+            this.colName.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colName.AppearanceCell.Options.UseForeColor = true;
             this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colName.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colName.AppearanceHeader.Options.UseFont = true;
+            this.colName.AppearanceHeader.Options.UseForeColor = true;
             this.colName.AppearanceHeader.Options.UseTextOptions = true;
             this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colName.Caption = "Tên hàng";
@@ -170,8 +186,12 @@ namespace pet_management
             // 
             // colUnitId
             // 
+            this.colUnitId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colUnitId.AppearanceCell.Options.UseForeColor = true;
             this.colUnitId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colUnitId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colUnitId.AppearanceHeader.Options.UseFont = true;
+            this.colUnitId.AppearanceHeader.Options.UseForeColor = true;
             this.colUnitId.AppearanceHeader.Options.UseTextOptions = true;
             this.colUnitId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUnitId.Caption = "Đơn vị";
@@ -185,8 +205,12 @@ namespace pet_management
             // 
             // colUses
             // 
+            this.colUses.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colUses.AppearanceCell.Options.UseForeColor = true;
             this.colUses.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colUses.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colUses.AppearanceHeader.Options.UseFont = true;
+            this.colUses.AppearanceHeader.Options.UseForeColor = true;
             this.colUses.AppearanceHeader.Options.UseTextOptions = true;
             this.colUses.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUses.Caption = "Công dụng";
@@ -200,8 +224,12 @@ namespace pet_management
             // 
             // colCost
             // 
+            this.colCost.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colCost.AppearanceCell.Options.UseForeColor = true;
             this.colCost.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCost.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colCost.AppearanceHeader.Options.UseFont = true;
+            this.colCost.AppearanceHeader.Options.UseForeColor = true;
             this.colCost.AppearanceHeader.Options.UseTextOptions = true;
             this.colCost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCost.Caption = "Giá nhập";
@@ -217,8 +245,12 @@ namespace pet_management
             // 
             // colPrice
             // 
+            this.colPrice.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colPrice.AppearanceCell.Options.UseForeColor = true;
             this.colPrice.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPrice.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colPrice.AppearanceHeader.Options.UseFont = true;
+            this.colPrice.AppearanceHeader.Options.UseForeColor = true;
             this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
             this.colPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPrice.Caption = "Giá bán";
@@ -234,8 +266,12 @@ namespace pet_management
             // 
             // colQuantity
             // 
+            this.colQuantity.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colQuantity.AppearanceCell.Options.UseForeColor = true;
             this.colQuantity.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colQuantity.AppearanceHeader.Options.UseFont = true;
+            this.colQuantity.AppearanceHeader.Options.UseForeColor = true;
             this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
             this.colQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colQuantity.Caption = "Còn hàng";
@@ -249,8 +285,12 @@ namespace pet_management
             // 
             // colTax
             // 
+            this.colTax.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colTax.AppearanceCell.Options.UseForeColor = true;
             this.colTax.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTax.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colTax.AppearanceHeader.Options.UseFont = true;
+            this.colTax.AppearanceHeader.Options.UseForeColor = true;
             this.colTax.AppearanceHeader.Options.UseTextOptions = true;
             this.colTax.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTax.Caption = "Thuế (%)";
@@ -264,10 +304,15 @@ namespace pet_management
             // 
             // colDelete
             // 
+            this.colDelete.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colDelete.AppearanceCell.Options.UseForeColor = true;
+            this.colDelete.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colDelete.AppearanceHeader.Options.UseForeColor = true;
             this.colDelete.ColumnEdit = this.rbtnDelete;
             this.colDelete.MinWidth = 25;
             this.colDelete.Name = "colDelete";
             this.colDelete.OptionsColumn.FixedWidth = true;
+            this.colDelete.OptionsColumn.Printable = DevExpress.Utils.DefaultBoolean.False;
             this.colDelete.Visible = true;
             this.colDelete.VisibleIndex = 1;
             this.colDelete.Width = 25;
@@ -284,10 +329,13 @@ namespace pet_management
             // 
             // colEdit
             // 
+            this.colEdit.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colEdit.AppearanceHeader.Options.UseForeColor = true;
             this.colEdit.ColumnEdit = this.rtbnEdit;
             this.colEdit.MinWidth = 25;
             this.colEdit.Name = "colEdit";
             this.colEdit.OptionsColumn.FixedWidth = true;
+            this.colEdit.OptionsColumn.Printable = DevExpress.Utils.DefaultBoolean.False;
             this.colEdit.Visible = true;
             this.colEdit.VisibleIndex = 0;
             this.colEdit.Width = 25;
@@ -304,7 +352,7 @@ namespace pet_management
             // 
             // lblSearch
             // 
-            this.lblSearch.Location = new System.Drawing.Point(13, 26);
+            this.lblSearch.Location = new System.Drawing.Point(13, 21);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(67, 18);
             this.lblSearch.TabIndex = 1;
@@ -312,7 +360,7 @@ namespace pet_management
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(86, 23);
+            this.txtSearch.Location = new System.Drawing.Point(86, 18);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
@@ -323,41 +371,56 @@ namespace pet_management
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(1021, 21);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
+            this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnAdd.Location = new System.Drawing.Point(1035, 12);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.Size = new System.Drawing.Size(94, 37);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(1121, 21);
+            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnImport.ImageOptions.SvgImage")));
+            this.btnImport.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnImport.Location = new System.Drawing.Point(1135, 12);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(94, 29);
+            this.btnImport.Size = new System.Drawing.Size(94, 37);
             this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Import File";
+            this.btnImport.Text = "Import";
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(1221, 21);
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnExport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExport.ImageOptions.SvgImage")));
+            this.btnExport.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
+            this.btnExport.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnExport.Location = new System.Drawing.Point(1235, 12);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(94, 29);
+            this.btnExport.Size = new System.Drawing.Size(94, 37);
             this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Export Excel";
+            this.btnExport.Text = "Export";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // frmPart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 615);
+            this.ClientSize = new System.Drawing.Size(1341, 617);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.grcPart);
-            this.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPart";
             this.Text = "Danh mục hàng hóa";

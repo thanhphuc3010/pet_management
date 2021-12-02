@@ -191,6 +191,7 @@
     <Compile Include="form\staff\frmStaffInfo.Designer.cs">
       <DependentUpon>frmStaffInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils\GridViewUtils.cs" />
     <Compile Include="utils\MyHelper.cs" />
     <Compile Include="utils\MyColor.cs" />
     <Compile Include="Program.cs" />

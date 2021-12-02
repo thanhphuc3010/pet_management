@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using DevExpress.XtraPrinting;
+using DevExpress.Export;
 
 namespace pet_management
 {
@@ -37,6 +39,7 @@ namespace pet_management
         {
             List<Part> parts = partBUS.GetParts();
             partBindingSource.DataSource = parts;
+            gridViewPart.BestFitColumnsEx();
         }
         #endregion
 
@@ -65,6 +68,50 @@ namespace pet_management
             Part part = gridViewPart.GetFocusedRow() as Part;
             frmPartInfor f = new frmPartInfor(this, part, isEditMode: true);
             f.ShowDialog();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ExportExcel("");
+        }
+
+        private bool ExportExcel(string fileName)
+        {
+            try
+            {
+                if(gridViewPart.FocusedRowHandle < 0)
+                {
+
+                } else
+                {
+                    var dialog = new SaveFileDialog();
+                    dialog.Title = "Export file excel";
+                    dialog.FileName = fileName;
+                    dialog.Filter = @"Microsoft Excel|*.xlsx";
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        gridViewPart.ColumnPanelRowHeight = 35;
+                        gridViewPart.OptionsPrint.AutoWidth = AutoSize;
+                        gridViewPart.OptionsPrint.ShowPrintExportProgress = true;
+                        gridViewPart.OptionsPrint.AllowCancelPrintExport = true;
+                        XlsxExportOptions options = new XlsxExportOptions();
+                        options.TextExportMode = TextExportMode.Text;
+                        options.ExportMode = XlsxExportMode.SingleFile;
+                        options.SheetName = "Sheet1";
+
+                        ExportSettings.DefaultExportType = ExportType.Default;
+                        gridViewPart.ExportToXlsx(dialog.FileName , options);
+                        XtraMessageBox.Show("Export Success", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
         }
     }
 }
