@@ -130,4 +130,7 @@
   <data name="ic_roles_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_roles_white.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="icon_assign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_assign.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
 </root>

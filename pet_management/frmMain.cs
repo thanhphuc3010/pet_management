@@ -36,8 +36,7 @@ namespace pet_management
         private void OpenFormAsDialog(Type frmType)
         {
             Form f = (Form)Activator.CreateInstance(frmType);
-            f.MdiParent = this;
-            f.Show();
+            f.ShowDialog();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -54,6 +53,11 @@ namespace pet_management
         {
             //OpenForm(typeof(frmRole));
             OpenFormAsDialog(typeof(frmRole));
+        }
+
+        private void btnPart_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmPart));
         }
     }
 }

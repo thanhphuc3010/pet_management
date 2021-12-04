@@ -59,6 +59,7 @@ namespace pet_management
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.txtStaffName = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -84,9 +85,10 @@ namespace pet_management
             this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
-            this.btnDontiep});
+            this.btnDontiep,
+            this.txtStaffName});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 17;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -145,6 +147,7 @@ namespace pet_management
             this.btnPart.Id = 7;
             this.btnPart.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_part_32x32;
             this.btnPart.Name = "btnPart";
+            this.btnPart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPart_ItemClick);
             // 
             // btnGroupService
             // 
@@ -267,6 +270,7 @@ namespace pet_management
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.txtStaffName);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 741);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
@@ -284,6 +288,12 @@ namespace pet_management
             // 
             this.tabbedView1.AppearancePage.Header.Options.UseImage = true;
             this.tabbedView1.DocumentProperties.UseFormIconAsDocumentImage = true;
+            // 
+            // txtStaffName
+            // 
+            this.txtStaffName.Caption = "Phạm Thanh Phúc";
+            this.txtStaffName.Id = 16;
+            this.txtStaffName.Name = "txtStaffName";
             // 
             // frmMain
             // 
@@ -337,5 +347,6 @@ namespace pet_management
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.BarStaticItem txtStaffName;
     }
 }

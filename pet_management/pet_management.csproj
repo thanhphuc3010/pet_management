@@ -321,6 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MailTemplate.html" />
+    <None Include="Resources\icon_assign.svg" />
     <None Include="Resources\ic_roles_white.svg" />
     <None Include="Resources\icon_technician.svg" />
     <None Include="Resources\Group 547.svg" />

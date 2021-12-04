@@ -30,6 +30,7 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff));
             this.grcStaff = new DevExpress.XtraGrid.GridControl();
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewStaff = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,6 +54,7 @@ namespace pet_management
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grcStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewStaff)).BeginInit();
@@ -366,11 +368,14 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(585, 11);
+            this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnAdd.Location = new System.Drawing.Point(585, 15);
             this.btnAdd.LookAndFeel.SkinName = "Office 2010 Blue";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 44);
+            this.btnAdd.Size = new System.Drawing.Size(103, 38);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -378,18 +383,21 @@ namespace pet_management
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(694, 11);
+            this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
+            this.btnDelete.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnDelete.Location = new System.Drawing.Point(694, 15);
             this.btnDelete.LookAndFeel.SkinName = "Office 2010 Blue";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 44);
+            this.btnDelete.Size = new System.Drawing.Size(94, 38);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 19);
+            this.txtSearch.Location = new System.Drawing.Point(85, 22);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
@@ -400,15 +408,25 @@ namespace pet_management
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 25);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(67, 18);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Tìm kiếm:";
+            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcStaff);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
             this.Name = "frmStaff";
             this.Text = "Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -421,6 +439,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -449,5 +468,6 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SearchControl txtSearch;
         private DevExpress.XtraGrid.Columns.GridColumn colFullName;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

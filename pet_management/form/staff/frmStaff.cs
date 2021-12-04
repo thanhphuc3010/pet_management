@@ -35,6 +35,7 @@ namespace pet_management
                 staff.FullName = $"{staff.FirstName} {staff.LastName}";
             }
             staffBindingSource.DataSource = result;
+            gridViewStaff.BestFitColumnsEx();
             roleStaffBindingSource.DataSource = RoleBUS.GetRoles();
         }
 

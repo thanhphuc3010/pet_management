@@ -116,7 +116,7 @@ namespace pet_management
             this.colId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colId.AppearanceCell.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colId.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colId.AppearanceHeader.Options.UseFont = true;
             this.colId.AppearanceHeader.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Options.UseTextOptions = true;
@@ -132,7 +132,7 @@ namespace pet_management
             this.colMakeId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colMakeId.AppearanceCell.Options.UseForeColor = true;
             this.colMakeId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colMakeId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colMakeId.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colMakeId.AppearanceHeader.Options.UseFont = true;
             this.colMakeId.AppearanceHeader.Options.UseForeColor = true;
             this.colMakeId.AppearanceHeader.Options.UseTextOptions = true;
@@ -151,7 +151,7 @@ namespace pet_management
             this.colPartNumber.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colPartNumber.AppearanceCell.Options.UseForeColor = true;
             this.colPartNumber.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colPartNumber.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colPartNumber.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colPartNumber.AppearanceHeader.Options.UseFont = true;
             this.colPartNumber.AppearanceHeader.Options.UseForeColor = true;
             this.colPartNumber.AppearanceHeader.Options.UseTextOptions = true;
@@ -170,7 +170,7 @@ namespace pet_management
             this.colName.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colName.AppearanceCell.Options.UseForeColor = true;
             this.colName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colName.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colName.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colName.AppearanceHeader.Options.UseFont = true;
             this.colName.AppearanceHeader.Options.UseForeColor = true;
             this.colName.AppearanceHeader.Options.UseTextOptions = true;
@@ -189,7 +189,7 @@ namespace pet_management
             this.colUnitId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colUnitId.AppearanceCell.Options.UseForeColor = true;
             this.colUnitId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colUnitId.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colUnitId.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colUnitId.AppearanceHeader.Options.UseFont = true;
             this.colUnitId.AppearanceHeader.Options.UseForeColor = true;
             this.colUnitId.AppearanceHeader.Options.UseTextOptions = true;
@@ -208,7 +208,7 @@ namespace pet_management
             this.colUses.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colUses.AppearanceCell.Options.UseForeColor = true;
             this.colUses.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colUses.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colUses.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colUses.AppearanceHeader.Options.UseFont = true;
             this.colUses.AppearanceHeader.Options.UseForeColor = true;
             this.colUses.AppearanceHeader.Options.UseTextOptions = true;
@@ -227,7 +227,7 @@ namespace pet_management
             this.colCost.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colCost.AppearanceCell.Options.UseForeColor = true;
             this.colCost.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colCost.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colCost.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colCost.AppearanceHeader.Options.UseFont = true;
             this.colCost.AppearanceHeader.Options.UseForeColor = true;
             this.colCost.AppearanceHeader.Options.UseTextOptions = true;
@@ -248,7 +248,7 @@ namespace pet_management
             this.colPrice.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colPrice.AppearanceCell.Options.UseForeColor = true;
             this.colPrice.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colPrice.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colPrice.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colPrice.AppearanceHeader.Options.UseFont = true;
             this.colPrice.AppearanceHeader.Options.UseForeColor = true;
             this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
@@ -269,7 +269,7 @@ namespace pet_management
             this.colQuantity.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colQuantity.AppearanceCell.Options.UseForeColor = true;
             this.colQuantity.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colQuantity.AppearanceHeader.Options.UseFont = true;
             this.colQuantity.AppearanceHeader.Options.UseForeColor = true;
             this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
@@ -288,7 +288,7 @@ namespace pet_management
             this.colTax.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colTax.AppearanceCell.Options.UseForeColor = true;
             this.colTax.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colTax.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colTax.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
             this.colTax.AppearanceHeader.Options.UseFont = true;
             this.colTax.AppearanceHeader.Options.UseForeColor = true;
             this.colTax.AppearanceHeader.Options.UseTextOptions = true;
@@ -365,6 +365,7 @@ namespace pet_management
             this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.txtSearch.Properties.NullValuePrompt = "Nhập từ khóa tìm kiếm";
             this.txtSearch.Size = new System.Drawing.Size(336, 24);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -376,9 +377,9 @@ namespace pet_management
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
             this.btnAdd.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnAdd.Location = new System.Drawing.Point(1021, 12);
+            this.btnAdd.Location = new System.Drawing.Point(1015, 12);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 37);
+            this.btnAdd.Size = new System.Drawing.Size(100, 37);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
