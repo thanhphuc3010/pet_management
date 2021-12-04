@@ -123,6 +123,12 @@
     <Compile Include="form\part\frmPartInfor.Designer.cs">
       <DependentUpon>frmPartInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\EntityState.cs" />
     <Compile Include="form\customer\frmAddCustomer.cs">
@@ -247,6 +253,9 @@
     <EmbeddedResource Include="form\part\frmPart.resx">
       <DependentUpon>frmPart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,6 +265,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="form\service\frmServiceInfor.resx">
       <DependentUpon>frmServiceInfor.cs</DependentUpon>
@@ -311,6 +321,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MailTemplate.html" />
+    <None Include="Resources\ic_roles_white.svg" />
+    <None Include="Resources\icon_technician.svg" />
+    <None Include="Resources\Group 547.svg" />
+    <None Include="Resources\icon_part_32x32.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="form\main\" />

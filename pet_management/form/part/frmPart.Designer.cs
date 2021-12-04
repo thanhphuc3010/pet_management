@@ -83,7 +83,7 @@ namespace pet_management
             this.grcPart.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rbtnDelete,
             this.rtbnEdit});
-            this.grcPart.Size = new System.Drawing.Size(1317, 539);
+            this.grcPart.Size = new System.Drawing.Size(1303, 537);
             this.grcPart.TabIndex = 0;
             this.grcPart.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPart});
@@ -376,7 +376,7 @@ namespace pet_management
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
             this.btnAdd.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnAdd.Location = new System.Drawing.Point(1035, 12);
+            this.btnAdd.Location = new System.Drawing.Point(1021, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 37);
             this.btnAdd.TabIndex = 3;
@@ -389,7 +389,7 @@ namespace pet_management
             this.btnImport.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnImport.ImageOptions.SvgImage")));
             this.btnImport.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnImport.Location = new System.Drawing.Point(1135, 12);
+            this.btnImport.Location = new System.Drawing.Point(1121, 12);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(94, 37);
             this.btnImport.TabIndex = 3;
@@ -402,7 +402,7 @@ namespace pet_management
             this.btnExport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExport.ImageOptions.SvgImage")));
             this.btnExport.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None;
             this.btnExport.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnExport.Location = new System.Drawing.Point(1235, 12);
+            this.btnExport.Location = new System.Drawing.Point(1221, 12);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(94, 37);
             this.btnExport.TabIndex = 3;
@@ -413,14 +413,14 @@ namespace pet_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 617);
+            this.ClientSize = new System.Drawing.Size(1327, 615);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.grcPart);
-            this.LookAndFeel.SkinName = "Office 2019 Colorful";
+            this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPart";
             this.Text = "Danh mục hàng hóa";

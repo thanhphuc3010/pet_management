@@ -77,13 +77,13 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcRole.DataSource = this.roleBindingSource;
-            this.grcRole.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grcRole.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.grcRole.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grcRole.Location = new System.Drawing.Point(0, 140);
+            this.grcRole.Location = new System.Drawing.Point(0, 144);
             this.grcRole.MainView = this.gridViewRole;
-            this.grcRole.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grcRole.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.grcRole.Name = "grcRole";
-            this.grcRole.Size = new System.Drawing.Size(728, 269);
+            this.grcRole.Size = new System.Drawing.Size(728, 241);
             this.grcRole.TabIndex = 2;
             this.grcRole.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewRole});
@@ -96,13 +96,13 @@ namespace pet_management
             // 
             this.gridViewRole.Appearance.Row.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridViewRole.Appearance.Row.Options.UseFont = true;
-            this.gridViewRole.ColumnPanelRowHeight = 37;
+            this.gridViewRole.ColumnPanelRowHeight = 42;
             this.gridViewRole.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colCode,
             this.colName,
             this.colDescription});
-            this.gridViewRole.DetailHeight = 539;
+            this.gridViewRole.DetailHeight = 606;
             this.gridViewRole.GridControl = this.grcRole;
             this.gridViewRole.Name = "gridViewRole";
             this.gridViewRole.OptionsBehavior.Editable = false;
@@ -110,7 +110,7 @@ namespace pet_management
             this.gridViewRole.OptionsFind.AlwaysVisible = true;
             this.gridViewRole.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm ...";
             this.gridViewRole.OptionsView.ShowGroupPanel = false;
-            this.gridViewRole.RowHeight = 35;
+            this.gridViewRole.RowHeight = 39;
             this.gridViewRole.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewRole_RowClick);
             this.gridViewRole.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
@@ -193,12 +193,12 @@ namespace pet_management
             this.btnAdd.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAdd.Location = new System.Drawing.Point(14, 449);
+            this.btnAdd.Location = new System.Drawing.Point(14, 398);
             this.btnAdd.LookAndFeel.SkinName = "Office 2019 Colorful";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 48);
+            this.btnAdd.Size = new System.Drawing.Size(107, 45);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -217,12 +217,12 @@ namespace pet_management
             this.btnUpdate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnUpdate.Location = new System.Drawing.Point(161, 449);
+            this.btnUpdate.Location = new System.Drawing.Point(161, 398);
             this.btnUpdate.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnUpdate.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(107, 45);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Lưu";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -242,12 +242,12 @@ namespace pet_management
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnEdit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(308, 449);
+            this.btnEdit.Location = new System.Drawing.Point(308, 398);
             this.btnEdit.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnEdit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(107, 48);
+            this.btnEdit.Size = new System.Drawing.Size(107, 45);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -266,12 +266,12 @@ namespace pet_management
             this.btnDelete.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDelete.Location = new System.Drawing.Point(455, 449);
+            this.btnDelete.Location = new System.Drawing.Point(455, 398);
             this.btnDelete.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 48);
+            this.btnDelete.Size = new System.Drawing.Size(107, 45);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -290,12 +290,12 @@ namespace pet_management
             this.btnCancel.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancel.Location = new System.Drawing.Point(602, 449);
+            this.btnCancel.Location = new System.Drawing.Point(602, 398);
             this.btnCancel.LookAndFeel.SkinName = "Office 2007 Blue";
             this.btnCancel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 48);
+            this.btnCancel.Size = new System.Drawing.Size(107, 45);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -311,14 +311,14 @@ namespace pet_management
             this.lytInput.Location = new System.Drawing.Point(0, 0);
             this.lytInput.Name = "lytInput";
             this.lytInput.Root = this.Root;
-            this.lytInput.Size = new System.Drawing.Size(728, 131);
+            this.lytInput.Size = new System.Drawing.Size(728, 147);
             this.lytInput.TabIndex = 4;
             this.lytInput.Text = "dataLayoutControl1";
             // 
             // txtCode
             // 
             this.txtCode.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.roleBindingSource, "Code", true));
-            this.txtCode.Location = new System.Drawing.Point(86, 12);
+            this.txtCode.Location = new System.Drawing.Point(86, 13);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
@@ -331,7 +331,7 @@ namespace pet_management
             // txtName
             // 
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.roleBindingSource, "Name", true));
-            this.txtName.Location = new System.Drawing.Point(440, 12);
+            this.txtName.Location = new System.Drawing.Point(440, 13);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
@@ -342,11 +342,11 @@ namespace pet_management
             // txtDescription
             // 
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.roleBindingSource, "Description", true));
-            this.txtDescription.Location = new System.Drawing.Point(86, 53);
+            this.txtDescription.Location = new System.Drawing.Point(86, 59);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
-            this.txtDescription.Size = new System.Drawing.Size(630, 66);
+            this.txtDescription.Size = new System.Drawing.Size(630, 75);
             this.txtDescription.StyleController = this.lytInput;
             this.txtDescription.TabIndex = 6;
             // 
@@ -357,7 +357,7 @@ namespace pet_management
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(728, 131);
+            this.Root.Size = new System.Drawing.Size(728, 147);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -371,7 +371,7 @@ namespace pet_management
             this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(708, 111);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(708, 125);
             // 
             // ItemForCode
             // 
@@ -393,9 +393,9 @@ namespace pet_management
             this.ItemForDescription.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForDescription.AppearanceItemCaption.Options.UseForeColor = true;
             this.ItemForDescription.Control = this.txtDescription;
-            this.ItemForDescription.Location = new System.Drawing.Point(0, 41);
+            this.ItemForDescription.Location = new System.Drawing.Point(0, 46);
             this.ItemForDescription.Name = "ItemForDescription";
-            this.ItemForDescription.Size = new System.Drawing.Size(708, 70);
+            this.ItemForDescription.Size = new System.Drawing.Size(708, 79);
             this.ItemForDescription.Text = "Mô tả";
             this.ItemForDescription.TextSize = new System.Drawing.Size(71, 18);
             // 
@@ -417,14 +417,14 @@ namespace pet_management
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(708, 13);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(708, 18);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 511);
+            this.ClientSize = new System.Drawing.Size(728, 458);
             this.Controls.Add(this.lytInput);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
@@ -433,6 +433,7 @@ namespace pet_management
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcRole);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.ic_roles_white;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRole";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

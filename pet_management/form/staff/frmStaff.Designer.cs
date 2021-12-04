@@ -38,14 +38,14 @@ namespace pet_management
             this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdRole = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.roleStaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,14 +68,14 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcStaff.DataSource = this.staffBindingSource;
-            this.grcStaff.Location = new System.Drawing.Point(12, 59);
+            this.grcStaff.Location = new System.Drawing.Point(12, 66);
             this.grcStaff.LookAndFeel.SkinName = "Office 2010 Blue";
             this.grcStaff.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grcStaff.MainView = this.gridViewStaff;
             this.grcStaff.Name = "grcStaff";
             this.grcStaff.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
-            this.grcStaff.Size = new System.Drawing.Size(776, 388);
+            this.grcStaff.Size = new System.Drawing.Size(776, 436);
             this.grcStaff.TabIndex = 0;
             this.grcStaff.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewStaff});
@@ -86,7 +86,7 @@ namespace pet_management
             // 
             // gridViewStaff
             // 
-            this.gridViewStaff.ColumnPanelRowHeight = 30;
+            this.gridViewStaff.ColumnPanelRowHeight = 34;
             this.gridViewStaff.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colStaffNumber,
@@ -102,6 +102,7 @@ namespace pet_management
             this.colPassword,
             this.colCreatedDate,
             this.colUpdatedDate});
+            this.gridViewStaff.DetailHeight = 394;
             this.gridViewStaff.GridControl = this.grcStaff;
             this.gridViewStaff.IndicatorWidth = 50;
             this.gridViewStaff.Name = "gridViewStaff";
@@ -189,6 +190,48 @@ namespace pet_management
             this.colFullName.VisibleIndex = 6;
             this.colFullName.Width = 94;
             // 
+            // colIdRole
+            // 
+            this.colIdRole.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colIdRole.AppearanceCell.Options.UseFont = true;
+            this.colIdRole.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colIdRole.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colIdRole.AppearanceHeader.Options.UseFont = true;
+            this.colIdRole.AppearanceHeader.Options.UseForeColor = true;
+            this.colIdRole.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIdRole.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIdRole.Caption = "Vai trò";
+            this.colIdRole.ColumnEdit = this.repositoryItemGridLookUpEdit1;
+            this.colIdRole.FieldName = "IdRole";
+            this.colIdRole.MinWidth = 25;
+            this.colIdRole.Name = "colIdRole";
+            this.colIdRole.Visible = true;
+            this.colIdRole.VisibleIndex = 8;
+            this.colIdRole.Width = 94;
+            // 
+            // repositoryItemGridLookUpEdit1
+            // 
+            this.repositoryItemGridLookUpEdit1.AutoHeight = false;
+            this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemGridLookUpEdit1.DataSource = this.roleStaffBindingSource;
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "Name";
+            this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.repositoryItemGridLookUpEdit1.ValueMember = "Id";
+            // 
+            // roleStaffBindingSource
+            // 
+            this.roleStaffBindingSource.DataSource = typeof(DTO.Role);
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.DetailHeight = 394;
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // colBirthday
             // 
             this.colBirthday.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,47 +303,6 @@ namespace pet_management
             this.colAddress.VisibleIndex = 7;
             this.colAddress.Width = 94;
             // 
-            // colIdRole
-            // 
-            this.colIdRole.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colIdRole.AppearanceCell.Options.UseFont = true;
-            this.colIdRole.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colIdRole.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colIdRole.AppearanceHeader.Options.UseFont = true;
-            this.colIdRole.AppearanceHeader.Options.UseForeColor = true;
-            this.colIdRole.AppearanceHeader.Options.UseTextOptions = true;
-            this.colIdRole.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colIdRole.Caption = "Vai trò";
-            this.colIdRole.ColumnEdit = this.repositoryItemGridLookUpEdit1;
-            this.colIdRole.FieldName = "IdRole";
-            this.colIdRole.MinWidth = 25;
-            this.colIdRole.Name = "colIdRole";
-            this.colIdRole.Visible = true;
-            this.colIdRole.VisibleIndex = 8;
-            this.colIdRole.Width = 94;
-            // 
-            // repositoryItemGridLookUpEdit1
-            // 
-            this.repositoryItemGridLookUpEdit1.AutoHeight = false;
-            this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemGridLookUpEdit1.DataSource = this.roleStaffBindingSource;
-            this.repositoryItemGridLookUpEdit1.DisplayMember = "Name";
-            this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
-            this.repositoryItemGridLookUpEdit1.PopupView = this.repositoryItemGridLookUpEdit1View;
-            this.repositoryItemGridLookUpEdit1.ValueMember = "Id";
-            // 
-            // roleStaffBindingSource
-            // 
-            this.roleStaffBindingSource.DataSource = typeof(DTO.Role);
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
             // colActive
             // 
             this.colActive.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,11 +366,11 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(585, 10);
+            this.btnAdd.Location = new System.Drawing.Point(585, 11);
             this.btnAdd.LookAndFeel.SkinName = "Office 2010 Blue";
             this.btnAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 39);
+            this.btnAdd.Size = new System.Drawing.Size(94, 44);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -376,32 +378,33 @@ namespace pet_management
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(694, 10);
+            this.btnDelete.Location = new System.Drawing.Point(694, 11);
             this.btnDelete.LookAndFeel.SkinName = "Office 2010 Blue";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 39);
+            this.btnDelete.Size = new System.Drawing.Size(94, 44);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 17);
+            this.txtSearch.Location = new System.Drawing.Point(12, 19);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.txtSearch.Size = new System.Drawing.Size(551, 24);
+            this.txtSearch.Properties.NullValuePrompt = "Nhập từ khóa để tìm kiếm";
+            this.txtSearch.Size = new System.Drawing.Size(394, 24);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // frmStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);

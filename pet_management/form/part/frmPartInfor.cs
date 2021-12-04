@@ -80,9 +80,9 @@ namespace pet_management
         private void InitializeControl()
         {
             txtCost.ApplyFormatToView();
-            txtCost.FormatCurrency();
+            //txtCost.FormatCurrency();
             txtPrice.ApplyFormatToView();
-            txtPrice.FormatCurrency();
+            //txtPrice.FormatCurrency();
             txtQuantity.ApplyFormatToView();
             txtTax.ApplyFormatToView();
         }

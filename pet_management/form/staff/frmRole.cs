@@ -15,7 +15,7 @@ using DTO;
 
 namespace pet_management
 {
-    public partial class frmRole : Form
+    public partial class frmRole : DevExpress.XtraEditors.XtraForm
     {
         EntityState state = EntityState.Unchaged;
         public frmRole()

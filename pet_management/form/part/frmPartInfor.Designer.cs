@@ -39,17 +39,16 @@ namespace pet_management
             this.txtCost = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.gluMake = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.makeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtPartNumber = new DevExpress.XtraEditors.TextEdit();
             this.luUnit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -69,7 +68,8 @@ namespace pet_management
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.makeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUses.Properties)).BeginInit();
@@ -79,14 +79,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtCost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluMake.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -104,7 +103,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -118,7 +118,7 @@ namespace pet_management
             this.layoutControl1.Controls.Add(this.gluMake);
             this.layoutControl1.Controls.Add(this.txtPartNumber);
             this.layoutControl1.Controls.Add(this.luUnit);
-            this.layoutControl1.Location = new System.Drawing.Point(1, 12);
+            this.layoutControl1.Location = new System.Drawing.Point(1, -1);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(605, 278);
@@ -167,7 +167,7 @@ namespace pet_management
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Properties.DisplayFormat.FormatString = "N0";
             this.txtPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPrice.Properties.Mask.EditMask = "c0";
+            this.txtPrice.Properties.Mask.EditMask = "n0";
             this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPrice.Size = new System.Drawing.Size(175, 24);
             this.txtPrice.StyleController = this.layoutControl1;
@@ -180,7 +180,7 @@ namespace pet_management
             this.txtCost.Name = "txtCost";
             this.txtCost.Properties.DisplayFormat.FormatString = "N0";
             this.txtCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCost.Properties.Mask.EditMask = "c0";
+            this.txtCost.Properties.Mask.EditMask = "n0";
             this.txtCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCost.Size = new System.Drawing.Size(198, 24);
             this.txtCost.StyleController = this.layoutControl1;
@@ -209,10 +209,6 @@ namespace pet_management
             this.gluMake.Size = new System.Drawing.Size(175, 24);
             this.gluMake.StyleController = this.layoutControl1;
             this.gluMake.TabIndex = 5;
-            // 
-            // makeBindingSource
-            // 
-            this.makeBindingSource.DataSource = typeof(DTO.Make);
             // 
             // gridLookUpEdit1View
             // 
@@ -258,10 +254,6 @@ namespace pet_management
             this.luUnit.Size = new System.Drawing.Size(175, 24);
             this.luUnit.StyleController = this.layoutControl1;
             this.luUnit.TabIndex = 13;
-            // 
-            // unitBindingSource
-            // 
-            this.unitBindingSource.DataSource = typeof(DTO.Unit);
             // 
             // gridView1
             // 
@@ -333,6 +325,14 @@ namespace pet_management
             this.layoutControlItem1.Size = new System.Drawing.Size(299, 28);
             this.layoutControlItem1.Text = "Mã số:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(94, 18);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 248);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(585, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
@@ -486,7 +486,7 @@ namespace pet_management
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
             this.btnSave.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnSave.Location = new System.Drawing.Point(400, 296);
+            this.btnSave.Location = new System.Drawing.Point(402, 279);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 33);
             this.btnSave.TabIndex = 1;
@@ -499,31 +499,31 @@ namespace pet_management
             this.btnQuit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnQuit.ImageOptions.SvgImage")));
             this.btnQuit.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
             this.btnQuit.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnQuit.Location = new System.Drawing.Point(500, 296);
+            this.btnQuit.Location = new System.Drawing.Point(502, 279);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(94, 33);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Thoát";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // emptySpaceItem1
+            // makeBindingSource
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 248);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(585, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.makeBindingSource.DataSource = typeof(DTO.Make);
+            // 
+            // unitBindingSource
+            // 
+            this.unitBindingSource.DataSource = typeof(DTO.Unit);
             // 
             // frmPartInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 341);
+            this.ClientSize = new System.Drawing.Size(606, 324);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Office 2019 White";
+            this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.Name = "frmPartInfor";
@@ -538,14 +538,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtCost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluMake.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -563,7 +562,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

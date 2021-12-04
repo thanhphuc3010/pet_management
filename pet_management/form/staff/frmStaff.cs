@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public partial class frmStaff : Form
+    public partial class frmStaff : DevExpress.XtraEditors.XtraForm
     {
         public frmStaff()
         {
