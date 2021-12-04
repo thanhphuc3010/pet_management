@@ -39,6 +39,7 @@ namespace pet_management
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.cboRole = new DevExpress.XtraEditors.LookUpEdit();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStaffNumber = new DevExpress.XtraLayout.LayoutControlItem();
@@ -48,14 +49,16 @@ namespace pet_management
             this.ItemForLastname = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForBirthday = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForRoleId = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.ItemForRoleId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtcStaff)).BeginInit();
             this.dtcStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
@@ -67,6 +70,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboRole.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStaffNumber)).BeginInit();
@@ -76,12 +80,14 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // dtcStaff
@@ -100,77 +106,77 @@ namespace pet_management
             this.dtcStaff.LookAndFeel.UseDefaultLookAndFeel = false;
             this.dtcStaff.Name = "dtcStaff";
             this.dtcStaff.Root = this.Root;
-            this.dtcStaff.Size = new System.Drawing.Size(717, 236);
+            this.dtcStaff.Size = new System.Drawing.Size(664, 266);
             this.dtcStaff.TabIndex = 0;
             this.dtcStaff.Text = "dataLayoutControl1";
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(106, 12);
+            this.txtNumber.Location = new System.Drawing.Point(106, 13);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Properties.Appearance.Options.UseFont = true;
-            this.txtNumber.Size = new System.Drawing.Size(139, 24);
+            this.txtNumber.Size = new System.Drawing.Size(237, 24);
             this.txtNumber.StyleController = this.dtcStaff;
             this.txtNumber.TabIndex = 5;
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(78, 50);
+            this.txtFirstname.Location = new System.Drawing.Point(105, 51);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(278, 24);
+            this.txtFirstname.Size = new System.Drawing.Size(238, 24);
             this.txtFirstname.StyleController = this.dtcStaff;
             this.txtFirstname.TabIndex = 6;
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(426, 50);
+            this.txtLastname.Location = new System.Drawing.Point(450, 51);
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(279, 24);
+            this.txtLastname.Size = new System.Drawing.Size(202, 24);
             this.txtLastname.StyleController = this.dtcStaff;
             this.txtLastname.TabIndex = 7;
             // 
             // dtBirthday
             // 
             this.dtBirthday.EditValue = null;
-            this.dtBirthday.Location = new System.Drawing.Point(315, 12);
+            this.dtBirthday.Location = new System.Drawing.Point(105, 89);
             this.dtBirthday.Name = "dtBirthday";
             this.dtBirthday.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dtBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtBirthday.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtBirthday.Size = new System.Drawing.Size(176, 24);
+            this.dtBirthday.Size = new System.Drawing.Size(238, 24);
             this.dtBirthday.StyleController = this.dtcStaff;
             this.dtBirthday.TabIndex = 8;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(78, 88);
+            this.txtPhone.Location = new System.Drawing.Point(105, 127);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(278, 24);
+            this.txtPhone.Size = new System.Drawing.Size(238, 24);
             this.txtPhone.StyleController = this.dtcStaff;
             this.txtPhone.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(426, 88);
+            this.txtEmail.Location = new System.Drawing.Point(450, 89);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(279, 24);
+            this.txtEmail.Size = new System.Drawing.Size(202, 24);
             this.txtEmail.StyleController = this.dtcStaff;
             this.txtEmail.TabIndex = 10;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(78, 136);
+            this.txtAddress.Location = new System.Drawing.Point(105, 155);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(627, 88);
+            this.txtAddress.Size = new System.Drawing.Size(547, 98);
             this.txtAddress.StyleController = this.dtcStaff;
             this.txtAddress.TabIndex = 11;
             // 
             // cboRole
             // 
-            this.cboRole.Location = new System.Drawing.Point(561, 12);
+            this.cboRole.Location = new System.Drawing.Point(450, 13);
             this.cboRole.Name = "cboRole";
             this.cboRole.Properties.Appearance.Options.UseTextOptions = true;
             this.cboRole.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -181,9 +187,13 @@ namespace pet_management
             this.cboRole.Properties.NullText = "";
             this.cboRole.Properties.PopupSizeable = false;
             this.cboRole.Properties.ValueMember = "Id";
-            this.cboRole.Size = new System.Drawing.Size(144, 24);
+            this.cboRole.Size = new System.Drawing.Size(202, 24);
             this.cboRole.StyleController = this.dtcStaff;
             this.cboRole.TabIndex = 12;
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataSource = typeof(DTO.Role);
             // 
             // Root
             // 
@@ -192,7 +202,7 @@ namespace pet_management
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(717, 236);
+            this.Root.Size = new System.Drawing.Size(664, 266);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -205,28 +215,31 @@ namespace pet_management
             this.ItemForPhone,
             this.ItemForAddress,
             this.ItemForLastname,
-            this.ItemForBirthday,
             this.ItemForEmail,
+            this.ItemForRoleId,
             this.emptySpaceItem1,
+            this.ItemForBirthday,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
             this.emptySpaceItem4,
-            this.ItemForRoleId});
+            this.emptySpaceItem5,
+            this.emptySpaceItem6,
+            this.emptySpaceItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AlignLocal;
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 0;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(697, 216);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(644, 244);
             // 
             // ItemForStaffNumber
             // 
             this.ItemForStaffNumber.Control = this.txtNumber;
             this.ItemForStaffNumber.Location = new System.Drawing.Point(0, 0);
             this.ItemForStaffNumber.Name = "ItemForStaffNumber";
-            this.ItemForStaffNumber.Size = new System.Drawing.Size(237, 28);
-            this.ItemForStaffNumber.Text = "Mã nhân viên";
+            this.ItemForStaffNumber.Size = new System.Drawing.Size(335, 28);
+            this.ItemForStaffNumber.Text = "Mã nhân viên:";
             this.ItemForStaffNumber.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.ItemForStaffNumber.TextSize = new System.Drawing.Size(89, 18);
+            this.ItemForStaffNumber.TextSize = new System.Drawing.Size(89, 20);
             this.ItemForStaffNumber.TextToControlDistance = 5;
             // 
             // ItemForFirstname
@@ -234,69 +247,100 @@ namespace pet_management
             this.ItemForFirstname.Control = this.txtFirstname;
             this.ItemForFirstname.Location = new System.Drawing.Point(0, 38);
             this.ItemForFirstname.Name = "ItemForFirstname";
-            this.ItemForFirstname.Size = new System.Drawing.Size(348, 28);
-            this.ItemForFirstname.Text = "Họ đệm";
-            this.ItemForFirstname.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForFirstname.Size = new System.Drawing.Size(335, 28);
+            this.ItemForFirstname.Text = "Họ đệm:";
+            this.ItemForFirstname.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForPhone
             // 
             this.ItemForPhone.Control = this.txtPhone;
-            this.ItemForPhone.Location = new System.Drawing.Point(0, 76);
+            this.ItemForPhone.Location = new System.Drawing.Point(0, 114);
             this.ItemForPhone.Name = "ItemForPhone";
-            this.ItemForPhone.Size = new System.Drawing.Size(348, 28);
-            this.ItemForPhone.Text = "Phone";
-            this.ItemForPhone.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForPhone.Size = new System.Drawing.Size(335, 28);
+            this.ItemForPhone.Text = "Số điện thoại:";
+            this.ItemForPhone.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForAddress
             // 
             this.ItemForAddress.Control = this.txtAddress;
-            this.ItemForAddress.Location = new System.Drawing.Point(0, 124);
+            this.ItemForAddress.Location = new System.Drawing.Point(0, 142);
             this.ItemForAddress.Name = "ItemForAddress";
-            this.ItemForAddress.Size = new System.Drawing.Size(697, 92);
+            this.ItemForAddress.Size = new System.Drawing.Size(644, 102);
             this.ItemForAddress.Text = "Address";
-            this.ItemForAddress.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForAddress.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForLastname
             // 
             this.ItemForLastname.Control = this.txtLastname;
-            this.ItemForLastname.Location = new System.Drawing.Point(348, 38);
+            this.ItemForLastname.Location = new System.Drawing.Point(345, 38);
             this.ItemForLastname.Name = "ItemForLastname";
-            this.ItemForLastname.Size = new System.Drawing.Size(349, 28);
+            this.ItemForLastname.Size = new System.Drawing.Size(299, 28);
             this.ItemForLastname.Text = "Tên";
-            this.ItemForLastname.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForLastname.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForBirthday
             // 
             this.ItemForBirthday.Control = this.dtBirthday;
-            this.ItemForBirthday.Location = new System.Drawing.Point(237, 0);
+            this.ItemForBirthday.Location = new System.Drawing.Point(0, 76);
             this.ItemForBirthday.Name = "ItemForBirthday";
-            this.ItemForBirthday.Size = new System.Drawing.Size(246, 28);
+            this.ItemForBirthday.Size = new System.Drawing.Size(335, 28);
             this.ItemForBirthday.Text = "Ngày sinh";
-            this.ItemForBirthday.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForBirthday.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForEmail
             // 
             this.ItemForEmail.Control = this.txtEmail;
-            this.ItemForEmail.Location = new System.Drawing.Point(348, 76);
+            this.ItemForEmail.Location = new System.Drawing.Point(345, 76);
             this.ItemForEmail.Name = "ItemForEmail";
-            this.ItemForEmail.Size = new System.Drawing.Size(349, 28);
+            this.ItemForEmail.Size = new System.Drawing.Size(299, 28);
             this.ItemForEmail.Text = "Email";
-            this.ItemForEmail.TextSize = new System.Drawing.Size(66, 18);
+            this.ItemForEmail.TextSize = new System.Drawing.Size(93, 18);
+            // 
+            // ItemForRoleId
+            // 
+            this.ItemForRoleId.Control = this.cboRole;
+            this.ItemForRoleId.Location = new System.Drawing.Point(345, 0);
+            this.ItemForRoleId.Name = "ItemForRoleId";
+            this.ItemForRoleId.Size = new System.Drawing.Size(299, 28);
+            this.ItemForRoleId.Text = "Vai trò";
+            this.ItemForRoleId.TextSize = new System.Drawing.Size(93, 18);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(447, 272);
+            this.btnSave.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 45);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Ghi nhận";
+            this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(558, 272);
+            this.btnQuit.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnQuit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(94, 45);
+            this.btnQuit.TabIndex = 1;
+            this.btnQuit.Text = "Thoát";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 114);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(335, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(697, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 142);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 104);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 28);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(697, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(335, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -304,57 +348,46 @@ namespace pet_management
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 66);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(697, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(335, 10);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 28);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 104);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(697, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(335, 10);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // ItemForRoleId
+            // emptySpaceItem5
             // 
-            this.ItemForRoleId.Control = this.cboRole;
-            this.ItemForRoleId.Location = new System.Drawing.Point(483, 0);
-            this.ItemForRoleId.Name = "ItemForRoleId";
-            this.ItemForRoleId.Size = new System.Drawing.Size(214, 28);
-            this.ItemForRoleId.Text = "Vai trò";
-            this.ItemForRoleId.TextSize = new System.Drawing.Size(66, 18);
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(345, 28);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(299, 10);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnSave
+            // emptySpaceItem6
             // 
-            this.btnSave.Location = new System.Drawing.Point(500, 249);
-            this.btnSave.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 40);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Ghi nhận";
-            this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.Location = new System.Drawing.Point(345, 66);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(299, 10);
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnQuit
+            // emptySpaceItem7
             // 
-            this.btnQuit.Location = new System.Drawing.Point(611, 249);
-            this.btnQuit.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.btnQuit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(94, 40);
-            this.btnQuit.TabIndex = 1;
-            this.btnQuit.Text = "Thoát";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataSource = typeof(DTO.Role);
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(345, 104);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(299, 38);
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmStaffInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 301);
+            this.ClientSize = new System.Drawing.Size(664, 334);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtcStaff);
@@ -375,6 +408,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboRole.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStaffNumber)).EndInit();
@@ -384,12 +418,14 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,13 +450,16 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlItem ItemForLastname;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBirthday;
         private DevExpress.XtraLayout.LayoutControlItem ItemForEmail;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnQuit;
         private DevExpress.XtraEditors.LookUpEdit cboRole;
         private System.Windows.Forms.BindingSource roleBindingSource;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
     }
 }

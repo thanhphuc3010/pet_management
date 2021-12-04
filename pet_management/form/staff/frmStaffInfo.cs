@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public partial class frmStaffInfo : Form
+    public partial class frmStaffInfo : DevExpress.XtraEditors.XtraForm
     {
         private readonly frmStaff frmStaff;
         private Staff staff;
@@ -51,11 +51,16 @@ namespace pet_management
             }
             else
             {
-                string fullname = $"{staff.FirstName} {staff.LastName}";
-                this.Text = $"Thông tin nhân viên {fullname}";
                 BindStaffInfo();
             }
             txtFirstname.Focus();
+            InitializeControl();
+        }
+
+        private void InitializeControl()
+        {
+            string fullname = (staff != null) ? $"{staff.FirstName} {staff.LastName}" : "";
+            this.Text = isEditMode ? $"Thông tin nhân viên {fullname}" : "Thêm mới nhân viên";
         }
 
         private void BindStaffInfo()
@@ -88,9 +93,11 @@ namespace pet_management
             {
                 staff.Id = this.staff.Id;
                 StaffBUS.Update(staff);
-            } else
+            }
+            else
             {
                 StaffBUS.Save(staff);
+                // TODO: Check two case: if managers want their staff to use software then invite staff by sending password via mail, if not then only save staff and don't send mail! 
                 SendPassword(staff);
             }
 
