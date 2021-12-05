@@ -39,7 +39,6 @@ namespace pet_management
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.cboRole = new DevExpress.XtraEditors.LookUpEdit();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStaffNumber = new DevExpress.XtraLayout.LayoutControlItem();
@@ -47,12 +46,10 @@ namespace pet_management
             this.ItemForPhone = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForAddress = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForLastname = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForBirthday = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForRoleId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.ItemForBirthday = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -60,6 +57,9 @@ namespace pet_management
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtcStaff)).BeginInit();
             this.dtcStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
@@ -71,7 +71,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboRole.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStaffNumber)).BeginInit();
@@ -79,10 +78,10 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastname)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
@@ -90,6 +89,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtcStaff
@@ -114,7 +114,7 @@ namespace pet_management
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(106, 13);
+            this.txtNumber.Location = new System.Drawing.Point(106, 12);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Properties.Appearance.Options.UseFont = true;
@@ -124,7 +124,7 @@ namespace pet_management
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(105, 51);
+            this.txtFirstname.Location = new System.Drawing.Point(105, 50);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(238, 24);
             this.txtFirstname.StyleController = this.dtcStaff;
@@ -132,7 +132,7 @@ namespace pet_management
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(450, 52);
+            this.txtLastname.Location = new System.Drawing.Point(450, 51);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(202, 24);
             this.txtLastname.StyleController = this.dtcStaff;
@@ -141,7 +141,7 @@ namespace pet_management
             // dtBirthday
             // 
             this.dtBirthday.EditValue = null;
-            this.dtBirthday.Location = new System.Drawing.Point(105, 89);
+            this.dtBirthday.Location = new System.Drawing.Point(105, 88);
             this.dtBirthday.Name = "dtBirthday";
             this.dtBirthday.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dtBirthday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -154,7 +154,7 @@ namespace pet_management
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(105, 127);
+            this.txtPhone.Location = new System.Drawing.Point(105, 126);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(238, 24);
             this.txtPhone.StyleController = this.dtcStaff;
@@ -162,7 +162,7 @@ namespace pet_management
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(450, 91);
+            this.txtEmail.Location = new System.Drawing.Point(450, 90);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(202, 24);
             this.txtEmail.StyleController = this.dtcStaff;
@@ -172,13 +172,13 @@ namespace pet_management
             // 
             this.txtAddress.Location = new System.Drawing.Point(105, 165);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(547, 88);
+            this.txtAddress.Size = new System.Drawing.Size(547, 89);
             this.txtAddress.StyleController = this.dtcStaff;
             this.txtAddress.TabIndex = 11;
             // 
             // cboRole
             // 
-            this.cboRole.Location = new System.Drawing.Point(450, 13);
+            this.cboRole.Location = new System.Drawing.Point(450, 12);
             this.cboRole.Name = "cboRole";
             this.cboRole.Properties.Appearance.Options.UseTextOptions = true;
             this.cboRole.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -192,10 +192,6 @@ namespace pet_management
             this.cboRole.Size = new System.Drawing.Size(202, 24);
             this.cboRole.StyleController = this.dtcStaff;
             this.cboRole.TabIndex = 12;
-            // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataSource = typeof(DTO.Role);
             // 
             // Root
             // 
@@ -232,7 +228,7 @@ namespace pet_management
             this.layoutControlGroup1.Name = "autoGeneratedGroup0";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AlignLocal;
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 0;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(644, 244);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(644, 246);
             // 
             // ItemForStaffNumber
             // 
@@ -266,9 +262,9 @@ namespace pet_management
             // ItemForAddress
             // 
             this.ItemForAddress.Control = this.txtAddress;
-            this.ItemForAddress.Location = new System.Drawing.Point(0, 152);
+            this.ItemForAddress.Location = new System.Drawing.Point(0, 153);
             this.ItemForAddress.Name = "ItemForAddress";
-            this.ItemForAddress.Size = new System.Drawing.Size(644, 92);
+            this.ItemForAddress.Size = new System.Drawing.Size(644, 93);
             this.ItemForAddress.Text = "Address";
             this.ItemForAddress.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -280,15 +276,6 @@ namespace pet_management
             this.ItemForLastname.Size = new System.Drawing.Size(299, 28);
             this.ItemForLastname.Text = "Tên";
             this.ItemForLastname.TextSize = new System.Drawing.Size(93, 18);
-            // 
-            // ItemForBirthday
-            // 
-            this.ItemForBirthday.Control = this.dtBirthday;
-            this.ItemForBirthday.Location = new System.Drawing.Point(0, 76);
-            this.ItemForBirthday.Name = "ItemForBirthday";
-            this.ItemForBirthday.Size = new System.Drawing.Size(335, 28);
-            this.ItemForBirthday.Text = "Ngày sinh";
-            this.ItemForBirthday.TextSize = new System.Drawing.Size(93, 18);
             // 
             // ItemForEmail
             // 
@@ -308,35 +295,22 @@ namespace pet_management
             this.ItemForRoleId.Text = "Vai trò";
             this.ItemForRoleId.TextSize = new System.Drawing.Size(93, 18);
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(447, 272);
-            this.btnSave.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 32);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Ghi nhận";
-            this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.Location = new System.Drawing.Point(558, 272);
-            this.btnQuit.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.btnQuit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(94, 32);
-            this.btnQuit.TabIndex = 1;
-            this.btnQuit.Text = "Thoát";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(335, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 152);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 153);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // ItemForBirthday
+            // 
+            this.ItemForBirthday.Control = this.dtBirthday;
+            this.ItemForBirthday.Location = new System.Drawing.Point(0, 76);
+            this.ItemForBirthday.Name = "ItemForBirthday";
+            this.ItemForBirthday.Size = new System.Drawing.Size(335, 28);
+            this.ItemForBirthday.Text = "Ngày sinh";
+            this.ItemForBirthday.TextSize = new System.Drawing.Size(93, 18);
             // 
             // emptySpaceItem2
             // 
@@ -383,7 +357,7 @@ namespace pet_management
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.Location = new System.Drawing.Point(345, 106);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(299, 46);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(299, 47);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
@@ -391,8 +365,34 @@ namespace pet_management
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 142);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(335, 10);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(335, 11);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(447, 272);
+            this.btnSave.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 32);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Ghi nhận";
+            this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(558, 272);
+            this.btnQuit.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.btnQuit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(94, 32);
+            this.btnQuit.TabIndex = 1;
+            this.btnQuit.Text = "Thoát";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataSource = typeof(DTO.Role);
             // 
             // frmStaffInfo
             // 
@@ -420,7 +420,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboRole.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStaffNumber)).EndInit();
@@ -428,10 +427,10 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastname)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRoleId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
@@ -439,6 +438,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
