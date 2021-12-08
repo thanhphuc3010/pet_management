@@ -12,7 +12,7 @@ using BUS;
 
 namespace pet_management
 {
-    public partial class frmAddCustomer : Form
+    public partial class frmAddCustomer : DevExpress.XtraEditors.XtraForm
     {
         private readonly frmCustomer frmCustomer;
         private Customer customer;

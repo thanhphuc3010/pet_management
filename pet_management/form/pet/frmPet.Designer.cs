@@ -554,6 +554,7 @@ namespace pet_management
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtSearch);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.ic_pet_color;
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPet";

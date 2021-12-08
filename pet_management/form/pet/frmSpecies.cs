@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public partial class frmSpecies : Form
+    public partial class frmSpecies : DevExpress.XtraEditors.XtraForm
     {
         EntityState state = EntityState.Unchaged;
         public frmSpecies()

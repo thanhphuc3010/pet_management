@@ -93,8 +93,10 @@
     <Compile Include="entity\Breed.cs" />
     <Compile Include="entity\Customer.cs" />
     <Compile Include="DataTableUtils.cs" />
+    <Compile Include="entity\Examination.cs" />
     <Compile Include="entity\Make.cs" />
     <Compile Include="entity\Part.cs" />
+    <Compile Include="ExaminationType.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

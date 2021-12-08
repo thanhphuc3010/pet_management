@@ -421,6 +421,7 @@ namespace pet_management
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.grcPart);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_part_32x32;
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPart";

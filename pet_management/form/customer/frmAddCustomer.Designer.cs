@@ -30,8 +30,10 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddCustomer));
             this.dtcCustomer = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtCustomerNumber = new DevExpress.XtraEditors.TextEdit();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtFirstname = new DevExpress.XtraEditors.TextEdit();
             this.txtLastname = new DevExpress.XtraEditors.TextEdit();
             this.dpDob = new DevExpress.XtraEditors.DateEdit();
@@ -48,20 +50,22 @@ namespace pet_management
             this.ItemForDiscountRate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.ItemForDob = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForPhone = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnQuit = new DevExpress.XtraEditors.SimpleButton();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtcCustomer)).BeginInit();
             this.dtcCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dpDob.Properties.CalendarTimeProperties)).BeginInit();
@@ -79,15 +83,16 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiscountRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // dtcCustomer
@@ -112,14 +117,14 @@ namespace pet_management
             this.dtcCustomer.OptionsPrint.AppearanceGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.dtcCustomer.OptionsPrint.AppearanceGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dtcCustomer.Root = this.layoutControlGroup1;
-            this.dtcCustomer.Size = new System.Drawing.Size(651, 249);
+            this.dtcCustomer.Size = new System.Drawing.Size(611, 235);
             this.dtcCustomer.TabIndex = 1;
             this.dtcCustomer.Text = "dataLayoutControl1";
             // 
             // txtCustomerNumber
             // 
             this.txtCustomerNumber.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "CustomerNumber", true));
-            this.txtCustomerNumber.Location = new System.Drawing.Point(116, 12);
+            this.txtCustomerNumber.Location = new System.Drawing.Point(116, 13);
             this.txtCustomerNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerNumber.Name = "txtCustomerNumber";
             this.txtCustomerNumber.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,31 +135,35 @@ namespace pet_management
             this.txtCustomerNumber.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtCustomerNumber.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtCustomerNumber.Properties.AppearanceReadOnly.Options.UseForeColor = true;
-            this.txtCustomerNumber.Size = new System.Drawing.Size(140, 24);
+            this.txtCustomerNumber.Size = new System.Drawing.Size(186, 24);
             this.txtCustomerNumber.StyleController = this.dtcCustomer;
             this.txtCustomerNumber.TabIndex = 4;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(DTO.Customer);
             // 
             // txtFirstname
             // 
             this.txtFirstname.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Firstname", true));
-            this.txtFirstname.Location = new System.Drawing.Point(116, 50);
+            this.txtFirstname.Location = new System.Drawing.Point(116, 51);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstname.Properties.Appearance.Options.UseFont = true;
-            this.txtFirstname.Size = new System.Drawing.Size(140, 24);
+            this.txtFirstname.Size = new System.Drawing.Size(186, 24);
             this.txtFirstname.StyleController = this.dtcCustomer;
             this.txtFirstname.TabIndex = 5;
             // 
             // txtLastname
             // 
             this.txtLastname.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Lastname", true));
-            this.txtLastname.Location = new System.Drawing.Point(374, 50);
+            this.txtLastname.Location = new System.Drawing.Point(420, 51);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastname.Properties.Appearance.Options.UseFont = true;
-            this.txtLastname.Size = new System.Drawing.Size(265, 24);
+            this.txtLastname.Size = new System.Drawing.Size(179, 24);
             this.txtLastname.StyleController = this.dtcCustomer;
             this.txtLastname.TabIndex = 6;
             // 
@@ -162,7 +171,7 @@ namespace pet_management
             // 
             this.dpDob.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Dob", true));
             this.dpDob.EditValue = null;
-            this.dpDob.Location = new System.Drawing.Point(116, 88);
+            this.dpDob.Location = new System.Drawing.Point(116, 89);
             this.dpDob.Margin = new System.Windows.Forms.Padding(4);
             this.dpDob.Name = "dpDob";
             this.dpDob.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,43 +180,43 @@ namespace pet_management
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dpDob.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dpDob.Size = new System.Drawing.Size(207, 24);
+            this.dpDob.Size = new System.Drawing.Size(186, 24);
             this.dpDob.StyleController = this.dtcCustomer;
             this.dpDob.TabIndex = 7;
             // 
             // txtPhone
             // 
             this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Phone", true));
-            this.txtPhone.Location = new System.Drawing.Point(431, 88);
+            this.txtPhone.Location = new System.Drawing.Point(420, 89);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
-            this.txtPhone.Size = new System.Drawing.Size(208, 24);
+            this.txtPhone.Size = new System.Drawing.Size(179, 24);
             this.txtPhone.StyleController = this.dtcCustomer;
             this.txtPhone.TabIndex = 8;
             // 
             // txtEmail
             // 
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Email", true));
-            this.txtEmail.Location = new System.Drawing.Point(116, 126);
+            this.txtEmail.Location = new System.Drawing.Point(116, 127);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Size = new System.Drawing.Size(523, 24);
+            this.txtEmail.Size = new System.Drawing.Size(483, 24);
             this.txtEmail.StyleController = this.dtcCustomer;
             this.txtEmail.TabIndex = 9;
             // 
             // txtAddress
             // 
             this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "Address", true));
-            this.txtAddress.Location = new System.Drawing.Point(116, 164);
+            this.txtAddress.Location = new System.Drawing.Point(116, 165);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
-            this.txtAddress.Size = new System.Drawing.Size(523, 73);
+            this.txtAddress.Size = new System.Drawing.Size(483, 57);
             this.txtAddress.StyleController = this.dtcCustomer;
             this.txtAddress.TabIndex = 10;
             // 
@@ -215,7 +224,7 @@ namespace pet_management
             // 
             this.txtDiscount.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customerBindingSource, "DiscountRate", true));
             this.txtDiscount.EditValue = "0";
-            this.txtDiscount.Location = new System.Drawing.Point(374, 12);
+            this.txtDiscount.Location = new System.Drawing.Point(420, 13);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,7 +234,7 @@ namespace pet_management
             this.txtDiscount.Properties.Mask.EditMask = "G";
             this.txtDiscount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDiscount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtDiscount.Size = new System.Drawing.Size(109, 24);
+            this.txtDiscount.Size = new System.Drawing.Size(86, 24);
             this.txtDiscount.StyleController = this.dtcCustomer;
             this.txtDiscount.TabIndex = 11;
             // 
@@ -235,8 +244,8 @@ namespace pet_management
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(651, 249);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(611, 235);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -251,17 +260,19 @@ namespace pet_management
             this.ItemForDiscountRate,
             this.ItemForEmail,
             this.emptySpaceItem1,
-            this.emptySpaceItem2,
-            this.emptySpaceItem3,
             this.emptySpaceItem4,
-            this.emptySpaceItem5,
-            this.emptySpaceItem6,
             this.ItemForDob,
             this.ItemForPhone,
-            this.emptySpaceItem7});
+            this.emptySpaceItem7,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3,
+            this.emptySpaceItem5,
+            this.emptySpaceItem6,
+            this.emptySpaceItem8,
+            this.emptySpaceItem9});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(631, 229);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(591, 213);
             // 
             // ItemForCustomerNumber
             // 
@@ -270,7 +281,7 @@ namespace pet_management
             this.ItemForCustomerNumber.Control = this.txtCustomerNumber;
             this.ItemForCustomerNumber.Location = new System.Drawing.Point(0, 0);
             this.ItemForCustomerNumber.Name = "ItemForCustomerNumber";
-            this.ItemForCustomerNumber.Size = new System.Drawing.Size(248, 28);
+            this.ItemForCustomerNumber.Size = new System.Drawing.Size(294, 28);
             this.ItemForCustomerNumber.Text = "Mã khách hàng";
             this.ItemForCustomerNumber.TextSize = new System.Drawing.Size(101, 18);
             // 
@@ -281,7 +292,7 @@ namespace pet_management
             this.ItemForFirstName.Control = this.txtFirstname;
             this.ItemForFirstName.Location = new System.Drawing.Point(0, 38);
             this.ItemForFirstName.Name = "ItemForFirstName";
-            this.ItemForFirstName.Size = new System.Drawing.Size(248, 28);
+            this.ItemForFirstName.Size = new System.Drawing.Size(294, 28);
             this.ItemForFirstName.Text = "Họ đệm";
             this.ItemForFirstName.TextSize = new System.Drawing.Size(101, 18);
             // 
@@ -292,7 +303,7 @@ namespace pet_management
             this.ItemForAddress.Control = this.txtAddress;
             this.ItemForAddress.Location = new System.Drawing.Point(0, 152);
             this.ItemForAddress.Name = "ItemForAddress";
-            this.ItemForAddress.Size = new System.Drawing.Size(631, 77);
+            this.ItemForAddress.Size = new System.Drawing.Size(591, 61);
             this.ItemForAddress.Text = "Address";
             this.ItemForAddress.TextSize = new System.Drawing.Size(101, 18);
             // 
@@ -301,10 +312,10 @@ namespace pet_management
             this.ItemForLastName.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemForLastName.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForLastName.Control = this.txtLastname;
-            this.ItemForLastName.Location = new System.Drawing.Point(258, 38);
+            this.ItemForLastName.Location = new System.Drawing.Point(304, 38);
             this.ItemForLastName.Name = "ItemForLastName";
-            this.ItemForLastName.Size = new System.Drawing.Size(373, 28);
-            this.ItemForLastName.Text = "Tên";
+            this.ItemForLastName.Size = new System.Drawing.Size(287, 28);
+            this.ItemForLastName.Text = "Tên:";
             this.ItemForLastName.TextSize = new System.Drawing.Size(101, 18);
             // 
             // ItemForDiscountRate
@@ -312,9 +323,9 @@ namespace pet_management
             this.ItemForDiscountRate.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemForDiscountRate.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForDiscountRate.Control = this.txtDiscount;
-            this.ItemForDiscountRate.Location = new System.Drawing.Point(258, 0);
+            this.ItemForDiscountRate.Location = new System.Drawing.Point(304, 0);
             this.ItemForDiscountRate.Name = "ItemForDiscountRate";
-            this.ItemForDiscountRate.Size = new System.Drawing.Size(217, 28);
+            this.ItemForDiscountRate.Size = new System.Drawing.Size(194, 28);
             this.ItemForDiscountRate.Text = "Chiết khấu";
             this.ItemForDiscountRate.TextSize = new System.Drawing.Size(101, 18);
             // 
@@ -325,57 +336,25 @@ namespace pet_management
             this.ItemForEmail.Control = this.txtEmail;
             this.ItemForEmail.Location = new System.Drawing.Point(0, 114);
             this.ItemForEmail.Name = "ItemForEmail";
-            this.ItemForEmail.Size = new System.Drawing.Size(631, 28);
+            this.ItemForEmail.Size = new System.Drawing.Size(591, 28);
             this.ItemForEmail.Text = "Email";
             this.ItemForEmail.TextSize = new System.Drawing.Size(101, 18);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(475, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(498, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(156, 28);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(93, 38);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 28);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(631, 10);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 66);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(631, 10);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 142);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(631, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(591, 10);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(248, 0);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 28);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(248, 38);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 28);
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForDob
             // 
@@ -384,7 +363,7 @@ namespace pet_management
             this.ItemForDob.Control = this.dpDob;
             this.ItemForDob.Location = new System.Drawing.Point(0, 76);
             this.ItemForDob.Name = "ItemForDob";
-            this.ItemForDob.Size = new System.Drawing.Size(315, 28);
+            this.ItemForDob.Size = new System.Drawing.Size(294, 28);
             this.ItemForDob.Text = "Ngày sinh";
             this.ItemForDob.TextSize = new System.Drawing.Size(101, 18);
             // 
@@ -393,65 +372,117 @@ namespace pet_management
             this.ItemForPhone.AppearanceItemCaption.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemForPhone.AppearanceItemCaption.Options.UseFont = true;
             this.ItemForPhone.Control = this.txtPhone;
-            this.ItemForPhone.Location = new System.Drawing.Point(315, 76);
+            this.ItemForPhone.Location = new System.Drawing.Point(304, 76);
             this.ItemForPhone.Name = "ItemForPhone";
-            this.ItemForPhone.Size = new System.Drawing.Size(316, 28);
-            this.ItemForPhone.Text = "Phone";
+            this.ItemForPhone.Size = new System.Drawing.Size(287, 28);
+            this.ItemForPhone.Text = "Số điện thoại:";
             this.ItemForPhone.TextSize = new System.Drawing.Size(101, 18);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 104);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(294, 0);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(631, 10);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(10, 114);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(477, 267);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnSave.Location = new System.Drawing.Point(414, 242);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(77, 37);
+            this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Ghi nhận";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnQuit
             // 
-            this.btnQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQuit.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.Appearance.Options.UseFont = true;
-            this.btnQuit.Location = new System.Drawing.Point(562, 267);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnQuit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnQuit.ImageOptions.SvgImage")));
+            this.btnQuit.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnQuit.Location = new System.Drawing.Point(522, 242);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(77, 37);
+            this.btnQuit.Size = new System.Drawing.Size(77, 30);
             this.btnQuit.TabIndex = 2;
             this.btnQuit.Text = "Thoát";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // customerBindingSource
+            // emptySpaceItem2
             // 
-            this.customerBindingSource.DataSource = typeof(DTO.Customer);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 28);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(294, 10);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 66);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(294, 10);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 104);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(294, 10);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.Location = new System.Drawing.Point(304, 28);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(194, 10);
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem8
+            // 
+            this.emptySpaceItem8.AllowHotTrack = false;
+            this.emptySpaceItem8.Location = new System.Drawing.Point(304, 66);
+            this.emptySpaceItem8.Name = "emptySpaceItem8";
+            this.emptySpaceItem8.Size = new System.Drawing.Size(287, 10);
+            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem9
+            // 
+            this.emptySpaceItem9.AllowHotTrack = false;
+            this.emptySpaceItem9.Location = new System.Drawing.Point(304, 104);
+            this.emptySpaceItem9.Name = "emptySpaceItem9";
+            this.emptySpaceItem9.Size = new System.Drawing.Size(287, 10);
+            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmAddCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 312);
+            this.ClientSize = new System.Drawing.Size(611, 284);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtcCustomer);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
             this.Name = "frmAddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddCustomer";
+            this.Text = "Thông tin khách hàng";
             this.Load += new System.EventHandler(this.frmAddCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtcCustomer)).EndInit();
             this.dtcCustomer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dpDob.Properties.CalendarTimeProperties)).EndInit();
@@ -469,15 +500,16 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiscountRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDob)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,15 +535,17 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlItem ItemForEmail;
         private DevExpress.XtraLayout.LayoutControlItem ItemForDob;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnQuit;
         private DevExpress.XtraEditors.TextEdit txtDiscount;
         private System.Windows.Forms.BindingSource customerBindingSource;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
     }
 }

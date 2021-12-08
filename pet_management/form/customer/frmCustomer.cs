@@ -16,7 +16,7 @@ using DTO;
 
 namespace pet_management
 {
-    public partial class frmCustomer : Form
+    public partial class frmCustomer : DevExpress.XtraEditors.XtraForm
     {
         public frmCustomer()
         {
@@ -43,9 +43,9 @@ namespace pet_management
 
         private void gridViewCustomer_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            string id = (sender as GridView).GetFocusedRowCellValue("Id").ToString();
-            //MessageBox.Show(id);
-            Customer customer = CustomerBUS.GetCustomerByID(id);
+            //string id = (sender as GridView).GetFocusedRowCellValue("Id").ToString();
+            ////MessageBox.Show(id);
+            //Customer customer = CustomerBUS.GetCustomerByID(id);
         }
 
         private void gridViewCustomer_DoubleClick(object sender, EventArgs e)

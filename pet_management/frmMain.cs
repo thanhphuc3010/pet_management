@@ -59,5 +59,45 @@ namespace pet_management
         {
             OpenForm(typeof(frmPart));
         }
+
+        private void btnCustomer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmCustomer));
+        }
+
+        private void btnPet_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmPet));
+        }
+
+        private void btnDontiep_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmReceivePet));
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmExamination));
+        }
+
+        private void btnGroupService_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormAsDialog(typeof(frmGroupService));
+        }
+
+        private void btnService_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormAsDialog(typeof(frmService));
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormAsDialog(typeof(frmSpecies));
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormAsDialog(typeof(frmBreed));
+        }
     }
 }

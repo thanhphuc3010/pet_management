@@ -426,7 +426,7 @@ namespace pet_management
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcStaff);
-            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.ic_staff;
             this.Name = "frmStaff";
             this.Text = "Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

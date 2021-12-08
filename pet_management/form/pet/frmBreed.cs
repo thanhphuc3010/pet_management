@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace pet_management
 {
-    public partial class frmBreed : Form
+    public partial class frmBreed : DevExpress.XtraEditors.XtraForm
     {
         private string id;
         public frmBreed()
@@ -27,6 +27,11 @@ namespace pet_management
         {
             id = cboBreed.SelectedValue.ToString();
             MessageBox.Show(id);
+        }
+
+        private void lbBreed_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

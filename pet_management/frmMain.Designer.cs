@@ -47,6 +47,12 @@ namespace pet_management
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDontiep = new DevExpress.XtraBars.BarButtonItem();
+            this.txtStaffName = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -56,10 +62,12 @@ namespace pet_management
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.txtStaffName = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -86,14 +94,20 @@ namespace pet_management
             this.barButtonItem4,
             this.barButtonItem5,
             this.btnDontiep,
-            this.txtStaffName});
+            this.txtStaffName,
+            this.barButtonItem6,
+            this.barButtonItem7,
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barButtonItem10});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 17;
+            this.ribbon.MaxItemId = 22;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
-            this.ribbonPage3});
+            this.ribbonPage3,
+            this.ribbonPage4});
             this.ribbon.Size = new System.Drawing.Size(1285, 183);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -129,7 +143,7 @@ namespace pet_management
             // 
             this.btnStaff.Caption = "Nhân viên";
             this.btnStaff.Id = 5;
-            this.btnStaff.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnStaff.ImageOptions.SvgImage")));
+            this.btnStaff.ImageOptions.SvgImage = global::pet_management.Properties.Resources.ic_staff;
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStaff_ItemClick);
             // 
@@ -155,6 +169,7 @@ namespace pet_management
             this.btnGroupService.Id = 8;
             this.btnGroupService.ImageOptions.SvgImage = global::pet_management.Properties.Resources.Group_547;
             this.btnGroupService.Name = "btnGroupService";
+            this.btnGroupService.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupService_ItemClick);
             // 
             // btnService
             // 
@@ -162,42 +177,96 @@ namespace pet_management
             this.btnService.Id = 9;
             this.btnService.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_technician;
             this.btnService.Name = "btnService";
+            this.btnService.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnService_ItemClick);
             // 
             // btnCustomer
             // 
             this.btnCustomer.Caption = "Khách hàng";
             this.btnCustomer.Id = 10;
+            this.btnCustomer.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
             this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomer_ItemClick);
             // 
             // btnPet
             // 
             this.btnPet.Caption = "Thú cưng";
             this.btnPet.Id = 11;
+            this.btnPet.ImageOptions.SvgImage = global::pet_management.Properties.Resources.ic_pet_color;
             this.btnPet.Name = "btnPet";
+            this.btnPet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPet_ItemClick);
             // 
             // barButtonItem3
             // 
             this.barButtonItem3.Caption = "Danh mục giống";
             this.barButtonItem3.Id = 12;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Danh mục loài";
             this.barButtonItem4.Id = 13;
+            this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "Danh mục đơn vị";
             this.barButtonItem5.Id = 14;
+            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 
             // btnDontiep
             // 
             this.btnDontiep.Caption = "Tiếp đón";
             this.btnDontiep.Id = 15;
+            this.btnDontiep.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_post_reward;
             this.btnDontiep.Name = "btnDontiep";
+            this.btnDontiep.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDontiep_ItemClick);
+            // 
+            // txtStaffName
+            // 
+            this.txtStaffName.Caption = "Phạm Thanh Phúc";
+            this.txtStaffName.Id = 16;
+            this.txtStaffName.Name = "txtStaffName";
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Danh sách khám chữa bệnh";
+            this.barButtonItem6.Id = 17;
+            this.barButtonItem6.ImageOptions.SvgImage = global::pet_management.Properties.Resources.ic_chooseasset_2x;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Báo cáo thống kê";
+            this.barButtonItem7.Id = 18;
+            this.barButtonItem7.ImageOptions.SvgImage = global::pet_management.Properties.Resources.ic_report;
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Báo cáo doanh thu";
+            this.barButtonItem8.Id = 19;
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Báo cáo hàng hóa sử dụng";
+            this.barButtonItem9.Id = 20;
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "Báo cáo tổng hợp";
+            this.barButtonItem10.Id = 21;
+            this.barButtonItem10.Name = "barButtonItem10";
             // 
             // ribbonPage1
             // 
@@ -256,7 +325,8 @@ namespace pet_management
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup7});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Quản lý tiếp đón";
             // 
@@ -267,6 +337,28 @@ namespace pet_management
             this.ribbonPageGroup5.ItemLinks.Add(this.btnDontiep);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Quản lý tiếp đón";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Quản lý khám chữa bệnh";
+            // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "Báo cáo - Thống kê";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Báo cáo thống kê";
             // 
             // ribbonStatusBar
             // 
@@ -289,12 +381,6 @@ namespace pet_management
             this.tabbedView1.AppearancePage.Header.Options.UseImage = true;
             this.tabbedView1.DocumentProperties.UseFormIconAsDocumentImage = true;
             // 
-            // txtStaffName
-            // 
-            this.txtStaffName.Caption = "Phạm Thanh Phúc";
-            this.txtStaffName.Id = 16;
-            this.txtStaffName.Name = "txtStaffName";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -306,7 +392,7 @@ namespace pet_management
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "frmMain";
+            this.Text = "Quản lý khám chữa bệnh thú y";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
@@ -348,5 +434,13 @@ namespace pet_management
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.BarStaticItem txtStaffName;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
     }
 }

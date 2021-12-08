@@ -30,6 +30,7 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grcCustomer = new DevExpress.XtraGrid.GridControl();
             this.gridViewCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -46,9 +47,12 @@ namespace pet_management
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // customerBindingSource
@@ -61,12 +65,12 @@ namespace pet_management
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcCustomer.DataSource = this.customerBindingSource;
-            this.grcCustomer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            this.grcCustomer.Location = new System.Drawing.Point(15, 71);
+            this.grcCustomer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.grcCustomer.Location = new System.Drawing.Point(15, 68);
             this.grcCustomer.MainView = this.gridViewCustomer;
-            this.grcCustomer.Margin = new System.Windows.Forms.Padding(6);
+            this.grcCustomer.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.grcCustomer.Name = "grcCustomer";
-            this.grcCustomer.Size = new System.Drawing.Size(1067, 532);
+            this.grcCustomer.Size = new System.Drawing.Size(1067, 610);
             this.grcCustomer.TabIndex = 1;
             this.grcCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCustomer});
@@ -91,11 +95,10 @@ namespace pet_management
             this.colEmail,
             this.colAddress,
             this.colDiscountRate});
-            this.gridViewCustomer.DetailHeight = 682;
+            this.gridViewCustomer.DetailHeight = 767;
             this.gridViewCustomer.GridControl = this.grcCustomer;
             this.gridViewCustomer.Name = "gridViewCustomer";
             this.gridViewCustomer.OptionsBehavior.Editable = false;
-            this.gridViewCustomer.OptionsFind.AlwaysVisible = true;
             this.gridViewCustomer.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridViewCustomer.OptionsView.ShowGroupPanel = false;
             this.gridViewCustomer.OptionsView.ShowIndicator = false;
@@ -105,6 +108,8 @@ namespace pet_management
             // 
             // colId
             // 
+            this.colId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colId.AppearanceHeader.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Options.UseTextOptions = true;
             this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colId.FieldName = "Id";
@@ -118,8 +123,8 @@ namespace pet_management
             this.colCustomerNumber.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCustomerNumber.AppearanceCell.Options.UseBorderColor = true;
             this.colCustomerNumber.AppearanceCell.Options.UseFont = true;
-            this.colCustomerNumber.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colCustomerNumber.AppearanceHeader.Options.UseBackColor = true;
+            this.colCustomerNumber.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colCustomerNumber.AppearanceHeader.Options.UseForeColor = true;
             this.colCustomerNumber.AppearanceHeader.Options.UseTextOptions = true;
             this.colCustomerNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCustomerNumber.Caption = "Mã KH";
@@ -134,8 +139,8 @@ namespace pet_management
             // 
             this.colFirstname.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colFirstname.AppearanceCell.Options.UseFont = true;
-            this.colFirstname.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colFirstname.AppearanceHeader.Options.UseBackColor = true;
+            this.colFirstname.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colFirstname.AppearanceHeader.Options.UseForeColor = true;
             this.colFirstname.AppearanceHeader.Options.UseTextOptions = true;
             this.colFirstname.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colFirstname.Caption = "Họ đệm";
@@ -150,8 +155,8 @@ namespace pet_management
             // 
             this.colLastname.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colLastname.AppearanceCell.Options.UseFont = true;
-            this.colLastname.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colLastname.AppearanceHeader.Options.UseBackColor = true;
+            this.colLastname.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colLastname.AppearanceHeader.Options.UseForeColor = true;
             this.colLastname.AppearanceHeader.Options.UseTextOptions = true;
             this.colLastname.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colLastname.Caption = "Tên";
@@ -166,8 +171,8 @@ namespace pet_management
             // 
             this.colDob.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colDob.AppearanceCell.Options.UseFont = true;
-            this.colDob.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colDob.AppearanceHeader.Options.UseBackColor = true;
+            this.colDob.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDob.AppearanceHeader.Options.UseForeColor = true;
             this.colDob.AppearanceHeader.Options.UseTextOptions = true;
             this.colDob.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDob.Caption = "Ngày sinh";
@@ -182,8 +187,8 @@ namespace pet_management
             // 
             this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colPhone.AppearanceCell.Options.UseFont = true;
-            this.colPhone.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colPhone.AppearanceHeader.Options.UseBackColor = true;
+            this.colPhone.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colPhone.AppearanceHeader.Options.UseForeColor = true;
             this.colPhone.AppearanceHeader.Options.UseTextOptions = true;
             this.colPhone.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPhone.Caption = "Số điện thoại";
@@ -198,8 +203,8 @@ namespace pet_management
             // 
             this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colEmail.AppearanceCell.Options.UseFont = true;
-            this.colEmail.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colEmail.AppearanceHeader.Options.UseBackColor = true;
+            this.colEmail.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colEmail.AppearanceHeader.Options.UseForeColor = true;
             this.colEmail.AppearanceHeader.Options.UseTextOptions = true;
             this.colEmail.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEmail.FieldName = "Email";
@@ -213,8 +218,8 @@ namespace pet_management
             // 
             this.colAddress.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colAddress.AppearanceCell.Options.UseFont = true;
-            this.colAddress.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colAddress.AppearanceHeader.Options.UseBackColor = true;
+            this.colAddress.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colAddress.AppearanceHeader.Options.UseForeColor = true;
             this.colAddress.AppearanceHeader.Options.UseTextOptions = true;
             this.colAddress.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colAddress.Caption = "Địa chỉ";
@@ -229,8 +234,8 @@ namespace pet_management
             // 
             this.colDiscountRate.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colDiscountRate.AppearanceCell.Options.UseFont = true;
-            this.colDiscountRate.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colDiscountRate.AppearanceHeader.Options.UseBackColor = true;
+            this.colDiscountRate.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDiscountRate.AppearanceHeader.Options.UseForeColor = true;
             this.colDiscountRate.AppearanceHeader.Options.UseTextOptions = true;
             this.colDiscountRate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDiscountRate.Caption = "Chiết khấu";
@@ -244,10 +249,13 @@ namespace pet_management
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(658, 17);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
+            this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnAdd.Location = new System.Drawing.Point(711, 18);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 43);
+            this.btnAdd.Size = new System.Drawing.Size(85, 36);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -255,10 +263,13 @@ namespace pet_management
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(768, 17);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(8);
+            this.btnEdit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
+            this.btnEdit.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnEdit.Location = new System.Drawing.Point(811, 18);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(94, 43);
+            this.btnEdit.Size = new System.Drawing.Size(75, 36);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -266,10 +277,13 @@ namespace pet_management
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(878, 17);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(8);
+            this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
+            this.btnDelete.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnDelete.Location = new System.Drawing.Point(901, 18);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 43);
+            this.btnDelete.Size = new System.Drawing.Size(71, 36);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -277,24 +291,49 @@ namespace pet_management
             // btnRefresh
             // 
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.Location = new System.Drawing.Point(988, 17);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(8);
+            this.btnRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
+            this.btnRefresh.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnRefresh.Location = new System.Drawing.Point(987, 18);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(94, 43);
+            this.btnRefresh.Size = new System.Drawing.Size(94, 36);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(15, 27);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(67, 18);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Tìm kiếm:";
+            // 
+            // searchControl1
+            // 
+            this.searchControl1.Location = new System.Drawing.Point(89, 24);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl1.Properties.NullValuePrompt = "Nhập từ khóa để tìm kiếm";
+            this.searchControl1.Size = new System.Drawing.Size(471, 24);
+            this.searchControl1.TabIndex = 4;
+            // 
             // frmCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 618);
+            this.ClientSize = new System.Drawing.Size(1097, 695);
+            this.Controls.Add(this.searchControl1);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcCustomer);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
             this.Name = "frmCustomer";
             this.Text = "Khách hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -302,7 +341,9 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -323,5 +364,7 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SearchControl searchControl1;
     }
 }
