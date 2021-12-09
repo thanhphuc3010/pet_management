@@ -14,6 +14,9 @@ namespace DAO
 {
     public class StaffDAO : BaseDAO<Staff>
     {
+        private static MapperColumn mapper = new MapperColumn();
+
+        private static void SetTypeMapperStaff() => SqlMapper.SetTypeMap(typeof(Staff), mapper.GetMap<Staff>());
         public static List<Staff> GetStaffs()
         {
             IDbConnection dbd = DataProvider.Connect;
@@ -21,13 +24,20 @@ namespace DAO
             if (dbd.State == ConnectionState.Closed) dbd.Open();
             //Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            MapperColumn mapper = new MapperColumn();
-            SqlMapper.SetTypeMap(typeof(Staff), mapper.GetMap<Staff>());
+            SetTypeMapperStaff();
 
             List<Staff> result = dbd.Query<Staff>(query).ToList();
             dbd.Close();
             return result;
         }
+
+        public static Staff GetStaffAuthentication(string email, string password)
+        {
+            string sql = "SELECT * FROM staff WHERE email = @Email AND password = @Password";
+            SetTypeMapperStaff();
+            return db.QuerySingleOrDefault<Staff>(sql, new { Email = email, Password = password });
+        }
+
         public static Staff GetStaffById(string id)
         {
             string sql = "SELECT * FROM staff WHERE id = " + id;

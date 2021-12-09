@@ -24,6 +24,12 @@ namespace DAO
             return result;
         }
 
+        public static Pet GetPetById(string id)
+        {
+            string sql = $"SELECT * FROM pet WHERE id = {id}";
+            return db.QuerySingle<Pet>(sql);
+        }
+
         public static bool Delete(string id)
         {
             string sql = $"DELETE FROM pet WHERE id = {id}";

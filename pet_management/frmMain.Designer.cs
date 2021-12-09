@@ -231,7 +231,7 @@ namespace pet_management
             // 
             // txtStaffName
             // 
-            this.txtStaffName.Caption = "Phạm Thanh Phúc";
+            this.txtStaffName.Caption = "---Staff Name---";
             this.txtStaffName.Id = 16;
             this.txtStaffName.Name = "txtStaffName";
             // 

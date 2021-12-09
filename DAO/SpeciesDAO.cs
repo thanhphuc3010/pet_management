@@ -5,12 +5,20 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 using DTO;
 
 namespace DAO
 {
     public class SpeicesDAO
     {
+        public static IDbConnection db = DataProvider.Connect;
+
+        MapperColumn mapper = new MapperColumn();
+        public void SetTypeMapper()
+        {
+            SqlMapper.SetTypeMap(typeof(Species), mapper.GetMap<Species>());
+        }
         public static List<Species> GetAllSpeices()
         {
             var result = new List<Species>();
@@ -29,6 +37,12 @@ namespace DAO
                 throw ex;
             }
             return result;
+        }
+
+        public static Species GetSpeicesById(string v)
+        {
+            string sql = $"SELECT * FROM species WHERE id = {v}";
+            return db.QuerySingle<Species>(sql);
         }
 
         public static bool Delete(Species species)

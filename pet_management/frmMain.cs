@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,22 @@ namespace pet_management
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private Staff staff;
         public frmMain()
         {
             InitializeComponent();
+            
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            InitializeLoginForm();
+        }
+
+        private void InitializeLoginForm()
+        {
+            frmLogin f = new frmLogin();
+            f.ShowDialog(this);
         }
 
         private void OpenForm(Type frmType)
@@ -39,11 +53,6 @@ namespace pet_management
             f.ShowDialog();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnStaff_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmStaff));
@@ -63,6 +72,17 @@ namespace pet_management
         private void btnCustomer_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmCustomer));
+        }
+
+        internal void SetLoginInfor(Staff s)
+        {
+            staff = s;
+            BindBottomStatusBar();
+        }
+
+        private void BindBottomStatusBar()
+        {
+            txtStaffName.Caption = $"{ staff.FirstName} {staff.LastName}";
         }
 
         private void btnPet_ItemClick(object sender, ItemClickEventArgs e)

@@ -19,6 +19,10 @@ namespace BUS
         {
             return StaffDAO.GetStaffById(id);
         }
+        public static Staff GetStaffAuthentication(string email, string password)
+        {
+            return StaffDAO.GetStaffAuthentication(email, password);
+        }
         public static bool Save(Staff s)
         {
             if (string.IsNullOrWhiteSpace(s.Address))

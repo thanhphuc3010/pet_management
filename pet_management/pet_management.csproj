@@ -147,6 +147,7 @@
     <Compile Include="frmReceivePet.Designer.cs">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils\Const.cs" />
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\EntityState.cs" />
     <Compile Include="form\customer\frmAddCustomer.cs">
