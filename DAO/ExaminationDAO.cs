@@ -60,5 +60,12 @@ namespace DAO
             });
             DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();
         }
+
+        public bool DoneExamination(Examination examination)
+        {
+            SetMapper();
+            var result = db.Update(examination);
+            return result;
+        }
     }
 }

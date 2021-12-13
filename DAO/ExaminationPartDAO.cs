@@ -43,6 +43,13 @@ namespace DAO
             }
         }
 
+        public bool Delete(ExaminationPart exPart)
+        {
+            SetMapper();
+            var result = db.Delete(exPart);
+            return result;
+        }
+
         public List<ExaminationPart> GetExaminationPartsDetail(long exId)
         {
             SetMapper();

@@ -51,5 +51,12 @@ namespace DAO
             List<ExaminationService> examinations = db.GetList<ExaminationService>(predicate).ToList();
             return examinations;
         }
+
+        public bool Delete(ExaminationService exService)
+        {
+            SetMapper();
+            var result = db.Delete(exService);
+            return result;
+        }
     }
 }

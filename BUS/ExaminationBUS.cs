@@ -22,6 +22,11 @@ namespace BUS
             return (result == 1);
         }
 
+        public bool DeletePartDetail(ExaminationPart exPart)
+        {
+            return exPartDao.Delete(exPart);
+        }
+
         public bool SavePartDetail(ExaminationPart exPart)
         {
             int result = exPartDao.Save(exPart);
@@ -70,6 +75,16 @@ namespace BUS
         {
             int result = exServiceDao.Save(exService);
             return (result == 1);
+        }
+
+        public bool DeleteServiceDetail(ExaminationService exService)
+        {
+            return exServiceDao.Delete(exService);
+        }
+
+        public bool DoneExamination(Examination examination)
+        {
+            return dao.DoneExamination(examination);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace DAO
         public ExaminationServiceMapper()
         {
             Table("examination_service");
-            Map(f => f.ExaminationId).Column("id_examination");
-            Map(f => f.ServiceId).Column("id_service");
+            Map(f => f.ExaminationId).Column("id_examination").Key(KeyType.Assigned);
+            Map(f => f.ServiceId).Column("id_service").Key(KeyType.Assigned);
             Map(f => f.Tax).Column("tax");
             Map(f => f.Price).Column("price");
             Map(f => f.Discount).Column("discount");

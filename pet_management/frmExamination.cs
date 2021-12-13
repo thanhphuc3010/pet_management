@@ -38,7 +38,9 @@ namespace pet_management
 
         private void InitailizeData()
         {
-            examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            examinations.Sort(new CompareExamination());
+            examinationBindingSource.DataSource = examinations;
             staffBindingSource.DataSource = StaffBUS.GetDoctors();
         }
 
@@ -127,6 +129,65 @@ namespace pet_management
         {
             frmSelectService f = new frmSelectService(this, currentExamination.Id);
             f.ShowDialog();
+        }
+
+        private void rbtnDelete_Click(object sender, EventArgs e)
+        {
+            ELItem item = gridViewDetail.GetFocusedRow() as ELItem;
+            bool result = false;
+            if (item.ItemType == "Hàng hóa")
+            {
+                result = examinationBUS.DeletePartDetail(item.ToExPart());
+            }
+            else if (item.ItemType == "Dịch vụ")
+            {
+                result = examinationBUS.DeleteServiceDetail(item.ToExService());
+            }
+            else
+            {
+                result = false;
+            }
+            if (result)
+            {
+                RefreshExDetail();
+            }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSymptom.Text) || string.IsNullOrEmpty(txtSymptom.Text))
+            {
+                XtraMessageBox.Show("Vui lòng nhập đủ thông tin về triệu chứng và kết luận của bác sĩ!");
+                return;
+            }
+            currentExamination.Status = ExaminationStatus.Done;
+            currentExamination.Symptom = txtSymptom.GetTextTrim();
+            currentExamination.Conclude = txtConclude.GetTextTrim();
+            var isSuccess = examinationBUS.DoneExamination(currentExamination);
+            if (isSuccess)
+            {
+                ResetAllFieldData();
+            }
+        }
+
+        private void ResetAllFieldData()
+        {
+            txtPetId.Text = null;
+            txtMicrochip.Text = null;
+            txtPetName.Text = null;
+            txtBreed.Text = null;
+            txtSpecies.Text = null;
+            txtCustomerName.Text = null;
+            txtPhone.Text = null;
+            txtAddress.Text = null;
+
+            txtID.Text = null;
+            dtExaminationDate.DateTime = DateTime.Today;
+            txtType.Text = null;
+            gluDoctor.EditValue = null;
+
+            eLItemBindingSource.DataSource = null;
+            currentExamination = null;
         }
     }
 }
