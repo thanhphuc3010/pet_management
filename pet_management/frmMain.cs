@@ -21,6 +21,17 @@ namespace pet_management
             
         }
 
+        public Staff GetStaffLogined()
+        {
+            if (staff != null)
+            {
+                return this.staff;
+            }
+            else
+            {
+                return null;
+            }
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             InitializeLoginForm();

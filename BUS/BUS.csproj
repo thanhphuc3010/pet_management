@@ -92,6 +92,7 @@
     <Compile Include="base\BaseBUS.cs" />
     <Compile Include="BreedBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
+    <Compile Include="ExaminationBUS.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

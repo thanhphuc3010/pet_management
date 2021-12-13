@@ -15,6 +15,28 @@ namespace BUS
             List<Staff> result = StaffDAO.GetStaffs();
             return result;
         }
+
+        public static List<Staff> GetDoctors()
+        {
+            // TODO: hardcode role id => has to fix by getting role id before call get list
+            List<Staff> data = StaffDAO.GetStaffsByRole(roleId: 1);
+            foreach (Staff staff in data)
+            {
+                staff.FullName = $"{staff.FirstName} {staff.LastName}";
+            }
+            return data;
+        }
+
+        public static List<Staff> GetReceptionlist()
+        {
+            // For now: id = 1 => Doctor, id = 3 => Receptionlist
+            List<Staff> data = StaffDAO.GetStaffsByRole(roleId: 3);
+            foreach (Staff staff in data)
+            {
+                staff.FullName = $"{staff.FirstName} {staff.LastName}";
+            }
+            return data;
+        }
         public static Staff GetStaffById(string id)
         {
             return StaffDAO.GetStaffById(id);

@@ -31,6 +31,17 @@ namespace DAO
             return result;
         }
 
+        public static List<Staff> GetStaffsByRole(int roleId)
+        {
+            IDbConnection dbd = DataProvider.Connect;
+            string query = "SELECT * FROM staff WHERE id_role = @id_role";
+            if (dbd.State == ConnectionState.Closed) dbd.Open();
+            SetTypeMapperStaff();
+            List<Staff> result = dbd.Query<Staff>(query, new { id_role = roleId }).ToList();
+            dbd.Close();
+            return result;
+        }
+
         public static Staff GetStaffAuthentication(string email, string password)
         {
             string sql = "SELECT * FROM staff WHERE email = @Email AND password = @Password";

@@ -92,12 +92,43 @@ namespace pet_management
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gluDoctor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStaffNumber1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirstName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLastName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthday1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdRole1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassword1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreatedDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUpdatedDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gluReceptionlist = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.receptionlistBS = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStaffNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdRole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtExaminationDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtIdNumber = new DevExpress.XtraEditors.TextEdit();
+            this.cboType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem15 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -124,9 +155,8 @@ namespace pet_management
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboType = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -176,12 +206,15 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluReceptionlist.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptionlistBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
@@ -204,7 +237,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -764,39 +796,233 @@ namespace pet_management
             // 
             // gluDoctor
             // 
+            this.gluDoctor.EditValue = "";
             this.gluDoctor.Location = new System.Drawing.Point(125, 199);
             this.gluDoctor.Name = "gluDoctor";
             this.gluDoctor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluDoctor.Properties.DataSource = this.doctorBindingSource;
+            this.gluDoctor.Properties.DisplayMember = "FullName";
             this.gluDoctor.Properties.PopupView = this.gridLookUpEdit3View;
+            this.gluDoctor.Properties.ValueMember = "Id";
             this.gluDoctor.Size = new System.Drawing.Size(322, 24);
             this.gluDoctor.StyleController = this.layoutControl2;
             this.gluDoctor.TabIndex = 19;
             // 
+            // doctorBindingSource
+            // 
+            this.doctorBindingSource.DataSource = typeof(DTO.Staff);
+            // 
             // gridLookUpEdit3View
             // 
+            this.gridLookUpEdit3View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId1,
+            this.colStaffNumber1,
+            this.colFirstName1,
+            this.colLastName1,
+            this.colFullName1,
+            this.colBirthday1,
+            this.colPhone1,
+            this.colEmail1,
+            this.colAddress1,
+            this.colIdRole1,
+            this.colActive1,
+            this.colPassword1,
+            this.colCreatedDate1,
+            this.colUpdatedDate1});
             this.gridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit3View.Name = "gridLookUpEdit3View";
             this.gridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit3View.OptionsView.ShowGroupPanel = false;
             // 
+            // colId1
+            // 
+            this.colId1.FieldName = "Id";
+            this.colId1.Name = "colId1";
+            // 
+            // colStaffNumber1
+            // 
+            this.colStaffNumber1.FieldName = "StaffNumber";
+            this.colStaffNumber1.Name = "colStaffNumber1";
+            this.colStaffNumber1.Visible = true;
+            this.colStaffNumber1.VisibleIndex = 0;
+            // 
+            // colFirstName1
+            // 
+            this.colFirstName1.FieldName = "FirstName";
+            this.colFirstName1.Name = "colFirstName1";
+            // 
+            // colLastName1
+            // 
+            this.colLastName1.FieldName = "LastName";
+            this.colLastName1.Name = "colLastName1";
+            // 
+            // colFullName1
+            // 
+            this.colFullName1.FieldName = "FullName";
+            this.colFullName1.Name = "colFullName1";
+            this.colFullName1.Visible = true;
+            this.colFullName1.VisibleIndex = 1;
+            // 
+            // colBirthday1
+            // 
+            this.colBirthday1.FieldName = "Birthday";
+            this.colBirthday1.Name = "colBirthday1";
+            // 
+            // colPhone1
+            // 
+            this.colPhone1.FieldName = "Phone";
+            this.colPhone1.Name = "colPhone1";
+            // 
+            // colEmail1
+            // 
+            this.colEmail1.FieldName = "Email";
+            this.colEmail1.Name = "colEmail1";
+            // 
+            // colAddress1
+            // 
+            this.colAddress1.FieldName = "Address";
+            this.colAddress1.Name = "colAddress1";
+            // 
+            // colIdRole1
+            // 
+            this.colIdRole1.FieldName = "IdRole";
+            this.colIdRole1.Name = "colIdRole1";
+            // 
+            // colActive1
+            // 
+            this.colActive1.FieldName = "Active";
+            this.colActive1.Name = "colActive1";
+            // 
+            // colPassword1
+            // 
+            this.colPassword1.FieldName = "Password";
+            this.colPassword1.Name = "colPassword1";
+            // 
+            // colCreatedDate1
+            // 
+            this.colCreatedDate1.FieldName = "CreatedDate";
+            this.colCreatedDate1.Name = "colCreatedDate1";
+            // 
+            // colUpdatedDate1
+            // 
+            this.colUpdatedDate1.FieldName = "UpdatedDate";
+            this.colUpdatedDate1.Name = "colUpdatedDate1";
+            // 
             // gluReceptionlist
             // 
+            this.gluReceptionlist.EditValue = "Select";
             this.gluReceptionlist.Location = new System.Drawing.Point(125, 161);
             this.gluReceptionlist.Name = "gluReceptionlist";
             this.gluReceptionlist.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluReceptionlist.Properties.DataSource = this.receptionlistBS;
+            this.gluReceptionlist.Properties.DisplayMember = "FullName";
             this.gluReceptionlist.Properties.PopupView = this.gridLookUpEdit2View;
+            this.gluReceptionlist.Properties.ValueMember = "Id";
             this.gluReceptionlist.Size = new System.Drawing.Size(322, 24);
             this.gluReceptionlist.StyleController = this.layoutControl2;
             this.gluReceptionlist.TabIndex = 18;
             // 
+            // receptionlistBS
+            // 
+            this.receptionlistBS.DataSource = typeof(DTO.Staff);
+            // 
             // gridLookUpEdit2View
             // 
+            this.gridLookUpEdit2View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colStaffNumber,
+            this.colFirstName,
+            this.colLastName,
+            this.colFullName,
+            this.colBirthday,
+            this.colPhone,
+            this.colEmail,
+            this.colAddress,
+            this.colIdRole,
+            this.colActive,
+            this.colPassword,
+            this.colCreatedDate,
+            this.colUpdatedDate});
             this.gridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
             this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colStaffNumber
+            // 
+            this.colStaffNumber.FieldName = "StaffNumber";
+            this.colStaffNumber.Name = "colStaffNumber";
+            this.colStaffNumber.Visible = true;
+            this.colStaffNumber.VisibleIndex = 0;
+            // 
+            // colFirstName
+            // 
+            this.colFirstName.FieldName = "FirstName";
+            this.colFirstName.Name = "colFirstName";
+            // 
+            // colLastName
+            // 
+            this.colLastName.FieldName = "LastName";
+            this.colLastName.Name = "colLastName";
+            // 
+            // colFullName
+            // 
+            this.colFullName.FieldName = "FullName";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 1;
+            // 
+            // colBirthday
+            // 
+            this.colBirthday.FieldName = "Birthday";
+            this.colBirthday.Name = "colBirthday";
+            // 
+            // colPhone
+            // 
+            this.colPhone.FieldName = "Phone";
+            this.colPhone.Name = "colPhone";
+            // 
+            // colEmail
+            // 
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            // 
+            // colAddress
+            // 
+            this.colAddress.FieldName = "Address";
+            this.colAddress.Name = "colAddress";
+            // 
+            // colIdRole
+            // 
+            this.colIdRole.FieldName = "IdRole";
+            this.colIdRole.Name = "colIdRole";
+            // 
+            // colActive
+            // 
+            this.colActive.FieldName = "Active";
+            this.colActive.Name = "colActive";
+            // 
+            // colPassword
+            // 
+            this.colPassword.FieldName = "Password";
+            this.colPassword.Name = "colPassword";
+            // 
+            // colCreatedDate
+            // 
+            this.colCreatedDate.FieldName = "CreatedDate";
+            this.colCreatedDate.Name = "colCreatedDate";
+            // 
+            // colUpdatedDate
+            // 
+            this.colUpdatedDate.FieldName = "UpdatedDate";
+            this.colUpdatedDate.Name = "colUpdatedDate";
             // 
             // dtExaminationDate
             // 
@@ -830,6 +1056,16 @@ namespace pet_management
             this.txtIdNumber.Size = new System.Drawing.Size(322, 24);
             this.txtIdNumber.StyleController = this.layoutControl2;
             this.txtIdNumber.TabIndex = 4;
+            // 
+            // cboType
+            // 
+            this.cboType.Location = new System.Drawing.Point(125, 82);
+            this.cboType.Name = "cboType";
+            this.cboType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboType.Size = new System.Drawing.Size(322, 24);
+            this.cboType.StyleController = this.layoutControl2;
+            this.cboType.TabIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -1093,16 +1329,17 @@ namespace pet_management
             this.searchControl1.Size = new System.Drawing.Size(529, 24);
             this.searchControl1.TabIndex = 1;
             // 
-            // simpleButton2
+            // btnRegister
             // 
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton2.Location = new System.Drawing.Point(628, 293);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(134, 27);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Đăng ký khám";
+            this.btnRegister.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btnRegister.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnRegister.Location = new System.Drawing.Point(628, 293);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(134, 27);
+            this.btnRegister.TabIndex = 2;
+            this.btnRegister.Text = "Đăng ký khám";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label1
             // 
@@ -1113,23 +1350,13 @@ namespace pet_management
             this.label1.TabIndex = 4;
             this.label1.Text = "Tìm kiếm:";
             // 
-            // cboType
-            // 
-            this.cboType.Location = new System.Drawing.Point(125, 82);
-            this.cboType.Name = "cboType";
-            this.cboType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboType.Size = new System.Drawing.Size(322, 24);
-            this.cboType.StyleController = this.layoutControl2;
-            this.cboType.TabIndex = 5;
-            // 
             // frmReceivePet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1860, 775);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
@@ -1188,12 +1415,15 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluReceptionlist.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptionlistBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
@@ -1217,7 +1447,6 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1299,7 +1528,7 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SearchControl searchControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnRegister;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
@@ -1321,5 +1550,35 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraEditors.MemoEdit txtAddress;
         private DevExpress.XtraEditors.ComboBoxEdit cboType;
+        private System.Windows.Forms.BindingSource doctorBindingSource;
+        private System.Windows.Forms.BindingSource receptionlistBS;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colStaffNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn colLastName;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthday;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdRole;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStaffNumber1;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirstName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colLastName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthday1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone1;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress1;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdRole1;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassword1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate1;
     }
 }

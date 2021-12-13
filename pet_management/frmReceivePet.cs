@@ -16,6 +16,7 @@ namespace pet_management
     public partial class frmReceivePet : DevExpress.XtraEditors.XtraForm
     {
         private ReceivePetBUS receivePetBUS = new ReceivePetBUS();
+        private ExaminationBUS examinationBUS = new ExaminationBUS();
         private int count;
         private string PREFIX = "PKDV";
         public frmReceivePet()
@@ -39,6 +40,8 @@ namespace pet_management
             cboType.Properties.Items.AddRange(ExaminationType.GetListType());
             GenerateExamNumber();
             dtExaminationDate.DateTime = DateTime.Now;
+            LoadListDoctor();
+            LoadListReceptionlist();
         }
 
         private void GenerateExamNumber()
@@ -68,6 +71,40 @@ namespace pet_management
             txtCustomer.Text = petData.CustomerName.ToString();
             txtPhone.Text = petData.Phone.ToString();
             txtAddress.Text = petData.Address.ToString();
+        }
+
+        private void LoadListReceptionlist()
+        {
+            receptionlistBS.DataSource = StaffBUS.GetReceptionlist();
+        }
+
+        private void LoadListDoctor()
+        {
+            doctorBindingSource.DataSource = StaffBUS.GetDoctors();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (gluDoctor.EditValue.ToString() == "")
+            {
+                XtraMessageBox.Show($"Vui lòng chỉ định bác sĩ khám chữa bệnh");
+                return;
+            }
+
+            RegisterExamination();
+        }
+
+        private void RegisterExamination()
+        {
+            Examination examination = new Examination();
+            examination.PetId = (int)gluIdPet.EditValue;
+            examination.ExaminationNumber = txtIdNumber.GetTextTrim();
+            examination.Type = cboType.EditValue.ToString();
+            examination.ExaminationDate = dtExaminationDate.DateTime;
+            examination.DoctorId = (int)gluDoctor.EditValue;
+            examination.ReceptionistId = (int)gluReceptionlist.EditValue;
+            examination.Status = "Chưa khám";
+            examinationBUS.Save(examination);
         }
     }
 }
