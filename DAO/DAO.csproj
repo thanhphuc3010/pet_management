@@ -117,6 +117,10 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="ExaminationDAO.cs" />
     <Compile Include="ExaminationMapper.cs" />
+    <Compile Include="ExaminationPartDAO.cs" />
+    <Compile Include="ExaminationPartMapper.cs" />
+    <Compile Include="ExaminationServiceDAO.cs" />
+    <Compile Include="ExaminationServiceMapper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

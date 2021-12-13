@@ -30,6 +30,7 @@ namespace DAO
         }
         public Part GetPartById(string id)
         {
+            SetTypeMapper();
             string sql = $"SELECT * FROM part WHERE id = {id}";
             return db.QuerySingle<Part>(sql);
         }

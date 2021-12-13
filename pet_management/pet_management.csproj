@@ -147,6 +147,18 @@
     <Compile Include="frmReceivePet.Designer.cs">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSelectPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPart.Designer.cs">
+      <DependentUpon>frmSelectPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectService.Designer.cs">
+      <DependentUpon>frmSelectService.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\Const.cs" />
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\EntityState.cs" />
@@ -284,6 +296,12 @@
     <EmbeddedResource Include="frmReceivePet.resx">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPart.resx">
+      <DependentUpon>frmSelectPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectService.resx">
+      <DependentUpon>frmSelectService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -301,6 +319,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
+    <None Include="Properties\DataSources\DTO.ELItem.datasource" />
     <None Include="Properties\DataSources\DTO.Examination.datasource" />
     <None Include="Properties\DataSources\DTO.GroupService.datasource" />
     <None Include="Properties\DataSources\DTO.Make.datasource" />

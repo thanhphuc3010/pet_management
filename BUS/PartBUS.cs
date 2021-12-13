@@ -12,6 +12,7 @@ namespace BUS
     {
         private PartDAO partDAO => baseDAO;
         public List<Part> GetParts() => partDAO.GetParts();
+        public Part GetPartById(string id) => partDAO.GetPartById(id);
         public bool Save(Part entity) => partDAO.Save(entity);
           
         public bool Update(Part entity) => partDAO.Update(entity);

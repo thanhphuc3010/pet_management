@@ -64,18 +64,17 @@ namespace pet_management
             this.repoBtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditPet = new DevExpress.XtraEditors.SimpleButton();
             this.lblCustomerInfo = new DevExpress.XtraEditors.LabelControl();
             this.lblPetInfor = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone = new DevExpress.XtraEditors.TextEdit();
+            this.txtCustomerName = new DevExpress.XtraEditors.TextEdit();
+            this.txtBreed = new DevExpress.XtraEditors.TextEdit();
+            this.txtSpecies = new DevExpress.XtraEditors.TextEdit();
+            this.txtPetName = new DevExpress.XtraEditors.TextEdit();
+            this.txtMicrochip = new DevExpress.XtraEditors.TextEdit();
+            this.txtPetId = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -102,10 +101,25 @@ namespace pet_management
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.gridLookUpEdit3 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.txtConclude = new DevExpress.XtraEditors.MemoEdit();
+            this.txtSymptom = new DevExpress.XtraEditors.TextEdit();
+            this.gluDoctor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStaffNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdRole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreatedDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUpdatedDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtExaminationDate = new DevExpress.XtraEditors.DateEdit();
             this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.txtID = new DevExpress.XtraEditors.TextEdit();
@@ -128,14 +142,26 @@ namespace pet_management
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem19 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.grcExDetail = new DevExpress.XtraGrid.GridControl();
+            this.eLItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colExaminationId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUnitId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTax = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiscount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colServiceUsedId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiscount = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.txtSubtotal = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
@@ -153,15 +179,14 @@ namespace pet_management
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSpecies.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPetName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMicrochip.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPetId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -188,9 +213,10 @@ namespace pet_management
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConclude.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSymptom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties)).BeginInit();
@@ -216,11 +242,12 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -237,7 +264,7 @@ namespace pet_management
             this.groupControl1.Controls.Add(this.grcExamination);
             this.groupControl1.Location = new System.Drawing.Point(13, 13);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(456, 866);
+            this.groupControl1.Size = new System.Drawing.Size(456, 733);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách bệnh nhân";
             // 
@@ -317,7 +344,7 @@ namespace pet_management
             this.grcExamination.Name = "grcExamination";
             this.grcExamination.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoBtnStart});
-            this.grcExamination.Size = new System.Drawing.Size(456, 770);
+            this.grcExamination.Size = new System.Drawing.Size(456, 637);
             this.grcExamination.TabIndex = 0;
             this.grcExamination.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewExamination});
@@ -505,17 +532,17 @@ namespace pet_management
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.btnEditPet);
             this.layoutControl1.Controls.Add(this.lblCustomerInfo);
             this.layoutControl1.Controls.Add(this.lblPetInfor);
-            this.layoutControl1.Controls.Add(this.textEdit9);
-            this.layoutControl1.Controls.Add(this.textEdit8);
-            this.layoutControl1.Controls.Add(this.textEdit7);
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.gridLookUpEdit1);
+            this.layoutControl1.Controls.Add(this.txtAddress);
+            this.layoutControl1.Controls.Add(this.txtPhone);
+            this.layoutControl1.Controls.Add(this.txtCustomerName);
+            this.layoutControl1.Controls.Add(this.txtBreed);
+            this.layoutControl1.Controls.Add(this.txtSpecies);
+            this.layoutControl1.Controls.Add(this.txtPetName);
+            this.layoutControl1.Controls.Add(this.txtMicrochip);
+            this.layoutControl1.Controls.Add(this.txtPetId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 26);
             this.layoutControl1.Name = "layoutControl1";
@@ -525,15 +552,15 @@ namespace pet_management
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // simpleButton1
+            // btnEditPet
             // 
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton1.Location = new System.Drawing.Point(480, 44);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(28, 27);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 2;
+            this.btnEditPet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditPet.ImageOptions.SvgImage")));
+            this.btnEditPet.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnEditPet.Location = new System.Drawing.Point(480, 44);
+            this.btnEditPet.Name = "btnEditPet";
+            this.btnEditPet.Size = new System.Drawing.Size(28, 27);
+            this.btnEditPet.StyleController = this.layoutControl1;
+            this.btnEditPet.TabIndex = 2;
             // 
             // lblCustomerInfo
             // 
@@ -559,79 +586,83 @@ namespace pet_management
             this.lblPetInfor.TabIndex = 1;
             this.lblPetInfor.Text = "Thông tin thú cưng";
             // 
-            // textEdit9
+            // txtAddress
             // 
-            this.textEdit9.Location = new System.Drawing.Point(108, 307);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(400, 24);
-            this.textEdit9.StyleController = this.layoutControl1;
-            this.textEdit9.TabIndex = 6;
+            this.txtAddress.Location = new System.Drawing.Point(108, 307);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Properties.ReadOnly = true;
+            this.txtAddress.Size = new System.Drawing.Size(400, 24);
+            this.txtAddress.StyleController = this.layoutControl1;
+            this.txtAddress.TabIndex = 6;
             // 
-            // textEdit8
+            // txtPhone
             // 
-            this.textEdit8.Location = new System.Drawing.Point(108, 269);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(400, 24);
-            this.textEdit8.StyleController = this.layoutControl1;
-            this.textEdit8.TabIndex = 4;
+            this.txtPhone.Location = new System.Drawing.Point(108, 269);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Properties.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(400, 24);
+            this.txtPhone.StyleController = this.layoutControl1;
+            this.txtPhone.TabIndex = 4;
             // 
-            // textEdit7
+            // txtCustomerName
             // 
-            this.textEdit7.Location = new System.Drawing.Point(108, 231);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(400, 24);
-            this.textEdit7.StyleController = this.layoutControl1;
-            this.textEdit7.TabIndex = 3;
+            this.txtCustomerName.Location = new System.Drawing.Point(108, 231);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Properties.ReadOnly = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(400, 24);
+            this.txtCustomerName.StyleController = this.layoutControl1;
+            this.txtCustomerName.TabIndex = 3;
             // 
-            // textEdit4
+            // txtBreed
             // 
-            this.textEdit4.Location = new System.Drawing.Point(108, 161);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(62, 24);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 8;
+            this.txtBreed.Location = new System.Drawing.Point(108, 161);
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.Properties.ReadOnly = true;
+            this.txtBreed.Size = new System.Drawing.Size(131, 24);
+            this.txtBreed.StyleController = this.layoutControl1;
+            this.txtBreed.TabIndex = 8;
             // 
-            // textEdit3
+            // txtSpecies
             // 
-            this.textEdit3.Location = new System.Drawing.Point(280, 161);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(228, 24);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 9;
+            this.txtSpecies.Location = new System.Drawing.Point(349, 161);
+            this.txtSpecies.Name = "txtSpecies";
+            this.txtSpecies.Properties.ReadOnly = true;
+            this.txtSpecies.Size = new System.Drawing.Size(159, 24);
+            this.txtSpecies.StyleController = this.layoutControl1;
+            this.txtSpecies.TabIndex = 9;
             // 
-            // textEdit2
+            // txtPetName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(108, 123);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(400, 24);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 7;
+            this.txtPetName.Location = new System.Drawing.Point(108, 123);
+            this.txtPetName.Name = "txtPetName";
+            this.txtPetName.Properties.ReadOnly = true;
+            this.txtPetName.Size = new System.Drawing.Size(400, 24);
+            this.txtPetName.StyleController = this.layoutControl1;
+            this.txtPetName.TabIndex = 7;
             // 
-            // textEdit1
+            // txtMicrochip
             // 
-            this.textEdit1.Location = new System.Drawing.Point(108, 85);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(400, 24);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
+            this.txtMicrochip.Location = new System.Drawing.Point(108, 85);
+            this.txtMicrochip.Name = "txtMicrochip";
+            this.txtMicrochip.Properties.ReadOnly = true;
+            this.txtMicrochip.Size = new System.Drawing.Size(400, 24);
+            this.txtMicrochip.StyleController = this.layoutControl1;
+            this.txtMicrochip.TabIndex = 5;
             // 
-            // gridLookUpEdit1
+            // txtPetId
             // 
-            this.gridLookUpEdit1.Location = new System.Drawing.Point(108, 44);
-            this.gridLookUpEdit1.Name = "gridLookUpEdit1";
-            this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gridLookUpEdit1.Properties.PopupView = this.gridLookUpEdit1View;
-            this.gridLookUpEdit1.Size = new System.Drawing.Size(368, 24);
-            this.gridLookUpEdit1.StyleController = this.layoutControl1;
-            this.gridLookUpEdit1.TabIndex = 0;
-            // 
-            // gridLookUpEdit1View
-            // 
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.txtPetId.EditValue = "";
+            this.txtPetId.Location = new System.Drawing.Point(108, 44);
+            this.txtPetId.Name = "txtPetId";
+            this.txtPetId.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.txtPetId.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.txtPetId.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtPetId.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.txtPetId.Properties.NullText = "[EditValue is null]";
+            this.txtPetId.Properties.ReadOnly = true;
+            this.txtPetId.Size = new System.Drawing.Size(368, 24);
+            this.txtPetId.StyleController = this.layoutControl1;
+            this.txtPetId.TabIndex = 0;
             // 
             // Root
             // 
@@ -665,7 +696,7 @@ namespace pet_management
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gridLookUpEdit1;
+            this.layoutControlItem1.Control = this.txtPetId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(468, 31);
@@ -674,7 +705,7 @@ namespace pet_management
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEdit1;
+            this.layoutControlItem2.Control = this.txtMicrochip;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(500, 28);
@@ -683,7 +714,7 @@ namespace pet_management
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit2;
+            this.layoutControlItem3.Control = this.txtPetName;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 111);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(500, 28);
@@ -692,20 +723,20 @@ namespace pet_management
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEdit4;
+            this.layoutControlItem5.Control = this.txtBreed;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 149);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(162, 38);
+            this.layoutControlItem5.Size = new System.Drawing.Size(231, 38);
             this.layoutControlItem5.Text = "Giống:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 18);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.textEdit3;
-            this.layoutControlItem4.Location = new System.Drawing.Point(172, 149);
+            this.layoutControlItem4.Control = this.txtSpecies;
+            this.layoutControlItem4.Location = new System.Drawing.Point(241, 149);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(328, 28);
-            this.layoutControlItem4.Text = "Trọng lượng:";
+            this.layoutControlItem4.Size = new System.Drawing.Size(259, 28);
+            this.layoutControlItem4.Text = "Loài:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 18);
             // 
             // emptySpaceItem4
@@ -751,7 +782,7 @@ namespace pet_management
             // 
             // layoutControlItem13
             // 
-            this.layoutControlItem13.Control = this.simpleButton1;
+            this.layoutControlItem13.Control = this.btnEditPet;
             this.layoutControlItem13.Location = new System.Drawing.Point(468, 32);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(32, 31);
@@ -761,7 +792,7 @@ namespace pet_management
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(162, 149);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(231, 149);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
             this.emptySpaceItem6.Size = new System.Drawing.Size(10, 38);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -769,9 +800,9 @@ namespace pet_management
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(172, 177);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(241, 177);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(328, 10);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(259, 10);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem12
@@ -793,7 +824,7 @@ namespace pet_management
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.Control = this.textEdit7;
+            this.layoutControlItem8.Control = this.txtCustomerName;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 219);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(500, 28);
@@ -810,7 +841,7 @@ namespace pet_management
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.textEdit8;
+            this.layoutControlItem9.Control = this.txtPhone;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 257);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(500, 28);
@@ -819,7 +850,7 @@ namespace pet_management
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.textEdit9;
+            this.layoutControlItem10.Control = this.txtAddress;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 295);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(500, 28);
@@ -856,9 +887,9 @@ namespace pet_management
             // 
             this.layoutControl2.Controls.Add(this.simpleButton8);
             this.layoutControl2.Controls.Add(this.simpleButton7);
-            this.layoutControl2.Controls.Add(this.memoEdit1);
-            this.layoutControl2.Controls.Add(this.textEdit5);
-            this.layoutControl2.Controls.Add(this.gridLookUpEdit3);
+            this.layoutControl2.Controls.Add(this.txtConclude);
+            this.layoutControl2.Controls.Add(this.txtSymptom);
+            this.layoutControl2.Controls.Add(this.gluDoctor);
             this.layoutControl2.Controls.Add(this.dtExaminationDate);
             this.layoutControl2.Controls.Add(this.txtType);
             this.layoutControl2.Controls.Add(this.txtID);
@@ -878,6 +909,7 @@ namespace pet_management
             this.simpleButton8.StyleController = this.layoutControl2;
             this.simpleButton8.TabIndex = 0;
             this.simpleButton8.Text = "Chỉ định DVKT";
+            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
             // 
             // simpleButton7
             // 
@@ -887,40 +919,138 @@ namespace pet_management
             this.simpleButton7.StyleController = this.layoutControl2;
             this.simpleButton7.TabIndex = 0;
             this.simpleButton7.Text = "Thêm thuốc";
+            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
             // 
-            // memoEdit1
+            // txtConclude
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(125, 202);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(451, 85);
-            this.memoEdit1.StyleController = this.layoutControl2;
-            this.memoEdit1.TabIndex = 6;
+            this.txtConclude.Location = new System.Drawing.Point(125, 202);
+            this.txtConclude.Name = "txtConclude";
+            this.txtConclude.Size = new System.Drawing.Size(451, 72);
+            this.txtConclude.StyleController = this.layoutControl2;
+            this.txtConclude.TabIndex = 6;
             // 
-            // textEdit5
+            // txtSymptom
             // 
-            this.textEdit5.Location = new System.Drawing.Point(125, 164);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(451, 24);
-            this.textEdit5.StyleController = this.layoutControl2;
-            this.textEdit5.TabIndex = 5;
+            this.txtSymptom.Location = new System.Drawing.Point(125, 164);
+            this.txtSymptom.Name = "txtSymptom";
+            this.txtSymptom.Size = new System.Drawing.Size(451, 24);
+            this.txtSymptom.StyleController = this.layoutControl2;
+            this.txtSymptom.TabIndex = 5;
             // 
-            // gridLookUpEdit3
+            // gluDoctor
             // 
-            this.gridLookUpEdit3.Location = new System.Drawing.Point(125, 126);
-            this.gridLookUpEdit3.Name = "gridLookUpEdit3";
-            this.gridLookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gluDoctor.EditValue = "";
+            this.gluDoctor.Location = new System.Drawing.Point(125, 126);
+            this.gluDoctor.Name = "gluDoctor";
+            this.gluDoctor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gridLookUpEdit3.Properties.PopupView = this.gridLookUpEdit3View;
-            this.gridLookUpEdit3.Size = new System.Drawing.Size(451, 24);
-            this.gridLookUpEdit3.StyleController = this.layoutControl2;
-            this.gridLookUpEdit3.TabIndex = 4;
+            this.gluDoctor.Properties.DataSource = this.staffBindingSource;
+            this.gluDoctor.Properties.DisplayMember = "FullName";
+            this.gluDoctor.Properties.PopupView = this.gridLookUpEdit3View;
+            this.gluDoctor.Properties.ValueMember = "Id";
+            this.gluDoctor.Size = new System.Drawing.Size(451, 24);
+            this.gluDoctor.StyleController = this.layoutControl2;
+            this.gluDoctor.TabIndex = 4;
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataSource = typeof(DTO.Staff);
             // 
             // gridLookUpEdit3View
             // 
+            this.gridLookUpEdit3View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId1,
+            this.colStaffNumber,
+            this.colFirstName,
+            this.colLastName,
+            this.colFullName,
+            this.colBirthday,
+            this.colPhone,
+            this.colEmail,
+            this.colAddress,
+            this.colIdRole,
+            this.colActive,
+            this.colPassword,
+            this.colCreatedDate1,
+            this.colUpdatedDate1});
             this.gridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit3View.Name = "gridLookUpEdit3View";
             this.gridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit3View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId1
+            // 
+            this.colId1.FieldName = "Id";
+            this.colId1.Name = "colId1";
+            // 
+            // colStaffNumber
+            // 
+            this.colStaffNumber.FieldName = "StaffNumber";
+            this.colStaffNumber.Name = "colStaffNumber";
+            this.colStaffNumber.Visible = true;
+            this.colStaffNumber.VisibleIndex = 0;
+            // 
+            // colFirstName
+            // 
+            this.colFirstName.FieldName = "FirstName";
+            this.colFirstName.Name = "colFirstName";
+            // 
+            // colLastName
+            // 
+            this.colLastName.FieldName = "LastName";
+            this.colLastName.Name = "colLastName";
+            // 
+            // colFullName
+            // 
+            this.colFullName.FieldName = "FullName";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 1;
+            // 
+            // colBirthday
+            // 
+            this.colBirthday.FieldName = "Birthday";
+            this.colBirthday.Name = "colBirthday";
+            // 
+            // colPhone
+            // 
+            this.colPhone.FieldName = "Phone";
+            this.colPhone.Name = "colPhone";
+            // 
+            // colEmail
+            // 
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            // 
+            // colAddress
+            // 
+            this.colAddress.FieldName = "Address";
+            this.colAddress.Name = "colAddress";
+            // 
+            // colIdRole
+            // 
+            this.colIdRole.FieldName = "IdRole";
+            this.colIdRole.Name = "colIdRole";
+            // 
+            // colActive
+            // 
+            this.colActive.FieldName = "Active";
+            this.colActive.Name = "colActive";
+            // 
+            // colPassword
+            // 
+            this.colPassword.FieldName = "Password";
+            this.colPassword.Name = "colPassword";
+            // 
+            // colCreatedDate1
+            // 
+            this.colCreatedDate1.FieldName = "CreatedDate";
+            this.colCreatedDate1.Name = "colCreatedDate1";
+            // 
+            // colUpdatedDate1
+            // 
+            this.colUpdatedDate1.FieldName = "UpdatedDate";
+            this.colUpdatedDate1.Name = "colUpdatedDate1";
             // 
             // dtExaminationDate
             // 
@@ -950,7 +1080,9 @@ namespace pet_management
             // 
             this.txtID.Location = new System.Drawing.Point(125, 12);
             this.txtID.Name = "txtID";
+            this.txtID.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.txtID.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.txtID.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtID.Properties.AppearanceReadOnly.Options.UseForeColor = true;
             this.txtID.Properties.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(272, 24);
@@ -1027,7 +1159,7 @@ namespace pet_management
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.textEdit5;
+            this.layoutControlItem6.Control = this.txtSymptom;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(568, 28);
@@ -1036,10 +1168,10 @@ namespace pet_management
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.memoEdit1;
+            this.layoutControlItem7.Control = this.txtConclude;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 190);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(568, 89);
+            this.layoutControlItem7.Size = new System.Drawing.Size(568, 76);
             this.layoutControlItem7.Text = "Chuẩn đoán/KL:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(110, 18);
             // 
@@ -1086,7 +1218,7 @@ namespace pet_management
             // 
             // layoutControlItem19
             // 
-            this.layoutControlItem19.Control = this.gridLookUpEdit3;
+            this.layoutControlItem19.Control = this.gluDoctor;
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(568, 28);
@@ -1122,53 +1254,247 @@ namespace pet_management
             // emptySpaceItem19
             // 
             this.emptySpaceItem19.AllowHotTrack = false;
-            this.emptySpaceItem19.Location = new System.Drawing.Point(0, 279);
+            this.emptySpaceItem19.Location = new System.Drawing.Point(0, 266);
             this.emptySpaceItem19.Name = "emptySpaceItem19";
-            this.emptySpaceItem19.Size = new System.Drawing.Size(568, 23);
+            this.emptySpaceItem19.Size = new System.Drawing.Size(568, 36);
             this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
             // 
             // groupControl4
             // 
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl4.Controls.Add(this.gridControl2);
+            this.groupControl4.Controls.Add(this.grcExDetail);
             this.groupControl4.Location = new System.Drawing.Point(475, 400);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1122, 391);
+            this.groupControl4.Size = new System.Drawing.Size(1122, 258);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Chi tiết phiếu khám";
             // 
-            // gridControl2
+            // grcExDetail
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 26);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1118, 363);
-            this.gridControl2.TabIndex = 1;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.grcExDetail.DataSource = this.eLItemBindingSource;
+            this.grcExDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcExDetail.Location = new System.Drawing.Point(2, 26);
+            this.grcExDetail.MainView = this.gridViewDetail;
+            this.grcExDetail.Name = "grcExDetail";
+            this.grcExDetail.Size = new System.Drawing.Size(1118, 230);
+            this.grcExDetail.TabIndex = 1;
+            this.grcExDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewDetail});
             // 
-            // gridView2
+            // eLItemBindingSource
             // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.eLItemBindingSource.DataSource = typeof(DTO.ELItem);
             // 
-            // textEdit6
+            // gridViewDetail
             // 
-            this.textEdit6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit6.Location = new System.Drawing.Point(1367, 797);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(230, 24);
-            this.textEdit6.TabIndex = 4;
+            this.gridViewDetail.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colExaminationId,
+            this.colItemId,
+            this.colItemNumber,
+            this.colItemName,
+            this.colUnitId,
+            this.colQuantity,
+            this.colPrice,
+            this.colTax,
+            this.colDiscount,
+            this.colServiceUsedId,
+            this.colItemType});
+            this.gridViewDetail.GridControl = this.grcExDetail;
+            this.gridViewDetail.Name = "gridViewDetail";
+            this.gridViewDetail.OptionsBehavior.AutoExpandAllGroups = true;
+            // 
+            // colExaminationId
+            // 
+            this.colExaminationId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExaminationId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExaminationId.AppearanceHeader.Options.UseFont = true;
+            this.colExaminationId.AppearanceHeader.Options.UseForeColor = true;
+            this.colExaminationId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExaminationId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExaminationId.FieldName = "ExaminationId";
+            this.colExaminationId.MinWidth = 25;
+            this.colExaminationId.Name = "colExaminationId";
+            this.colExaminationId.Width = 94;
+            // 
+            // colItemId
+            // 
+            this.colItemId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colItemId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colItemId.AppearanceHeader.Options.UseFont = true;
+            this.colItemId.AppearanceHeader.Options.UseForeColor = true;
+            this.colItemId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colItemId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colItemId.FieldName = "ItemId";
+            this.colItemId.MinWidth = 25;
+            this.colItemId.Name = "colItemId";
+            this.colItemId.Width = 94;
+            // 
+            // colItemNumber
+            // 
+            this.colItemNumber.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colItemNumber.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colItemNumber.AppearanceHeader.Options.UseFont = true;
+            this.colItemNumber.AppearanceHeader.Options.UseForeColor = true;
+            this.colItemNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colItemNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colItemNumber.Caption = "Mã HH/ ID Dịch vụ";
+            this.colItemNumber.FieldName = "ItemNumber";
+            this.colItemNumber.MinWidth = 25;
+            this.colItemNumber.Name = "colItemNumber";
+            this.colItemNumber.Visible = true;
+            this.colItemNumber.VisibleIndex = 0;
+            this.colItemNumber.Width = 137;
+            // 
+            // colItemName
+            // 
+            this.colItemName.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colItemName.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colItemName.AppearanceHeader.Options.UseFont = true;
+            this.colItemName.AppearanceHeader.Options.UseForeColor = true;
+            this.colItemName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colItemName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colItemName.Caption = "Tên hàng hóa - dịch vụ";
+            this.colItemName.FieldName = "ItemName";
+            this.colItemName.MinWidth = 25;
+            this.colItemName.Name = "colItemName";
+            this.colItemName.Visible = true;
+            this.colItemName.VisibleIndex = 1;
+            this.colItemName.Width = 272;
+            // 
+            // colUnitId
+            // 
+            this.colUnitId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colUnitId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colUnitId.AppearanceHeader.Options.UseFont = true;
+            this.colUnitId.AppearanceHeader.Options.UseForeColor = true;
+            this.colUnitId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUnitId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUnitId.Caption = "ĐVT";
+            this.colUnitId.FieldName = "UnitId";
+            this.colUnitId.MinWidth = 25;
+            this.colUnitId.Name = "colUnitId";
+            this.colUnitId.Visible = true;
+            this.colUnitId.VisibleIndex = 2;
+            this.colUnitId.Width = 46;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colQuantity.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colQuantity.AppearanceHeader.Options.UseFont = true;
+            this.colQuantity.AppearanceHeader.Options.UseForeColor = true;
+            this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colQuantity.Caption = "Số lượng";
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.MinWidth = 25;
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 3;
+            this.colQuantity.Width = 88;
+            // 
+            // colPrice
+            // 
+            this.colPrice.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colPrice.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colPrice.AppearanceHeader.Options.UseFont = true;
+            this.colPrice.AppearanceHeader.Options.UseForeColor = true;
+            this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPrice.Caption = "Đơn giá";
+            this.colPrice.FieldName = "Price";
+            this.colPrice.MinWidth = 25;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.Visible = true;
+            this.colPrice.VisibleIndex = 4;
+            this.colPrice.Width = 132;
+            // 
+            // colTax
+            // 
+            this.colTax.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colTax.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colTax.AppearanceHeader.Options.UseFont = true;
+            this.colTax.AppearanceHeader.Options.UseForeColor = true;
+            this.colTax.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTax.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTax.Caption = "Thuế";
+            this.colTax.FieldName = "Tax";
+            this.colTax.MinWidth = 25;
+            this.colTax.Name = "colTax";
+            this.colTax.Visible = true;
+            this.colTax.VisibleIndex = 5;
+            this.colTax.Width = 144;
+            // 
+            // colDiscount
+            // 
+            this.colDiscount.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colDiscount.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDiscount.AppearanceHeader.Options.UseFont = true;
+            this.colDiscount.AppearanceHeader.Options.UseForeColor = true;
+            this.colDiscount.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDiscount.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDiscount.Caption = "Giảm giá";
+            this.colDiscount.FieldName = "Discount";
+            this.colDiscount.MinWidth = 25;
+            this.colDiscount.Name = "colDiscount";
+            this.colDiscount.Visible = true;
+            this.colDiscount.VisibleIndex = 6;
+            this.colDiscount.Width = 143;
+            // 
+            // colServiceUsedId
+            // 
+            this.colServiceUsedId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colServiceUsedId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colServiceUsedId.AppearanceHeader.Options.UseFont = true;
+            this.colServiceUsedId.AppearanceHeader.Options.UseForeColor = true;
+            this.colServiceUsedId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colServiceUsedId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colServiceUsedId.Caption = "Sử dụng cho";
+            this.colServiceUsedId.FieldName = "ServiceUsedId";
+            this.colServiceUsedId.MinWidth = 25;
+            this.colServiceUsedId.Name = "colServiceUsedId";
+            this.colServiceUsedId.Visible = true;
+            this.colServiceUsedId.VisibleIndex = 7;
+            this.colServiceUsedId.Width = 138;
+            // 
+            // colItemType
+            // 
+            this.colItemType.Caption = "Loại";
+            this.colItemType.FieldName = "ItemType";
+            this.colItemType.MinWidth = 25;
+            this.colItemType.Name = "colItemType";
+            this.colItemType.Visible = true;
+            this.colItemType.VisibleIndex = 8;
+            this.colItemType.Width = 94;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotal.Location = new System.Drawing.Point(1367, 664);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.Transparent;
+            this.txtTotal.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.txtTotal.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Critical;
+            this.txtTotal.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.txtTotal.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtTotal.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.txtTotal.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtTotal.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotal.Properties.DisplayFormat.FormatString = "N0";
+            this.txtTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotal.Properties.Mask.EditMask = "n0";
+            this.txtTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotal.Properties.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(230, 24);
+            this.txtTotal.TabIndex = 4;
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(1295, 800);
+            this.labelControl3.Location = new System.Drawing.Point(1295, 667);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 18);
             this.labelControl3.TabIndex = 5;
@@ -1179,43 +1505,43 @@ namespace pet_management
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(1223, 830);
+            this.labelControl4.Location = new System.Drawing.Point(1223, 697);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(140, 18);
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Chiết khấu/giảm giá:";
             // 
-            // textEdit12
+            // txtDiscount
             // 
-            this.textEdit12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit12.Location = new System.Drawing.Point(1367, 827);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(230, 24);
-            this.textEdit12.TabIndex = 4;
+            this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiscount.Location = new System.Drawing.Point(1367, 694);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(230, 24);
+            this.txtDiscount.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(1279, 860);
+            this.label1.Location = new System.Drawing.Point(1279, 727);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Thành tiền:";
             // 
-            // textEdit13
+            // txtSubtotal
             // 
-            this.textEdit13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit13.Location = new System.Drawing.Point(1367, 857);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(230, 24);
-            this.textEdit13.TabIndex = 4;
+            this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubtotal.Location = new System.Drawing.Point(1367, 724);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(230, 24);
+            this.txtSubtotal.TabIndex = 4;
             // 
             // simpleButton4
             // 
             this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Location = new System.Drawing.Point(475, 830);
+            this.simpleButton4.Location = new System.Drawing.Point(475, 697);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(109, 48);
             this.simpleButton4.TabIndex = 8;
@@ -1224,7 +1550,7 @@ namespace pet_management
             // simpleButton5
             // 
             this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton5.Location = new System.Drawing.Point(590, 830);
+            this.simpleButton5.Location = new System.Drawing.Point(590, 697);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(109, 48);
             this.simpleButton5.TabIndex = 8;
@@ -1233,7 +1559,7 @@ namespace pet_management
             // simpleButton6
             // 
             this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.Location = new System.Drawing.Point(705, 830);
+            this.simpleButton6.Location = new System.Drawing.Point(705, 697);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(109, 48);
             this.simpleButton6.TabIndex = 8;
@@ -1243,16 +1569,16 @@ namespace pet_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1609, 891);
+            this.ClientSize = new System.Drawing.Size(1609, 758);
             this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textEdit13);
-            this.Controls.Add(this.textEdit12);
-            this.Controls.Add(this.textEdit6);
+            this.Controls.Add(this.txtSubtotal);
+            this.Controls.Add(this.txtDiscount);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
@@ -1277,15 +1603,14 @@ namespace pet_management
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBreed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSpecies.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPetName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMicrochip.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPetId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -1312,9 +1637,10 @@ namespace pet_management
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConclude.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSymptom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit3View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate.Properties)).EndInit();
@@ -1340,11 +1666,12 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1357,18 +1684,16 @@ namespace pet_management
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewExamination;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnEditPet;
         private DevExpress.XtraEditors.LabelControl lblCustomerInfo;
         private DevExpress.XtraEditors.LabelControl lblPetInfor;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private DevExpress.XtraEditors.TextEdit txtPhone;
+        private DevExpress.XtraEditors.TextEdit txtCustomerName;
+        private DevExpress.XtraEditors.TextEdit txtBreed;
+        private DevExpress.XtraEditors.TextEdit txtSpecies;
+        private DevExpress.XtraEditors.TextEdit txtPetName;
+        private DevExpress.XtraEditors.TextEdit txtMicrochip;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
@@ -1392,9 +1717,9 @@ namespace pet_management
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit3;
+        private DevExpress.XtraEditors.MemoEdit txtConclude;
+        private DevExpress.XtraEditors.TextEdit txtSymptom;
+        private DevExpress.XtraEditors.GridLookUpEdit gluDoctor;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit3View;
         private DevExpress.XtraEditors.DateEdit dtExaminationDate;
         private DevExpress.XtraEditors.TextEdit txtType;
@@ -1417,16 +1742,16 @@ namespace pet_management
         private DevExpress.XtraEditors.DateEdit dateEdit3;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl grcExDetail;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewDetail;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtTotal;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.TextEdit txtDiscount;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
+        private DevExpress.XtraEditors.TextEdit txtSubtotal;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
@@ -1455,5 +1780,33 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate;
         private DevExpress.XtraGrid.Columns.GridColumn colStart;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repoBtnStart;
+        private DevExpress.XtraEditors.TextEdit txtPetId;
+        private System.Windows.Forms.BindingSource staffBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStaffNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn colLastName;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthday;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdRole;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate1;
+        private System.Windows.Forms.BindingSource eLItemBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colExaminationId;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemId;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemName;
+        private DevExpress.XtraGrid.Columns.GridColumn colUnitId;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colTax;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiscount;
+        private DevExpress.XtraGrid.Columns.GridColumn colServiceUsedId;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemType;
     }
 }
