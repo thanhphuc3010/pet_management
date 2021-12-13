@@ -19,14 +19,10 @@ namespace pet_management
         private ExaminationBUS examinationBUS = new ExaminationBUS();
         private int count;
         private string PREFIX = "PKDV";
+
         public frmReceivePet()
         {
             InitializeComponent();
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmReceivePet_Load(object sender, EventArgs e)
@@ -40,6 +36,8 @@ namespace pet_management
             cboType.Properties.Items.AddRange(ExaminationType.GetListType());
             GenerateExamNumber();
             dtExaminationDate.DateTime = DateTime.Now;
+            examinationBindingSource.DataSource = examinationBUS.GetExaminations();
+            exTodayBindingSource.DataSource = examinationBUS.GetExaminationsToday();
             LoadListDoctor();
             LoadListReceptionlist();
         }
@@ -103,8 +101,32 @@ namespace pet_management
             examination.ExaminationDate = dtExaminationDate.DateTime;
             examination.DoctorId = (int)gluDoctor.EditValue;
             examination.ReceptionistId = (int)gluReceptionlist.EditValue;
-            examination.Status = "Chưa khám";
+            examination.Status = ExaminationStatus.Pending;
             examinationBUS.Save(examination);
+        }
+
+        private void btnDoing_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Doing).ToList();
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            exTodayBindingSource.DataSource = examinations;
+        }
+
+        private void btnWait_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Pending).ToList();
+        }
+
+        private void btnPaymented_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Paymented).ToList();
         }
     }
 }

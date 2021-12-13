@@ -1,4 +1,5 @@
 ﻿using DapperExtensions;
+using DapperExtensions.Predicate;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,7 @@ namespace DAO
     {
         public int Save(Examination examination)
         {
-            DapperExtensions.DapperExtensions.DefaultMapper = typeof(ExaminationMapper);
-
-            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[]
-            {
-                typeof (ExaminationMapper).Assembly
-            });
-
-
-            DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();
+            SetMapper();
             try
             {
                 var result = db.Insert(new Examination
@@ -40,6 +33,32 @@ namespace DAO
             {
                 throw;
             }
+        }
+
+        public List<Examination> GetExaminationsToday()
+        {
+            SetMapper();
+            var predicate = Predicates.Field<Examination>(f => f.ExaminationDate, Operator.Eq, DateTime.Today);
+            List<Examination> examinations = db.GetList<Examination>(predicate).ToList();
+            return examinations;
+        }
+
+        public List<Examination> GetExaminations()
+        {
+            SetMapper();
+            List<Examination> examinations = db.GetList<Examination>().ToList();
+            return examinations;
+        }
+
+        private static void SetMapper()
+        {
+            DapperExtensions.DapperExtensions.DefaultMapper = typeof(ExaminationMapper);
+
+            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[]
+            {
+                typeof (ExaminationMapper).Assembly
+            });
+            DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();
         }
     }
 }

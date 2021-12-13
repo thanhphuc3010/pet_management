@@ -301,6 +301,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.Breed.datasource" />
     <None Include="Properties\DataSources\DTO.Customer.datasource" />
+    <None Include="Properties\DataSources\DTO.Examination.datasource" />
     <None Include="Properties\DataSources\DTO.GroupService.datasource" />
     <None Include="Properties\DataSources\DTO.Make.datasource" />
     <None Include="Properties\DataSources\DTO.Part.datasource" />

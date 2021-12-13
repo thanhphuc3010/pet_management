@@ -17,5 +17,15 @@ namespace BUS
             int result = dao.Save(examination);
             return (result == 1);
         }
+
+        public List<Examination> GetExaminations()
+        {
+            return dao.GetExaminations();
+        }
+
+        public List<Examination> GetExaminationsToday()
+        {
+            return dao.GetExaminationsToday();
+        }
     }
 }

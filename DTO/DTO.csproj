@@ -96,6 +96,7 @@
     <Compile Include="entity\Examination.cs" />
     <Compile Include="entity\Make.cs" />
     <Compile Include="entity\Part.cs" />
+    <Compile Include="ExaminationStatus.cs" />
     <Compile Include="ExaminationType.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

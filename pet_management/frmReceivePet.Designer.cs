@@ -143,17 +143,47 @@ namespace pet_management
             this.emptySpaceItem20 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.grcExaminations = new DevExpress.XtraGrid.GridControl();
+            this.examinationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExaminationNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExaminationDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPetId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colReceptionistId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoctorId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSymptom = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConclude = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPayment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreatedDate2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUpdatedDate2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnWait = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDoing = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAll = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.btnPaymented = new DevExpress.XtraEditors.SimpleButton();
+            this.grcExaminationToday = new DevExpress.XtraGrid.GridControl();
+            this.exTodayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExaminationNumber1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExaminationDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colType1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPetId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colReceptionistId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoctorId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSymptom1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConclude1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotal1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPayment1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreatedDate3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUpdatedDate3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -230,11 +260,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExaminations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExaminationToday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exTodayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -1194,7 +1226,7 @@ namespace pet_management
             // 
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupControl3.Controls.Add(this.gridControl2);
+            this.groupControl3.Controls.Add(this.grcExaminations);
             this.groupControl3.Controls.Add(this.labelControl2);
             this.groupControl3.Location = new System.Drawing.Point(12, 338);
             this.groupControl3.Name = "groupControl3";
@@ -1202,22 +1234,167 @@ namespace pet_management
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Danh sách phiếu khám";
             // 
-            // gridControl2
+            // grcExaminations
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 26);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1215, 397);
-            this.gridControl2.TabIndex = 0;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcExaminations.DataSource = this.examinationBindingSource;
+            this.grcExaminations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcExaminations.Location = new System.Drawing.Point(2, 26);
+            this.grcExaminations.MainView = this.gridView2;
+            this.grcExaminations.Name = "grcExaminations";
+            this.grcExaminations.Size = new System.Drawing.Size(1215, 397);
+            this.grcExaminations.TabIndex = 0;
+            this.grcExaminations.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // examinationBindingSource
+            // 
+            this.examinationBindingSource.DataSource = typeof(DTO.Examination);
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId2,
+            this.colExaminationNumber,
+            this.colExaminationDate,
+            this.colType,
+            this.colPetId,
+            this.colReceptionistId,
+            this.colDoctorId,
+            this.colSymptom,
+            this.colConclude,
+            this.colStatus,
+            this.colTotal,
+            this.colPayment,
+            this.colCreatedDate2,
+            this.colUpdatedDate2});
+            this.gridView2.GridControl = this.grcExaminations;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId2
+            // 
+            this.colId2.FieldName = "Id";
+            this.colId2.MinWidth = 25;
+            this.colId2.Name = "colId2";
+            this.colId2.Width = 94;
+            // 
+            // colExaminationNumber
+            // 
+            this.colExaminationNumber.Caption = "Mã phiếu khám";
+            this.colExaminationNumber.FieldName = "ExaminationNumber";
+            this.colExaminationNumber.MinWidth = 25;
+            this.colExaminationNumber.Name = "colExaminationNumber";
+            this.colExaminationNumber.Visible = true;
+            this.colExaminationNumber.VisibleIndex = 0;
+            this.colExaminationNumber.Width = 169;
+            // 
+            // colExaminationDate
+            // 
+            this.colExaminationDate.Caption = "Ngày khám";
+            this.colExaminationDate.FieldName = "ExaminationDate";
+            this.colExaminationDate.MinWidth = 25;
+            this.colExaminationDate.Name = "colExaminationDate";
+            this.colExaminationDate.Visible = true;
+            this.colExaminationDate.VisibleIndex = 1;
+            this.colExaminationDate.Width = 128;
+            // 
+            // colType
+            // 
+            this.colType.Caption = "Hình thức";
+            this.colType.FieldName = "Type";
+            this.colType.MinWidth = 25;
+            this.colType.Name = "colType";
+            this.colType.Visible = true;
+            this.colType.VisibleIndex = 2;
+            this.colType.Width = 165;
+            // 
+            // colPetId
+            // 
+            this.colPetId.Caption = "Tên thú cưng";
+            this.colPetId.FieldName = "PetId";
+            this.colPetId.MinWidth = 25;
+            this.colPetId.Name = "colPetId";
+            this.colPetId.Visible = true;
+            this.colPetId.VisibleIndex = 3;
+            this.colPetId.Width = 127;
+            // 
+            // colReceptionistId
+            // 
+            this.colReceptionistId.Caption = "NV đón tiếp";
+            this.colReceptionistId.FieldName = "ReceptionistId";
+            this.colReceptionistId.MinWidth = 25;
+            this.colReceptionistId.Name = "colReceptionistId";
+            this.colReceptionistId.Visible = true;
+            this.colReceptionistId.VisibleIndex = 4;
+            this.colReceptionistId.Width = 133;
+            // 
+            // colDoctorId
+            // 
+            this.colDoctorId.Caption = "Bác sĩ điều trị";
+            this.colDoctorId.FieldName = "DoctorId";
+            this.colDoctorId.MinWidth = 25;
+            this.colDoctorId.Name = "colDoctorId";
+            this.colDoctorId.Visible = true;
+            this.colDoctorId.VisibleIndex = 5;
+            this.colDoctorId.Width = 149;
+            // 
+            // colSymptom
+            // 
+            this.colSymptom.FieldName = "Symptom";
+            this.colSymptom.MinWidth = 25;
+            this.colSymptom.Name = "colSymptom";
+            this.colSymptom.Width = 94;
+            // 
+            // colConclude
+            // 
+            this.colConclude.FieldName = "Conclude";
+            this.colConclude.MinWidth = 25;
+            this.colConclude.Name = "colConclude";
+            this.colConclude.Width = 94;
+            // 
+            // colStatus
+            // 
+            this.colStatus.Caption = "Trạng thái";
+            this.colStatus.FieldName = "Status";
+            this.colStatus.MinWidth = 25;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.Visible = true;
+            this.colStatus.VisibleIndex = 6;
+            this.colStatus.Width = 103;
+            // 
+            // colTotal
+            // 
+            this.colTotal.Caption = "Tổng tiền";
+            this.colTotal.FieldName = "Total";
+            this.colTotal.MinWidth = 25;
+            this.colTotal.Name = "colTotal";
+            this.colTotal.Visible = true;
+            this.colTotal.VisibleIndex = 7;
+            this.colTotal.Width = 103;
+            // 
+            // colPayment
+            // 
+            this.colPayment.Caption = "Đã thanh toán";
+            this.colPayment.FieldName = "Payment";
+            this.colPayment.MinWidth = 25;
+            this.colPayment.Name = "colPayment";
+            this.colPayment.Visible = true;
+            this.colPayment.VisibleIndex = 8;
+            this.colPayment.Width = 120;
+            // 
+            // colCreatedDate2
+            // 
+            this.colCreatedDate2.FieldName = "CreatedDate";
+            this.colCreatedDate2.MinWidth = 25;
+            this.colCreatedDate2.Name = "colCreatedDate2";
+            this.colCreatedDate2.Width = 94;
+            // 
+            // colUpdatedDate2
+            // 
+            this.colUpdatedDate2.FieldName = "UpdatedDate";
+            this.colUpdatedDate2.MinWidth = 25;
+            this.colUpdatedDate2.Name = "colUpdatedDate2";
+            this.colUpdatedDate2.Width = 94;
             // 
             // labelControl2
             // 
@@ -1232,50 +1409,53 @@ namespace pet_management
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl4.Controls.Add(this.simpleButton6);
-            this.groupControl4.Controls.Add(this.simpleButton5);
-            this.groupControl4.Controls.Add(this.simpleButton4);
+            this.groupControl4.Controls.Add(this.btnWait);
+            this.groupControl4.Controls.Add(this.btnDoing);
+            this.groupControl4.Controls.Add(this.btnAll);
             this.groupControl4.Controls.Add(this.simpleButton7);
-            this.groupControl4.Controls.Add(this.simpleButton3);
-            this.groupControl4.Controls.Add(this.gridControl1);
+            this.groupControl4.Controls.Add(this.btnPaymented);
+            this.groupControl4.Controls.Add(this.grcExaminationToday);
             this.groupControl4.Location = new System.Drawing.Point(1237, 12);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(611, 751);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Danh sách đăng ký khám trong ngày";
             // 
-            // simpleButton6
+            // btnWait
             // 
-            this.simpleButton6.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
-            this.simpleButton6.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton6.Location = new System.Drawing.Point(210, 35);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(113, 29);
-            this.simpleButton6.TabIndex = 2;
-            this.simpleButton6.Text = "Chưa khám";
+            this.btnWait.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnWait.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
+            this.btnWait.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnWait.Location = new System.Drawing.Point(210, 35);
+            this.btnWait.Name = "btnWait";
+            this.btnWait.Size = new System.Drawing.Size(113, 29);
+            this.btnWait.TabIndex = 2;
+            this.btnWait.Text = "Chưa khám";
+            this.btnWait.Click += new System.EventHandler(this.btnWait_Click);
             // 
-            // simpleButton5
+            // btnDoing
             // 
-            this.simpleButton5.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
-            this.simpleButton5.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton5.Location = new System.Drawing.Point(91, 35);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(113, 29);
-            this.simpleButton5.TabIndex = 2;
-            this.simpleButton5.Text = "Đang khám";
+            this.btnDoing.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDoing.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
+            this.btnDoing.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnDoing.Location = new System.Drawing.Point(91, 35);
+            this.btnDoing.Name = "btnDoing";
+            this.btnDoing.Size = new System.Drawing.Size(113, 29);
+            this.btnDoing.TabIndex = 2;
+            this.btnDoing.Text = "Đang khám";
+            this.btnDoing.Click += new System.EventHandler(this.btnDoing_Click);
             // 
-            // simpleButton4
+            // btnAll
             // 
-            this.simpleButton4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton4.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
-            this.simpleButton4.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton4.Location = new System.Drawing.Point(5, 35);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(80, 29);
-            this.simpleButton4.TabIndex = 2;
-            this.simpleButton4.Text = "Tất cả";
+            this.btnAll.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAll.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
+            this.btnAll.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnAll.Location = new System.Drawing.Point(5, 35);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(80, 29);
+            this.btnAll.TabIndex = 2;
+            this.btnAll.Text = "Tất cả";
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // simpleButton7
             // 
@@ -1288,35 +1468,166 @@ namespace pet_management
             this.simpleButton7.TabIndex = 2;
             this.simpleButton7.Text = "Hủy khám";
             // 
-            // simpleButton3
+            // btnPaymented
             // 
-            this.simpleButton3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton3.Location = new System.Drawing.Point(329, 35);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(134, 29);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "Đã thanh toán";
+            this.btnPaymented.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnPaymented.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnPaymented.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnPaymented.Location = new System.Drawing.Point(329, 35);
+            this.btnPaymented.Name = "btnPaymented";
+            this.btnPaymented.Size = new System.Drawing.Size(134, 29);
+            this.btnPaymented.TabIndex = 2;
+            this.btnPaymented.Text = "Đã thanh toán";
+            this.btnPaymented.Click += new System.EventHandler(this.btnPaymented_Click);
             // 
-            // gridControl1
+            // grcExaminationToday
             // 
-            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grcExaminationToday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.Location = new System.Drawing.Point(0, 70);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(611, 681);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcExaminationToday.DataSource = this.exTodayBindingSource;
+            this.grcExaminationToday.Location = new System.Drawing.Point(0, 70);
+            this.grcExaminationToday.MainView = this.gridView1;
+            this.grcExaminationToday.Name = "grcExaminationToday";
+            this.grcExaminationToday.Size = new System.Drawing.Size(611, 681);
+            this.grcExaminationToday.TabIndex = 0;
+            this.grcExaminationToday.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // exTodayBindingSource
+            // 
+            this.exTodayBindingSource.DataSource = typeof(DTO.Examination);
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId3,
+            this.colExaminationNumber1,
+            this.colExaminationDate1,
+            this.colType1,
+            this.colPetId1,
+            this.colReceptionistId1,
+            this.colDoctorId1,
+            this.colSymptom1,
+            this.colConclude1,
+            this.colStatus1,
+            this.colTotal1,
+            this.colPayment1,
+            this.colCreatedDate3,
+            this.colUpdatedDate3});
+            this.gridView1.GridControl = this.grcExaminationToday;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId3
+            // 
+            this.colId3.FieldName = "Id";
+            this.colId3.MinWidth = 25;
+            this.colId3.Name = "colId3";
+            this.colId3.Width = 94;
+            // 
+            // colExaminationNumber1
+            // 
+            this.colExaminationNumber1.Caption = "Mã phiếu khám";
+            this.colExaminationNumber1.FieldName = "ExaminationNumber";
+            this.colExaminationNumber1.MinWidth = 25;
+            this.colExaminationNumber1.Name = "colExaminationNumber1";
+            this.colExaminationNumber1.Visible = true;
+            this.colExaminationNumber1.VisibleIndex = 0;
+            this.colExaminationNumber1.Width = 94;
+            // 
+            // colExaminationDate1
+            // 
+            this.colExaminationDate1.FieldName = "ExaminationDate";
+            this.colExaminationDate1.MinWidth = 25;
+            this.colExaminationDate1.Name = "colExaminationDate1";
+            this.colExaminationDate1.Width = 94;
+            // 
+            // colType1
+            // 
+            this.colType1.Caption = "Hình thức DV";
+            this.colType1.FieldName = "Type";
+            this.colType1.MinWidth = 25;
+            this.colType1.Name = "colType1";
+            this.colType1.Visible = true;
+            this.colType1.VisibleIndex = 3;
+            this.colType1.Width = 94;
+            // 
+            // colPetId1
+            // 
+            this.colPetId1.Caption = "Tên thú cưng";
+            this.colPetId1.FieldName = "PetId";
+            this.colPetId1.MinWidth = 25;
+            this.colPetId1.Name = "colPetId1";
+            this.colPetId1.Visible = true;
+            this.colPetId1.VisibleIndex = 1;
+            this.colPetId1.Width = 94;
+            // 
+            // colReceptionistId1
+            // 
+            this.colReceptionistId1.FieldName = "ReceptionistId";
+            this.colReceptionistId1.MinWidth = 25;
+            this.colReceptionistId1.Name = "colReceptionistId1";
+            this.colReceptionistId1.Width = 94;
+            // 
+            // colDoctorId1
+            // 
+            this.colDoctorId1.Caption = "Bác sĩ";
+            this.colDoctorId1.FieldName = "DoctorId";
+            this.colDoctorId1.MinWidth = 25;
+            this.colDoctorId1.Name = "colDoctorId1";
+            this.colDoctorId1.Visible = true;
+            this.colDoctorId1.VisibleIndex = 2;
+            this.colDoctorId1.Width = 94;
+            // 
+            // colSymptom1
+            // 
+            this.colSymptom1.FieldName = "Symptom";
+            this.colSymptom1.MinWidth = 25;
+            this.colSymptom1.Name = "colSymptom1";
+            this.colSymptom1.Width = 94;
+            // 
+            // colConclude1
+            // 
+            this.colConclude1.FieldName = "Conclude";
+            this.colConclude1.MinWidth = 25;
+            this.colConclude1.Name = "colConclude1";
+            this.colConclude1.Width = 94;
+            // 
+            // colStatus1
+            // 
+            this.colStatus1.FieldName = "Status";
+            this.colStatus1.MinWidth = 25;
+            this.colStatus1.Name = "colStatus1";
+            this.colStatus1.Width = 94;
+            // 
+            // colTotal1
+            // 
+            this.colTotal1.FieldName = "Total";
+            this.colTotal1.MinWidth = 25;
+            this.colTotal1.Name = "colTotal1";
+            this.colTotal1.Width = 94;
+            // 
+            // colPayment1
+            // 
+            this.colPayment1.FieldName = "Payment";
+            this.colPayment1.MinWidth = 25;
+            this.colPayment1.Name = "colPayment1";
+            this.colPayment1.Width = 94;
+            // 
+            // colCreatedDate3
+            // 
+            this.colCreatedDate3.FieldName = "CreatedDate";
+            this.colCreatedDate3.MinWidth = 25;
+            this.colCreatedDate3.Name = "colCreatedDate3";
+            this.colCreatedDate3.Width = 94;
+            // 
+            // colUpdatedDate3
+            // 
+            this.colUpdatedDate3.FieldName = "UpdatedDate";
+            this.colUpdatedDate3.MinWidth = 25;
+            this.colUpdatedDate3.Name = "colUpdatedDate3";
+            this.colUpdatedDate3.Width = 94;
             // 
             // searchControl1
             // 
@@ -1332,7 +1643,7 @@ namespace pet_management
             // btnRegister
             // 
             this.btnRegister.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRegister.ImageOptions.SvgImage")));
             this.btnRegister.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnRegister.Location = new System.Drawing.Point(628, 293);
             this.btnRegister.Name = "btnRegister";
@@ -1440,11 +1751,13 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExaminations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcExaminationToday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exTodayBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -1519,14 +1832,14 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcExaminationToday;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.GridControl grcExaminations;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnWait;
+        private DevExpress.XtraEditors.SimpleButton btnDoing;
+        private DevExpress.XtraEditors.SimpleButton btnAll;
+        private DevExpress.XtraEditors.SimpleButton btnPaymented;
         private DevExpress.XtraEditors.SearchControl searchControl1;
         private DevExpress.XtraEditors.SimpleButton btnRegister;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -1580,5 +1893,35 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colPassword1;
         private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate1;
         private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate1;
+        private System.Windows.Forms.BindingSource examinationBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId2;
+        private DevExpress.XtraGrid.Columns.GridColumn colExaminationNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colExaminationDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colType;
+        private DevExpress.XtraGrid.Columns.GridColumn colPetId;
+        private DevExpress.XtraGrid.Columns.GridColumn colReceptionistId;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoctorId;
+        private DevExpress.XtraGrid.Columns.GridColumn colSymptom;
+        private DevExpress.XtraGrid.Columns.GridColumn colConclude;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colPayment;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate2;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate2;
+        private System.Windows.Forms.BindingSource exTodayBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId3;
+        private DevExpress.XtraGrid.Columns.GridColumn colExaminationNumber1;
+        private DevExpress.XtraGrid.Columns.GridColumn colExaminationDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colType1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPetId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colReceptionistId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoctorId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSymptom1;
+        private DevExpress.XtraGrid.Columns.GridColumn colConclude1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotal1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPayment1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate3;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate3;
     }
 }
