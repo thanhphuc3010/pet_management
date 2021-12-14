@@ -26,6 +26,9 @@ namespace DAO
 
         public static Pet GetPetById(string id)
         {
+            MapperColumn mapper = new MapperColumn();
+            SqlMapper.SetTypeMap(typeof(Pet), mapper.GetMap<Pet>());
+
             string sql = $"SELECT * FROM pet WHERE id = {id}";
             return db.QuerySingle<Pet>(sql);
         }

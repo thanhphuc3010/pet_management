@@ -45,7 +45,7 @@ namespace pet_management
         private void GenerateExamNumber()
         {
             DateTime current = DateTime.Now;
-            count = receivePetBUS.GetCountExaminationToday();
+            count = examinationBUS.GetExaminationsToday().Count;
             string suffix = String.Format("{0:00}", (count + 1));
             string exNumber = $"{current.Day}{current.Month}{current.Year}{suffix}";
             txtIdNumber.Text = $"{PREFIX}{exNumber}";

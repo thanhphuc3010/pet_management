@@ -14,6 +14,8 @@ namespace BUS
         {
             return PetDAO.GetPets();
         }
+
+        public static Pet GetPet(string id) => PetDAO.GetPetById(id);
         public static bool Save(Pet p )
         {
             return PetDAO.Save(p);

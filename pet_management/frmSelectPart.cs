@@ -22,11 +22,13 @@ namespace pet_management
         private ExaminationBUS examinationBUS = new ExaminationBUS();
         private long examinationId;
         private readonly frmExamination frmExamination;
-        public frmSelectPart(frmExamination frmExamination, long examinationId)
+        public List<ELItem> detailItems;
+        public frmSelectPart(frmExamination frmExamination, long examinationId, List<ELItem> detailItems)
         {
             InitializeComponent();
             this.frmExamination = frmExamination;
             this.examinationId = examinationId;
+            this.detailItems = detailItems;
         }
 
         private void frmSelectPart_Load(object sender, EventArgs e)
@@ -43,19 +45,33 @@ namespace pet_management
             {
                 string id = view.GetFocusedRowCellValue("Id").ToString();
                 Part part = partBUS.GetPartById(id);
-                if (frmExamination != null)
+                frmExaminationItemDetail f = new frmExaminationItemDetail(this, part);
+                f.ShowDialog();
+            }
+        }
+
+        internal void UpdatePartEx(ExaminationPart exPart)
+        {
+            if (frmExamination != null)
+            {
+                exPart.ExaminationId = examinationId;
+                if (examinationBUS.UpdatePartDetail(exPart))
                 {
-                    ExaminationPart exPart = new ExaminationPart();
-                    exPart.ExaminationId = examinationId;
-                    exPart.PartId = part.Id;
-                    exPart.Quantity = 1;
-                    exPart.Price = part.Price;
-                    exPart.ServiceUsedId = null;
-                    if (examinationBUS.SavePartDetail(exPart))
-                    {
-                        frmExamination.RefreshExDetail();
-                        this.Close();
-                    }
+                    frmExamination.RefreshExDetail();
+                    this.Close();
+                }
+            }
+        }
+
+        public void AddPartToEx(ExaminationPart exPart)
+        {
+            if (frmExamination != null)
+            {
+                exPart.ExaminationId = examinationId;
+                if (examinationBUS.SavePartDetail(exPart))
+                {
+                    frmExamination.RefreshExDetail();
+                    this.Close();
                 }
             }
         }

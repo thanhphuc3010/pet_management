@@ -16,12 +16,14 @@ namespace pet_management
     public partial class frmPetInfor : DevExpress.XtraEditors.XtraForm
     {
         private readonly frmPet frmPet;
+        private XtraForm form;
         private Pet pet;
         private bool isEditMode;
-        public frmPetInfor(frmPet frmPet, Pet pet, bool isEditMode)
+        private ReceivePetBUS receivePetBUS = new ReceivePetBUS();
+        public frmPetInfor(DevExpress.XtraEditors.XtraForm form, Pet pet, bool isEditMode)
         {
             InitializeComponent();
-            this.frmPet = frmPet;
+            this.form = form;
             this.pet = pet;
             this.isEditMode = isEditMode;
         }
@@ -100,9 +102,22 @@ namespace pet_management
             }
             if (isSuccess)
             {
-                if (frmPet != null)
+                if (form != null)
                 {
-                    frmPet.ReloadData();
+                    if (form.GetType() == typeof(frmPet))
+                    {
+                        (form as frmPet).ReloadData();
+                    }
+                    else
+                    {
+                        if (form.GetType() == typeof(frmExamination))
+                        {
+                            string petId = pet.Id.ToString();
+                            PetData petData = receivePetBUS.GetPetData(petId);
+                            (form as frmExamination).BindPetData(petData);
+                            (form as frmExamination).RefeshListExWhenEditPetInfor();
+                        }
+                    }
                     this.Close();
                 }
             }

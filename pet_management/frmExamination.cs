@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace pet_management
         private ExaminationBUS examinationBUS = new ExaminationBUS();
         private ReceivePetBUS receivePetBUS = new ReceivePetBUS();
         private Examination currentExamination = null;
+        private Pet pet;
+        private bool editable = false;
 
         private List<ELItem> detailsItem = null;
         public frmExamination()
@@ -42,6 +45,10 @@ namespace pet_management
             examinations.Sort(new CompareExamination());
             examinationBindingSource.DataSource = examinations;
             staffBindingSource.DataSource = StaffBUS.GetDoctors();
+            petExBindingSource.DataSource = PetBUS.GetPets();
+            staffExBindingSource.DataSource = StaffBUS.GetDoctors();
+            dtFrom.DateTime = DateTime.Today;
+            dtTo.DateTime = DateTime.Today;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -51,13 +58,30 @@ namespace pet_management
 
         private void repoBtnStart_Click(object sender, EventArgs e)
         {
+            
             Examination exam = gridViewExamination.GetFocusedRow() as Examination;
-            if (currentExamination == null)
+            editable = true;
+            if (currentExamination == null || (exam != currentExamination && exam.Status == ExaminationStatus.Pending) || exam.Status == ExaminationStatus.Doing)
             {
+                ResetAllFieldData();
                 currentExamination = exam;
 
-                XtraMessageBox.Show($"{currentExamination.PetId}");
+                currentExamination.Status = ExaminationStatus.Doing;
+                var isSuccess = examinationBUS.DoneExamination(currentExamination);
+                if (isSuccess)
+                {
+                    examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+                }
+
                 BindData(currentExamination);
+                BindExDetail();
+                if (detailsItem.Count == 0 || detailsItem == null)
+                {
+                    ResetSummaryPayment();
+                } else
+                {
+                    BindSummaryPayment();
+                }
             }
             else
             {
@@ -68,6 +92,7 @@ namespace pet_management
         private void BindData(Examination examination)
         {
             string petId = examination.PetId.ToString();
+            pet = PetBUS.GetPet(petId);
             PetData petData = receivePetBUS.GetPetData(petId);
             BindPetData(petData);
 
@@ -81,10 +106,16 @@ namespace pet_management
             {
                 gluDoctor.ReadOnly = true;
             }
+            gridViewDetail.Columns["ItemType"].GroupIndex = 0;
+        }
+
+        private void BindExDetail()
+        {
             detailsItem = examinationBUS.GetDetail(currentExamination.Id);
             eLItemBindingSource.DataSource = detailsItem;
-            BindSummaryPayment();
-            gridViewDetail.Columns["ItemType"].GroupIndex = 0;
+            unitBindingSource.DataSource = UnitBUS.GetUnits();
+            ServiceBUS serviceBUS = new ServiceBUS();
+            serviceBindingSource.DataSource = serviceBUS.GetServices();
         }
 
         private Staff GetStaffCurrent()
@@ -93,7 +124,7 @@ namespace pet_management
             return f.GetStaffLogined();
         }
 
-        private void BindPetData(PetData petData)
+        public void BindPetData(PetData petData)
         {
             txtPetId.Text = petData.PetNumber.ToString();
             txtMicrochip.Text = petData.Microchip.ToString();
@@ -110,18 +141,28 @@ namespace pet_management
             detailsItem = examinationBUS.GetDetail(currentExamination.Id);
             eLItemBindingSource.DataSource = detailsItem;
             gridViewDetail.Columns["ItemType"].GroupIndex = 0;
+            unitBindingSource.DataSource = UnitBUS.GetUnits();
             BindSummaryPayment();
         }
 
         private void BindSummaryPayment()
         {
-            txtTotal.Text = detailsItem.Sum(item => item.Price).ToString();
+            var total = detailsItem.Sum(item => item.Total);
+            var discount = detailsItem.Sum(x => x.Discount);
+            var tax = detailsItem.Sum(x => x.Tax);
+            txtTotal.Text = total.ToString();
             txtTotal.ApplyFormatToView();
+            txtDiscount.Text = discount.ToString();
+            txtDiscount.ApplyFormatToView();
+            txtTax.Text = tax.ToString();
+            txtTax.ApplyFormatToView();
+            txtSubtotal.Text = (total - discount + tax).ToString();
+            txtSubtotal.ApplyFormatToView();
         }
 
         private void simpleButton7_Click(object sender, EventArgs e)
         {
-            frmSelectPart f = new frmSelectPart(this, currentExamination.Id);
+            frmSelectPart f = new frmSelectPart(this, currentExamination.Id, detailsItem);
             f.ShowDialog();
         }
 
@@ -163,11 +204,23 @@ namespace pet_management
             currentExamination.Status = ExaminationStatus.Done;
             currentExamination.Symptom = txtSymptom.GetTextTrim();
             currentExamination.Conclude = txtConclude.GetTextTrim();
+            currentExamination.Note = txtNote.GetTextTrim();
+            currentExamination.Total = Convert.ToDecimal(txtSubtotal.GetTextTrim());
             var isSuccess = examinationBUS.DoneExamination(currentExamination);
             if (isSuccess)
             {
+                examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
                 ResetAllFieldData();
+                ResetSummaryPayment();
             }
+        }
+
+        private void ResetSummaryPayment()
+        {
+            txtTotal.Text = "0";
+            txtDiscount.Text = "0";
+            txtTax.Text = "0";
+            txtSubtotal.Text = "0";
         }
 
         private void ResetAllFieldData()
@@ -185,9 +238,103 @@ namespace pet_management
             dtExaminationDate.DateTime = DateTime.Today;
             txtType.Text = null;
             gluDoctor.EditValue = null;
+            txtConclude.Text = null;
+            txtSymptom.Text = null;
+            txtNote.Text = null;
 
             eLItemBindingSource.DataSource = null;
             currentExamination = null;
+        }
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            examinationBindingSource.DataSource = examinationBUS.GetExaminations();
+        }
+
+        private void gridViewExamination_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.Column.FieldName == "Action")
+            {
+                string status = view.GetRowCellValue(e.RowHandle, "Status").ToString();
+                if (status == ExaminationStatus.Done)
+                    e.RepositoryItem = rbtnViewEdit;
+                else
+                    e.RepositoryItem = rbtnStart;
+            }
+        }
+
+        private void rbtnViewEdit_Click(object sender, EventArgs e)
+        {
+            Examination exam = gridViewExamination.GetFocusedRow() as Examination;
+            if (!editable)
+            {
+                currentExamination = exam;
+                BindData(currentExamination);
+                BindExDetail();
+                BindSummaryPayment();
+            } 
+            else
+            {
+                XtraMessageBox.Show("Vui lòng hoàn thành phiên khám cũ trước khi bắt đầu khám cho bệnh nhân mới");
+            }
+        }
+
+        private void rbtnEdit_Click(object sender, EventArgs e)
+        {
+            ELItem item = gridViewDetail.GetFocusedRow() as ELItem;
+            {
+                frmEditItemEx f = new frmEditItemEx(this, item);
+                f.ShowDialog();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            editable = false;
+            currentExamination.Symptom = txtSymptom.GetTextTrim();
+            currentExamination.Conclude = txtConclude.GetTextTrim();
+            currentExamination.Note = txtNote.GetTextTrim();
+            currentExamination.Total = Convert.ToDecimal(txtSubtotal.GetTextTrim());
+            var isSuccess = examinationBUS.DoneExamination(currentExamination);
+            if (isSuccess)
+            {
+                examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+                ResetAllFieldData();
+                ResetSummaryPayment(); 
+                MyHelper.ShowSuccessMessage("Lưu phiếu khám thành công", "Thông báo");
+            } else
+            {
+                MyHelper.showErrorMessage("Đã có lỗi xảy ra. Vui lòng thử lại", "Lỗi");
+            }
+        }
+
+        private void btnEditPet_Click(object sender, EventArgs e)
+        {
+            frmPetInfor f = new frmPetInfor(this, pet, true);
+            f.ShowDialog();
+        }
+
+        public void RefeshListExWhenEditPetInfor()
+        {
+            InitailizeData();
+        }
+
+        private void btnDoing_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Doing).ToList();
+        }
+
+        private void btnWait_Click(object sender, EventArgs e)
+        {
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Pending).ToList();
         }
     }
 }

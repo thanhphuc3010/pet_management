@@ -58,5 +58,12 @@ namespace DAO
             var result = db.Delete(exService);
             return result;
         }
+
+        public bool Update(ExaminationPart exPart)
+        {
+            SetMapper();
+            var result = db.Update(exPart);
+            return result;
+        }
     }
 }

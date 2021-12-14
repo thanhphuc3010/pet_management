@@ -12,6 +12,8 @@ namespace DTO
         public int PartId { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public decimal Tax { get; set; }
+        public decimal Discount { get; set; }
         public int? ServiceUsedId { get; set; }
 
         public ELItem ToELItem()
@@ -22,8 +24,8 @@ namespace DTO
             elItem.Quantity = this.Quantity;
             elItem.Price = this.Price;
             elItem.ServiceUsedId = this.ServiceUsedId;
-            elItem.Discount = 0;
-            elItem.Tax = 0;
+            elItem.DiscountRate = this.Discount;
+            elItem.TaxRate = this.Tax;
             elItem.ItemType = "Hàng hóa";
             return elItem;
         }

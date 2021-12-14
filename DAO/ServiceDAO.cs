@@ -37,6 +37,7 @@ namespace DAO
         }
         public Service GetServiceById(string id)
         {
+            SetTypeMapper();
             string sql = $"SELECT * FROM service WHERE id = {id}";
             return db.QuerySingle<Service>(sql);
         }

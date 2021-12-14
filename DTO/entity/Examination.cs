@@ -27,6 +27,7 @@ namespace DTO
         public int DoctorId { get; set; }
         public string Symptom { get; set; }
         public string Conclude { get; set; }
+        public string Note { get; set; }
         public string Status { get; set; }
         public decimal Total { get; set; }
         public decimal Payment { get; set; }

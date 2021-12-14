@@ -135,9 +135,14 @@ namespace pet_management
             }
         }
 
-        public static void showErrorMessage(string message)
+        public static void showErrorMessage(string message, string caption)
         {
-            MessageBox.Show(message, "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            XtraMessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static void ShowSuccessMessage(string message, string caption)
+        {
+            XtraMessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void showSuccessMessage(string message)

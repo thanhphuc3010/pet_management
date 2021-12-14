@@ -30,27 +30,41 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExamination));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions13 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject49 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject50 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject51 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject52 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions14 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject53 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject54 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject55 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject56 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions15 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject57 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject58 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject59 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject60 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.rgluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.rgluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repoBtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnAll = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.btnToday = new DevExpress.XtraEditors.SimpleButton();
+            this.dtTo = new DevExpress.XtraEditors.DateEdit();
+            this.dtFrom = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grcExamination = new DevExpress.XtraGrid.GridControl();
@@ -61,8 +75,14 @@ namespace pet_management
             this.colExaminationDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.petExBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colReceptionistId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoctorId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gluDoctors = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.staffExBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSymptom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colConclude = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -71,7 +91,8 @@ namespace pet_management
             this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStart = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repoBtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.rbtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.rbtnViewEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnEditPet = new DevExpress.XtraEditors.SimpleButton();
@@ -109,7 +130,7 @@ namespace pet_management
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtNote = new DevExpress.XtraEditors.MemoEdit();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.txtConclude = new DevExpress.XtraEditors.MemoEdit();
@@ -162,12 +183,21 @@ namespace pet_management
             this.colItemId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colItemNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colItemName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiscountRate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnitId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rgluUnit = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.unitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTaxRate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiscount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colServiceUsedId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gluServiceUse = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDeteleItem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rbtnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -182,16 +212,34 @@ namespace pet_management
             this.btnDone = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrintMedical = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+            this.emptySpaceItem22 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem23 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTax = new DevExpress.XtraEditors.TextEdit();
+            this.btnFilter = new DevExpress.XtraEditors.SimpleButton();
+            this.btnWait = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDoing = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluDoctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcExamination)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewExamination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnViewEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -230,7 +278,7 @@ namespace pet_management
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConclude.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSymptom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).BeginInit();
@@ -265,83 +313,137 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcExDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluServiceUse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // rgluPet
+            // 
+            this.rgluPet.AutoHeight = false;
+            this.rgluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluPet.DisplayMember = "Name";
+            this.rgluPet.Name = "rgluPet";
+            this.rgluPet.ValueMember = "Id";
+            // 
+            // rgluDoctor
+            // 
+            this.rgluDoctor.AutoHeight = false;
+            this.rgluDoctor.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluDoctor.DisplayMember = "FullName";
+            this.rgluDoctor.Name = "rgluDoctor";
+            this.rgluDoctor.ValueMember = "Id";
+            // 
+            // repoBtnStart
+            // 
+            this.repoBtnStart.AutoHeight = false;
+            editorButtonImageOptions11.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions11.SvgImage")));
+            editorButtonImageOptions11.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.repoBtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repoBtnStart.Name = "repoBtnStart";
+            this.repoBtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // groupControl1
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.btnWait);
+            this.groupControl1.Controls.Add(this.btnDoing);
+            this.groupControl1.Controls.Add(this.btnFilter);
+            this.groupControl1.Controls.Add(this.btnAll);
             this.groupControl1.Controls.Add(this.btnRefresh);
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.dateEdit3);
-            this.groupControl1.Controls.Add(this.dateEdit2);
+            this.groupControl1.Controls.Add(this.btnToday);
+            this.groupControl1.Controls.Add(this.dtTo);
+            this.groupControl1.Controls.Add(this.dtFrom);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.grcExamination);
             this.groupControl1.Location = new System.Drawing.Point(13, 13);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(456, 859);
+            this.groupControl1.Size = new System.Drawing.Size(460, 908);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách bệnh nhân";
+            // 
+            // btnAll
+            // 
+            this.btnAll.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAll.ImageOptions.SvgImage = global::pet_management.Properties.Resources.icon_assign;
+            this.btnAll.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnAll.Location = new System.Drawing.Point(452, 33);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(80, 29);
+            this.btnAll.TabIndex = 6;
+            this.btnAll.Text = "Tất cả";
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
             this.btnRefresh.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnRefresh.Location = new System.Drawing.Point(5, 66);
+            this.btnRefresh.Location = new System.Drawing.Point(341, 66);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(446, 24);
+            this.btnRefresh.Size = new System.Drawing.Size(141, 30);
             this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Làm mới danh sách bệnh nhân";
+            this.btnRefresh.Text = "Làm mới DSBN";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // simpleButton2
+            // btnToday
             // 
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton2.Location = new System.Drawing.Point(434, 35);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(92, 24);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Hôm nay";
+            this.btnToday.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnToday.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnToday.ImageOptions.SvgImage")));
+            this.btnToday.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnToday.Location = new System.Drawing.Point(5, 67);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(92, 29);
+            this.btnToday.TabIndex = 5;
+            this.btnToday.Text = "Hôm nay";
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
-            // dateEdit3
+            // dtTo
             // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(287, 35);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtTo.EditValue = null;
+            this.dtTo.Location = new System.Drawing.Point(266, 35);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Size = new System.Drawing.Size(141, 24);
-            this.dateEdit3.TabIndex = 4;
-            this.dateEdit3.EditValueChanged += new System.EventHandler(this.dateEdit2_EditValueChanged);
+            this.dtTo.Size = new System.Drawing.Size(141, 24);
+            this.dtTo.TabIndex = 4;
+            this.dtTo.EditValueChanged += new System.EventHandler(this.dateEdit2_EditValueChanged);
             // 
-            // dateEdit2
+            // dtFrom
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(109, 35);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtFrom.EditValue = null;
+            this.dtFrom.Location = new System.Drawing.Point(109, 35);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(141, 24);
-            this.dateEdit2.TabIndex = 4;
-            this.dateEdit2.EditValueChanged += new System.EventHandler(this.dateEdit2_EditValueChanged);
+            this.dtFrom.Size = new System.Drawing.Size(120, 24);
+            this.dtFrom.TabIndex = 4;
+            this.dtFrom.EditValueChanged += new System.EventHandler(this.dateEdit2_EditValueChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(256, 38);
+            this.labelControl2.Location = new System.Drawing.Point(235, 38);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(25, 18);
             this.labelControl2.TabIndex = 3;
@@ -357,16 +459,18 @@ namespace pet_management
             // 
             // grcExamination
             // 
-            this.grcExamination.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grcExamination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcExamination.DataSource = this.examinationBindingSource;
-            this.grcExamination.Location = new System.Drawing.Point(0, 96);
+            this.grcExamination.Location = new System.Drawing.Point(0, 107);
             this.grcExamination.MainView = this.gridViewExamination;
             this.grcExamination.Name = "grcExamination";
             this.grcExamination.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repoBtnStart});
-            this.grcExamination.Size = new System.Drawing.Size(456, 763);
+            this.rbtnStart,
+            this.rbtnViewEdit,
+            this.gluPet,
+            this.gluDoctors});
+            this.grcExamination.Size = new System.Drawing.Size(460, 801);
             this.grcExamination.TabIndex = 0;
             this.grcExamination.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewExamination});
@@ -396,6 +500,7 @@ namespace pet_management
             this.gridViewExamination.GridControl = this.grcExamination;
             this.gridViewExamination.Name = "gridViewExamination";
             this.gridViewExamination.OptionsView.ShowGroupPanel = false;
+            this.gridViewExamination.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gridViewExamination_CustomRowCellEdit);
             // 
             // colId
             // 
@@ -414,7 +519,7 @@ namespace pet_management
             this.colExaminationNumber.OptionsColumn.AllowEdit = false;
             this.colExaminationNumber.Visible = true;
             this.colExaminationNumber.VisibleIndex = 0;
-            this.colExaminationNumber.Width = 66;
+            this.colExaminationNumber.Width = 64;
             // 
             // colExaminationDate
             // 
@@ -425,7 +530,7 @@ namespace pet_management
             this.colExaminationDate.OptionsColumn.AllowEdit = false;
             this.colExaminationDate.Visible = true;
             this.colExaminationDate.VisibleIndex = 1;
-            this.colExaminationDate.Width = 89;
+            this.colExaminationDate.Width = 87;
             // 
             // colType
             // 
@@ -438,13 +543,36 @@ namespace pet_management
             // colPetId
             // 
             this.colPetId.Caption = "Thú cưng";
+            this.colPetId.ColumnEdit = this.gluPet;
             this.colPetId.FieldName = "PetId";
             this.colPetId.MinWidth = 25;
             this.colPetId.Name = "colPetId";
             this.colPetId.OptionsColumn.AllowEdit = false;
             this.colPetId.Visible = true;
             this.colPetId.VisibleIndex = 2;
-            this.colPetId.Width = 82;
+            this.colPetId.Width = 80;
+            // 
+            // gluPet
+            // 
+            this.gluPet.AutoHeight = false;
+            this.gluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluPet.DataSource = this.petExBindingSource;
+            this.gluPet.DisplayMember = "Name";
+            this.gluPet.Name = "gluPet";
+            this.gluPet.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.gluPet.ValueMember = "Id";
+            // 
+            // petExBindingSource
+            // 
+            this.petExBindingSource.DataSource = typeof(DTO.Pet);
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // colReceptionistId
             // 
@@ -457,13 +585,36 @@ namespace pet_management
             // colDoctorId
             // 
             this.colDoctorId.Caption = "Bác sĩ";
+            this.colDoctorId.ColumnEdit = this.gluDoctors;
             this.colDoctorId.FieldName = "DoctorId";
             this.colDoctorId.MinWidth = 25;
             this.colDoctorId.Name = "colDoctorId";
             this.colDoctorId.OptionsColumn.AllowEdit = false;
             this.colDoctorId.Visible = true;
             this.colDoctorId.VisibleIndex = 3;
-            this.colDoctorId.Width = 86;
+            this.colDoctorId.Width = 84;
+            // 
+            // gluDoctors
+            // 
+            this.gluDoctors.AutoHeight = false;
+            this.gluDoctors.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluDoctors.DataSource = this.staffExBindingSource;
+            this.gluDoctors.DisplayMember = "FullName";
+            this.gluDoctors.Name = "gluDoctors";
+            this.gluDoctors.PopupView = this.gridView1;
+            this.gluDoctors.ValueMember = "Id";
+            // 
+            // staffExBindingSource
+            // 
+            this.staffExBindingSource.DataSource = typeof(DTO.Staff);
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colSymptom
             // 
@@ -490,7 +641,7 @@ namespace pet_management
             this.colStatus.OptionsColumn.AllowEdit = false;
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 4;
-            this.colStatus.Width = 96;
+            this.colStatus.Width = 100;
             // 
             // colTotal
             // 
@@ -527,6 +678,7 @@ namespace pet_management
             // colStart
             // 
             this.colStart.ColumnEdit = this.repoBtnStart;
+            this.colStart.FieldName = "Action";
             this.colStart.MinWidth = 25;
             this.colStart.Name = "colStart";
             this.colStart.OptionsColumn.FixedWidth = true;
@@ -534,22 +686,33 @@ namespace pet_management
             this.colStart.VisibleIndex = 5;
             this.colStart.Width = 25;
             // 
-            // repoBtnStart
+            // rbtnStart
             // 
-            this.repoBtnStart.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.repoBtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repoBtnStart.Name = "repoBtnStart";
-            this.repoBtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repoBtnStart.Click += new System.EventHandler(this.repoBtnStart_Click);
+            this.rbtnStart.AutoHeight = false;
+            editorButtonImageOptions12.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions12.SvgImage")));
+            editorButtonImageOptions12.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.rbtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rbtnStart.Name = "rbtnStart";
+            this.rbtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rbtnStart.Click += new System.EventHandler(this.repoBtnStart_Click);
+            // 
+            // rbtnViewEdit
+            // 
+            this.rbtnViewEdit.AutoHeight = false;
+            editorButtonImageOptions13.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions13.SvgImage")));
+            editorButtonImageOptions13.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.rbtnViewEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject49, serializableAppearanceObject50, serializableAppearanceObject51, serializableAppearanceObject52, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rbtnViewEdit.Name = "rbtnViewEdit";
+            this.rbtnViewEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rbtnViewEdit.Click += new System.EventHandler(this.rbtnViewEdit_Click);
             // 
             // groupControl2
             // 
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.layoutControl1);
-            this.groupControl2.Location = new System.Drawing.Point(475, 13);
+            this.groupControl2.Location = new System.Drawing.Point(477, 13);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(524, 381);
             this.groupControl2.TabIndex = 1;
@@ -586,6 +749,7 @@ namespace pet_management
             this.btnEditPet.Size = new System.Drawing.Size(28, 27);
             this.btnEditPet.StyleController = this.layoutControl1;
             this.btnEditPet.TabIndex = 2;
+            this.btnEditPet.Click += new System.EventHandler(this.btnEditPet_Click);
             // 
             // lblCustomerInfo
             // 
@@ -902,7 +1066,7 @@ namespace pet_management
             // 
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.Controls.Add(this.layoutControl2);
-            this.groupControl3.Location = new System.Drawing.Point(1005, 13);
+            this.groupControl3.Location = new System.Drawing.Point(1007, 13);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(592, 381);
             this.groupControl3.TabIndex = 2;
@@ -910,7 +1074,7 @@ namespace pet_management
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.memoEdit1);
+            this.layoutControl2.Controls.Add(this.txtNote);
             this.layoutControl2.Controls.Add(this.simpleButton8);
             this.layoutControl2.Controls.Add(this.simpleButton7);
             this.layoutControl2.Controls.Add(this.txtConclude);
@@ -927,13 +1091,13 @@ namespace pet_management
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // memoEdit1
+            // txtNote
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(125, 256);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(451, 43);
-            this.memoEdit1.StyleController = this.layoutControl2;
-            this.memoEdit1.TabIndex = 7;
+            this.txtNote.Location = new System.Drawing.Point(125, 256);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(451, 43);
+            this.txtNote.StyleController = this.layoutControl2;
+            this.txtNote.TabIndex = 7;
             // 
             // simpleButton8
             // 
@@ -1297,7 +1461,7 @@ namespace pet_management
             // 
             // layoutControlItem20
             // 
-            this.layoutControlItem20.Control = this.memoEdit1;
+            this.layoutControlItem20.Control = this.txtNote;
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 244);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(568, 47);
@@ -1317,9 +1481,9 @@ namespace pet_management
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.grcExDetail);
-            this.groupControl4.Location = new System.Drawing.Point(475, 400);
+            this.groupControl4.Location = new System.Drawing.Point(477, 400);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1122, 384);
+            this.groupControl4.Size = new System.Drawing.Size(1122, 391);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Chi tiết phiếu khám";
             // 
@@ -1332,8 +1496,10 @@ namespace pet_management
             this.grcExDetail.Name = "grcExDetail";
             this.grcExDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rbtnDelete,
-            this.rbtnEdit});
-            this.grcExDetail.Size = new System.Drawing.Size(1118, 356);
+            this.rbtnEdit,
+            this.rgluUnit,
+            this.gluServiceUse});
+            this.grcExDetail.Size = new System.Drawing.Size(1118, 363);
             this.grcExDetail.TabIndex = 1;
             this.grcExDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDetail});
@@ -1349,9 +1515,12 @@ namespace pet_management
             this.colItemId,
             this.colItemNumber,
             this.colItemName,
+            this.colDiscountRate,
             this.colUnitId,
             this.colQuantity,
             this.colPrice,
+            this.colTaxRate,
+            this.colTotalPrice,
             this.colTax,
             this.colDiscount,
             this.colServiceUsedId,
@@ -1405,7 +1574,7 @@ namespace pet_management
             this.colItemNumber.OptionsColumn.AllowEdit = false;
             this.colItemNumber.Visible = true;
             this.colItemNumber.VisibleIndex = 2;
-            this.colItemNumber.Width = 119;
+            this.colItemNumber.Width = 109;
             // 
             // colItemName
             // 
@@ -1422,7 +1591,14 @@ namespace pet_management
             this.colItemName.OptionsColumn.AllowEdit = false;
             this.colItemName.Visible = true;
             this.colItemName.VisibleIndex = 3;
-            this.colItemName.Width = 237;
+            this.colItemName.Width = 217;
+            // 
+            // colDiscountRate
+            // 
+            this.colDiscountRate.FieldName = "DiscountRate";
+            this.colDiscountRate.MinWidth = 25;
+            this.colDiscountRate.Name = "colDiscountRate";
+            this.colDiscountRate.Width = 94;
             // 
             // colUnitId
             // 
@@ -1433,13 +1609,36 @@ namespace pet_management
             this.colUnitId.AppearanceHeader.Options.UseTextOptions = true;
             this.colUnitId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUnitId.Caption = "ĐVT";
+            this.colUnitId.ColumnEdit = this.rgluUnit;
             this.colUnitId.FieldName = "UnitId";
             this.colUnitId.MinWidth = 25;
             this.colUnitId.Name = "colUnitId";
             this.colUnitId.OptionsColumn.AllowEdit = false;
             this.colUnitId.Visible = true;
             this.colUnitId.VisibleIndex = 4;
-            this.colUnitId.Width = 38;
+            this.colUnitId.Width = 57;
+            // 
+            // rgluUnit
+            // 
+            this.rgluUnit.AutoHeight = false;
+            this.rgluUnit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluUnit.DataSource = this.unitBindingSource;
+            this.rgluUnit.DisplayMember = "Name";
+            this.rgluUnit.Name = "rgluUnit";
+            this.rgluUnit.PopupView = this.gridView2;
+            this.rgluUnit.ValueMember = "Id";
+            // 
+            // unitBindingSource
+            // 
+            this.unitBindingSource.DataSource = typeof(DTO.Unit);
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colQuantity
             // 
@@ -1456,7 +1655,7 @@ namespace pet_management
             this.colQuantity.OptionsColumn.AllowEdit = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 5;
-            this.colQuantity.Width = 76;
+            this.colQuantity.Width = 68;
             // 
             // colPrice
             // 
@@ -1473,7 +1672,29 @@ namespace pet_management
             this.colPrice.OptionsColumn.AllowEdit = false;
             this.colPrice.Visible = true;
             this.colPrice.VisibleIndex = 6;
-            this.colPrice.Width = 115;
+            this.colPrice.Width = 98;
+            // 
+            // colTaxRate
+            // 
+            this.colTaxRate.FieldName = "TaxRate";
+            this.colTaxRate.MinWidth = 25;
+            this.colTaxRate.Name = "colTaxRate";
+            this.colTaxRate.Width = 94;
+            // 
+            // colTotalPrice
+            // 
+            this.colTotalPrice.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colTotalPrice.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colTotalPrice.AppearanceHeader.Options.UseFont = true;
+            this.colTotalPrice.AppearanceHeader.Options.UseForeColor = true;
+            this.colTotalPrice.Caption = "Thành tiền";
+            this.colTotalPrice.FieldName = "Total";
+            this.colTotalPrice.MinWidth = 25;
+            this.colTotalPrice.Name = "colTotalPrice";
+            this.colTotalPrice.OptionsColumn.AllowEdit = false;
+            this.colTotalPrice.Visible = true;
+            this.colTotalPrice.VisibleIndex = 9;
+            this.colTotalPrice.Width = 89;
             // 
             // colTax
             // 
@@ -1490,7 +1711,7 @@ namespace pet_management
             this.colTax.OptionsColumn.AllowEdit = false;
             this.colTax.Visible = true;
             this.colTax.VisibleIndex = 7;
-            this.colTax.Width = 125;
+            this.colTax.Width = 96;
             // 
             // colDiscount
             // 
@@ -1507,7 +1728,7 @@ namespace pet_management
             this.colDiscount.OptionsColumn.AllowEdit = false;
             this.colDiscount.Visible = true;
             this.colDiscount.VisibleIndex = 8;
-            this.colDiscount.Width = 124;
+            this.colDiscount.Width = 85;
             // 
             // colServiceUsedId
             // 
@@ -1518,24 +1739,52 @@ namespace pet_management
             this.colServiceUsedId.AppearanceHeader.Options.UseTextOptions = true;
             this.colServiceUsedId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colServiceUsedId.Caption = "Sử dụng cho";
+            this.colServiceUsedId.ColumnEdit = this.gluServiceUse;
             this.colServiceUsedId.FieldName = "ServiceUsedId";
             this.colServiceUsedId.MinWidth = 25;
             this.colServiceUsedId.Name = "colServiceUsedId";
             this.colServiceUsedId.OptionsColumn.AllowEdit = false;
             this.colServiceUsedId.Visible = true;
-            this.colServiceUsedId.VisibleIndex = 9;
-            this.colServiceUsedId.Width = 119;
+            this.colServiceUsedId.VisibleIndex = 10;
+            this.colServiceUsedId.Width = 111;
+            // 
+            // gluServiceUse
+            // 
+            this.gluServiceUse.AutoHeight = false;
+            this.gluServiceUse.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gluServiceUse.DataSource = this.serviceBindingSource;
+            this.gluServiceUse.DisplayMember = "Name";
+            this.gluServiceUse.Name = "gluServiceUse";
+            this.gluServiceUse.NullText = "";
+            this.gluServiceUse.PopupView = this.gridView3;
+            this.gluServiceUse.ValueMember = "Id";
+            // 
+            // serviceBindingSource
+            // 
+            this.serviceBindingSource.DataSource = typeof(DTO.Service);
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // colItemType
             // 
+            this.colItemType.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colItemType.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colItemType.AppearanceHeader.Options.UseFont = true;
+            this.colItemType.AppearanceHeader.Options.UseForeColor = true;
             this.colItemType.Caption = "Loại";
             this.colItemType.FieldName = "ItemType";
             this.colItemType.MinWidth = 25;
             this.colItemType.Name = "colItemType";
             this.colItemType.OptionsColumn.AllowEdit = false;
             this.colItemType.Visible = true;
-            this.colItemType.VisibleIndex = 10;
-            this.colItemType.Width = 97;
+            this.colItemType.VisibleIndex = 11;
+            this.colItemType.Width = 120;
             // 
             // colDeteleItem
             // 
@@ -1550,10 +1799,10 @@ namespace pet_management
             // rbtnDelete
             // 
             this.rbtnDelete.AutoHeight = false;
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
-            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions14.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions14.SvgImage")));
+            editorButtonImageOptions14.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions14, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject53, serializableAppearanceObject54, serializableAppearanceObject55, serializableAppearanceObject56, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnDelete.Click += new System.EventHandler(this.rbtnDelete_Click);
@@ -1571,21 +1820,22 @@ namespace pet_management
             // rbtnEdit
             // 
             this.rbtnEdit.AutoHeight = false;
-            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
-            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions15.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions15.SvgImage")));
+            editorButtonImageOptions15.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions15, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject57, serializableAppearanceObject58, serializableAppearanceObject59, serializableAppearanceObject60, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rbtnEdit.Click += new System.EventHandler(this.rbtnEdit_Click);
             // 
             // txtTotal
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotal.Location = new System.Drawing.Point(1367, 790);
+            this.txtTotal.Location = new System.Drawing.Point(1122, 801);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.Transparent;
             this.txtTotal.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.txtTotal.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Critical;
+            this.txtTotal.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
             this.txtTotal.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
             this.txtTotal.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtTotal.Properties.AppearanceReadOnly.Options.UseForeColor = true;
@@ -1604,18 +1854,18 @@ namespace pet_management
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(1295, 793);
+            this.labelControl3.Location = new System.Drawing.Point(1042, 804);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 18);
+            this.labelControl3.Size = new System.Drawing.Size(73, 18);
             this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "Tổng tiền:";
+            this.labelControl3.Text = "Tổng cộng:";
             // 
             // labelControl4
             // 
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(1223, 823);
+            this.labelControl4.Location = new System.Drawing.Point(975, 836);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(140, 18);
             this.labelControl4.TabIndex = 6;
@@ -1624,8 +1874,13 @@ namespace pet_management
             // txtDiscount
             // 
             this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDiscount.Location = new System.Drawing.Point(1367, 820);
+            this.txtDiscount.Location = new System.Drawing.Point(1122, 833);
             this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDiscount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtDiscount.Properties.Mask.EditMask = "n0";
+            this.txtDiscount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDiscount.Properties.ReadOnly = true;
             this.txtDiscount.Size = new System.Drawing.Size(230, 24);
             this.txtDiscount.TabIndex = 4;
             // 
@@ -1634,26 +1889,35 @@ namespace pet_management
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(1279, 853);
+            this.label1.Location = new System.Drawing.Point(999, 900);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 18);
+            this.label1.Size = new System.Drawing.Size(116, 18);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Thành tiền:";
+            this.label1.Text = "Phải thanh toán:";
             // 
             // txtSubtotal
             // 
             this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSubtotal.Location = new System.Drawing.Point(1367, 850);
+            this.txtSubtotal.Location = new System.Drawing.Point(1122, 897);
             this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSubtotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSubtotal.Properties.AppearanceReadOnly.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Critical;
+            this.txtSubtotal.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.txtSubtotal.Properties.DisplayFormat.FormatString = "N0";
+            this.txtSubtotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSubtotal.Properties.Mask.EditMask = "n0";
+            this.txtSubtotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSubtotal.Properties.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(230, 24);
             this.txtSubtotal.TabIndex = 4;
             // 
             // btnDone
             // 
             this.btnDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDone.Location = new System.Drawing.Point(475, 823);
+            this.btnDone.Location = new System.Drawing.Point(1358, 797);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(109, 48);
+            this.btnDone.Size = new System.Drawing.Size(122, 32);
             this.btnDone.TabIndex = 8;
             this.btnDone.Text = "Kết thúc khám";
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
@@ -1661,33 +1925,123 @@ namespace pet_management
             // btnPrintMedical
             // 
             this.btnPrintMedical.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintMedical.Location = new System.Drawing.Point(590, 823);
+            this.btnPrintMedical.Location = new System.Drawing.Point(1358, 834);
             this.btnPrintMedical.Name = "btnPrintMedical";
-            this.btnPrintMedical.Size = new System.Drawing.Size(109, 48);
+            this.btnPrintMedical.Size = new System.Drawing.Size(122, 32);
             this.btnPrintMedical.TabIndex = 8;
             this.btnPrintMedical.Text = "In đơn thuốc";
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(705, 823);
+            this.btnPrint.Location = new System.Drawing.Point(1486, 797);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(109, 48);
+            this.btnPrint.Size = new System.Drawing.Size(113, 32);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "In phiếu khám";
+            // 
+            // emptySpaceItem22
+            // 
+            this.emptySpaceItem22.AllowHotTrack = false;
+            this.emptySpaceItem22.Location = new System.Drawing.Point(96, 0);
+            this.emptySpaceItem22.Name = "emptySpaceItem22";
+            this.emptySpaceItem22.Size = new System.Drawing.Size(10, 31);
+            this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem23
+            // 
+            this.emptySpaceItem23.AllowHotTrack = false;
+            this.emptySpaceItem23.Location = new System.Drawing.Point(243, 0);
+            this.emptySpaceItem23.Name = "emptySpaceItem23";
+            this.emptySpaceItem23.Size = new System.Drawing.Size(11, 33);
+            this.emptySpaceItem23.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(1486, 834);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(113, 32);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Lưu tạm";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(1078, 868);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(37, 18);
+            this.labelControl5.TabIndex = 6;
+            this.labelControl5.Text = "Thuế:";
+            // 
+            // txtTax
+            // 
+            this.txtTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTax.Location = new System.Drawing.Point(1122, 865);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTax.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTax.Properties.DisplayFormat.FormatString = "N0";
+            this.txtTax.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTax.Properties.Mask.EditMask = "n0";
+            this.txtTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTax.Properties.ReadOnly = true;
+            this.txtTax.Size = new System.Drawing.Size(230, 24);
+            this.txtTax.TabIndex = 4;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnFilter.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnFilter.Location = new System.Drawing.Point(413, 33);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(33, 29);
+            this.btnFilter.TabIndex = 6;
+            this.btnFilter.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnWait
+            // 
+            this.btnWait.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnWait.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnWait.ImageOptions.SvgImage")));
+            this.btnWait.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnWait.Location = new System.Drawing.Point(222, 67);
+            this.btnWait.Name = "btnWait";
+            this.btnWait.Size = new System.Drawing.Size(113, 29);
+            this.btnWait.TabIndex = 7;
+            this.btnWait.Text = "Chưa khám";
+            this.btnWait.Click += new System.EventHandler(this.btnWait_Click);
+            // 
+            // btnDoing
+            // 
+            this.btnDoing.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDoing.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDoing.ImageOptions.SvgImage")));
+            this.btnDoing.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnDoing.Location = new System.Drawing.Point(103, 67);
+            this.btnDoing.Name = "btnDoing";
+            this.btnDoing.Size = new System.Drawing.Size(113, 29);
+            this.btnDoing.TabIndex = 8;
+            this.btnDoing.Text = "Đang khám";
+            this.btnDoing.Click += new System.EventHandler(this.btnDoing_Click);
             // 
             // frmExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1609, 884);
+            this.ClientSize = new System.Drawing.Size(1611, 933);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnPrintMedical);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtSubtotal);
+            this.Controls.Add(this.txtTax);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.groupControl4);
@@ -1699,17 +2053,27 @@ namespace pet_management
             this.Text = "Phiếu khám";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmExamination_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rgluPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluDoctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcExamination)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewExamination)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbtnViewEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -1748,7 +2112,7 @@ namespace pet_management
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConclude.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSymptom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctor.Properties)).EndInit();
@@ -1783,11 +2147,20 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcExDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluServiceUse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1852,12 +2225,10 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dtFrom;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
-        private DevExpress.XtraEditors.SimpleButton btnRefresh;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.DateEdit dtTo;
         private DevExpress.XtraGrid.GridControl grcExDetail;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDetail;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
@@ -1895,7 +2266,6 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate;
         private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate;
         private DevExpress.XtraGrid.Columns.GridColumn colStart;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repoBtnStart;
         private DevExpress.XtraEditors.TextEdit txtPetId;
         private System.Windows.Forms.BindingSource staffBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colId1;
@@ -1928,8 +2298,39 @@ namespace pet_management
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnDelete;
         private DevExpress.XtraGrid.Columns.GridColumn colEditItem;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnEdit;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit txtNote;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem20;
+        private System.Windows.Forms.BindingSource petExBindingSource;
+        private System.Windows.Forms.BindingSource staffExBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluUnit;
+        private System.Windows.Forms.BindingSource unitBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem22;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem23;
+        private DevExpress.XtraEditors.SimpleButton btnAll;
+        private DevExpress.XtraEditors.SimpleButton btnRefresh;
+        private DevExpress.XtraEditors.SimpleButton btnToday;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnStart;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnViewEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluPet;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluDoctor;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repoBtnStart;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluPet;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluDoctors;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluServiceUse;
+        private System.Windows.Forms.BindingSource serviceBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiscountRate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTaxRate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalPrice;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtTax;
+        private DevExpress.XtraEditors.SimpleButton btnFilter;
+        private DevExpress.XtraEditors.SimpleButton btnWait;
+        private DevExpress.XtraEditors.SimpleButton btnDoing;
     }
 }

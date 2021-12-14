@@ -16,8 +16,11 @@ namespace DTO
         public int UnitId { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public decimal? Tax { get; set; }
-        public decimal? Discount { get; set; }
+        public decimal? TaxRate { get; set; }
+        public decimal Tax { get; set; }
+        public decimal? DiscountRate { get; set; }
+        public decimal Discount { get; set; }
+        public decimal Total { get; set; }
         public int? ServiceUsedId { get; set; }
 
         public ExaminationPart ToExPart()
@@ -29,6 +32,8 @@ namespace DTO
             examinationPart.Quantity = this.Quantity;
             examinationPart.Price = this.Price;
             examinationPart.ServiceUsedId = this.ServiceUsedId;
+            examinationPart.Tax = (this.TaxRate == null) ? 0 : (decimal)this.TaxRate;
+            examinationPart.Discount = (this.DiscountRate == null) ? 0 : (decimal)this.DiscountRate;
             return examinationPart;
         }
 
@@ -38,8 +43,8 @@ namespace DTO
             examinationService.ExaminationId = this.ExaminationId;
             examinationService.ServiceId = this.ItemId;
             examinationService.Price = this.Price;
-            examinationService.Tax = (this.Tax == null) ? 0 : (decimal)this.Tax;
-            examinationService.Discount = (this.Discount == null) ? 0 : (decimal)this.Discount;
+            examinationService.Tax = (this.TaxRate == null) ? 0 : (decimal)this.TaxRate;
+            examinationService.Discount = (this.DiscountRate == null) ? 0 : (decimal)this.DiscountRate;
             return examinationService;
         }
     }

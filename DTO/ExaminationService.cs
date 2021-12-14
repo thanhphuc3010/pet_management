@@ -21,8 +21,8 @@ namespace DTO
             elItem.ItemId = this.ServiceId;
             elItem.Price = this.Price;
             elItem.Quantity = 1;
-            elItem.Tax = this.Tax;
-            elItem.Discount = this.Discount;
+            elItem.TaxRate = this.Tax;
+            elItem.DiscountRate = this.Discount;
             elItem.ItemType = "Dịch vụ";
             return elItem;
         }

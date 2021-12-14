@@ -54,6 +54,13 @@ namespace BUS
                 item.ItemName = p.Name;
                 item.ItemNumber = p.PartNumber;
                 item.UnitId = p.UnitId;
+
+                var discountRate = (item.DiscountRate == null) ? 0 : (decimal)item.DiscountRate;
+                var taxRate = (item.TaxRate == null) ? 0 : (decimal)item.TaxRate;
+                var sum = item.Quantity * item.Price;
+                item.Discount = sum * (discountRate / 100);
+                item.Tax = sum * (taxRate / 100);
+                item.Total = sum - item.Discount + item.Tax;
                 details.Add(item);
             }
 
@@ -65,10 +72,23 @@ namespace BUS
                 item.ItemName = s.Name;
                 item.ItemNumber = s.Id.ToString();
                 item.UnitId = s.UnitId;
+
+                var discountRate = (item.DiscountRate == null) ? 0 : (decimal)item.DiscountRate;
+                var taxRate = (item.TaxRate == null) ? 0 : (decimal)item.TaxRate;
+                var sum = item.Quantity * item.Price;
+                item.Discount = sum * (discountRate / 100);
+                item.Tax = sum * (taxRate / 100);
+                item.Total = sum - item.Discount + item.Tax;
+
                 details.Add(item);
             }
 
             return details;
+        }
+
+        public bool UpdatePartDetail(ExaminationPart exPart)
+        {
+            return exServiceDao.Update(exPart);
         }
 
         public bool SaveServiceDetail(ExaminationService exService)
