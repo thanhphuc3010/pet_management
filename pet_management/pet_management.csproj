@@ -179,6 +179,12 @@
     <Compile Include="frmReceivePet.Designer.cs">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelectPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReceivePet.resx">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectPart.resx">
       <DependentUpon>frmSelectPart.cs</DependentUpon>

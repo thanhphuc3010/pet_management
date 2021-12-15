@@ -93,6 +93,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExaminationData.cs" />
+    <Compile Include="ExaminationInfor.cs" />
+    <Compile Include="rptExaminationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExaminationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptMedical.cs">
       <DependentUpon>rptMedical.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -126,6 +134,10 @@
     <Compile Include="entity\Species.cs" />
     <Compile Include="entity\Staff.cs" />
     <Compile Include="entity\Unit.cs" />
+    <EmbeddedResource Include="rptExaminationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExaminationReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptMedical.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptMedical.cs</LastGenOutput>

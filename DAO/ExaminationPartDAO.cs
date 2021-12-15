@@ -53,10 +53,18 @@ namespace DAO
         public List<ExaminationPart> GetExaminationPartsDetail(long exId)
         {
             SetMapper();
-            //var pg = new PredicateGroup { Operator = GroupOperator.And, Predicates = new List<IPredicate>() };
-            var predicate = (Predicates.Field<ExaminationPart>(f => f.ExaminationId, Operator.Eq, exId));
-            List<ExaminationPart> examinations = db.GetList<ExaminationPart>(predicate).ToList();
-            return examinations;
+            try
+            {
+                //var pg = new PredicateGroup { Operator = GroupOperator.And, Predicates = new List<IPredicate>() };
+                var predicate = (Predicates.Field<ExaminationPart>(f => f.ExaminationId, Operator.Eq, exId));
+                List<ExaminationPart> examinations = db.GetList<ExaminationPart>(predicate).ToList();
+                return examinations;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

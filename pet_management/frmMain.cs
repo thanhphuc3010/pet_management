@@ -130,5 +130,10 @@ namespace pet_management
         {
             OpenFormAsDialog(typeof(frmBreed));
         }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormAsDialog(typeof(frmReport));
+        }
     }
 }

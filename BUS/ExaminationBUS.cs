@@ -60,7 +60,7 @@ namespace BUS
                 var sum = item.Quantity * item.Price;
                 item.Discount = sum * (discountRate / 100);
                 item.Tax = sum * (taxRate / 100);
-                item.Total = sum - item.Discount + item.Tax;
+                item.Total = sum;
                 details.Add(item);
             }
 
@@ -78,7 +78,7 @@ namespace BUS
                 var sum = item.Quantity * item.Price;
                 item.Discount = sum * (discountRate / 100);
                 item.Tax = sum * (taxRate / 100);
-                item.Total = sum - item.Discount + item.Tax;
+                item.Total = sum;
 
                 details.Add(item);
             }
@@ -105,6 +105,11 @@ namespace BUS
         public bool DoneExamination(Examination examination)
         {
             return dao.DoneExamination(examination);
+        }
+
+        public List<ExaminationInfor> GetExaminationInfors()
+        {
+            return dao.GetExaminationInfors();
         }
     }
 }

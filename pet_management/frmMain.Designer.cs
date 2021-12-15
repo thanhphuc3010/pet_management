@@ -255,6 +255,7 @@ namespace pet_management
             this.barButtonItem8.Caption = "Báo cáo doanh thu";
             this.barButtonItem8.Id = 19;
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
