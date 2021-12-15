@@ -55,7 +55,7 @@ namespace pet_management
             // Start check service use id
             if (serviceUseId == 0)
             {
-                exPart.ServiceUsedId = null;
+                exPart.ServiceUsedId = 0;
             } else
             {
                 exPart.ServiceUsedId = serviceUseId;

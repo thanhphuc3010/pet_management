@@ -20,6 +20,7 @@ namespace pet_management
         private ExaminationBUS examinationBUS = new ExaminationBUS();
         private ReceivePetBUS receivePetBUS = new ReceivePetBUS();
         private Examination currentExamination = null;
+        private PetData _petData;
         private Pet pet;
         private bool editable = false;
 
@@ -94,6 +95,7 @@ namespace pet_management
             string petId = examination.PetId.ToString();
             pet = PetBUS.GetPet(petId);
             PetData petData = receivePetBUS.GetPetData(petId);
+            _petData = petData;
             BindPetData(petData);
 
             txtID.Text = examination.ExaminationNumber.ToString();
@@ -335,6 +337,14 @@ namespace pet_management
         {
             List<Examination> examinations = examinationBUS.GetExaminationsToday();
             examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Pending).ToList();
+        }
+
+        private void btnPrintMedical_Click(object sender, EventArgs e)
+        {
+            using (frmPrintMedical frm = new frmPrintMedical(detailsItem, _petData))
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

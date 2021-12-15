@@ -14,7 +14,7 @@ namespace DTO
         public decimal Price { get; set; }
         public decimal Tax { get; set; }
         public decimal Discount { get; set; }
-        public int? ServiceUsedId { get; set; }
+        public int ServiceUsedId { get; set; }
 
         public ELItem ToELItem()
         {

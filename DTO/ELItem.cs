@@ -16,12 +16,12 @@ namespace DTO
         public int UnitId { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public decimal? TaxRate { get; set; }
+        public decimal TaxRate { get; set; }
         public decimal Tax { get; set; }
-        public decimal? DiscountRate { get; set; }
+        public decimal DiscountRate { get; set; }
         public decimal Discount { get; set; }
         public decimal Total { get; set; }
-        public int? ServiceUsedId { get; set; }
+        public int ServiceUsedId { get; set; }
 
         public ExaminationPart ToExPart()
         {
