@@ -34,6 +34,7 @@ namespace pet_management
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rptExaminationReport1 = new DTO.rptExaminationReport();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace pet_management
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton2);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -80,6 +82,15 @@ namespace pet_management
             // rptExaminationReport1
             // 
             this.rptExaminationReport1.FileName = "rassdk://D:\\pet-management\\pet_management\\DTO\\rptExaminationReport.rpt";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(184, 11);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton2.TabIndex = 1;
+            this.simpleButton2.Text = "simpleButton2";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frmReport
             // 
@@ -104,5 +115,6 @@ namespace pet_management
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private DTO.rptExaminationReport rptExaminationReport1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

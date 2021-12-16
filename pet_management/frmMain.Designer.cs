@@ -262,12 +262,14 @@ namespace pet_management
             this.barButtonItem9.Caption = "Báo cáo hàng hóa sử dụng";
             this.barButtonItem9.Id = 20;
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "Báo cáo tổng hợp";
             this.barButtonItem10.Id = 21;
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // ribbonPage1
             // 

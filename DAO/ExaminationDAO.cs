@@ -99,6 +99,50 @@ namespace DAO
             return result;
         }
 
+        public List<ExaminationPartReport> GetExPartDataReport()
+        {
+            IDbConnection con = DataProvider.Connect;
+            string sql = @" SELECT
+                                e.id,
+                                e.examination_number AS examinationNumber,
+                                e.examination_date AS examinationDate,
+                                e.type AS examinationType,
+                                e.id_doctor AS doctorId,
+                                e.status,
+                                p.id AS petId,
+                                p.name AS petName,
+                                p.pet_number AS petNumber,
+                                ep.id_part AS partId,
+                                ep.quantity AS quantity,
+                                pa.part_number AS partNumber,
+                                pa.name AS partName,
+                                u.name AS unit,
+                                ep.price,
+                                ep.tax AS taxRate,
+                                ep.discount AS discountRate,
+                                s.name AS serviceUseId
+                            FROM
+                                examination e
+                            INNER JOIN pet p ON
+                                e.id_pet = p.id
+                            INNER JOIN examination_part ep ON
+                                e.id = ep.id_examination
+                            INNER JOIN part pa ON
+                                ep.id_part = pa.id
+                            INNER JOIN unit u ON
+                                pa.id_unit = u.id
+                            LEFT JOIN service s ON
+                                ep.use_for_service = s.id";
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            List<ExaminationPartReport> data = con.Query<ExaminationPartReport>(sql).ToList();
+            con.Close();
+            return data;
+        }
+
         public List<ExaminationData> GetExaminationDatas()
         {
             IDbConnection dbd = DataProvider.Connect;

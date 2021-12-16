@@ -51,7 +51,13 @@ namespace pet_management
         private void frmReport_Load(object sender, EventArgs e)
         {
             var result = reportBUS.GetExaminationDatas();
+            var filter = result.Where(x => x.ExaminationDate.Month == 10).ToList();
             result.Count();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

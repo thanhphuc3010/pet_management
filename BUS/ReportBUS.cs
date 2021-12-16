@@ -54,5 +54,10 @@ namespace BUS
             List<ExaminationData> examinationDatas = exDAO.GetExaminationDatas();
             return examinationDatas;
         }
+        public List<ExaminationPartReport> GetExaminationPartReports()
+        {
+            List<ExaminationPartReport> data = exDAO.GetExPartDataReport();
+            return data;
+        }
     }
 }

@@ -95,6 +95,13 @@
   <ItemGroup>
     <Compile Include="ExaminationData.cs" />
     <Compile Include="ExaminationInfor.cs" />
+    <Compile Include="ExaminationPartReport.cs" />
+    <Compile Include="rptExaminationData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExaminationData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptExaminationReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,6 +141,16 @@
     <Compile Include="entity\Species.cs" />
     <Compile Include="entity\Staff.cs" />
     <Compile Include="entity\Unit.cs" />
+    <Compile Include="rptPartUseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPartUseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="rptExaminationData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExaminationData.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptExaminationReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptExaminationReport.cs</LastGenOutput>
@@ -151,6 +168,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rptPartUseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPartUseReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
