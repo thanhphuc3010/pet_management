@@ -76,6 +76,7 @@ namespace pet_management
 
                 BindData(currentExamination);
                 BindExDetail();
+                gridViewDetail.Columns["ItemType"].GroupIndex = 0;
                 if (detailsItem.Count == 0 || detailsItem == null)
                 {
                     ResetSummaryPayment();
