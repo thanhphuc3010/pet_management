@@ -780,11 +780,12 @@ namespace pet_management
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lytPetInfo);
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.ic_pet_color;
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmPetInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPetInfor";
+            this.Text = "Thông tin thú cưng";
             this.Load += new System.EventHandler(this.frmPetInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lytPetInfo)).EndInit();
             this.lytPetInfo.ResumeLayout(false);

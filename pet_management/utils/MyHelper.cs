@@ -135,7 +135,7 @@ namespace pet_management
             }
         }
 
-        public static void showErrorMessage(string message, string caption)
+        public static void ShowErrorMessage(string message, string caption)
         {
             XtraMessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

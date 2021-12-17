@@ -321,11 +321,13 @@ namespace pet_management
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grcGroupService);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.SvgImage = global::pet_management.Properties.Resources.icon_technician;
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.Name = "frmGroupService";
-            this.Text = "Nhóm dịch vụ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Danh mục nhóm dịch vụ";
             this.Load += new System.EventHandler(this.frmGroupService_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcGroupService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupServiceBindingSource)).EndInit();

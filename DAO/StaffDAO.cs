@@ -34,10 +34,10 @@ namespace DAO
         public static List<Staff> GetStaffsByRole(int roleId)
         {
             IDbConnection dbd = DataProvider.Connect;
-            string query = "SELECT * FROM staff WHERE id_role = @id_role";
+            string query = "SELECT * FROM staff WHERE id_role = @id_role AND active = @active";
             if (dbd.State == ConnectionState.Closed) dbd.Open();
             SetTypeMapperStaff();
-            List<Staff> result = dbd.Query<Staff>(query, new { id_role = roleId }).ToList();
+            List<Staff> result = dbd.Query<Staff>(query, new { id_role = roleId, active = true}).ToList();
             dbd.Close();
             return result;
         }

@@ -14,6 +14,12 @@ namespace BUS
         {
             return RoleDAO.GetRoles();
         }
+
+        public static Role GetRoleById(string id)
+        {
+            return RoleDAO.GetRoleById(id);
+        }
+
         public static bool Save(Role role)
         {
             return RoleDAO.Save(role);

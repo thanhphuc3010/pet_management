@@ -115,7 +115,7 @@ namespace pet_management
         {
             if (itemToUpdate.Quantity > inventory)
             {
-                MyHelper.showErrorMessage($"Tồn kho không đủ. Số lượng có thể bán là : {inventory}", "Lỗi");
+                MyHelper.ShowErrorMessage($"Tồn kho không đủ. Số lượng có thể bán là : {inventory}", "Lỗi");
                 return;
             }
             bool isSuccess = examinationBUS.UpdatePartDetail(itemToUpdate.ToExPart());

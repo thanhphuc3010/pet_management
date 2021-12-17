@@ -171,19 +171,15 @@ namespace pet_management
             this.exTodayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExaminationNumber1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExaminationDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colType1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colReceptionistId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rgluPetToday = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDoctorId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSymptom1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colConclude1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rgluDoctorToday = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colStatus1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTotal1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPayment1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCreatedDate3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUpdatedDate3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -268,6 +264,10 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcExaminationToday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exTodayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluPetToday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluDoctorToday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1424,7 +1424,7 @@ namespace pet_management
             // btnWait
             // 
             this.btnWait.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnWait.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
+            this.btnWait.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnWait.ImageOptions.SvgImage")));
             this.btnWait.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnWait.Location = new System.Drawing.Point(210, 35);
             this.btnWait.Name = "btnWait";
@@ -1436,7 +1436,7 @@ namespace pet_management
             // btnDoing
             // 
             this.btnDoing.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDoing.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
+            this.btnDoing.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDoing.ImageOptions.SvgImage")));
             this.btnDoing.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnDoing.Location = new System.Drawing.Point(91, 35);
             this.btnDoing.Name = "btnDoing";
@@ -1471,7 +1471,7 @@ namespace pet_management
             // btnPaymented
             // 
             this.btnPaymented.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnPaymented.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnPaymented.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPaymented.ImageOptions.SvgImage")));
             this.btnPaymented.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnPaymented.Location = new System.Drawing.Point(329, 35);
             this.btnPaymented.Name = "btnPaymented";
@@ -1489,6 +1489,9 @@ namespace pet_management
             this.grcExaminationToday.Location = new System.Drawing.Point(0, 70);
             this.grcExaminationToday.MainView = this.gridView1;
             this.grcExaminationToday.Name = "grcExaminationToday";
+            this.grcExaminationToday.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rgluPetToday,
+            this.rgluDoctorToday});
             this.grcExaminationToday.Size = new System.Drawing.Size(611, 681);
             this.grcExaminationToday.TabIndex = 0;
             this.grcExaminationToday.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1502,21 +1505,14 @@ namespace pet_management
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId3,
-            this.colExaminationNumber1,
-            this.colExaminationDate1,
+            this.colExNumber,
             this.colType1,
             this.colPetId1,
-            this.colReceptionistId1,
             this.colDoctorId1,
-            this.colSymptom1,
-            this.colConclude1,
-            this.colStatus1,
-            this.colTotal1,
-            this.colPayment1,
-            this.colCreatedDate3,
-            this.colUpdatedDate3});
+            this.colStatus1});
             this.gridView1.GridControl = this.grcExaminationToday;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colId3
@@ -1526,108 +1522,123 @@ namespace pet_management
             this.colId3.Name = "colId3";
             this.colId3.Width = 94;
             // 
-            // colExaminationNumber1
+            // colExNumber
             // 
-            this.colExaminationNumber1.Caption = "Mã phiếu khám";
-            this.colExaminationNumber1.FieldName = "ExaminationNumber";
-            this.colExaminationNumber1.MinWidth = 25;
-            this.colExaminationNumber1.Name = "colExaminationNumber1";
-            this.colExaminationNumber1.Visible = true;
-            this.colExaminationNumber1.VisibleIndex = 0;
-            this.colExaminationNumber1.Width = 94;
-            // 
-            // colExaminationDate1
-            // 
-            this.colExaminationDate1.FieldName = "ExaminationDate";
-            this.colExaminationDate1.MinWidth = 25;
-            this.colExaminationDate1.Name = "colExaminationDate1";
-            this.colExaminationDate1.Width = 94;
+            this.colExNumber.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExNumber.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExNumber.AppearanceHeader.Options.UseFont = true;
+            this.colExNumber.AppearanceHeader.Options.UseForeColor = true;
+            this.colExNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExNumber.Caption = "Mã phiếu khám";
+            this.colExNumber.FieldName = "ExaminationNumber";
+            this.colExNumber.MinWidth = 25;
+            this.colExNumber.Name = "colExNumber";
+            this.colExNumber.Visible = true;
+            this.colExNumber.VisibleIndex = 0;
+            this.colExNumber.Width = 94;
             // 
             // colType1
             // 
-            this.colType1.Caption = "Hình thức DV";
+            this.colType1.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colType1.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colType1.AppearanceHeader.Options.UseFont = true;
+            this.colType1.AppearanceHeader.Options.UseForeColor = true;
+            this.colType1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colType1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colType1.Caption = "Hình thức khám";
             this.colType1.FieldName = "Type";
             this.colType1.MinWidth = 25;
             this.colType1.Name = "colType1";
             this.colType1.Visible = true;
-            this.colType1.VisibleIndex = 3;
+            this.colType1.VisibleIndex = 1;
             this.colType1.Width = 94;
             // 
             // colPetId1
             // 
-            this.colPetId1.Caption = "Tên thú cưng";
+            this.colPetId1.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colPetId1.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colPetId1.AppearanceHeader.Options.UseFont = true;
+            this.colPetId1.AppearanceHeader.Options.UseForeColor = true;
+            this.colPetId1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPetId1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPetId1.Caption = "Tên thú";
+            this.colPetId1.ColumnEdit = this.rgluPetToday;
             this.colPetId1.FieldName = "PetId";
             this.colPetId1.MinWidth = 25;
             this.colPetId1.Name = "colPetId1";
             this.colPetId1.Visible = true;
-            this.colPetId1.VisibleIndex = 1;
+            this.colPetId1.VisibleIndex = 2;
             this.colPetId1.Width = 94;
             // 
-            // colReceptionistId1
+            // rgluPetToday
             // 
-            this.colReceptionistId1.FieldName = "ReceptionistId";
-            this.colReceptionistId1.MinWidth = 25;
-            this.colReceptionistId1.Name = "colReceptionistId1";
-            this.colReceptionistId1.Width = 94;
+            this.rgluPetToday.AutoHeight = false;
+            this.rgluPetToday.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluPetToday.DataSource = this.petBindingSource;
+            this.rgluPetToday.DisplayMember = "Name";
+            this.rgluPetToday.Name = "rgluPetToday";
+            this.rgluPetToday.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.rgluPetToday.ValueMember = "Id";
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // colDoctorId1
             // 
+            this.colDoctorId1.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colDoctorId1.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDoctorId1.AppearanceHeader.Options.UseFont = true;
+            this.colDoctorId1.AppearanceHeader.Options.UseForeColor = true;
+            this.colDoctorId1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoctorId1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDoctorId1.Caption = "Bác sĩ";
+            this.colDoctorId1.ColumnEdit = this.rgluDoctorToday;
             this.colDoctorId1.FieldName = "DoctorId";
             this.colDoctorId1.MinWidth = 25;
             this.colDoctorId1.Name = "colDoctorId1";
             this.colDoctorId1.Visible = true;
-            this.colDoctorId1.VisibleIndex = 2;
+            this.colDoctorId1.VisibleIndex = 3;
             this.colDoctorId1.Width = 94;
             // 
-            // colSymptom1
+            // rgluDoctorToday
             // 
-            this.colSymptom1.FieldName = "Symptom";
-            this.colSymptom1.MinWidth = 25;
-            this.colSymptom1.Name = "colSymptom1";
-            this.colSymptom1.Width = 94;
+            this.rgluDoctorToday.AutoHeight = false;
+            this.rgluDoctorToday.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluDoctorToday.DataSource = this.doctorBindingSource;
+            this.rgluDoctorToday.DisplayMember = "FullName";
+            this.rgluDoctorToday.Name = "rgluDoctorToday";
+            this.rgluDoctorToday.PopupView = this.gridView3;
+            this.rgluDoctorToday.ValueMember = "Id";
             // 
-            // colConclude1
+            // gridView3
             // 
-            this.colConclude1.FieldName = "Conclude";
-            this.colConclude1.MinWidth = 25;
-            this.colConclude1.Name = "colConclude1";
-            this.colConclude1.Width = 94;
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // colStatus1
             // 
+            this.colStatus1.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colStatus1.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colStatus1.AppearanceHeader.Options.UseFont = true;
+            this.colStatus1.AppearanceHeader.Options.UseForeColor = true;
+            this.colStatus1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colStatus1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStatus1.Caption = "Trạng thái";
             this.colStatus1.FieldName = "Status";
             this.colStatus1.MinWidth = 25;
             this.colStatus1.Name = "colStatus1";
+            this.colStatus1.Visible = true;
+            this.colStatus1.VisibleIndex = 4;
             this.colStatus1.Width = 94;
-            // 
-            // colTotal1
-            // 
-            this.colTotal1.FieldName = "Total";
-            this.colTotal1.MinWidth = 25;
-            this.colTotal1.Name = "colTotal1";
-            this.colTotal1.Width = 94;
-            // 
-            // colPayment1
-            // 
-            this.colPayment1.FieldName = "Payment";
-            this.colPayment1.MinWidth = 25;
-            this.colPayment1.Name = "colPayment1";
-            this.colPayment1.Width = 94;
-            // 
-            // colCreatedDate3
-            // 
-            this.colCreatedDate3.FieldName = "CreatedDate";
-            this.colCreatedDate3.MinWidth = 25;
-            this.colCreatedDate3.Name = "colCreatedDate3";
-            this.colCreatedDate3.Width = 94;
-            // 
-            // colUpdatedDate3
-            // 
-            this.colUpdatedDate3.FieldName = "UpdatedDate";
-            this.colUpdatedDate3.MinWidth = 25;
-            this.colUpdatedDate3.Name = "colUpdatedDate3";
-            this.colUpdatedDate3.Width = 94;
             // 
             // searchControl1
             // 
@@ -1759,6 +1770,10 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.grcExaminationToday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exTodayBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluPetToday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluDoctorToday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1909,19 +1924,15 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate2;
         private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate2;
         private System.Windows.Forms.BindingSource exTodayBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluPetToday;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluDoctorToday;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn colId3;
-        private DevExpress.XtraGrid.Columns.GridColumn colExaminationNumber1;
-        private DevExpress.XtraGrid.Columns.GridColumn colExaminationDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colExNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colType1;
         private DevExpress.XtraGrid.Columns.GridColumn colPetId1;
-        private DevExpress.XtraGrid.Columns.GridColumn colReceptionistId1;
         private DevExpress.XtraGrid.Columns.GridColumn colDoctorId1;
-        private DevExpress.XtraGrid.Columns.GridColumn colSymptom1;
-        private DevExpress.XtraGrid.Columns.GridColumn colConclude1;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotal1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPayment1;
-        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate3;
-        private DevExpress.XtraGrid.Columns.GridColumn colUpdatedDate3;
     }
 }

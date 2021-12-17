@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraBars;
+﻿using BUS;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -15,10 +17,11 @@ namespace pet_management
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private Staff staff;
+        private Role role;
+        public bool isLogin = false;
         public frmMain()
         {
             InitializeComponent();
-            
         }
 
         public Staff GetStaffLogined()
@@ -32,9 +35,35 @@ namespace pet_management
                 return null;
             }
         }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-            InitializeLoginForm();
+            InitializeData();
+        }
+
+        private void InitializeData()
+        {
+            if (!isLogin)
+            {
+                InitializeLoginForm();
+            }
+            else
+            {
+                InitializeView();
+            }
+        }
+
+        private void InitializeView()
+        {
+            role = RoleBUS.GetRoleById(staff.IdRole.ToString());
+            if (role.Code != "ADMIN")
+            {
+                rbpHR.Visible = false;
+            }
+            else
+            {
+                rbpHR.Visible = true;
+            }
         }
 
         private void InitializeLoginForm()
@@ -56,6 +85,20 @@ namespace pet_management
             Form f = (Form)Activator.CreateInstance(frmType);
             f.MdiParent = this;
             f.Show();
+        }
+
+        public void DisposeAllForm()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Dispose();
+                frm.Close();
+            }
+            foreach (XtraForm frm in this.MdiChildren)
+            {
+                frm.Dispose();
+                frm.Close();
+            }
         }
 
         private void OpenFormAsDialog(Type frmType)
@@ -88,12 +131,30 @@ namespace pet_management
         internal void SetLoginInfor(Staff s)
         {
             staff = s;
+            isLogin = true;
+            InitializeView();
             BindBottomStatusBar();
+        }
+        internal void ResetLoginSession()
+        {
+            this.staff = null;
+            isLogin = false;
         }
 
         private void BindBottomStatusBar()
         {
-            txtStaffName.Caption = $"{ staff.FirstName} {staff.LastName}";
+            if (staff == null)
+            {
+                txtStaffName.Caption = "";
+                txtRole.Caption = "";
+                
+            } else
+            {
+                txtStaffName.Caption = $"{ staff.FirstName} {staff.LastName}";
+                txtRole.Caption = role.Name;
+            }
+            lbCompanyName.Caption = "Bệnh viện thú y Sasaki";
+            txtCurrentDate.Caption = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
         private void btnPet_ItemClick(object sender, ItemClickEventArgs e)
@@ -144,6 +205,19 @@ namespace pet_management
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmPartReport));
+        }
+
+        private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ResetLoginSession();
+            DisposeAllForm();
+            InitializeData();
+            BindBottomStatusBar();
+        }
+
+        private void btnCloseAll_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DisposeAllForm();
         }
     }
 }

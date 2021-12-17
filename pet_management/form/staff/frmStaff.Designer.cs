@@ -31,6 +31,7 @@ namespace pet_management
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff));
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcStaff = new DevExpress.XtraGrid.GridControl();
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewStaff = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,7 +48,6 @@ namespace pet_management
             this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,6 +63,23 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colActive
+            // 
+            this.colActive.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colActive.AppearanceCell.Options.UseFont = true;
+            this.colActive.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colActive.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
+            this.colActive.AppearanceHeader.Options.UseFont = true;
+            this.colActive.AppearanceHeader.Options.UseForeColor = true;
+            this.colActive.AppearanceHeader.Options.UseTextOptions = true;
+            this.colActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colActive.FieldName = "Active";
+            this.colActive.MinWidth = 25;
+            this.colActive.Name = "colActive";
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 9;
+            this.colActive.Width = 94;
             // 
             // grcStaff
             // 
@@ -304,21 +321,6 @@ namespace pet_management
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 7;
             this.colAddress.Width = 94;
-            // 
-            // colActive
-            // 
-            this.colActive.AppearanceCell.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colActive.AppearanceCell.Options.UseFont = true;
-            this.colActive.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colActive.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(115)))));
-            this.colActive.AppearanceHeader.Options.UseFont = true;
-            this.colActive.AppearanceHeader.Options.UseForeColor = true;
-            this.colActive.AppearanceHeader.Options.UseTextOptions = true;
-            this.colActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colActive.FieldName = "Active";
-            this.colActive.MinWidth = 25;
-            this.colActive.Name = "colActive";
-            this.colActive.Width = 94;
             // 
             // colPassword
             // 

@@ -57,7 +57,7 @@ namespace pet_management
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpHR = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -68,6 +68,9 @@ namespace pet_management
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.lbCompanyName = new DevExpress.XtraBars.BarStaticItem();
+            this.txtRole = new DevExpress.XtraBars.BarStaticItem();
+            this.txtCurrentDate = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -99,9 +102,12 @@ namespace pet_management
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10});
+            this.barButtonItem10,
+            this.lbCompanyName,
+            this.txtRole,
+            this.txtCurrentDate});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 22;
+            this.ribbon.MaxItemId = 25;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -117,6 +123,7 @@ namespace pet_management
             this.btnLogout.Id = 1;
             this.btnLogout.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLogout.ImageOptions.SvgImage")));
             this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
             // btnCloseAll
             // 
@@ -124,6 +131,7 @@ namespace pet_management
             this.btnCloseAll.Id = 2;
             this.btnCloseAll.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCloseAll.ImageOptions.SvgImage")));
             this.btnCloseAll.Name = "btnCloseAll";
+            this.btnCloseAll.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCloseAll_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -296,18 +304,18 @@ namespace pet_management
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
+            this.rbpHR,
             this.ribbonPageGroup4,
             this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản lý danh mục";
             // 
-            // ribbonPageGroup2
+            // rbpHR
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnStaff);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnRole);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Nhân sự";
+            this.rbpHR.ItemLinks.Add(this.btnStaff);
+            this.rbpHR.ItemLinks.Add(this.btnRole);
+            this.rbpHR.Name = "rbpHR";
+            this.rbpHR.Text = "Nhân sự";
             // 
             // ribbonPageGroup4
             // 
@@ -365,7 +373,10 @@ namespace pet_management
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.lbCompanyName);
             this.ribbonStatusBar.ItemLinks.Add(this.txtStaffName);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtRole);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtCurrentDate);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 741);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
@@ -383,6 +394,24 @@ namespace pet_management
             // 
             this.tabbedView1.AppearancePage.Header.Options.UseImage = true;
             this.tabbedView1.DocumentProperties.UseFormIconAsDocumentImage = true;
+            // 
+            // lbCompanyName
+            // 
+            this.lbCompanyName.Caption = "Bệnh viện thú y Sasaki";
+            this.lbCompanyName.Id = 22;
+            this.lbCompanyName.Name = "lbCompanyName";
+            // 
+            // txtRole
+            // 
+            this.txtRole.Caption = "--Staff role--";
+            this.txtRole.Id = 23;
+            this.txtRole.Name = "txtRole";
+            // 
+            // txtCurrentDate
+            // 
+            this.txtCurrentDate.Caption = "--CurrentDate--";
+            this.txtCurrentDate.Id = 24;
+            this.txtCurrentDate.Name = "txtCurrentDate";
             // 
             // frmMain
             // 
@@ -413,7 +442,7 @@ namespace pet_management
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpHR;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
         private DevExpress.XtraBars.BarButtonItem btnCloseAll;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
@@ -445,5 +474,8 @@ namespace pet_management
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarStaticItem lbCompanyName;
+        private DevExpress.XtraBars.BarStaticItem txtRole;
+        private DevExpress.XtraBars.BarButtonItem txtCurrentDate;
     }
 }

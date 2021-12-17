@@ -16,6 +16,8 @@ namespace pet_management
 {
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
+        private const string MESSAGE_LOGIN_SUCCESS = "Đăng nhập thành công!";
+        private int tryCount = 0;
 
         public frmLogin()
         {
@@ -26,15 +28,9 @@ namespace pet_management
         {
 
         }
-
-        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Application.Exit();
-        }
-
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void lblForgotPass_Click(object sender, EventArgs e)
@@ -49,11 +45,16 @@ namespace pet_management
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (tryCount >= 2)
+            {
+                MyHelper.ShowErrorMessage("Bạn đã nhập sai password quá 3 lần! Phần mềm sẽ tự thoát", "Cảnh báo");
+                Application.Exit();
+            }
             string email = txtEmail.GetTextTrim();
             string password = txtPassword.GetTextTrim();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                XtraMessageBox.Show(Const.MESSAGE_LOGIN_REQUIRE, "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MyHelper.ShowErrorMessage(Const.MESSAGE_LOGIN_REQUIRE, "Cảnh báo");
                 return;
             }
             else
@@ -61,14 +62,27 @@ namespace pet_management
                 Staff s = StaffBUS.GetStaffAuthentication(email, password);
                 if (s == null)
                 {
-                    XtraMessageBox.Show(Const.MESSAGE_LOGIN_FAILE, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MyHelper.ShowErrorMessage(Const.MESSAGE_LOGIN_FAILE, "Cảnh báo");
+                    tryCount++;
                 }
                 else
                 {
                     frmMain f = (frmMain)Owner;
                     f.SetLoginInfor(s);
-                    this.Close();
+                    //f.InitializeView();
+                    MyHelper.ShowSuccessMessage(MESSAGE_LOGIN_SUCCESS, "Thông báo");
+                    this.Hide();
                 }
+            }
+        }
+
+        private void frmLogin_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            frmMain f = (frmMain)Owner;
+            if (f == null) Application.Exit();
+            if (!f.isLogin)
+            {
+                Application.Exit();
             }
         }
     }

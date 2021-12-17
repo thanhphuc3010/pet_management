@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using Dapper;
 
 namespace DAO
 {
-    public class RoleDAO
+    public class RoleDAO : BaseDAO<Role>
     {
         public static List<Role> GetRoles()
         {
@@ -29,6 +30,20 @@ namespace DAO
             }
             return result;
         }
+
+        public static Role GetRoleById(string id)
+        {
+            try
+            {
+                string sql = $"SELECT * FROM role WHERE id = {id}";
+                return db.QuerySingle<Role>(sql);
+            }
+            catch (Exception ex )
+            {
+                throw ex;
+            }
+        }
+
         public static bool Save(Role role)
         {
             try

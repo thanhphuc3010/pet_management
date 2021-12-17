@@ -15,6 +15,7 @@ namespace pet_management
 {
     public partial class frmReceivePet : DevExpress.XtraEditors.XtraForm
     {
+        private const string REGISTER_SUCCESS_MESSAGE = "Đăng ký thành công";
         private ReceivePetBUS receivePetBUS = new ReceivePetBUS();
         private ExaminationBUS examinationBUS = new ExaminationBUS();
         private int count;
@@ -34,6 +35,7 @@ namespace pet_management
         {
             petBindingSource.DataSource = PetBUS.GetPets();
             cboType.Properties.Items.AddRange(ExaminationType.GetListType());
+            cboType.EditValue = 0;
             GenerateExamNumber();
             dtExaminationDate.DateTime = DateTime.Now;
             examinationBindingSource.DataSource = examinationBUS.GetExaminations();
@@ -74,22 +76,45 @@ namespace pet_management
         private void LoadListReceptionlist()
         {
             receptionlistBS.DataSource = StaffBUS.GetReceptionlist();
+            gluReceptionlist.EditValue = gluReceptionlist.Properties.GetKeyValue(0);
         }
 
         private void LoadListDoctor()
         {
             doctorBindingSource.DataSource = StaffBUS.GetDoctors();
+            gluDoctor.EditValue = gluDoctor.Properties.GetKeyValue(0);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            bool isValid = ValidateDataBeforeRegister();
+            if (isValid)
+            {
+                RegisterExamination();
+            }
+        }
+
+        private bool ValidateDataBeforeRegister()
+        {
+            string examinationNumber = txtIdNumber.GetTextTrim();
+            if (string.IsNullOrEmpty(examinationNumber))
+            {
+                MyHelper.ShowErrorMessage("Mã phiếu khám là bắt buộc, vui lòng nhập mã phiếu khám!", "Lỗi");
+                return false;
+            }
+
             if (gluDoctor.EditValue.ToString() == "")
             {
                 XtraMessageBox.Show($"Vui lòng chỉ định bác sĩ khám chữa bệnh");
-                return;
+                return false;
             }
 
-            RegisterExamination();
+            if (gluReceptionlist.EditValue.ToString() == "")
+            {
+                MyHelper.ShowErrorMessage("Nhân viên lễ tân không được để trống, vui lòng chọn lễ tân đón tiếp!", "Lỗi");
+                return false;
+            }
+            return true;
         }
 
         private void RegisterExamination()
@@ -102,7 +127,19 @@ namespace pet_management
             examination.DoctorId = (int)gluDoctor.EditValue;
             examination.ReceptionistId = (int)gluReceptionlist.EditValue;
             examination.Status = ExaminationStatus.Pending;
-            examinationBUS.Save(examination);
+            bool isSuccess = examinationBUS.Save(examination);
+            if (isSuccess)
+            {
+                MyHelper.ShowSuccessMessage(REGISTER_SUCCESS_MESSAGE, "Thông báo");
+                RefreshGridData();
+                GenerateExamNumber();
+            }
+        }
+
+        private void RefreshGridData()
+        {
+            examinationBindingSource.DataSource = examinationBUS.GetExaminations();
+            exTodayBindingSource.DataSource = examinationBUS.GetExaminationsToday();
         }
 
         private void btnDoing_Click(object sender, EventArgs e)

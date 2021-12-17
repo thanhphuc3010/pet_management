@@ -313,7 +313,7 @@ namespace pet_management
                 MyHelper.ShowSuccessMessage("Lưu phiếu khám thành công", "Thông báo");
             } else
             {
-                MyHelper.showErrorMessage("Đã có lỗi xảy ra. Vui lòng thử lại", "Lỗi");
+                MyHelper.ShowErrorMessage("Đã có lỗi xảy ra. Vui lòng thử lại", "Lỗi");
             }
         }
 
