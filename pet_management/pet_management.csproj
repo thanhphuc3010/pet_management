@@ -60,6 +60,8 @@
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
@@ -125,6 +127,7 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DateTimeDayOfMonthExtensions.cs" />
     <Compile Include="form\part\frmPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +139,12 @@
     </Compile>
     <Compile Include="form\part\frmPartInfor.Designer.cs">
       <DependentUpon>frmPartInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDTReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDTReport.Designer.cs">
+      <DependentUpon>frmDTReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditItemEx.cs">
       <SubType>Form</SubType>
@@ -154,6 +163,18 @@
     </Compile>
     <Compile Include="frmExaminationItemDetail.Designer.cs">
       <DependentUpon>frmExaminationItemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExaminationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExaminationReport.Designer.cs">
+      <DependentUpon>frmExaminationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExaminationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExaminationView.Designer.cs">
+      <DependentUpon>frmExaminationView.cs</DependentUpon>
     </Compile>
     <Compile Include="frmExDataReport.cs">
       <SubType>Form</SubType>
@@ -191,11 +212,17 @@
     <Compile Include="frmReceivePet.Designer.cs">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReport.cs">
+    <Compile Include="frmExPetReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport.Designer.cs">
-      <DependentUpon>frmReport.cs</DependentUpon>
+    <Compile Include="frmExPetReport.Designer.cs">
+      <DependentUpon>frmExPetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSelectPart.cs">
       <SubType>Form</SubType>
@@ -209,7 +236,14 @@
     <Compile Include="frmSelectService.Designer.cs">
       <DependentUpon>frmSelectService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Month.cs" />
     <Compile Include="PetRPT.cs" />
+    <Compile Include="ucPartUseReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPartUseReport.Designer.cs">
+      <DependentUpon>ucPartUseReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\Const.cs" />
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\EntityState.cs" />
@@ -339,6 +373,9 @@
     <EmbeddedResource Include="form\part\frmPart.resx">
       <DependentUpon>frmPart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDTReport.resx">
+      <DependentUpon>frmDTReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditItemEx.resx">
       <DependentUpon>frmEditItemEx.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExaminationItemDetail.resx">
       <DependentUpon>frmExaminationItemDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExaminationReport.resx">
+      <DependentUpon>frmExaminationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExaminationView.resx">
+      <DependentUpon>frmExaminationView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExDataReport.resx">
       <DependentUpon>frmExDataReport.cs</DependentUpon>
@@ -366,8 +409,11 @@
     <EmbeddedResource Include="frmReceivePet.resx">
       <DependentUpon>frmReceivePet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
-      <DependentUpon>frmReport.cs</DependentUpon>
+    <EmbeddedResource Include="frmExPetReport.resx">
+      <DependentUpon>frmExPetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectPart.resx">
       <DependentUpon>frmSelectPart.cs</DependentUpon>
@@ -388,6 +434,9 @@
     </Compile>
     <EmbeddedResource Include="form\service\frmServiceInfor.resx">
       <DependentUpon>frmServiceInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPartUseReport.resx">
+      <DependentUpon>ucPartUseReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.Breed.datasource" />

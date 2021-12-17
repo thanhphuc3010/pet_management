@@ -14,6 +14,8 @@ namespace DAO
 {
     public class ExaminationDAO : BaseDAO<Examination>
     {
+        private ExaminationPartDAO exPartDAO = new ExaminationPartDAO();
+        private ExaminationServiceDAO exServiceDAO = new ExaminationServiceDAO();
         public int Save(Examination examination)
         {
             SetMapper();
@@ -63,6 +65,22 @@ namespace DAO
             DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();
         }
 
+        public bool DeleteExamination(Examination examination)
+        {
+            SetMapper();
+            try
+            {
+                string sql = $"CALL delete_examination({examination.Id})";
+                int result = DataProvider.Instance.ExcuteNonQuery(sql);
+                return result == 1;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+
         public bool DoneExamination(Examination examination)
         {
             SetMapper();
@@ -70,7 +88,7 @@ namespace DAO
             return result;
         }
 
-        public List<ExaminationInfor> GetExaminationInfors()
+        public List<ExaminationInfor> GetExaminationInfors(DateTime fromDate, DateTime toDate)
         {
             IDbConnection dbd = DataProvider.Connect;
             string query = @"SELECT
@@ -85,16 +103,18 @@ namespace DAO
                             p.name AS petName, 
                             b.name AS breed, 
                             s.name AS species, 
-                            CONCAT(c.first_name, ' ', c.last_name) AS customerName 
+                            CONCAT(c.first_name, ' ', c.last_name) AS customerName,
+                            c.id AS customerId
                             FROM examination e
                             INNER JOIN pet p ON e.id_pet = p.id 
                             INNER JOIN customer c ON p.customer_id = c.id 
                             INNER JOIN breed b ON p.breed_id = b.id 
-                            INNER JOIN species s ON b.species_id = s.id";
+                            INNER JOIN species s ON b.species_id = s.id 
+                            WHERE e.examination_date BETWEEN @FromDate AND @ToDate";
             if (dbd.State == ConnectionState.Closed) dbd.Open();
             //Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
-
-            List<ExaminationInfor> result = dbd.Query<ExaminationInfor>(query).ToList();
+            var parameters = new { FromDate = fromDate, ToDate = toDate };
+            List<ExaminationInfor> result = dbd.Query<ExaminationInfor>(query, parameters).ToList();
             dbd.Close();
             return result;
         }
@@ -143,27 +163,60 @@ namespace DAO
             return data;
         }
 
-        public List<ExaminationData> GetExaminationDatas()
+        public List<ExaminationData> GetExaminationDatas(int month, int year, string type)
         {
             IDbConnection dbd = DataProvider.Connect;
-            string query = @"SELECT
-                            e.examination_date AS examinationDate,
-                            COUNT(*) AS quantity,
-                            SUM(d.total) AS total,
-                            SUM(d.tax) AS tax,
-                            SUM(d.discount) AS discount
-                            FROM
-                            examination e
-                            LEFT JOIN exam_total_summary d ON
-                            e.id = d.id
-                            GROUP BY
-                            e.examination_date";
-            if (dbd.State == ConnectionState.Closed) dbd.Open();
-            //Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+            string sql;
 
-            List<ExaminationData> result = dbd.Query<ExaminationData>(query).ToList();
-            dbd.Close();
-            return result;
+            if (month == 0)
+            {
+                sql = @" SELECT * FROM (
+                            SELECT
+                                e.examination_date AS examinationDate,
+                                COUNT(*) AS quantity,
+                                SUM(d.total) AS total,
+                                SUM(d.tax) AS tax,
+                                SUM(d.discount) AS discount
+                            FROM
+                                examination e
+                            LEFT JOIN exam_total_summary d ON
+                                e.id = d.id
+                            WHERE e.type = @Type
+                            AND e.status = 'Đã thanh toán'
+                            GROUP BY
+                                e.examination_date)
+                            AS temp
+                            WHERE YEAR(temp.examinationDate) = @Year";
+                var parameters = new { Type = type, Year = year };
+                if (dbd.State == ConnectionState.Closed) dbd.Open();
+                List<ExaminationData> result = dbd.Query<ExaminationData>(sql, parameters).ToList();
+                dbd.Close();
+                return result;
+            } else
+            {
+                sql = @" SELECT * FROM (
+                            SELECT
+                                e.examination_date AS examinationDate,
+                                COUNT(*) AS quantity,
+                                SUM(d.total) AS total,
+                                SUM(d.tax) AS tax,
+                                SUM(d.discount) AS discount
+                            FROM
+                                examination e
+                            LEFT JOIN exam_total_summary d ON
+                                e.id = d.id
+                            WHERE e.type = @Type
+                            AND e.status = 'Đã thanh toán'
+                            GROUP BY
+                                e.examination_date)
+                            AS temp
+                            WHERE MONTH(temp.examinationDate) = @Month AND YEAR(temp.examinationDate) = @Year";
+                var parameters = new { Type = type, Month = month, Year = year };
+                if (dbd.State == ConnectionState.Closed) dbd.Open();
+                List<ExaminationData> result = dbd.Query<ExaminationData>(sql, parameters).ToList();
+                dbd.Close();
+                return result;
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ namespace BUS
             return (result == 1);
         }
 
+        public bool DeleteExamination(Examination examination) => dao.DeleteExamination(examination);
+
         public bool DeletePartDetail(ExaminationPart exPart)
         {
             return exPartDao.Delete(exPart);
@@ -107,9 +109,9 @@ namespace BUS
             return dao.DoneExamination(examination);
         }
 
-        public List<ExaminationInfor> GetExaminationInfors()
-        {
-            return dao.GetExaminationInfors();
-        }
+        //public List<ExaminationInfor> GetExaminationInfors()
+        //{
+        //    return dao.GetExaminationInfors();
+        //}
     }
 }

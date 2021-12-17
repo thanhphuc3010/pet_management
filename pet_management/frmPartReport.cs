@@ -16,9 +16,17 @@ namespace pet_management
     public partial class frmPartReport : DevExpress.XtraEditors.XtraForm
     {
         private ReportBUS reportBUS = new ReportBUS();
-        public frmPartReport()
+        private DateTime fromDate;
+        private DateTime toDate;
+        private Staff doctor;
+        private Staff currentStaff;
+        public frmPartReport(DateTime fromDate, DateTime toDate, Staff staff, Staff currentStaff)
         {
             InitializeComponent();
+            this.fromDate = fromDate;
+            this.toDate = toDate;
+            this.doctor = staff;
+            this.currentStaff = currentStaff;
         }
 
         private void frmPartReport_Load(object sender, EventArgs e)
@@ -33,14 +41,21 @@ namespace pet_management
                 item.Discount = sum * item.DiscountRate / 100;
                 item.Subtotal = sum + item.Tax - item.Discount;
             }
-            DateTime dt = new DateTime(2021, 12, 15);
-            rptPartUseReport.SetDataSource(data.Where(x => x.ExaminationDate >= dt));
-            //rptMedical1.SetParameterValue("pPetNumber", _petData.PetNumber);
-            //rptMedical1.SetParameterValue("pPetName", _petData.PetName);
-            //rptMedical1.SetParameterValue("pBreed", _petData.Breed);
-            //rptMedical1.SetParameterValue("pCustomer", _petData.CustomerName);
-            //rptMedical1.SetParameterValue("pAddress", _petData.Address);
-            //rptMedical1.SetParameterValue("pPhone", _petData.Phone);
+
+            List<ExaminationPartReport> filterByDate = data.Where(x => (x.ExaminationDate >= fromDate) && (x.ExaminationDate <= toDate)).ToList();
+
+            if (doctor.Id == 0)
+            {
+                rptPartUseReport.SetDataSource(filterByDate);
+            } else
+            {
+                rptPartUseReport.SetDataSource(filterByDate.Where(x => x.DoctorId == doctor.Id));
+            }
+            rptPartUseReport.SetParameterValue("fDoctorName", doctor.FullName);
+            rptPartUseReport.SetParameterValue("fFromDate", fromDate);
+            rptPartUseReport.SetParameterValue("fToDate", toDate);
+
+            rptPartUseReport.SetParameterValue("pStaff", currentStaff.FullName);
             crystalReportViewer2.ReportSource = rptPartUseReport;
             crystalReportViewer2.Refresh();
         }

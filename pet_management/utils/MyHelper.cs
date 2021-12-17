@@ -49,7 +49,7 @@ namespace pet_management
         /**
          * <summary>Hide a cotrol</summary>
          */
-        public static void gone(this Control control)
+        public static void Gone(this Control control)
         {
             control.Visible = false;
         }

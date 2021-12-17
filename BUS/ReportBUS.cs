@@ -26,32 +26,15 @@ namespace BUS
             petData.CustomerName = $"{petData.FirstName} {petData.LastName}";
             return petData;
         }
-        public List<ExaminationInfor> GetListExaminationInfor()
+        public List<ExaminationInfor> GetListExaminationInfor(DateTime fromDate, DateTime toDate)
         {
-            List<ExaminationInfor> examinationInfor = exDAO.GetExaminationInfors();
-            //List<Examination> examinations = exDAO.GetExaminations();
-            //foreach (Examination examination in examinations)
-            //{
-            //    ExaminationInfor exInfor = new ExaminationInfor();
-            //    exInfor.MapperData(examination);
-            //    PetData petData = GetPetData(examination.PetId.ToString());
-            //    Staff receptionlist = StaffDAO.GetStaffById(examination.ReceptionistId.ToString());
-            //    Staff doctor = StaffDAO.GetStaffById(examination.DoctorId.ToString());
-
-            //    exInfor.Breed = petData.Breed;
-            //    exInfor.Species = petData.Species;
-            //    exInfor.PetName = petData.PetName;
-            //    exInfor.CustomerName = petData.CustomerName;
-            //    exInfor.ReceptionistName = $"{receptionlist.FirstName} {receptionlist.LastName}";
-            //    exInfor.DoctorName = $"{doctor.FirstName} {doctor.LastName}";
-            //    examinationInfor.Add(exInfor);
-            //}
+            List<ExaminationInfor> examinationInfor = exDAO.GetExaminationInfors(fromDate, toDate);
             return examinationInfor;
         }
 
-        public List<ExaminationData> GetExaminationDatas()
+        public List<ExaminationData> GetExaminationDatas(int month, int year, string type)
         {
-            List<ExaminationData> examinationDatas = exDAO.GetExaminationDatas();
+            List<ExaminationData> examinationDatas = exDAO.GetExaminationDatas(month, year, type);
             return examinationDatas;
         }
         public List<ExaminationPartReport> GetExaminationPartReports()

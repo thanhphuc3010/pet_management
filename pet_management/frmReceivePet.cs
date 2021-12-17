@@ -24,6 +24,7 @@ namespace pet_management
         public frmReceivePet()
         {
             InitializeComponent();
+            gluIdPet.EditValue = null;
         }
 
         private void frmReceivePet_Load(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace pet_management
         {
             petBindingSource.DataSource = PetBUS.GetPets();
             cboType.Properties.Items.AddRange(ExaminationType.GetListType());
-            cboType.EditValue = 0;
+            cboType.EditValue = cboType.Properties.Items[0];
             GenerateExamNumber();
             dtExaminationDate.DateTime = DateTime.Now;
             examinationBindingSource.DataSource = examinationBUS.GetExaminations();
@@ -55,6 +56,10 @@ namespace pet_management
 
         private void gluIdPet_EditValueChanged(object sender, EventArgs e)
         {
+            if (gluIdPet.EditValue == null)
+            {
+                return;
+            }
             string id = gluIdPet.EditValue.ToString();
             PetData petData = receivePetBUS.GetPetData(id);
             BindPetData(petData);
@@ -97,6 +102,11 @@ namespace pet_management
         private bool ValidateDataBeforeRegister()
         {
             string examinationNumber = txtIdNumber.GetTextTrim();
+            if (gluIdPet.EditValue == null)
+            {
+                MyHelper.ShowErrorMessage("Vui lòng chọn thú cưng để đăng ký!", "Lỗi");
+                return false;
+            }
             if (string.IsNullOrEmpty(examinationNumber))
             {
                 MyHelper.ShowErrorMessage("Mã phiếu khám là bắt buộc, vui lòng nhập mã phiếu khám!", "Lỗi");
@@ -136,7 +146,7 @@ namespace pet_management
             }
         }
 
-        private void RefreshGridData()
+        public void RefreshGridData()
         {
             examinationBindingSource.DataSource = examinationBUS.GetExaminations();
             exTodayBindingSource.DataSource = examinationBUS.GetExaminationsToday();
@@ -162,8 +172,51 @@ namespace pet_management
 
         private void btnPaymented_Click(object sender, EventArgs e)
         {
-            List<Examination> examinations = examinationBUS.GetExaminationsToday();
-            exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Paymented).ToList();
+            //List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            //exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Paymented).ToList();
+
+        }
+
+        private void simpleButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnPayment_Click(object sender, EventArgs e)
+        {
+            Examination exam = gridView1.GetFocusedRow() as Examination;
+            if (exam.Status == ExaminationStatus.Pending || exam.Status == ExaminationStatus.Doing)
+            {
+                MyHelper.ShowErrorMessage("Phiếu khám này chưa khám xong, chưa thể thanh toán", "Lỗi");
+                return;
+            } else
+            {
+                frmExaminationView f = new frmExaminationView(this, exam);
+                f.ShowDialog();
+            }
+        }
+
+        private void rbtnCancel_Click(object sender, EventArgs e)
+        {
+            Examination exam = gridView1.GetFocusedRow() as Examination;
+            if (exam.Status == ExaminationStatus.Paymented)
+            {
+                MyHelper.ShowErrorMessage("Phiếu khám chữa bệnh này đã được thanh toán, không thể xóa", "Lỗi");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    examinationBUS.DeleteExamination(exam);
+                    RefreshGridData();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
     }
 }

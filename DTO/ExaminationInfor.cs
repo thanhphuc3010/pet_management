@@ -22,6 +22,7 @@ namespace DTO
         public decimal Tax { get; set; }
         public decimal Payment { get; set; }
         public decimal Subtotal { get; set; }
+        public int CustomerId { get; set; }
         public string CustomerName { get; set; }
         public string Breed { get; set; }
         public string Species { get; set; }

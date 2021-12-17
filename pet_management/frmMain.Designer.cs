@@ -52,7 +52,10 @@ namespace pet_management
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReportEx = new DevExpress.XtraBars.BarButtonItem();
+            this.lbCompanyName = new DevExpress.XtraBars.BarStaticItem();
+            this.txtRole = new DevExpress.XtraBars.BarStaticItem();
+            this.txtCurrentDate = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -68,9 +71,6 @@ namespace pet_management
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.lbCompanyName = new DevExpress.XtraBars.BarStaticItem();
-            this.txtRole = new DevExpress.XtraBars.BarStaticItem();
-            this.txtCurrentDate = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -102,7 +102,7 @@ namespace pet_management
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10,
+            this.btnReportEx,
             this.lbCompanyName,
             this.txtRole,
             this.txtCurrentDate});
@@ -272,12 +272,30 @@ namespace pet_management
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
-            // barButtonItem10
+            // btnReportEx
             // 
-            this.barButtonItem10.Caption = "Báo cáo tổng hợp";
-            this.barButtonItem10.Id = 21;
-            this.barButtonItem10.Name = "barButtonItem10";
-            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            this.btnReportEx.Caption = "BC sử dụng dịch vụ";
+            this.btnReportEx.Id = 21;
+            this.btnReportEx.Name = "btnReportEx";
+            this.btnReportEx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            // 
+            // lbCompanyName
+            // 
+            this.lbCompanyName.Caption = "Bệnh viện thú y Sasaki";
+            this.lbCompanyName.Id = 22;
+            this.lbCompanyName.Name = "lbCompanyName";
+            // 
+            // txtRole
+            // 
+            this.txtRole.Caption = "--Staff role--";
+            this.txtRole.Id = 23;
+            this.txtRole.Name = "txtRole";
+            // 
+            // txtCurrentDate
+            // 
+            this.txtCurrentDate.Caption = "--CurrentDate--";
+            this.txtCurrentDate.Id = 24;
+            this.txtCurrentDate.Name = "txtCurrentDate";
             // 
             // ribbonPage1
             // 
@@ -367,7 +385,7 @@ namespace pet_management
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem9);
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnReportEx);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Báo cáo thống kê";
             // 
@@ -394,24 +412,6 @@ namespace pet_management
             // 
             this.tabbedView1.AppearancePage.Header.Options.UseImage = true;
             this.tabbedView1.DocumentProperties.UseFormIconAsDocumentImage = true;
-            // 
-            // lbCompanyName
-            // 
-            this.lbCompanyName.Caption = "Bệnh viện thú y Sasaki";
-            this.lbCompanyName.Id = 22;
-            this.lbCompanyName.Name = "lbCompanyName";
-            // 
-            // txtRole
-            // 
-            this.txtRole.Caption = "--Staff role--";
-            this.txtRole.Id = 23;
-            this.txtRole.Name = "txtRole";
-            // 
-            // txtCurrentDate
-            // 
-            this.txtCurrentDate.Caption = "--CurrentDate--";
-            this.txtCurrentDate.Id = 24;
-            this.txtCurrentDate.Name = "txtCurrentDate";
             // 
             // frmMain
             // 
@@ -473,7 +473,7 @@ namespace pet_management
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem btnReportEx;
         private DevExpress.XtraBars.BarStaticItem lbCompanyName;
         private DevExpress.XtraBars.BarStaticItem txtRole;
         private DevExpress.XtraBars.BarButtonItem txtCurrentDate;

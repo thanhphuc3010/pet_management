@@ -194,17 +194,20 @@ namespace pet_management
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenFormAsDialog(typeof(frmReport));
+            frmDTReport f = new frmDTReport();
+            f.ShowDialog(this);
         }
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenForm(typeof(frmExDataReport));
+            frmExaminationReport f = new frmExaminationReport();
+            f.ShowDialog(this);
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenForm(typeof(frmPartReport));
+            frmReports f = new frmReports();
+            f.ShowDialog(this);
         }
 
         private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)

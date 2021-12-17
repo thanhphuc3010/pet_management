@@ -23,6 +23,7 @@ namespace pet_management
         private PetData _petData;
         private Pet pet;
         private bool editable = false;
+        private bool closable = true;
 
         private List<ELItem> detailsItem = null;
         public frmExamination()
@@ -62,6 +63,7 @@ namespace pet_management
             
             Examination exam = gridViewExamination.GetFocusedRow() as Examination;
             editable = true;
+            closable = false;
             if (currentExamination == null || (exam != currentExamination && exam.Status == ExaminationStatus.Pending) || exam.Status == ExaminationStatus.Doing)
             {
                 ResetAllFieldData();
@@ -216,6 +218,7 @@ namespace pet_management
                 ResetAllFieldData();
                 ResetSummaryPayment();
             }
+            closable = true;
         }
 
         private void ResetSummaryPayment()
@@ -251,7 +254,8 @@ namespace pet_management
 
         private void btnToday_Click(object sender, EventArgs e)
         {
-            examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Pending).ToList();
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -299,7 +303,13 @@ namespace pet_management
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            SaveEx();
+        }
+
+        private void SaveEx()
+        {
             editable = false;
+            closable = true;
             currentExamination.Symptom = txtSymptom.GetTextTrim();
             currentExamination.Conclude = txtConclude.GetTextTrim();
             currentExamination.Note = txtNote.GetTextTrim();
@@ -309,9 +319,10 @@ namespace pet_management
             {
                 examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
                 ResetAllFieldData();
-                ResetSummaryPayment(); 
+                ResetSummaryPayment();
                 MyHelper.ShowSuccessMessage("Lưu phiếu khám thành công", "Thông báo");
-            } else
+            }
+            else
             {
                 MyHelper.ShowErrorMessage("Đã có lỗi xảy ra. Vui lòng thử lại", "Lỗi");
             }
@@ -331,13 +342,13 @@ namespace pet_management
         private void btnDoing_Click(object sender, EventArgs e)
         {
             List<Examination> examinations = examinationBUS.GetExaminationsToday();
-            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Doing).ToList();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Done).ToList();
         }
 
         private void btnWait_Click(object sender, EventArgs e)
         {
             List<Examination> examinations = examinationBUS.GetExaminationsToday();
-            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Pending).ToList();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Doing).ToList();
         }
 
         private void btnPrintMedical_Click(object sender, EventArgs e)
@@ -346,6 +357,26 @@ namespace pet_management
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void frmExamination_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (closable)
+            {
+                this.Close();
+            } else
+            {
+                string message = $"Phiếu khám {currentExamination.ExaminationNumber} chưa được lưu/hoàn tất. Lưu phiếu khám và thoát ?";
+                DialogResult dialogResult = XtraMessageBox.Show(message, "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    SaveEx();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            } 
         }
     }
 }
