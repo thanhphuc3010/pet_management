@@ -138,5 +138,10 @@ namespace pet_management
                 DoPayment();
             }
         }
+
+        private void frmExaminationView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

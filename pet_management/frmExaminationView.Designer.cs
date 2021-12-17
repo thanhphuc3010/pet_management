@@ -1503,6 +1503,7 @@ namespace pet_management
             this.Name = "frmExaminationView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu khám chi tiết";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmExaminationView_FormClosing);
             this.Load += new System.EventHandler(this.frmExaminationView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);

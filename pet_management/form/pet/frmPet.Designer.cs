@@ -41,6 +41,11 @@ namespace pet_management
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupPet = new DevExpress.XtraEditors.GroupControl();
             this.grcPet = new DevExpress.XtraGrid.GridControl();
             this.petBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,15 +73,34 @@ namespace pet_management
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUpdatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gpExaminationHistory = new DevExpress.XtraEditors.GroupControl();
             this.txtSearch = new DevExpress.XtraEditors.SearchControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.gpExaminationHistory = new DevExpress.XtraEditors.GroupControl();
+            this.grcPetHistory = new DevExpress.XtraGrid.GridControl();
+            this.exPetHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDetail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rBtnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colExNumberHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExDateHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTypeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPetIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDoctorIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSymptomHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConcludeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatusHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colReceptionistId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupPet)).BeginInit();
             this.groupPet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcPet)).BeginInit();
@@ -90,14 +114,24 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerpetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gpExaminationHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gpExaminationHistory)).BeginInit();
+            this.gpExaminationHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcPetHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPet
@@ -151,6 +185,7 @@ namespace pet_management
             this.gridViewPet.GridControl = this.grcPet;
             this.gridViewPet.Name = "gridViewPet";
             this.gridViewPet.OptionsView.ShowGroupPanel = false;
+            this.gridViewPet.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewPet_RowClick);
             this.gridViewPet.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewPet_RowCellStyle);
             // 
             // colEdit
@@ -455,14 +490,6 @@ namespace pet_management
             this.colUpdatedDate.OptionsColumn.AllowEdit = false;
             this.colUpdatedDate.Width = 94;
             // 
-            // gpExaminationHistory
-            // 
-            this.gpExaminationHistory.Location = new System.Drawing.Point(12, 352);
-            this.gpExaminationHistory.Name = "gpExaminationHistory";
-            this.gpExaminationHistory.Size = new System.Drawing.Size(1023, 314);
-            this.gpExaminationHistory.TabIndex = 0;
-            this.gpExaminationHistory.Text = "Lịch sử khám chữa bệnh / sử dụng dịch vụ";
-            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(95, 26);
@@ -507,6 +534,244 @@ namespace pet_management
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // gpExaminationHistory
+            // 
+            this.gpExaminationHistory.Controls.Add(this.grcPetHistory);
+            this.gpExaminationHistory.Location = new System.Drawing.Point(12, 352);
+            this.gpExaminationHistory.Name = "gpExaminationHistory";
+            this.gpExaminationHistory.Size = new System.Drawing.Size(1023, 314);
+            this.gpExaminationHistory.TabIndex = 0;
+            this.gpExaminationHistory.Text = "Lịch sử khám chữa bệnh / sử dụng dịch vụ";
+            // 
+            // grcPetHistory
+            // 
+            this.grcPetHistory.DataSource = this.exPetHistoryBindingSource;
+            this.grcPetHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcPetHistory.Location = new System.Drawing.Point(2, 26);
+            this.grcPetHistory.MainView = this.gridView4;
+            this.grcPetHistory.Name = "grcPetHistory";
+            this.grcPetHistory.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rBtnDetail,
+            this.repoGluDoctor,
+            this.repoGluPet});
+            this.grcPetHistory.Size = new System.Drawing.Size(1019, 286);
+            this.grcPetHistory.TabIndex = 10;
+            this.grcPetHistory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // exPetHistoryBindingSource
+            // 
+            this.exPetHistoryBindingSource.DataSource = typeof(DTO.Examination);
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDetail,
+            this.colExNumberHistory,
+            this.colExDateHistory,
+            this.colTypeHistory,
+            this.colPetIdHistory,
+            this.colReceptionistId,
+            this.colDoctorIdHistory,
+            this.colSymptomHistory,
+            this.colConcludeHistory,
+            this.colStatusHistory});
+            this.gridView4.GridControl = this.grcPetHistory;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // colDetail
+            // 
+            this.colDetail.ColumnEdit = this.rBtnDetail;
+            this.colDetail.MinWidth = 25;
+            this.colDetail.Name = "colDetail";
+            this.colDetail.OptionsColumn.FixedWidth = true;
+            this.colDetail.Visible = true;
+            this.colDetail.VisibleIndex = 0;
+            this.colDetail.Width = 25;
+            // 
+            // rBtnDetail
+            // 
+            this.rBtnDetail.AutoHeight = false;
+            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.rBtnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rBtnDetail.Name = "rBtnDetail";
+            this.rBtnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // colExNumberHistory
+            // 
+            this.colExNumberHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExNumberHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExNumberHistory.AppearanceHeader.Options.UseFont = true;
+            this.colExNumberHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colExNumberHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExNumberHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExNumberHistory.Caption = "Mã phiếu khám";
+            this.colExNumberHistory.FieldName = "ExaminationNumber";
+            this.colExNumberHistory.MinWidth = 25;
+            this.colExNumberHistory.Name = "colExNumberHistory";
+            this.colExNumberHistory.OptionsColumn.AllowEdit = false;
+            this.colExNumberHistory.Visible = true;
+            this.colExNumberHistory.VisibleIndex = 1;
+            this.colExNumberHistory.Width = 126;
+            // 
+            // colExDateHistory
+            // 
+            this.colExDateHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExDateHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExDateHistory.AppearanceHeader.Options.UseFont = true;
+            this.colExDateHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colExDateHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExDateHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExDateHistory.Caption = "Ngày khám";
+            this.colExDateHistory.FieldName = "ExaminationDate";
+            this.colExDateHistory.MinWidth = 25;
+            this.colExDateHistory.Name = "colExDateHistory";
+            this.colExDateHistory.OptionsColumn.AllowEdit = false;
+            this.colExDateHistory.Visible = true;
+            this.colExDateHistory.VisibleIndex = 2;
+            this.colExDateHistory.Width = 94;
+            // 
+            // colTypeHistory
+            // 
+            this.colTypeHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colTypeHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colTypeHistory.AppearanceHeader.Options.UseFont = true;
+            this.colTypeHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colTypeHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTypeHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTypeHistory.Caption = "Hình thức";
+            this.colTypeHistory.FieldName = "Type";
+            this.colTypeHistory.MinWidth = 25;
+            this.colTypeHistory.Name = "colTypeHistory";
+            this.colTypeHistory.OptionsColumn.AllowEdit = false;
+            this.colTypeHistory.Visible = true;
+            this.colTypeHistory.VisibleIndex = 3;
+            this.colTypeHistory.Width = 136;
+            // 
+            // colPetIdHistory
+            // 
+            this.colPetIdHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colPetIdHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colPetIdHistory.AppearanceHeader.Options.UseFont = true;
+            this.colPetIdHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colPetIdHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPetIdHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPetIdHistory.Caption = "Tên thú cưng";
+            this.colPetIdHistory.ColumnEdit = this.repoGluPet;
+            this.colPetIdHistory.FieldName = "PetId";
+            this.colPetIdHistory.MinWidth = 25;
+            this.colPetIdHistory.Name = "colPetIdHistory";
+            this.colPetIdHistory.OptionsColumn.AllowEdit = false;
+            this.colPetIdHistory.Visible = true;
+            this.colPetIdHistory.VisibleIndex = 4;
+            this.colPetIdHistory.Width = 94;
+            // 
+            // repoGluPet
+            // 
+            this.repoGluPet.AutoHeight = false;
+            this.repoGluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGluPet.DataSource = this.petBindingSource;
+            this.repoGluPet.DisplayMember = "Name";
+            this.repoGluPet.Name = "repoGluPet";
+            this.repoGluPet.PopupView = this.gridView6;
+            this.repoGluPet.ValueMember = "Id";
+            // 
+            // gridView6
+            // 
+            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView6.OptionsView.ShowGroupPanel = false;
+            // 
+            // colDoctorIdHistory
+            // 
+            this.colDoctorIdHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colDoctorIdHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseFont = true;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoctorIdHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoctorIdHistory.Caption = "Tên bác sĩ";
+            this.colDoctorIdHistory.ColumnEdit = this.repoGluDoctor;
+            this.colDoctorIdHistory.FieldName = "DoctorId";
+            this.colDoctorIdHistory.MinWidth = 25;
+            this.colDoctorIdHistory.Name = "colDoctorIdHistory";
+            this.colDoctorIdHistory.OptionsColumn.AllowEdit = false;
+            this.colDoctorIdHistory.Visible = true;
+            this.colDoctorIdHistory.VisibleIndex = 6;
+            this.colDoctorIdHistory.Width = 94;
+            // 
+            // repoGluDoctor
+            // 
+            this.repoGluDoctor.AutoHeight = false;
+            this.repoGluDoctor.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGluDoctor.DataSource = this.staffBindingSource;
+            this.repoGluDoctor.DisplayMember = "FullName";
+            this.repoGluDoctor.Name = "repoGluDoctor";
+            this.repoGluDoctor.PopupView = this.gridView5;
+            this.repoGluDoctor.ValueMember = "Id";
+            // 
+            // gridView5
+            // 
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // colSymptomHistory
+            // 
+            this.colSymptomHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colSymptomHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colSymptomHistory.AppearanceHeader.Options.UseFont = true;
+            this.colSymptomHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colSymptomHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSymptomHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSymptomHistory.Caption = "Triệu chứng";
+            this.colSymptomHistory.FieldName = "Symptom";
+            this.colSymptomHistory.MinWidth = 25;
+            this.colSymptomHistory.Name = "colSymptomHistory";
+            this.colSymptomHistory.OptionsColumn.AllowEdit = false;
+            this.colSymptomHistory.Visible = true;
+            this.colSymptomHistory.VisibleIndex = 7;
+            this.colSymptomHistory.Width = 94;
+            // 
+            // colConcludeHistory
+            // 
+            this.colConcludeHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colConcludeHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colConcludeHistory.AppearanceHeader.Options.UseFont = true;
+            this.colConcludeHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colConcludeHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colConcludeHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colConcludeHistory.Caption = "Kết luận";
+            this.colConcludeHistory.FieldName = "Conclude";
+            this.colConcludeHistory.MinWidth = 25;
+            this.colConcludeHistory.Name = "colConcludeHistory";
+            this.colConcludeHistory.OptionsColumn.AllowEdit = false;
+            this.colConcludeHistory.Visible = true;
+            this.colConcludeHistory.VisibleIndex = 8;
+            this.colConcludeHistory.Width = 94;
+            // 
+            // colStatusHistory
+            // 
+            this.colStatusHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colStatusHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colStatusHistory.AppearanceHeader.Options.UseFont = true;
+            this.colStatusHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colStatusHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colStatusHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStatusHistory.Caption = "Trạng thái";
+            this.colStatusHistory.FieldName = "Status";
+            this.colStatusHistory.MinWidth = 25;
+            this.colStatusHistory.Name = "colStatusHistory";
+            this.colStatusHistory.OptionsColumn.AllowEdit = false;
+            this.colStatusHistory.Width = 94;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -545,6 +810,27 @@ namespace pet_management
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // colReceptionistId
+            // 
+            this.colReceptionistId.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colReceptionistId.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colReceptionistId.AppearanceHeader.Options.UseFont = true;
+            this.colReceptionistId.AppearanceHeader.Options.UseForeColor = true;
+            this.colReceptionistId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colReceptionistId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colReceptionistId.Caption = "NV đón tiếp";
+            this.colReceptionistId.ColumnEdit = this.repoGluDoctor;
+            this.colReceptionistId.FieldName = "ReceptionistId";
+            this.colReceptionistId.MinWidth = 25;
+            this.colReceptionistId.Name = "colReceptionistId";
+            this.colReceptionistId.Visible = true;
+            this.colReceptionistId.VisibleIndex = 5;
+            this.colReceptionistId.Width = 94;
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataSource = typeof(DTO.Staff);
+            // 
             // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -574,14 +860,24 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerpetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gpExaminationHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gpExaminationHistory)).EndInit();
+            this.gpExaminationHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grcPetHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,7 +886,6 @@ namespace pet_management
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupPet;
-        private DevExpress.XtraEditors.GroupControl gpExaminationHistory;
         private DevExpress.XtraEditors.SearchControl txtSearch;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
@@ -614,7 +909,6 @@ namespace pet_management
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraGrid.Columns.GridColumn colDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repoItemBtnDelete;
         private DevExpress.XtraGrid.Columns.GridColumn colEdit;
@@ -625,5 +919,26 @@ namespace pet_management
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit2;
         private System.Windows.Forms.BindingSource breedpetBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit2View;
+        private DevExpress.XtraEditors.GroupControl gpExaminationHistory;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.GridControl grcPetHistory;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rBtnDetail;
+        private DevExpress.XtraGrid.Columns.GridColumn colExNumberHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colExDateHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colTypeHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colPetIdHistory;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGluPet;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoctorIdHistory;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGluDoctor;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraGrid.Columns.GridColumn colSymptomHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colConcludeHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatusHistory;
+        private System.Windows.Forms.BindingSource exPetHistoryBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colReceptionistId;
+        private System.Windows.Forms.BindingSource staffBindingSource;
     }
 }

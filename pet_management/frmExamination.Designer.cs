@@ -30,13 +30,8 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExamination));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExamination));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -56,10 +51,40 @@ namespace pet_management
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
             this.rgluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.rgluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repoBtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.lbHistoryPet = new DevExpress.XtraEditors.LabelControl();
+            this.grcPetHistory = new DevExpress.XtraGrid.GridControl();
+            this.exPetHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDetail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rBtnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colExNumberHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExDateHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTypeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPetIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoctorIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.staffExBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSymptomHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConcludeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatusHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.petExBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnWait = new DevExpress.XtraEditors.SimpleButton();
             this.btnDoing = new DevExpress.XtraEditors.SimpleButton();
             this.btnFilter = new DevExpress.XtraEditors.SimpleButton();
@@ -79,12 +104,10 @@ namespace pet_management
             this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.petExBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colReceptionistId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoctorId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gluDoctors = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.staffExBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSymptom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colConclude = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -134,8 +157,8 @@ namespace pet_management
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.txtNote = new DevExpress.XtraEditors.MemoEdit();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddService = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddPart = new DevExpress.XtraEditors.SimpleButton();
             this.txtConclude = new DevExpress.XtraEditors.MemoEdit();
             this.txtSymptom = new DevExpress.XtraEditors.TextEdit();
             this.gluDoctor = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -225,6 +248,16 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcPetHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).BeginInit();
@@ -233,10 +266,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewExamination)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctors)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnViewEdit)).BeginInit();
@@ -350,10 +381,10 @@ namespace pet_management
             // repoBtnStart
             // 
             this.repoBtnStart.AutoHeight = false;
-            editorButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions6.SvgImage")));
-            editorButtonImageOptions6.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
+            editorButtonImageOptions7.SvgImageSize = new System.Drawing.Size(16, 16);
             this.repoBtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoBtnStart.Name = "repoBtnStart";
             this.repoBtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -362,6 +393,8 @@ namespace pet_management
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.lbHistoryPet);
+            this.groupControl1.Controls.Add(this.grcPetHistory);
             this.groupControl1.Controls.Add(this.btnWait);
             this.groupControl1.Controls.Add(this.btnDoing);
             this.groupControl1.Controls.Add(this.btnFilter);
@@ -378,6 +411,256 @@ namespace pet_management
             this.groupControl1.Size = new System.Drawing.Size(460, 908);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách bệnh nhân";
+            // 
+            // lbHistoryPet
+            // 
+            this.lbHistoryPet.Location = new System.Drawing.Point(-1, 477);
+            this.lbHistoryPet.Name = "lbHistoryPet";
+            this.lbHistoryPet.Size = new System.Drawing.Size(257, 18);
+            this.lbHistoryPet.TabIndex = 10;
+            this.lbHistoryPet.Text = "Lịch sử khám chữa bệnh của thú cưng:\r\n";
+            // 
+            // grcPetHistory
+            // 
+            this.grcPetHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcPetHistory.DataSource = this.exPetHistoryBindingSource;
+            this.grcPetHistory.Location = new System.Drawing.Point(0, 501);
+            this.grcPetHistory.MainView = this.gridView4;
+            this.grcPetHistory.Name = "grcPetHistory";
+            this.grcPetHistory.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rBtnDetail,
+            this.repoGluDoctor,
+            this.repoGluPet});
+            this.grcPetHistory.Size = new System.Drawing.Size(460, 407);
+            this.grcPetHistory.TabIndex = 9;
+            this.grcPetHistory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // exPetHistoryBindingSource
+            // 
+            this.exPetHistoryBindingSource.DataSource = typeof(DTO.Examination);
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDetail,
+            this.colExNumberHistory,
+            this.colExDateHistory,
+            this.colTypeHistory,
+            this.colPetIdHistory,
+            this.colDoctorIdHistory,
+            this.colSymptomHistory,
+            this.colConcludeHistory,
+            this.colStatusHistory});
+            this.gridView4.GridControl = this.grcPetHistory;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsView.ColumnAutoWidth = false;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // colDetail
+            // 
+            this.colDetail.ColumnEdit = this.rBtnDetail;
+            this.colDetail.MinWidth = 25;
+            this.colDetail.Name = "colDetail";
+            this.colDetail.OptionsColumn.FixedWidth = true;
+            this.colDetail.Visible = true;
+            this.colDetail.VisibleIndex = 0;
+            this.colDetail.Width = 25;
+            // 
+            // rBtnDetail
+            // 
+            this.rBtnDetail.AutoHeight = false;
+            editorButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions8.SvgImage")));
+            editorButtonImageOptions8.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.rBtnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.rBtnDetail.Name = "rBtnDetail";
+            this.rBtnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rBtnDetail.Click += new System.EventHandler(this.rBtnDetail_Click);
+            // 
+            // colExNumberHistory
+            // 
+            this.colExNumberHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExNumberHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExNumberHistory.AppearanceHeader.Options.UseFont = true;
+            this.colExNumberHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colExNumberHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExNumberHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExNumberHistory.Caption = "Mã phiếu khám";
+            this.colExNumberHistory.FieldName = "ExaminationNumber";
+            this.colExNumberHistory.MinWidth = 25;
+            this.colExNumberHistory.Name = "colExNumberHistory";
+            this.colExNumberHistory.OptionsColumn.AllowEdit = false;
+            this.colExNumberHistory.Visible = true;
+            this.colExNumberHistory.VisibleIndex = 1;
+            this.colExNumberHistory.Width = 126;
+            // 
+            // colExDateHistory
+            // 
+            this.colExDateHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colExDateHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colExDateHistory.AppearanceHeader.Options.UseFont = true;
+            this.colExDateHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colExDateHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colExDateHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colExDateHistory.Caption = "Ngày khám";
+            this.colExDateHistory.FieldName = "ExaminationDate";
+            this.colExDateHistory.MinWidth = 25;
+            this.colExDateHistory.Name = "colExDateHistory";
+            this.colExDateHistory.OptionsColumn.AllowEdit = false;
+            this.colExDateHistory.Visible = true;
+            this.colExDateHistory.VisibleIndex = 2;
+            this.colExDateHistory.Width = 94;
+            // 
+            // colTypeHistory
+            // 
+            this.colTypeHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colTypeHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colTypeHistory.AppearanceHeader.Options.UseFont = true;
+            this.colTypeHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colTypeHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTypeHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTypeHistory.Caption = "Hình thức";
+            this.colTypeHistory.FieldName = "Type";
+            this.colTypeHistory.MinWidth = 25;
+            this.colTypeHistory.Name = "colTypeHistory";
+            this.colTypeHistory.OptionsColumn.AllowEdit = false;
+            this.colTypeHistory.Visible = true;
+            this.colTypeHistory.VisibleIndex = 3;
+            this.colTypeHistory.Width = 136;
+            // 
+            // colPetIdHistory
+            // 
+            this.colPetIdHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colPetIdHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colPetIdHistory.AppearanceHeader.Options.UseFont = true;
+            this.colPetIdHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colPetIdHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPetIdHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPetIdHistory.Caption = "Tên thú cưng";
+            this.colPetIdHistory.ColumnEdit = this.repoGluPet;
+            this.colPetIdHistory.FieldName = "PetId";
+            this.colPetIdHistory.MinWidth = 25;
+            this.colPetIdHistory.Name = "colPetIdHistory";
+            this.colPetIdHistory.OptionsColumn.AllowEdit = false;
+            this.colPetIdHistory.Visible = true;
+            this.colPetIdHistory.VisibleIndex = 4;
+            this.colPetIdHistory.Width = 94;
+            // 
+            // colDoctorIdHistory
+            // 
+            this.colDoctorIdHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colDoctorIdHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseFont = true;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colDoctorIdHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoctorIdHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoctorIdHistory.Caption = "Tên bác sĩ";
+            this.colDoctorIdHistory.ColumnEdit = this.repoGluDoctor;
+            this.colDoctorIdHistory.FieldName = "DoctorId";
+            this.colDoctorIdHistory.MinWidth = 25;
+            this.colDoctorIdHistory.Name = "colDoctorIdHistory";
+            this.colDoctorIdHistory.OptionsColumn.AllowEdit = false;
+            this.colDoctorIdHistory.Visible = true;
+            this.colDoctorIdHistory.VisibleIndex = 5;
+            this.colDoctorIdHistory.Width = 94;
+            // 
+            // repoGluDoctor
+            // 
+            this.repoGluDoctor.AutoHeight = false;
+            this.repoGluDoctor.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGluDoctor.DataSource = this.staffExBindingSource;
+            this.repoGluDoctor.DisplayMember = "FullName";
+            this.repoGluDoctor.Name = "repoGluDoctor";
+            this.repoGluDoctor.PopupView = this.gridView5;
+            this.repoGluDoctor.ValueMember = "Id";
+            // 
+            // staffExBindingSource
+            // 
+            this.staffExBindingSource.DataSource = typeof(DTO.Staff);
+            // 
+            // gridView5
+            // 
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // colSymptomHistory
+            // 
+            this.colSymptomHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colSymptomHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colSymptomHistory.AppearanceHeader.Options.UseFont = true;
+            this.colSymptomHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colSymptomHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSymptomHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSymptomHistory.Caption = "Triệu chứng";
+            this.colSymptomHistory.FieldName = "Symptom";
+            this.colSymptomHistory.MinWidth = 25;
+            this.colSymptomHistory.Name = "colSymptomHistory";
+            this.colSymptomHistory.OptionsColumn.AllowEdit = false;
+            this.colSymptomHistory.Visible = true;
+            this.colSymptomHistory.VisibleIndex = 6;
+            this.colSymptomHistory.Width = 94;
+            // 
+            // colConcludeHistory
+            // 
+            this.colConcludeHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colConcludeHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colConcludeHistory.AppearanceHeader.Options.UseFont = true;
+            this.colConcludeHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colConcludeHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colConcludeHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colConcludeHistory.Caption = "Kết luận";
+            this.colConcludeHistory.FieldName = "Conclude";
+            this.colConcludeHistory.MinWidth = 25;
+            this.colConcludeHistory.Name = "colConcludeHistory";
+            this.colConcludeHistory.OptionsColumn.AllowEdit = false;
+            this.colConcludeHistory.Visible = true;
+            this.colConcludeHistory.VisibleIndex = 7;
+            this.colConcludeHistory.Width = 94;
+            // 
+            // colStatusHistory
+            // 
+            this.colStatusHistory.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colStatusHistory.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colStatusHistory.AppearanceHeader.Options.UseFont = true;
+            this.colStatusHistory.AppearanceHeader.Options.UseForeColor = true;
+            this.colStatusHistory.AppearanceHeader.Options.UseTextOptions = true;
+            this.colStatusHistory.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStatusHistory.Caption = "Trạng thái";
+            this.colStatusHistory.FieldName = "Status";
+            this.colStatusHistory.MinWidth = 25;
+            this.colStatusHistory.Name = "colStatusHistory";
+            this.colStatusHistory.OptionsColumn.AllowEdit = false;
+            this.colStatusHistory.Visible = true;
+            this.colStatusHistory.VisibleIndex = 8;
+            this.colStatusHistory.Width = 94;
+            // 
+            // repoGluPet
+            // 
+            this.repoGluPet.AutoHeight = false;
+            this.repoGluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGluPet.DataSource = this.petExBindingSource;
+            this.repoGluPet.DisplayMember = "Name";
+            this.repoGluPet.Name = "repoGluPet";
+            this.repoGluPet.PopupView = this.gridView6;
+            this.repoGluPet.ValueMember = "Id";
+            // 
+            // petExBindingSource
+            // 
+            this.petExBindingSource.DataSource = typeof(DTO.Pet);
+            // 
+            // gridView6
+            // 
+            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView6.OptionsView.ShowGroupPanel = false;
             // 
             // btnWait
             // 
@@ -505,7 +788,7 @@ namespace pet_management
             this.rbtnViewEdit,
             this.gluPet,
             this.gluDoctors});
-            this.grcExamination.Size = new System.Drawing.Size(460, 801);
+            this.grcExamination.Size = new System.Drawing.Size(460, 362);
             this.grcExamination.TabIndex = 0;
             this.grcExamination.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewExamination});
@@ -535,6 +818,7 @@ namespace pet_management
             this.gridViewExamination.GridControl = this.grcExamination;
             this.gridViewExamination.Name = "gridViewExamination";
             this.gridViewExamination.OptionsView.ShowGroupPanel = false;
+            this.gridViewExamination.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewExamination_RowClick);
             this.gridViewExamination.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gridViewExamination_CustomRowCellEdit);
             // 
             // colId
@@ -598,10 +882,6 @@ namespace pet_management
             this.gluPet.PopupView = this.repositoryItemGridLookUpEdit1View;
             this.gluPet.ValueMember = "Id";
             // 
-            // petExBindingSource
-            // 
-            this.petExBindingSource.DataSource = typeof(DTO.Pet);
-            // 
             // repositoryItemGridLookUpEdit1View
             // 
             this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
@@ -639,10 +919,6 @@ namespace pet_management
             this.gluDoctors.Name = "gluDoctors";
             this.gluDoctors.PopupView = this.gridView1;
             this.gluDoctors.ValueMember = "Id";
-            // 
-            // staffExBindingSource
-            // 
-            this.staffExBindingSource.DataSource = typeof(DTO.Staff);
             // 
             // gridView1
             // 
@@ -724,10 +1000,10 @@ namespace pet_management
             // rbtnStart
             // 
             this.rbtnStart.AutoHeight = false;
-            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
-            editorButtonImageOptions7.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions9.SvgImage")));
+            editorButtonImageOptions9.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnStart.Name = "rbtnStart";
             this.rbtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnStart.Click += new System.EventHandler(this.repoBtnStart_Click);
@@ -735,10 +1011,10 @@ namespace pet_management
             // rbtnViewEdit
             // 
             this.rbtnViewEdit.AutoHeight = false;
-            editorButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions8.SvgImage")));
-            editorButtonImageOptions8.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions10.SvgImage")));
+            editorButtonImageOptions10.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnViewEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnViewEdit.Name = "rbtnViewEdit";
             this.rbtnViewEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnViewEdit.Click += new System.EventHandler(this.rbtnViewEdit_Click);
@@ -1110,8 +1386,8 @@ namespace pet_management
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.txtNote);
-            this.layoutControl2.Controls.Add(this.simpleButton8);
-            this.layoutControl2.Controls.Add(this.simpleButton7);
+            this.layoutControl2.Controls.Add(this.btnAddService);
+            this.layoutControl2.Controls.Add(this.btnAddPart);
             this.layoutControl2.Controls.Add(this.txtConclude);
             this.layoutControl2.Controls.Add(this.txtSymptom);
             this.layoutControl2.Controls.Add(this.gluDoctor);
@@ -1134,25 +1410,25 @@ namespace pet_management
             this.txtNote.StyleController = this.layoutControl2;
             this.txtNote.TabIndex = 7;
             // 
-            // simpleButton8
+            // btnAddService
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(133, 314);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(117, 27);
-            this.simpleButton8.StyleController = this.layoutControl2;
-            this.simpleButton8.TabIndex = 0;
-            this.simpleButton8.Text = "Chỉ định DVKT";
-            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
+            this.btnAddService.Location = new System.Drawing.Point(133, 314);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(117, 27);
+            this.btnAddService.StyleController = this.layoutControl2;
+            this.btnAddService.TabIndex = 0;
+            this.btnAddService.Text = "Chỉ định DVKT";
+            this.btnAddService.Click += new System.EventHandler(this.simpleButton8_Click);
             // 
-            // simpleButton7
+            // btnAddPart
             // 
-            this.simpleButton7.Location = new System.Drawing.Point(12, 314);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(117, 27);
-            this.simpleButton7.StyleController = this.layoutControl2;
-            this.simpleButton7.TabIndex = 0;
-            this.simpleButton7.Text = "Thêm thuốc";
-            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
+            this.btnAddPart.Location = new System.Drawing.Point(12, 314);
+            this.btnAddPart.Name = "btnAddPart";
+            this.btnAddPart.Size = new System.Drawing.Size(117, 27);
+            this.btnAddPart.StyleController = this.layoutControl2;
+            this.btnAddPart.TabIndex = 0;
+            this.btnAddPart.Text = "Thêm thuốc";
+            this.btnAddPart.Click += new System.EventHandler(this.simpleButton7_Click);
             // 
             // txtConclude
             // 
@@ -1470,7 +1746,7 @@ namespace pet_management
             // 
             // layoutControlItem16
             // 
-            this.layoutControlItem16.Control = this.simpleButton7;
+            this.layoutControlItem16.Control = this.btnAddPart;
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 302);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(121, 31);
@@ -1479,7 +1755,7 @@ namespace pet_management
             // 
             // layoutControlItem18
             // 
-            this.layoutControlItem18.Control = this.simpleButton8;
+            this.layoutControlItem18.Control = this.btnAddService;
             this.layoutControlItem18.Location = new System.Drawing.Point(121, 302);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(121, 31);
@@ -1834,10 +2110,10 @@ namespace pet_management
             // rbtnDelete
             // 
             this.rbtnDelete.AutoHeight = false;
-            editorButtonImageOptions9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions9.SvgImage")));
-            editorButtonImageOptions9.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions11.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions11.SvgImage")));
+            editorButtonImageOptions11.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnDelete.Click += new System.EventHandler(this.rbtnDelete_Click);
@@ -1855,10 +2131,10 @@ namespace pet_management
             // rbtnEdit
             // 
             this.rbtnEdit.AutoHeight = false;
-            editorButtonImageOptions10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions10.SvgImage")));
-            editorButtonImageOptions10.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions12.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions12.SvgImage")));
+            editorButtonImageOptions12.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnEdit.Click += new System.EventHandler(this.rbtnEdit_Click);
@@ -2061,6 +2337,16 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcPetHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).EndInit();
@@ -2069,10 +2355,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.examinationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewExamination)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gluDoctors)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnViewEdit)).EndInit();
@@ -2233,8 +2517,8 @@ namespace pet_management
         private DevExpress.XtraEditors.DateEdit dtTo;
         private DevExpress.XtraGrid.GridControl grcExDetail;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDetail;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton btnAddService;
+        private DevExpress.XtraEditors.SimpleButton btnAddPart;
         private DevExpress.XtraEditors.TextEdit txtTotal;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -2334,5 +2618,23 @@ namespace pet_management
         private DevExpress.XtraEditors.SimpleButton btnFilter;
         private DevExpress.XtraEditors.SimpleButton btnWait;
         private DevExpress.XtraEditors.SimpleButton btnDoing;
+        private DevExpress.XtraEditors.LabelControl lbHistoryPet;
+        private DevExpress.XtraGrid.GridControl grcPetHistory;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private System.Windows.Forms.BindingSource exPetHistoryBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colExNumberHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colExDateHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colTypeHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colPetIdHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoctorIdHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colSymptomHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colConcludeHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatusHistory;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rBtnDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGluDoctor;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGluPet;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
     }
 }

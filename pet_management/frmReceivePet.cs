@@ -172,8 +172,8 @@ namespace pet_management
 
         private void btnPaymented_Click(object sender, EventArgs e)
         {
-            //List<Examination> examinations = examinationBUS.GetExaminationsToday();
-            //exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Paymented).ToList();
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            exTodayBindingSource.DataSource = examinations.Where(x => x.Status == ExaminationStatus.Paymented).ToList();
 
         }
 
@@ -217,6 +217,11 @@ namespace pet_management
                     throw;
                 }
             }
+        }
+
+        private void frmReceivePet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

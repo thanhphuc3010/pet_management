@@ -38,6 +38,8 @@ namespace pet_management
 
         private void frmExamination_Load(object sender, EventArgs e)
         {
+            btnAddPart.Disable();
+            btnAddService.Disable();
             InitailizeData();
         }
 
@@ -45,25 +47,31 @@ namespace pet_management
         {
             List<Examination> examinations = examinationBUS.GetExaminationsToday();
             examinations.Sort(new CompareExamination());
-            examinationBindingSource.DataSource = examinations;
+
+            List<Examination> exNotPayment = examinations.Where(x => x.Status != ExaminationStatus.Paymented).ToList();
+            examinationBindingSource.DataSource = exNotPayment;
             staffBindingSource.DataSource = StaffBUS.GetDoctors();
             petExBindingSource.DataSource = PetBUS.GetPets();
             staffExBindingSource.DataSource = StaffBUS.GetDoctors();
+
             dtFrom.DateTime = DateTime.Today;
             dtTo.DateTime = DateTime.Today;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
+            List<Examination> examinations = examinationBUS.GetExaminationsToday();
+            examinationBindingSource.DataSource = examinations.Where(x => x.Status != ExaminationStatus.Paymented).ToList();
         }
 
         private void repoBtnStart_Click(object sender, EventArgs e)
         {
-            
+
             Examination exam = gridViewExamination.GetFocusedRow() as Examination;
             editable = true;
             closable = false;
+            btnAddPart.Enable();
+            btnAddService.Enable();
             if (currentExamination == null || (exam != currentExamination && exam.Status == ExaminationStatus.Pending) || exam.Status == ExaminationStatus.Doing)
             {
                 ResetAllFieldData();
@@ -82,7 +90,8 @@ namespace pet_management
                 if (detailsItem.Count == 0 || detailsItem == null)
                 {
                     ResetSummaryPayment();
-                } else
+                }
+                else
                 {
                     BindSummaryPayment();
                 }
@@ -217,6 +226,8 @@ namespace pet_management
                 examinationBindingSource.DataSource = examinationBUS.GetExaminationsToday();
                 ResetAllFieldData();
                 ResetSummaryPayment();
+                btnAddPart.Disable();
+                btnAddService.Disable();
             }
             closable = true;
         }
@@ -285,7 +296,7 @@ namespace pet_management
                 BindData(currentExamination);
                 BindExDetail();
                 BindSummaryPayment();
-            } 
+            }
             else
             {
                 XtraMessageBox.Show("Vui lòng hoàn thành phiên khám cũ trước khi bắt đầu khám cho bệnh nhân mới");
@@ -321,6 +332,8 @@ namespace pet_management
                 ResetAllFieldData();
                 ResetSummaryPayment();
                 MyHelper.ShowSuccessMessage("Lưu phiếu khám thành công", "Thông báo");
+                btnAddPart.Disable();
+                btnAddService.Disable();
             }
             else
             {
@@ -363,8 +376,18 @@ namespace pet_management
         {
             if (closable)
             {
-                this.Close();
-            } else
+                try
+                {
+                    this.Dispose();
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+                
+            }
+            else
             {
                 string message = $"Phiếu khám {currentExamination.ExaminationNumber} chưa được lưu/hoàn tất. Lưu phiếu khám và thoát ?";
                 DialogResult dialogResult = XtraMessageBox.Show(message, "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
@@ -376,7 +399,23 @@ namespace pet_management
                 {
                     e.Cancel = true;
                 }
-            } 
+            }
+        }
+
+        private void gridViewExamination_RowClick(object sender, RowClickEventArgs e)
+        {
+            string petId = (sender as GridView).GetFocusedRowCellValue("PetId").ToString();
+            string exId = (sender as GridView).GetFocusedRowCellValue("Id").ToString();
+            List<Examination> history = examinationBUS.GetExaminationByPetId(petId);
+            exPetHistoryBindingSource.DataSource = history.Where(x => x.Id.ToString() != exId);
+            //Customer customer = CustomerBUS.GetCustomerByID(id);
+        }
+
+        private void rBtnDetail_Click(object sender, EventArgs e)
+        {
+            Examination exam = gridView4.GetFocusedRow() as Examination;
+            frmExaminationView f = new frmExaminationView(this, exam);
+            f.ShowDialog();
         }
     }
 }

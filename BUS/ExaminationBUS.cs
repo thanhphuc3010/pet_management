@@ -40,6 +40,11 @@ namespace BUS
             return dao.GetExaminations();
         }
 
+        public List<Examination> GetExaminationByPetId(string petId)
+        {
+            return dao.GetExaminationById(petId);
+        }
+
         public List<Examination> GetExaminationsToday()
         {
             return dao.GetExaminationsToday();

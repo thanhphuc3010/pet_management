@@ -11,11 +11,14 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace pet_management
 {
     public partial class frmPet : DevExpress.XtraEditors.XtraForm
     {
+        private ExaminationBUS examinationBUS = new ExaminationBUS();
         public frmPet()
         {
             InitializeComponent();
@@ -31,7 +34,8 @@ namespace pet_management
             }
             customerpetBindingSource.DataSource = customers;
             breedpetBindingSource.DataSource = BreedBUS.GetBreeds();
-            
+            staffBindingSource.DataSource = StaffBUS.GetStaffs();
+            gridView4.BestFitColumnsEx();
             
         }
 
@@ -84,11 +88,26 @@ namespace pet_management
                 DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi này không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    bool isSuccess = PetBUS.Delete(p.Id.ToString());
-                    if (isSuccess)
+                    try
                     {
-                        petBindingSource.Remove(p);
+                        bool isSuccess = PetBUS.Delete(p.Id.ToString());
+                        if (isSuccess)
+                        {
+                            petBindingSource.Remove(p);
+                        }
                     }
+                    catch (Exception ex)
+                    {
+                        if (ex.GetType() == typeof(MySqlException))
+                        {
+                            MyHelper.ShowErrorMessage("Thú nuôi đã phát sinh giao dịch sử dụng dịch vụ, không thể xóa!", "Lỗi");
+                        }
+                        else
+                        {
+                            MyHelper.ShowErrorMessage(ex.Message, "Lỗi");
+                        }
+                    }
+                    
                 }
                 else
                 {
@@ -104,6 +123,13 @@ namespace pet_management
             {
                 e.Appearance.ForeColor = MyColor.Primary;
             }
+        }
+
+        private void gridViewPet_RowClick(object sender, RowClickEventArgs e)
+        {
+            string petId = (sender as GridView).GetFocusedRowCellValue("Id").ToString();
+            List<Examination> history = examinationBUS.GetExaminationByPetId(petId);
+            exPetHistoryBindingSource.DataSource = history;
         }
     }
 }

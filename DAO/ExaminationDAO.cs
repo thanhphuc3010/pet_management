@@ -47,6 +47,14 @@ namespace DAO
             return examinations;
         }
 
+        public List<Examination> GetExaminationById(string petId)
+        {
+            SetMapper();
+            var predicate = Predicates.Field<Examination>(f => f.PetId, Operator.Eq, petId);
+            List<Examination> examinations = db.GetList<Examination>(predicate).ToList();
+            return examinations;
+        }
+
         public List<Examination> GetExaminations()
         {
             SetMapper();
