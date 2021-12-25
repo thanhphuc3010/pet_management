@@ -17,6 +17,9 @@ namespace pet_management
         PetData _petData;
         Pet _pet;
         List<ELItem> _items;
+        public string _conclude;
+        public string _doctor;
+
         public frmPrintMedical(List<ELItem> items, PetData petData)
         {
             InitializeComponent();
@@ -34,6 +37,8 @@ namespace pet_management
             rptMedical1.SetParameterValue("pCustomer", _petData.CustomerName);
             rptMedical1.SetParameterValue("pAddress", _petData.Address);
             rptMedical1.SetParameterValue("pPhone", _petData.Phone);
+            rptMedical1.SetParameterValue("pConclude", _conclude);
+            rptMedical1.SetParameterValue("pStaff", _doctor);
             crystalReportViewer.ReportSource = rptMedical1;
             crystalReportViewer.Refresh();
         }

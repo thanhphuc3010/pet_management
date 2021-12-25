@@ -48,6 +48,7 @@ namespace pet_management
             } else
             {
                 lblInventory.Visible = false;
+                txtSaleNumber.ReadOnly = true;
             }
             txtSaleNumber.Text = item.Quantity.ToString();
             txtSaleNumber.ApplyFormatToView();
@@ -113,10 +114,13 @@ namespace pet_management
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (itemToUpdate.Quantity > inventory)
+            if (itemToUpdate.ItemType == "Hàng hóa")
             {
-                MyHelper.ShowErrorMessage($"Tồn kho không đủ. Số lượng có thể bán là : {inventory}", "Lỗi");
-                return;
+                if (itemToUpdate.Quantity > inventory)
+                {
+                    MyHelper.ShowErrorMessage($"Tồn kho không đủ. Số lượng có thể bán là : {inventory}", "Lỗi");
+                    return;
+                }
             }
             bool isSuccess = examinationBUS.UpdatePartDetail(itemToUpdate.ToExPart());
             if (isSuccess)

@@ -29,12 +29,13 @@ namespace pet_management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBreed));
-            this.cboBreed = new System.Windows.Forms.ComboBox();
+            this.cboSpecies = new System.Windows.Forms.ComboBox();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -44,18 +45,23 @@ namespace pet_management
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcBreed = new DevExpress.XtraGrid.GridControl();
+            this.breedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSpeciesId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -65,25 +71,26 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcBreed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // cboBreed
+            // cboSpecies
             // 
-            this.cboBreed.FormattingEnabled = true;
-            this.cboBreed.Location = new System.Drawing.Point(428, 12);
-            this.cboBreed.Name = "cboBreed";
-            this.cboBreed.Size = new System.Drawing.Size(248, 26);
-            this.cboBreed.TabIndex = 0;
-            this.cboBreed.SelectedIndexChanged += new System.EventHandler(this.cboBreed_SelectedIndexChanged);
+            this.cboSpecies.FormattingEnabled = true;
+            this.cboSpecies.Location = new System.Drawing.Point(428, 12);
+            this.cboSpecies.Name = "cboSpecies";
+            this.cboSpecies.Size = new System.Drawing.Size(248, 26);
+            this.cboSpecies.TabIndex = 0;
+            this.cboSpecies.SelectedIndexChanged += new System.EventHandler(this.cboBreed_SelectedIndexChanged);
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.memoEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.cboBreed);
+            this.layoutControl1.Controls.Add(this.txtDescription);
+            this.layoutControl1.Controls.Add(this.txtName);
+            this.layoutControl1.Controls.Add(this.txtId);
+            this.layoutControl1.Controls.Add(this.cboSpecies);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -92,30 +99,30 @@ namespace pet_management
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // memoEdit1
+            // txtDescription
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(84, 90);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(592, 45);
-            this.memoEdit1.StyleController = this.layoutControl1;
-            this.memoEdit1.TabIndex = 6;
+            this.txtDescription.Location = new System.Drawing.Point(84, 90);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(592, 45);
+            this.txtDescription.StyleController = this.layoutControl1;
+            this.txtDescription.TabIndex = 6;
             // 
-            // textEdit2
+            // txtName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(84, 52);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(592, 24);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 5;
+            this.txtName.Location = new System.Drawing.Point(84, 52);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(592, 24);
+            this.txtName.StyleController = this.layoutControl1;
+            this.txtName.TabIndex = 5;
             // 
-            // textEdit1
+            // txtId
             // 
-            this.textEdit1.Location = new System.Drawing.Point(84, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(258, 24);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 4;
+            this.txtId.Location = new System.Drawing.Point(84, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.Properties.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(258, 24);
+            this.txtId.StyleController = this.layoutControl1;
+            this.txtId.TabIndex = 4;
             // 
             // Root
             // 
@@ -144,7 +151,7 @@ namespace pet_management
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEdit1;
+            this.layoutControlItem2.Control = this.txtId;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(334, 30);
@@ -153,7 +160,7 @@ namespace pet_management
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit2;
+            this.layoutControlItem3.Control = this.txtName;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(668, 28);
@@ -162,7 +169,7 @@ namespace pet_management
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.memoEdit1;
+            this.layoutControlItem4.Control = this.txtDescription;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(668, 49);
@@ -187,7 +194,7 @@ namespace pet_management
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.cboBreed;
+            this.layoutControlItem1.Control = this.cboSpecies;
             this.layoutControlItem1.Location = new System.Drawing.Point(344, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(324, 30);
@@ -202,19 +209,29 @@ namespace pet_management
             this.emptySpaceItem5.Size = new System.Drawing.Size(10, 30);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // gridControl1
+            // grcBreed
             // 
-            this.gridControl1.Location = new System.Drawing.Point(13, 154);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(663, 251);
-            this.gridControl1.TabIndex = 3;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcBreed.DataSource = this.breedBindingSource;
+            this.grcBreed.Location = new System.Drawing.Point(13, 154);
+            this.grcBreed.MainView = this.gridView1;
+            this.grcBreed.Name = "grcBreed";
+            this.grcBreed.Size = new System.Drawing.Size(663, 251);
+            this.grcBreed.TabIndex = 3;
+            this.grcBreed.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // breedBindingSource
+            // 
+            this.breedBindingSource.DataSource = typeof(DTO.Breed);
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colSpeciesId,
+            this.colName,
+            this.colDescription});
+            this.gridView1.GridControl = this.grcBreed;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -233,6 +250,7 @@ namespace pet_management
             this.btnCancel.Size = new System.Drawing.Size(76, 34);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Huỷ";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -249,6 +267,7 @@ namespace pet_management
             this.btnDelete.Size = new System.Drawing.Size(84, 34);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xoá";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -267,6 +286,7 @@ namespace pet_management
             this.btnEdit.Size = new System.Drawing.Size(84, 34);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnUpdate
             // 
@@ -283,6 +303,7 @@ namespace pet_management
             this.btnUpdate.Size = new System.Drawing.Size(86, 34);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Lưu";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -299,6 +320,43 @@ namespace pet_management
             this.btnAdd.Size = new System.Drawing.Size(99, 34);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.MinWidth = 25;
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
+            this.colId.Width = 94;
+            // 
+            // colSpeciesId
+            // 
+            this.colSpeciesId.FieldName = "SpeciesId";
+            this.colSpeciesId.MinWidth = 25;
+            this.colSpeciesId.Name = "colSpeciesId";
+            this.colSpeciesId.Visible = true;
+            this.colSpeciesId.VisibleIndex = 1;
+            this.colSpeciesId.Width = 94;
+            // 
+            // colName
+            // 
+            this.colName.FieldName = "Name";
+            this.colName.MinWidth = 25;
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 2;
+            this.colName.Width = 94;
+            // 
+            // colDescription
+            // 
+            this.colDescription.FieldName = "Description";
+            this.colDescription.MinWidth = 25;
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 3;
+            this.colDescription.Width = 94;
             // 
             // frmBreed
             // 
@@ -310,7 +368,7 @@ namespace pet_management
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.grcBreed);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.SvgImage = global::pet_management.Properties.Resources.ic_pet_color;
             this.Name = "frmBreed";
@@ -319,9 +377,9 @@ namespace pet_management
             this.Load += new System.EventHandler(this.frmBreed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -331,7 +389,8 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcBreed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -339,12 +398,12 @@ namespace pet_management
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboBreed;
+        private System.Windows.Forms.ComboBox cboSpecies;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.MemoEdit txtDescription;
+        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtId;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -353,12 +412,17 @@ namespace pet_management
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcBreed;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private System.Windows.Forms.BindingSource breedBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colSpeciesId;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
     }
 }

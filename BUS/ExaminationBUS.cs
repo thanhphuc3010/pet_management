@@ -61,13 +61,14 @@ namespace BUS
                 item.ItemName = p.Name;
                 item.ItemNumber = p.PartNumber;
                 item.UnitId = p.UnitId;
+                item.UnitName = UnitBUS.GetUnitById(item.UnitId.ToString()).Name.ToString();
 
                 var discountRate = (item.DiscountRate == null) ? 0 : (decimal)item.DiscountRate;
                 var taxRate = (item.TaxRate == null) ? 0 : (decimal)item.TaxRate;
                 var sum = item.Quantity * item.Price;
                 item.Discount = sum * (discountRate / 100);
                 item.Tax = sum * (taxRate / 100);
-                item.Total = sum;
+                item.Total = sum - item.Discount + item.Tax;
                 details.Add(item);
             }
 
@@ -79,13 +80,14 @@ namespace BUS
                 item.ItemName = s.Name;
                 item.ItemNumber = s.Id.ToString();
                 item.UnitId = s.UnitId;
+                item.UnitName = UnitBUS.GetUnitById(item.UnitId.ToString()).Name.ToString();
 
                 var discountRate = (item.DiscountRate == null) ? 0 : (decimal)item.DiscountRate;
                 var taxRate = (item.TaxRate == null) ? 0 : (decimal)item.TaxRate;
                 var sum = item.Quantity * item.Price;
                 item.Discount = sum * (discountRate / 100);
                 item.Tax = sum * (taxRate / 100);
-                item.Total = sum;
+                item.Total = sum - item.Discount + item.Tax;
 
                 details.Add(item);
             }

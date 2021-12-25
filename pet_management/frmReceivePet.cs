@@ -34,7 +34,8 @@ namespace pet_management
 
         private void InitializeData()
         {
-            petBindingSource.DataSource = PetBUS.GetPets();
+            LoadPetGridLookUp();
+
             cboType.Properties.Items.AddRange(ExaminationType.GetListType());
             cboType.EditValue = cboType.Properties.Items[0];
             GenerateExamNumber();
@@ -43,6 +44,17 @@ namespace pet_management
             exTodayBindingSource.DataSource = examinationBUS.GetExaminationsToday();
             LoadListDoctor();
             LoadListReceptionlist();
+        }
+
+        private void LoadPetGridLookUp()
+        {
+            petBindingSource.DataSource = PetBUS.GetPets();
+            List<Customer> customers = CustomerBUS.GetCustomers();
+            foreach (Customer customer in customers)
+            {
+                customer.Fullname = $"{customer.Firstname} {customer.Lastname}";
+            }
+            customerBindingSource.DataSource = customers;
         }
 
         private void GenerateExamNumber()
@@ -222,6 +234,25 @@ namespace pet_management
         private void frmReceivePet_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            frmPetInfor f = new frmPetInfor(this, null, false);
+            f.ShowDialog();
+        }
+
+        public void RefreshWhenCreateNewPet(string petId)
+        {
+            PetData petData = receivePetBUS.GetPetData(petId);
+            LoadPetGridLookUp();
+            BindPetData(petData);
+            gluIdPet.EditValue = petId;
+        }
+
+        private void btnRefreshPet_Click(object sender, EventArgs e)
+        {
+            LoadPetGridLookUp();
         }
     }
 }

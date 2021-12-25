@@ -43,6 +43,7 @@ namespace pet_management
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnRefreshPet = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.lblCustomerInfo = new DevExpress.XtraEditors.LabelControl();
@@ -61,16 +62,12 @@ namespace pet_management
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rgluCustomer = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -102,6 +99,7 @@ namespace pet_management
             this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem21 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gluDoctor = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -204,7 +202,7 @@ namespace pet_management
             this.rbtnCancel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.emptySpaceItem22 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -220,6 +218,9 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gluIdPet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -251,6 +252,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -301,6 +303,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.rbtnPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -314,6 +317,7 @@ namespace pet_management
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnRefreshPet);
             this.layoutControl1.Controls.Add(this.btnRegister);
             this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.lblCustomerInfo);
@@ -337,14 +341,26 @@ namespace pet_management
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnRefreshPet
+            // 
+            this.btnRefreshPet.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnRefreshPet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefreshPet.ImageOptions.SvgImage")));
+            this.btnRefreshPet.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.btnRefreshPet.Location = new System.Drawing.Point(406, 44);
+            this.btnRefreshPet.Name = "btnRefreshPet";
+            this.btnRefreshPet.Size = new System.Drawing.Size(28, 27);
+            this.btnRefreshPet.StyleController = this.layoutControl1;
+            this.btnRefreshPet.TabIndex = 17;
+            this.btnRefreshPet.Click += new System.EventHandler(this.btnRefreshPet_Click);
+            // 
             // btnRegister
             // 
             this.btnRegister.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnRegister.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRegister.ImageOptions.SvgImage")));
             this.btnRegister.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnRegister.Location = new System.Drawing.Point(585, 206);
+            this.btnRegister.Location = new System.Drawing.Point(567, 206);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(149, 27);
+            this.btnRegister.Size = new System.Drawing.Size(167, 27);
             this.btnRegister.StyleController = this.layoutControl1;
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Đăng ký khám";
@@ -354,20 +370,21 @@ namespace pet_management
             // 
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
             this.simpleButton1.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.simpleButton1.Location = new System.Drawing.Point(340, 44);
+            this.simpleButton1.Location = new System.Drawing.Point(374, 44);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(28, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 16;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lblCustomerInfo
             // 
             this.lblCustomerInfo.Appearance.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.lblCustomerInfo.Appearance.Options.UseFont = true;
             this.lblCustomerInfo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCustomerInfo.Location = new System.Drawing.Point(382, 12);
+            this.lblCustomerInfo.Location = new System.Drawing.Point(448, 12);
             this.lblCustomerInfo.Name = "lblCustomerInfo";
-            this.lblCustomerInfo.Size = new System.Drawing.Size(352, 18);
+            this.lblCustomerInfo.Size = new System.Drawing.Size(286, 18);
             this.lblCustomerInfo.StyleController = this.layoutControl1;
             this.lblCustomerInfo.TabIndex = 15;
             this.lblCustomerInfo.Text = "Thông tin chủ nuôi";
@@ -379,26 +396,26 @@ namespace pet_management
             this.lblPetInfor.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPetInfor.Location = new System.Drawing.Point(12, 12);
             this.lblPetInfor.Name = "lblPetInfor";
-            this.lblPetInfor.Size = new System.Drawing.Size(356, 18);
+            this.lblPetInfor.Size = new System.Drawing.Size(422, 18);
             this.lblPetInfor.StyleController = this.layoutControl1;
             this.lblPetInfor.TabIndex = 14;
             this.lblPetInfor.Text = "Thông tin thú cưng";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(478, 82);
+            this.txtPhone.Location = new System.Drawing.Point(544, 82);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(256, 24);
+            this.txtPhone.Size = new System.Drawing.Size(190, 24);
             this.txtPhone.StyleController = this.layoutControl1;
             this.txtPhone.TabIndex = 12;
             // 
             // txtCustomer
             // 
-            this.txtCustomer.Location = new System.Drawing.Point(478, 44);
+            this.txtCustomer.Location = new System.Drawing.Point(544, 44);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Properties.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(256, 24);
+            this.txtCustomer.Size = new System.Drawing.Size(190, 24);
             this.txtCustomer.StyleController = this.layoutControl1;
             this.txtCustomer.TabIndex = 11;
             // 
@@ -407,7 +424,7 @@ namespace pet_management
             this.txtAge.Location = new System.Drawing.Point(302, 199);
             this.txtAge.Name = "txtAge";
             this.txtAge.Properties.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(66, 24);
+            this.txtAge.Size = new System.Drawing.Size(132, 24);
             this.txtAge.StyleController = this.layoutControl1;
             this.txtAge.TabIndex = 10;
             // 
@@ -434,7 +451,7 @@ namespace pet_management
             this.txtSpecies.Location = new System.Drawing.Point(302, 161);
             this.txtSpecies.Name = "txtSpecies";
             this.txtSpecies.Properties.ReadOnly = true;
-            this.txtSpecies.Size = new System.Drawing.Size(66, 24);
+            this.txtSpecies.Size = new System.Drawing.Size(132, 24);
             this.txtSpecies.StyleController = this.layoutControl1;
             this.txtSpecies.TabIndex = 7;
             // 
@@ -443,7 +460,7 @@ namespace pet_management
             this.txtPetName.Location = new System.Drawing.Point(108, 123);
             this.txtPetName.Name = "txtPetName";
             this.txtPetName.Properties.ReadOnly = true;
-            this.txtPetName.Size = new System.Drawing.Size(260, 24);
+            this.txtPetName.Size = new System.Drawing.Size(326, 24);
             this.txtPetName.StyleController = this.layoutControl1;
             this.txtPetName.TabIndex = 6;
             // 
@@ -452,7 +469,7 @@ namespace pet_management
             this.txtMicrochip.Location = new System.Drawing.Point(108, 85);
             this.txtMicrochip.Name = "txtMicrochip";
             this.txtMicrochip.Properties.ReadOnly = true;
-            this.txtMicrochip.Size = new System.Drawing.Size(260, 24);
+            this.txtMicrochip.Size = new System.Drawing.Size(326, 24);
             this.txtMicrochip.StyleController = this.layoutControl1;
             this.txtMicrochip.TabIndex = 5;
             // 
@@ -467,8 +484,10 @@ namespace pet_management
             this.gluIdPet.Properties.DisplayMember = "PetNumber";
             this.gluIdPet.Properties.NullText = "";
             this.gluIdPet.Properties.PopupView = this.searchLookUpEdit1View;
+            this.gluIdPet.Properties.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rgluCustomer});
             this.gluIdPet.Properties.ValueMember = "Id";
-            this.gluIdPet.Size = new System.Drawing.Size(228, 24);
+            this.gluIdPet.Size = new System.Drawing.Size(262, 24);
             this.gluIdPet.StyleController = this.layoutControl1;
             this.gluIdPet.TabIndex = 4;
             this.gluIdPet.EditValueChanged += new System.EventHandler(this.gluIdPet_EditValueChanged);
@@ -483,16 +502,9 @@ namespace pet_management
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn13});
+            this.gridColumn4,
+            this.gridColumn5});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -505,6 +517,7 @@ namespace pet_management
             // 
             // gridColumn2
             // 
+            this.gridColumn2.Caption = "Mã thú cưng";
             this.gridColumn2.FieldName = "PetNumber";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -517,68 +530,56 @@ namespace pet_management
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Tên thú cưng";
+            this.gridColumn6.FieldName = "Name";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 3;
+            // 
             // gridColumn4
             // 
             this.gridColumn4.FieldName = "BreedId";
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn5
             // 
+            this.gridColumn5.Caption = "Khách hàng";
+            this.gridColumn5.ColumnEdit = this.rgluCustomer;
             this.gridColumn5.FieldName = "CustomerId";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.VisibleIndex = 2;
             // 
-            // gridColumn6
+            // rgluCustomer
             // 
-            this.gridColumn6.FieldName = "Name";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
+            this.rgluCustomer.AutoHeight = false;
+            this.rgluCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rgluCustomer.DataSource = this.customerBindingSource;
+            this.rgluCustomer.DisplayMember = "Fullname";
+            this.rgluCustomer.Name = "rgluCustomer";
+            this.rgluCustomer.PopupView = this.gridView7;
+            this.rgluCustomer.ValueMember = "Id";
             // 
-            // gridColumn7
+            // customerBindingSource
             // 
-            this.gridColumn7.FieldName = "Age";
-            this.gridColumn7.Name = "gridColumn7";
+            this.customerBindingSource.DataSource = typeof(DTO.Customer);
             // 
-            // gridColumn8
+            // gridView7
             // 
-            this.gridColumn8.FieldName = "Weight";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.FieldName = "FeatherColor";
-            this.gridColumn9.Name = "gridColumn9";
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.FieldName = "Note";
-            this.gridColumn10.Name = "gridColumn10";
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.FieldName = "MedicalHistory";
-            this.gridColumn11.Name = "gridColumn11";
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.FieldName = "CreatedDate";
-            this.gridColumn12.Name = "gridColumn12";
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.FieldName = "UpdatedDate";
-            this.gridColumn13.Name = "gridColumn13";
+            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView7.Name = "gridView7";
+            this.gridView7.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView7.OptionsView.ShowGroupPanel = false;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(478, 120);
+            this.txtAddress.Location = new System.Drawing.Point(544, 120);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.ReadOnly = true;
-            this.txtAddress.Size = new System.Drawing.Size(256, 49);
+            this.txtAddress.Size = new System.Drawing.Size(190, 38);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 13;
             // 
@@ -615,7 +616,8 @@ namespace pet_management
             this.emptySpaceItem13,
             this.emptySpaceItem14,
             this.layoutControlItem20,
-            this.emptySpaceItem21});
+            this.emptySpaceItem21,
+            this.layoutControlItem21});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(746, 245);
             this.Root.TextVisible = false;
@@ -625,7 +627,7 @@ namespace pet_management
             this.layoutControlItem1.Control = this.gluIdPet;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(328, 31);
+            this.layoutControlItem1.Size = new System.Drawing.Size(362, 31);
             this.layoutControlItem1.Text = "Mã/IDTCL:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -634,7 +636,7 @@ namespace pet_management
             this.layoutControlItem2.Control = this.txtMicrochip;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(360, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(426, 28);
             this.layoutControlItem2.Text = "Microchip:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -643,7 +645,7 @@ namespace pet_management
             this.layoutControlItem3.Control = this.txtPetName;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 111);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(360, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(426, 28);
             this.layoutControlItem3.Text = "Tên thú nuôi:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -659,27 +661,27 @@ namespace pet_management
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtCustomer;
-            this.layoutControlItem8.Location = new System.Drawing.Point(370, 32);
+            this.layoutControlItem8.Location = new System.Drawing.Point(436, 32);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(356, 28);
+            this.layoutControlItem8.Size = new System.Drawing.Size(290, 28);
             this.layoutControlItem8.Text = "Tên chủ nuôi:";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(93, 18);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtPhone;
-            this.layoutControlItem9.Location = new System.Drawing.Point(370, 70);
+            this.layoutControlItem9.Location = new System.Drawing.Point(436, 70);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(356, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(290, 28);
             this.layoutControlItem9.Text = "Số điện thoại:";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(93, 18);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtAddress;
-            this.layoutControlItem10.Location = new System.Drawing.Point(370, 108);
+            this.layoutControlItem10.Location = new System.Drawing.Point(436, 108);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(356, 53);
+            this.layoutControlItem10.Size = new System.Drawing.Size(290, 42);
             this.layoutControlItem10.Text = "Địa chỉ:";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -688,7 +690,7 @@ namespace pet_management
             this.layoutControlItem7.Control = this.txtAge;
             this.layoutControlItem7.Location = new System.Drawing.Point(194, 187);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(166, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(232, 28);
             this.layoutControlItem7.Text = "Tuổi:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -697,16 +699,16 @@ namespace pet_management
             this.layoutControlItem4.Control = this.txtSpecies;
             this.layoutControlItem4.Location = new System.Drawing.Point(194, 149);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(166, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(232, 28);
             this.layoutControlItem4.Text = "Loài:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 18);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(370, 161);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(436, 150);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(356, 33);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(290, 44);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -723,7 +725,7 @@ namespace pet_management
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 101);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(360, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(426, 10);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
@@ -731,7 +733,7 @@ namespace pet_management
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 139);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(360, 10);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(426, 10);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
@@ -745,17 +747,17 @@ namespace pet_management
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(370, 60);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(436, 60);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(356, 10);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(290, 10);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem10
             // 
             this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(370, 98);
+            this.emptySpaceItem10.Location = new System.Drawing.Point(436, 98);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(356, 10);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(290, 10);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -763,21 +765,21 @@ namespace pet_management
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 22);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(360, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(426, 10);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
-            this.emptySpaceItem11.Location = new System.Drawing.Point(370, 22);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(436, 22);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(356, 10);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(290, 10);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(360, 0);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(426, 0);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
             this.emptySpaceItem7.Size = new System.Drawing.Size(10, 225);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -787,16 +789,16 @@ namespace pet_management
             this.layoutControlItem11.Control = this.lblPetInfor;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(360, 22);
+            this.layoutControlItem11.Size = new System.Drawing.Size(426, 22);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.lblCustomerInfo;
-            this.layoutControlItem12.Location = new System.Drawing.Point(370, 0);
+            this.layoutControlItem12.Location = new System.Drawing.Point(436, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(356, 22);
+            this.layoutControlItem12.Size = new System.Drawing.Size(290, 22);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -805,13 +807,13 @@ namespace pet_management
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 63);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(360, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(426, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.simpleButton1;
-            this.layoutControlItem13.Location = new System.Drawing.Point(328, 32);
+            this.layoutControlItem13.Location = new System.Drawing.Point(362, 32);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(32, 31);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
@@ -838,7 +840,7 @@ namespace pet_management
             this.emptySpaceItem13.AllowHotTrack = false;
             this.emptySpaceItem13.Location = new System.Drawing.Point(194, 177);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(166, 10);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(232, 10);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem14
@@ -846,25 +848,34 @@ namespace pet_management
             this.emptySpaceItem14.AllowHotTrack = false;
             this.emptySpaceItem14.Location = new System.Drawing.Point(194, 215);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(166, 10);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(232, 10);
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.btnRegister;
-            this.layoutControlItem20.Location = new System.Drawing.Point(573, 194);
+            this.layoutControlItem20.Location = new System.Drawing.Point(555, 194);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(153, 31);
+            this.layoutControlItem20.Size = new System.Drawing.Size(171, 31);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
             // emptySpaceItem21
             // 
             this.emptySpaceItem21.AllowHotTrack = false;
-            this.emptySpaceItem21.Location = new System.Drawing.Point(370, 194);
+            this.emptySpaceItem21.Location = new System.Drawing.Point(436, 194);
             this.emptySpaceItem21.Name = "emptySpaceItem21";
-            this.emptySpaceItem21.Size = new System.Drawing.Size(203, 31);
+            this.emptySpaceItem21.Size = new System.Drawing.Size(119, 31);
             this.emptySpaceItem21.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.btnRefreshPet;
+            this.layoutControlItem21.Location = new System.Drawing.Point(394, 32);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(32, 31);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextVisible = false;
             // 
             // groupControl2
             // 
@@ -1843,20 +1854,19 @@ namespace pet_management
             this.label1.TabIndex = 4;
             this.label1.Text = "Tìm kiếm:";
             // 
-            // cboStatus
+            // emptySpaceItem22
             // 
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(639, 294);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(204, 26);
-            this.cboStatus.TabIndex = 5;
+            this.emptySpaceItem22.AllowHotTrack = false;
+            this.emptySpaceItem22.Location = new System.Drawing.Point(337, 32);
+            this.emptySpaceItem22.Name = "emptySpaceItem22";
+            this.emptySpaceItem22.Size = new System.Drawing.Size(28, 31);
+            this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmReceivePet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1860, 775);
-            this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.groupControl4);
@@ -1883,6 +1893,9 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.gluIdPet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgluCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -1914,6 +1927,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
@@ -1965,6 +1979,7 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.rbtnPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbtnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2058,13 +2073,6 @@ namespace pet_management
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraEditors.MemoEdit txtAddress;
         private DevExpress.XtraEditors.ComboBoxEdit cboType;
         private System.Windows.Forms.BindingSource doctorBindingSource;
@@ -2129,12 +2137,17 @@ namespace pet_management
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rbtnCancel;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem21;
-        private System.Windows.Forms.ComboBox cboStatus;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluPetFullEx;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluReceptionlistFullEx;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit gluDoctorfullEx;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit rgluCustomer;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
+        private DevExpress.XtraEditors.SimpleButton btnRefreshPet;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem22;
     }
 }

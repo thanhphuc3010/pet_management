@@ -14,5 +14,10 @@ namespace BUS
         {
             return UnitDAO.GetUnits();
         }
+
+        public static Unit GetUnitById(string id)
+        {
+            return UnitDAO.GetUnitById(id);
+        }
     }
 }

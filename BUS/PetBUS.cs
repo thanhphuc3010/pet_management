@@ -16,6 +16,8 @@ namespace BUS
         }
 
         public static Pet GetPet(string id) => PetDAO.GetPetById(id);
+
+        public static Pet GetPetByNumber(string petNumber) => DAO.PetDAO.GetPetByNumber(petNumber);
         public static bool Save(Pet p )
         {
             return PetDAO.Save(p);

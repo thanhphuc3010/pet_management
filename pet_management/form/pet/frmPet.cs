@@ -36,7 +36,7 @@ namespace pet_management
             breedpetBindingSource.DataSource = BreedBUS.GetBreeds();
             staffBindingSource.DataSource = StaffBUS.GetStaffs();
             gridView4.BestFitColumnsEx();
-            
+
         }
 
         private void searchControl1_TextChanged(object sender, EventArgs e)
@@ -45,7 +45,8 @@ namespace pet_management
             if (!string.IsNullOrEmpty(keySearch))
             {
                 gridViewPet.ApplyFindFilter(keySearch);
-            } else
+            }
+            else
             {
                 gridViewPet.ClearFindFilter();
             }
@@ -107,7 +108,7 @@ namespace pet_management
                             MyHelper.ShowErrorMessage(ex.Message, "Lỗi");
                         }
                     }
-                    
+
                 }
                 else
                 {
@@ -130,6 +131,19 @@ namespace pet_management
             string petId = (sender as GridView).GetFocusedRowCellValue("Id").ToString();
             List<Examination> history = examinationBUS.GetExaminationByPetId(petId);
             exPetHistoryBindingSource.DataSource = history;
+            List<Staff> staffs = StaffBUS.GetStaffs();
+            foreach (Staff staff in staffs)
+            {
+                staff.FullName = $"{staff.FirstName} {staff.LastName}";
+            }
+            staffBindingSource.DataSource = staffs;
+        }
+
+        private void rBtnDetail_Click(object sender, EventArgs e)
+        {
+            Examination exam = gridView4.GetFocusedRow() as Examination;
+            frmExaminationView f = new frmExaminationView(this, exam);
+            f.ShowDialog();
         }
     }
 }

@@ -114,6 +114,9 @@ namespace pet_management
             dtExaminationDate.DateTime = examination.ExaminationDate;
             txtType.Text = examination.Type.ToString();
             gluDoctor.EditValue = examination.DoctorId;
+            txtSymptom.Text = (examination.Symptom == null) ? "" : examination.Symptom.ToString();
+            txtConclude.Text = (examination.Conclude == null) ? "" : examination.Conclude.ToString();
+            txtNote.Text = (examination.Note == null) ? "" : examination.Note.ToString();
 
             Staff s = GetStaffCurrent();
             if (s.IdRole != 3)
@@ -350,6 +353,9 @@ namespace pet_management
         public void RefeshListExWhenEditPetInfor()
         {
             InitailizeData();
+            PetData petData = receivePetBUS.GetPetData(pet.Id.ToString());
+            _petData = petData;
+            BindPetData(petData);
         }
 
         private void btnDoing_Click(object sender, EventArgs e)
@@ -368,6 +374,8 @@ namespace pet_management
         {
             using (frmPrintMedical frm = new frmPrintMedical(detailsItem, _petData))
             {
+                frm._conclude = txtConclude.GetTextTrim();
+                frm._doctor = gluDoctor.Text.ToString();
                 frm.ShowDialog();
             }
         }
@@ -416,6 +424,18 @@ namespace pet_management
             Examination exam = gridView4.GetFocusedRow() as Examination;
             frmExaminationView f = new frmExaminationView(this, exam);
             f.ShowDialog();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            using (frmInvoice frm = new frmInvoice(detailsItem, _petData))
+            {
+                frm._conclude = txtConclude.GetTextTrim();
+                Staff doctor = StaffBUS.GetStaffById(currentExamination.DoctorId.ToString());
+                doctor.FullName = $"{doctor.FirstName} {doctor.LastName}";
+                frm._doctor = doctor.FullName;
+                frm.ShowDialog();
+            }
         }
     }
 }

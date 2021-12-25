@@ -30,37 +30,37 @@ namespace pet_management
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExamination));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             this.rgluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.rgluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repoBtnStart = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -75,6 +75,9 @@ namespace pet_management
             this.colExDateHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTypeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repoGluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.petExBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDoctorIdHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoGluDoctor = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.staffExBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -82,9 +85,6 @@ namespace pet_management
             this.colSymptomHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colConcludeHistory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatusHistory = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repoGluPet = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.petExBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnWait = new DevExpress.XtraEditors.SimpleButton();
             this.btnDoing = new DevExpress.XtraEditors.SimpleButton();
             this.btnFilter = new DevExpress.XtraEditors.SimpleButton();
@@ -243,6 +243,7 @@ namespace pet_management
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtTax = new DevExpress.XtraEditors.TextEdit();
+            this.colSum = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.rgluPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgluDoctor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoBtnStart)).BeginInit();
@@ -252,12 +253,12 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).BeginInit();
@@ -381,10 +382,10 @@ namespace pet_management
             // repoBtnStart
             // 
             this.repoBtnStart.AutoHeight = false;
-            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
-            editorButtonImageOptions7.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
             this.repoBtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoBtnStart.Name = "repoBtnStart";
             this.repoBtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -472,10 +473,10 @@ namespace pet_management
             // rBtnDetail
             // 
             this.rBtnDetail.AutoHeight = false;
-            editorButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions8.SvgImage")));
-            editorButtonImageOptions8.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rBtnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rBtnDetail.Name = "rBtnDetail";
             this.rBtnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rBtnDetail.Click += new System.EventHandler(this.rBtnDetail_Click);
@@ -548,6 +549,28 @@ namespace pet_management
             this.colPetIdHistory.Visible = true;
             this.colPetIdHistory.VisibleIndex = 4;
             this.colPetIdHistory.Width = 94;
+            // 
+            // repoGluPet
+            // 
+            this.repoGluPet.AutoHeight = false;
+            this.repoGluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoGluPet.DataSource = this.petExBindingSource;
+            this.repoGluPet.DisplayMember = "Name";
+            this.repoGluPet.Name = "repoGluPet";
+            this.repoGluPet.PopupView = this.gridView6;
+            this.repoGluPet.ValueMember = "Id";
+            // 
+            // petExBindingSource
+            // 
+            this.petExBindingSource.DataSource = typeof(DTO.Pet);
+            // 
+            // gridView6
+            // 
+            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView6.OptionsView.ShowGroupPanel = false;
             // 
             // colDoctorIdHistory
             // 
@@ -639,28 +662,6 @@ namespace pet_management
             this.colStatusHistory.Visible = true;
             this.colStatusHistory.VisibleIndex = 8;
             this.colStatusHistory.Width = 94;
-            // 
-            // repoGluPet
-            // 
-            this.repoGluPet.AutoHeight = false;
-            this.repoGluPet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoGluPet.DataSource = this.petExBindingSource;
-            this.repoGluPet.DisplayMember = "Name";
-            this.repoGluPet.Name = "repoGluPet";
-            this.repoGluPet.PopupView = this.gridView6;
-            this.repoGluPet.ValueMember = "Id";
-            // 
-            // petExBindingSource
-            // 
-            this.petExBindingSource.DataSource = typeof(DTO.Pet);
-            // 
-            // gridView6
-            // 
-            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView6.Name = "gridView6";
-            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView6.OptionsView.ShowGroupPanel = false;
             // 
             // btnWait
             // 
@@ -1000,10 +1001,10 @@ namespace pet_management
             // rbtnStart
             // 
             this.rbtnStart.AutoHeight = false;
-            editorButtonImageOptions9.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions9.SvgImage")));
-            editorButtonImageOptions9.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnStart.Name = "rbtnStart";
             this.rbtnStart.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnStart.Click += new System.EventHandler(this.repoBtnStart_Click);
@@ -1011,10 +1012,10 @@ namespace pet_management
             // rbtnViewEdit
             // 
             this.rbtnViewEdit.AutoHeight = false;
-            editorButtonImageOptions10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions10.SvgImage")));
-            editorButtonImageOptions10.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions4.SvgImage")));
+            editorButtonImageOptions4.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnViewEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnViewEdit.Name = "rbtnViewEdit";
             this.rbtnViewEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnViewEdit.Click += new System.EventHandler(this.rbtnViewEdit_Click);
@@ -1829,6 +1830,7 @@ namespace pet_management
             this.colDiscountRate,
             this.colUnitId,
             this.colQuantity,
+            this.colSum,
             this.colPrice,
             this.colTaxRate,
             this.colTotalPrice,
@@ -1977,6 +1979,8 @@ namespace pet_management
             this.colPrice.AppearanceHeader.Options.UseTextOptions = true;
             this.colPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPrice.Caption = "Đơn giá";
+            this.colPrice.DisplayFormat.FormatString = "N0";
+            this.colPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPrice.FieldName = "Price";
             this.colPrice.MinWidth = 25;
             this.colPrice.Name = "colPrice";
@@ -1999,12 +2003,14 @@ namespace pet_management
             this.colTotalPrice.AppearanceHeader.Options.UseFont = true;
             this.colTotalPrice.AppearanceHeader.Options.UseForeColor = true;
             this.colTotalPrice.Caption = "Thành tiền";
+            this.colTotalPrice.DisplayFormat.FormatString = "N0";
+            this.colTotalPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTotalPrice.FieldName = "Total";
             this.colTotalPrice.MinWidth = 25;
             this.colTotalPrice.Name = "colTotalPrice";
             this.colTotalPrice.OptionsColumn.AllowEdit = false;
             this.colTotalPrice.Visible = true;
-            this.colTotalPrice.VisibleIndex = 9;
+            this.colTotalPrice.VisibleIndex = 10;
             this.colTotalPrice.Width = 89;
             // 
             // colTax
@@ -2016,12 +2022,14 @@ namespace pet_management
             this.colTax.AppearanceHeader.Options.UseTextOptions = true;
             this.colTax.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTax.Caption = "Thuế";
+            this.colTax.DisplayFormat.FormatString = "N0";
+            this.colTax.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTax.FieldName = "Tax";
             this.colTax.MinWidth = 25;
             this.colTax.Name = "colTax";
             this.colTax.OptionsColumn.AllowEdit = false;
             this.colTax.Visible = true;
-            this.colTax.VisibleIndex = 7;
+            this.colTax.VisibleIndex = 8;
             this.colTax.Width = 96;
             // 
             // colDiscount
@@ -2033,12 +2041,14 @@ namespace pet_management
             this.colDiscount.AppearanceHeader.Options.UseTextOptions = true;
             this.colDiscount.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDiscount.Caption = "Giảm giá";
+            this.colDiscount.DisplayFormat.FormatString = "N0";
+            this.colDiscount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDiscount.FieldName = "Discount";
             this.colDiscount.MinWidth = 25;
             this.colDiscount.Name = "colDiscount";
             this.colDiscount.OptionsColumn.AllowEdit = false;
             this.colDiscount.Visible = true;
-            this.colDiscount.VisibleIndex = 8;
+            this.colDiscount.VisibleIndex = 9;
             this.colDiscount.Width = 85;
             // 
             // colServiceUsedId
@@ -2056,7 +2066,7 @@ namespace pet_management
             this.colServiceUsedId.Name = "colServiceUsedId";
             this.colServiceUsedId.OptionsColumn.AllowEdit = false;
             this.colServiceUsedId.Visible = true;
-            this.colServiceUsedId.VisibleIndex = 10;
+            this.colServiceUsedId.VisibleIndex = 11;
             this.colServiceUsedId.Width = 111;
             // 
             // gluServiceUse
@@ -2094,7 +2104,7 @@ namespace pet_management
             this.colItemType.Name = "colItemType";
             this.colItemType.OptionsColumn.AllowEdit = false;
             this.colItemType.Visible = true;
-            this.colItemType.VisibleIndex = 11;
+            this.colItemType.VisibleIndex = 12;
             this.colItemType.Width = 120;
             // 
             // colDeteleItem
@@ -2110,10 +2120,10 @@ namespace pet_management
             // rbtnDelete
             // 
             this.rbtnDelete.AutoHeight = false;
-            editorButtonImageOptions11.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions11.SvgImage")));
-            editorButtonImageOptions11.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions5.SvgImage")));
+            editorButtonImageOptions5.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnDelete.Name = "rbtnDelete";
             this.rbtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnDelete.Click += new System.EventHandler(this.rbtnDelete_Click);
@@ -2131,10 +2141,10 @@ namespace pet_management
             // rbtnEdit
             // 
             this.rbtnEdit.AutoHeight = false;
-            editorButtonImageOptions12.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions12.SvgImage")));
-            editorButtonImageOptions12.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions6.SvgImage")));
+            editorButtonImageOptions6.SvgImageSize = new System.Drawing.Size(16, 16);
             this.rbtnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.rbtnEdit.Name = "rbtnEdit";
             this.rbtnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rbtnEdit.Click += new System.EventHandler(this.rbtnEdit_Click);
@@ -2251,6 +2261,7 @@ namespace pet_management
             this.btnPrint.Size = new System.Drawing.Size(113, 32);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "In phiếu khám";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // emptySpaceItem22
             // 
@@ -2304,6 +2315,24 @@ namespace pet_management
             this.txtTax.Size = new System.Drawing.Size(230, 24);
             this.txtTax.TabIndex = 4;
             // 
+            // colSum
+            // 
+            this.colSum.AppearanceHeader.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.colSum.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.ControlText;
+            this.colSum.AppearanceHeader.Options.UseFont = true;
+            this.colSum.AppearanceHeader.Options.UseForeColor = true;
+            this.colSum.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSum.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSum.Caption = "Tiền hàng";
+            this.colSum.DisplayFormat.FormatString = "N0";
+            this.colSum.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSum.FieldName = "Sum";
+            this.colSum.MinWidth = 25;
+            this.colSum.Name = "colSum";
+            this.colSum.Visible = true;
+            this.colSum.VisibleIndex = 7;
+            this.colSum.Width = 94;
+            // 
             // frmExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2341,12 +2370,12 @@ namespace pet_management
             ((System.ComponentModel.ISupportInitialize)(this.exPetHistoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rBtnDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoGluPet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petExBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoGluDoctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffExBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).EndInit();
@@ -2636,5 +2665,6 @@ namespace pet_management
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGluPet;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+        private DevExpress.XtraGrid.Columns.GridColumn colSum;
     }
 }

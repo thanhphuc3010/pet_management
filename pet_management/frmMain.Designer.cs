@@ -357,7 +357,7 @@ namespace pet_management
             this.ribbonPageGroup5,
             this.ribbonPageGroup7});
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Quản lý tiếp đón";
+            this.ribbonPage3.Text = "Quản lý dịch vụ khám chữa bệnh";
             // 
             // ribbonPageGroup5
             // 

@@ -24,6 +24,15 @@ namespace DAO
             return result;
         }
 
+        public static Pet GetPetByNumber(string petNumber)
+        {
+            MapperColumn mapper = new MapperColumn();
+            SqlMapper.SetTypeMap(typeof(Pet), mapper.GetMap<Pet>());
+
+            string sql = $"SELECT * FROM pet WHERE pet_number = '{petNumber}'";
+            return db.QuerySingle<Pet>(sql);
+        }
+
         public static Pet GetPetById(string id)
         {
             MapperColumn mapper = new MapperColumn();

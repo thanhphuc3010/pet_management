@@ -108,6 +108,12 @@
       <DependentUpon>rptExaminationReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptInvoice.cs">
+      <DependentUpon>rptInvoice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="rptMedical.cs">
       <DependentUpon>rptMedical.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -154,6 +160,10 @@
     <EmbeddedResource Include="rptExaminationReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptExaminationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptMedical.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

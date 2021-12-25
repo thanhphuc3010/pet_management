@@ -21,6 +21,7 @@ namespace pet_management
         private readonly XtraForm frm;
         private decimal subtotal;
         private List<ELItem> detailsItem = null;
+        private PetData _petData;
         public frmExaminationView(XtraForm frm, Examination examination)
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace pet_management
             string petId = examination.PetId.ToString();
             Pet pet = PetBUS.GetPet(petId);
             PetData petData = receivePetBUS.GetPetData(petId);
-
+            _petData = petData;
 
             BindPetData(petData);
 
@@ -64,6 +65,9 @@ namespace pet_management
             dtExaminationDate.DateTime = examination.ExaminationDate;
             txtType.Text = examination.Type.ToString();
             gluDoctor.EditValue = examination.DoctorId;
+            txtSymptom.Text = (examination.Symptom == null) ? "" : examination.Symptom.ToString();
+            txtConclude.Text = (examination.Conclude == null) ? "" : examination.Conclude.ToString();
+            txtNote.Text = (examination.Note == null) ? "" : examination.Note.ToString();
             gridViewDetail.Columns["ItemType"].GroupIndex = 0;
         }
         public void BindPetData(PetData petData)
@@ -142,6 +146,26 @@ namespace pet_management
         private void frmExaminationView_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            using (frmInvoice frm = new frmInvoice(detailsItem, _petData))
+            {
+                frm._conclude = txtConclude.GetTextTrim();
+                frm._doctor = gluDoctor.Text.ToString();
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnPrintMedical_Click(object sender, EventArgs e)
+        {
+            using (frmPrintMedical frm = new frmPrintMedical(detailsItem, _petData))
+            {
+                frm._conclude = txtConclude.GetTextTrim();
+                frm._doctor = gluDoctor.Text.ToString();
+                frm.ShowDialog();
+            }
         }
     }
 }

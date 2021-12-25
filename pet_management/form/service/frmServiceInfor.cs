@@ -79,7 +79,7 @@ namespace pet_management
             s.Name = txtName.Text.ToString().Trim();
             s.Description = txtDescription.Text.ToString().Trim();
             s.Price = Convert.ToDecimal(txtPrice.Text);
-            s.Tax = Convert.ToDecimal(txtTax.Text);
+            s.Tax = (string.IsNullOrEmpty(txtTax.Text)) ? 0 : Convert.ToDecimal(txtTax.Text);
             s.GroupServiceId = Convert.ToInt32(gluGroupService.EditValue);
             s.UnitId = Convert.ToInt32(gluUnit.EditValue);
 

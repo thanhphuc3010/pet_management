@@ -95,6 +95,7 @@ namespace pet_management
             if (!isEditMode)
             {
                 isSuccess = PetBUS.Save(p);
+                pet = PetBUS.GetPetByNumber(p.PetNumber);
             } else
             {
                 p.Id = pet.Id;
@@ -116,6 +117,14 @@ namespace pet_management
                             PetData petData = receivePetBUS.GetPetData(petId);
                             (form as frmExamination).BindPetData(petData);
                             (form as frmExamination).RefeshListExWhenEditPetInfor();
+                        } else
+                        {
+                            if (form.GetType() == typeof(frmReceivePet))
+                            {
+
+                                string petId = pet.Id.ToString();
+                                (form as frmReceivePet).RefreshWhenCreateNewPet(petId);
+                            }
                         }
                     }
                     this.Close();
@@ -144,6 +153,13 @@ namespace pet_management
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboSpecies_EditValueChanged(object sender, EventArgs e)
+        {
+            string id = cboSpecies.EditValue.ToString();
+            List<Breed> breeds = BreedBUS.GetBreedsBySpeices(id);
+            breedBindingSource.DataSource = breeds;
         }
     }
 }

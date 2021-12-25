@@ -228,6 +228,11 @@ namespace pet_management
             this.cboBreed.Properties.Appearance.Options.UseFont = true;
             this.cboBreed.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboBreed.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Mã/Id", 35, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SpeciesId", "Species Id", 79, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên giống", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 87, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cboBreed.Properties.DataSource = this.breedBindingSource;
             this.cboBreed.Properties.DisplayMember = "Name";
             this.cboBreed.Properties.NullText = "Chọn giống";
@@ -248,6 +253,10 @@ namespace pet_management
             this.cboSpecies.Properties.Appearance.Options.UseFont = true;
             this.cboSpecies.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboSpecies.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Mã/Id", 35, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên loài", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 87, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cboSpecies.Properties.DataSource = this.speciesPetBindingSource;
             this.cboSpecies.Properties.DisplayMember = "Name";
             this.cboSpecies.Properties.NullText = "Chọn loài";
@@ -255,6 +264,7 @@ namespace pet_management
             this.cboSpecies.Size = new System.Drawing.Size(489, 24);
             this.cboSpecies.StyleController = this.lytPetInfo;
             this.cboSpecies.TabIndex = 11;
+            this.cboSpecies.EditValueChanged += new System.EventHandler(this.cboSpecies_EditValueChanged);
             // 
             // speciesPetBindingSource
             // 
@@ -363,6 +373,7 @@ namespace pet_management
             // 
             // colCustomerNumber
             // 
+            this.colCustomerNumber.Caption = "Mã khách hàng";
             this.colCustomerNumber.FieldName = "CustomerNumber";
             this.colCustomerNumber.Name = "colCustomerNumber";
             this.colCustomerNumber.Visible = true;
@@ -370,6 +381,7 @@ namespace pet_management
             // 
             // colFullname
             // 
+            this.colFullname.Caption = "Tên khách hàng";
             this.colFullname.FieldName = "Fullname";
             this.colFullname.Name = "colFullname";
             this.colFullname.Visible = true;
@@ -377,6 +389,7 @@ namespace pet_management
             // 
             // colPhone
             // 
+            this.colPhone.Caption = "Số điện thoại";
             this.colPhone.FieldName = "Phone";
             this.colPhone.Name = "colPhone";
             this.colPhone.Visible = true;
@@ -384,6 +397,7 @@ namespace pet_management
             // 
             // colAddress
             // 
+            this.colAddress.Caption = "Địa chỉ";
             this.colAddress.FieldName = "Address";
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;

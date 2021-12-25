@@ -23,5 +23,18 @@ namespace DAO
             db.Close();
             return result;
         }
+
+        public static Unit GetUnitById(string id)
+        {
+            string query = $"SELECT * FROM unit WHERE id = {id}";
+            if (db.State == ConnectionState.Closed) db.Open();
+
+            MapperColumn mapper = new MapperColumn();
+            SqlMapper.SetTypeMap(typeof(Unit), mapper.GetMap<Unit>());
+
+            Unit result = db.QuerySingle<Unit>(query);
+            db.Close();
+            return result;
+        }
     }
 }

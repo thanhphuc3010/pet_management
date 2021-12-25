@@ -14,8 +14,16 @@ namespace DTO
         public string ItemNumber { get; set; }
         public string ItemName { get; set; }
         public int UnitId { get; set; }
+        public string UnitName { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public decimal Sum
+        {
+            get
+            {
+               return Quantity * Price;
+            }
+        }
         public decimal TaxRate { get; set; }
         public decimal Tax { get; set; }
         public decimal DiscountRate { get; set; }
